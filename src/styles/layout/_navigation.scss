@@ -1,0 +1,219 @@
+.nav {
+  width: 100%;
+  top: 0;
+  height: 15vh;
+  color: white;
+  background-color: $color-white;
+  position: fixed;
+  display: flex;
+  z-index: 9999;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  transition: top 0.3s;
+   
+  &__logo {
+    margin: 0 0 0 10rem;
+    width: 35%;
+
+    @include respond(phone) {
+      width: 50%;
+    }
+
+    @include respond(tab-land) {
+      margin: 0 0 0 5rem;
+      width: 50%;
+    }
+
+    @include respond(tab-port) {
+      width: 70%;
+    }
+
+    &__image {
+      width: 40%;
+      height: auto;
+
+
+      @include respond(phone) {
+        width: 60%;
+      }
+
+    }
+  }
+}
+
+.navigation {
+  margin: 0 10rem 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+
+  &__nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-top: -2rem;
+  }
+
+  &__open {
+    display: none;
+  }
+
+  &__link {
+    margin-right: 2rem;
+    padding: 1rem 2rem;
+    font-size: $default-font-size;
+    color: $color-black;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  &__link:hover {
+    color: $color-primary;
+    transition: all 0.5s;
+    text-decoration: none;
+  }
+
+  &__item {
+    display: inline;
+
+    &__button {
+      color: $color-white;
+      background-color: $color-black !important;
+    }
+  }
+
+  &__close {
+    visibility: hidden;
+    position: absolute;
+    cursor: pointer;
+    color: $color-primary;
+    text-decoration: none;
+    top: 0rem;
+    right: 1.5rem;
+    font-size: 12rem;
+  }
+
+  &__dropdown {
+    text-align: center;
+    padding: 1rem 2rem;
+    background-color: $color-black;
+    color: $color-white;
+    font-size: 1.6rem;
+    font-weight: 600;
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    background-repeat: no-repeat;
+    background-position-y: 6px;
+    background-position-x: 80px;
+
+    &:focus {
+      outline: none;
+    }
+
+    &__items {
+      font-size: 2rem;
+      border: none;
+    }
+  }
+
+  @include respond(tab-land) {
+    margin: -2rem 0 2rem 0;
+    height: 110%;
+    width: 0;
+    position: fixed;
+    z-index: 100000;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    overflow-y: hidden;
+    transition: 0.5s;
+
+    &__nav {
+      position: relative;
+      top: 25%;
+      width: 100%;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    &__link {
+      padding: 3rem;
+      text-decoration: none;
+      font-size: 4rem;
+      color: $color-primary;
+      display: block;
+      transform: translate(3rem, -6rem);
+
+      &:hover,
+      &:focus {
+        color: #f1f1f1;
+      }
+
+      @include respond(phone) {
+        font-size: 3rem;
+      }
+    }
+
+    &__open {
+      display: inline-block;
+      font-size: 5rem;
+      transform: translate(-3rem, 0.5rem);
+      cursor: pointer;
+      color: $color-primary;
+
+      &:hover,
+      &:focus {
+        color: $color-black;
+        transition: 0.5s all;
+      }
+    }
+
+    &__close {
+      visibility: visible;
+      position: absolute;
+      cursor: pointer;
+      color: $color-primary;
+      text-decoration: none !important;
+      top: 3rem;
+      right: 3rem;
+      font-size: 8rem;
+
+      &:hover,
+      &:focus {
+        color: $color-white;
+        transition: 0.5s all;
+      }
+    }
+
+    &__dropdown {
+      display: block;
+      position: absolute;
+      top: -30%;
+      left: 38%;
+      text-align: center;
+      padding: 1rem 2rem;
+      font-size: 3rem;
+      background-color: $color-primary;
+      color: $color-white;
+      border: none;
+      background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+      background-repeat: no-repeat;
+      background-position-y: 10px;
+      background-position-x: 100px;
+
+      option {
+        font-size: 3rem;
+      }
+
+      &__items {
+        font-size: 1.6rem;
+        border: none;
+      }
+    }
+  }
+}
