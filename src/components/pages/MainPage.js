@@ -12,12 +12,12 @@ class MainPage extends React.Component {
         <nav className="main__navigation" id="nav">
           <ul className="main__navigation__nav">
             <li className="main__navigation__item">
-              <a className="main__navigation__link" href="/">
+              <a className="main__navigation__link" href="#AboutMe">
                 About
               </a>
             </li>
             <li className="main__navigation__item">
-              <a className="main__navigation__link" href="/">
+              <a className="main__navigation__link" href="#Experiences">
                 Experiences
               </a>
             </li>
@@ -30,7 +30,7 @@ class MainPage extends React.Component {
           </a>
           <ul className="main__navigation__nav">
             <li className="main__navigation__item">
-              <a className="main__navigation__link" href="/">
+              <a className="main__navigation__link" href="#Projects">
                 Projects
               </a>
             </li>
@@ -51,11 +51,17 @@ class MainPage extends React.Component {
           </a>
         </header>
         
-        <AboutMe />
+        <div id="AboutMe">
+          <AboutMe />
+        </div>
 
-        <Experiences />
+        <div id="Experiences">
+          <Experiences />
+        </div>
 
-        <Projects />
+        <div id="Projects">
+          <Projects />
+        </div>
 
       </main>
     );

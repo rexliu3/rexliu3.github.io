@@ -1,0 +1,30 @@
+/* Modal Content/Box */
+.modal__experiences {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 300000000000; /* Sit on top */
+    top: 25%;
+    left:25%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: white; /* Fallback color */
+    margin: auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    height:50%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
