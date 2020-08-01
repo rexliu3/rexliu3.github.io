@@ -69,7 +69,9 @@ const AboutMe = () => {
           <div className="aboutme__content__resume">
             <h2 className="aboutme__content__resume__title">Resume</h2>
             <div className="aboutme__content__resume__content">
-              <img src="assets/Resume.png"></img>
+              <a href="file:///../../assets/Rex-SE-Resume.pdf" target="_blank">
+                <img src="assets/Resume.png"></img>
+              </a>
             </div>
           </div>
         </div>
