@@ -1,0 +1,69 @@
+.aboutme {
+    border-top: thick;
+    border-color: $color-secondary;
+    width:100%;
+    height:100vw;
+
+    &__header {
+        font-size: large;
+        color:$color-secondary;
+        font-size:8rem;
+        display:flex;
+        flex-direction: center;
+        padding-left:38%;
+        text-align:center;
+    }
+
+    &__about {
+        margin-top:-2rem;
+        color:$color-white;
+        font-size:4rem;
+        text-align:center;
+        line-height: normal;
+    }
+
+    &__content {
+        display:grid;
+        margin:0% 5%;
+        grid-template-columns: 30% 30% 30%;
+        align-content: center;
+
+        &__education {
+            float: left;
+            width: 33.33%;
+
+            &__title {
+                color:$color-white;
+                font-size:4rem;
+            }
+        }
+
+        &__central {
+            float: left;
+            width: 33.33%;
+
+            &__experiences {
+                &__title {
+                    color:$color-white;
+                    font-size:4rem;
+                }
+            }
+            &__projects {
+                &__title {
+                    color:$color-white;
+                    font-size:4rem;
+                }
+            }
+        }
+
+        &__resume {
+            float: left;
+            width: 33.33%;
+
+            &__title {
+                color:$color-white;
+                font-size:4rem;
+            }
+        }
+    }
+}

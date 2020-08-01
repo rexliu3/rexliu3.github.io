@@ -1,0 +1,49 @@
+.main {
+    &__header {
+        //background-image: url('../../assets/Header-Background.png');
+        background-image:
+            //linear-rgba(54, 54, 54, 0.52), rgba(48, 47, 47, 0.52)),
+            url('../../assets/Header-Background.png');
+        background-repeat: no-repeat;
+        height:100vh;
+        width:99vw;
+        display:block;
+
+        &__name {
+            //position: relative;
+            display:flex;
+            flex-direction: center;
+            width:100%;       
+            padding-top:10%;     
+            padding-left:38%;
+            color:$color-white;
+            font-size:10rem;
+            margin:0;
+        }
+
+        &__about {
+            color:$color-white;
+            font-size:4rem;
+            text-align:center;
+            line-height: normal;
+        }
+
+        &__email {
+            width:8vw; 
+            height:5vw;
+            align-self:center;
+            margin-top:2rem;
+            margin-left:47%;
+        }
+        
+        &__email:hover {
+            background-image: radial-gradient($color-secondary, rgba(255,255,255,0));
+            transition: all 0.5s;
+            text-decoration: none;
+        }
+    }
+
+    &__body {
+
+    }
+}
