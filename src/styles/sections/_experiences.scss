@@ -1,0 +1,29 @@
+.experiences {
+    width:99vw;
+    height:125vw;
+    display:block;
+    align-content: center;
+
+    &__header {
+        font-size: large;
+        color:$color-secondary;
+        font-size:8rem;
+        display:flex;
+        flex-direction: center;
+        padding-left:35.5%;
+        text-align:center;
+    }
+
+    &__about {
+        margin-top:-2rem;
+        color:$color-white;
+        font-size:4rem;
+        text-align:center;
+        line-height: normal;
+        margin-bottom:3rem;
+    }
+    
+    &__main {
+        padding-left:8%;
+    }
+}
