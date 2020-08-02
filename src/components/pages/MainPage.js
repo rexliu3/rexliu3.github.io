@@ -6,7 +6,12 @@ import Projects from "../sections/Projects";
 
 class MainPage extends React.Component {
   render() {
+    const togglePopup = () => {
+      document.getElementById("popup").classList.toggle("active");
+      document.getElementById("blur").classList.toggle("active");
+    }
     return (
+      
       <main className="main">
         <header className="main__header">
         <nav className="main__navigation" id="nav">
