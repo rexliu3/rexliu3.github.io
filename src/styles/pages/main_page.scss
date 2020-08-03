@@ -1,4 +1,5 @@
 .main {
+    display:block;
     &__header {
         background-image:
             url('../../assets/Header-Background.png');
@@ -11,12 +12,16 @@
             //position: relative;
             display:flex;
             flex-direction: center;
+            align-self: center;
+            justify-self: center;
+            position:center;
             width:100%;       
             padding-top:10%;     
             padding-left:38%;
+            padding:auto;
             color:$color-white;
             font-size:10rem;
-            margin:0;
+            margin:auto;
         }
 
         &__about {

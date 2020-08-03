@@ -9,14 +9,13 @@
     z-index: 100000000;
     display:none;
   }*/
-.popup {
-  left:20%;
-}
+
 
 .popup .content {
   position: fixed;
   top: 40%;
   left: 17%;
+  margin:auto;
   transform: translate(-50%, -50%) scale(0);
   background: $color-black;
   width: 30vw;

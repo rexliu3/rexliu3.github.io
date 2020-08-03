@@ -68,6 +68,10 @@ class MainPage extends React.Component {
           <Projects />
         </div>
 
+        <footer className="main__footer">
+          
+        </footer>
+
       </main>
     );
   }
