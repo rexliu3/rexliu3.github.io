@@ -1,0 +1,72 @@
+.project__grid__item {
+    width:70vw;
+    height:fit-content;
+    background-color: black;
+    display:grid;
+    margin:auto;
+    border-radius: 5vw;
+    grid-template-columns: 20vw 50vw;
+    border: thick;
+    border-color: white;
+    border-style: solid;
+    margin-bottom: 5rem;
+
+    &__image {
+        height:20vw;
+        width:20vw;
+        margin-top:2vw;
+        border-radius:5vw;
+    }
+
+    &__content {
+        display:block;
+        margin-left:1rem;
+        &__header {
+            display:inline-block;
+            color:$color-secondary;
+            font-size:4rem;
+            text-align:left;
+        }
+
+        &__github {
+            display:inline-block;
+            height: 4rem;
+            width: 4rem;
+            margin-left: 2rem;
+            background-color: white;
+            border-radius: 80%;
+        }
+
+        &__date {
+            font-size:2rem;
+            color:$color-white;
+            margin: -2rem 0rem -2rem 1rem;
+        }
+
+        &__description {
+            font-size:2rem;
+            color:$color-white;
+            margin-top:-1rem;
+            position: relative;
+            
+            &__item {
+                margin-left:3.5rem;
+            }
+        }
+
+        &__descriptor {
+            display: inline-block;
+            font-size:3rem;
+            font-weight: 600;
+            color:$color-secondary;
+
+        }
+
+        &__tools {
+            display: inline-block;
+            font-size:2rem;
+            color:$color-white;
+        }
+    }
+
+}

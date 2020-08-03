@@ -56,15 +56,15 @@ class MainPage extends React.Component {
           </a>
         </header>
         
-        <div id="AboutMe">
+        <div class="main__AboutMe" id="AboutMe">
           <AboutMe />
         </div>
 
-        <div id="Experiences">
+        <div class="main__Experiences" id="Experiences">
           <Experiences />
         </div>
 
-        <div id="Projects">
+        <div class="main__Projects" id="Projects">
           <Projects />
         </div>
 
