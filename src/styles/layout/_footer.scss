@@ -2,7 +2,104 @@
     background-image:
             url('../../assets/Footer-Background.png');
         background-repeat: no-repeat;
-        height:100vh;
-        width:99vw;
-        display:block;
-}
+    height:100vh;
+    width:99vw;
+    display:flex;
+    justify-content: center;
+
+    color: $color-white;
+    margin: auto;
+    padding-top: 10rem;
+    transition: top 0.3s;
+
+  
+    &__nav {
+      list-style-type: none;
+      margin: auto;
+      padding: 0;
+        align-items: center;
+        justify-items: center;
+        align-content: center;
+        justify-content: center;
+        align-self:center;
+        justify-self: center;
+        position: relative;
+    }
+  
+    &__item {
+      display: inline;
+    }
+  
+    &__link {
+      margin-right: 0rem;
+      padding: 1rem 3rem;
+      font-size: 2.5rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: $color-white;
+    }
+
+    &__logo {
+        height: 4vw;
+        width:4vw;
+    }
+
+    &__logo:hover {
+        -webkit-box-shadow: 0px 0px 25px 0px rgba(255,255,255,1);
+        -moz-box-shadow: 0px 0px 25px 0px rgba(255,255,255,1);
+        box-shadow: 0px 0px 25px 0px rgba(255,255,255,1);
+        border-radius:40%;
+        transition: all 1s;
+    }
+  
+    &__link:hover {
+      color: $color-secondary;
+      transition: all 0.5s;
+      text-decoration: none;
+    }
+  
+    @include respond(tab-land) {
+      margin: -2rem 0 2rem 0;
+      height: 110%;
+      width: 0;
+      position: fixed;
+      z-index: 100000;
+      left: 0;
+      top: 0;
+      background-color: rgba(0, 0, 0, 0.9);
+      overflow-x: hidden;
+      overflow-y: hidden;
+      transition: 0.5s;
+  
+      &__nav {
+        position: relative;
+        top: 25%;
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;
+      }
+  
+      &__link {
+        padding: 3rem;
+        text-decoration: none;
+        font-size: 50rem;
+        color: $color-primary;
+        display: block;
+        transform: translate(3rem, -6rem);
+  
+        &:hover,
+        &:focus {
+          color: $color-secondary;
+        }
+  
+        @include respond(phone) {
+          font-size: 3rem;
+        }
+      }
+    }
+  }
+
+  #newline {
+      display:block;
+  }

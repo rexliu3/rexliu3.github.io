@@ -69,9 +69,55 @@ class MainPage extends React.Component {
         </div>
 
         <footer className="main__footer">
+          <div id="newline">
+          <ul className="main__footer__nav">
+              <li className="main__footer__item">
+                <a className="main__footer__link" href="https://linkedin.com/in/rexliu3" target="_blank">
+                  <img className="main__footer__logo" src="assets/linkedin.png"></img>
+                </a>
+              </li>
+              <li className="main__footer__item">
+                <a className="main__footer__link" href="https://instagram.com/rexliu3" target="_blank">
+                  <img className="main__footer__logo" src="assets/instagram.png"></img>
+                </a>
+              </li>
+              <li className="main__footer__item">
+                <a className="main__footer__link" href="https://facebook.com/rexliu333" target="_blank">
+                  <img className="main__footer__logo" src="assets/facebook.png"></img>
+                </a>
+              </li>
+              <li className="main__footer__item">
+                <a className="main__footer__link" href="https://open.spotify.com/user/rexliu3" target="_blank">
+                  <img className="main__footer__logo" src="assets/spotify.png"></img>
+                </a>
+              </li>
+          </ul>
           
-        </footer>
 
+          <ul className="main__footer__nav">
+              <li className="main__footer__item">
+                <a className="main__footer__link" href="#AboutMe">
+                  About
+                </a>
+              </li>
+              <li className="main__footer__item">
+                <a className="main__footer__link" href="#Experiences">
+                  Experiences
+                </a>
+              </li>
+              <li className="main__footer__item">
+                <a className="main__footer__link" href="#Projects">
+                  Projects
+                </a>
+              </li>
+              <li className="main__footer__item">
+                <a className="main__footer__link" href="/">
+                  Skills
+                </a>
+              </li>
+            </ul>
+            </div>
+        </footer>
       </main>
     );
   }
