@@ -70,7 +70,7 @@ class MainPage extends React.Component {
 
         <footer className="main__footer">
           <div id="newline">
-          <ul className="main__footer__nav">
+          <ul className="main__footer__navitems">
               <li className="main__footer__item">
                 <a className="main__footer__link" href="https://linkedin.com/in/rexliu3" target="_blank">
                   <img className="main__footer__logo" src="assets/linkedin.png"></img>
