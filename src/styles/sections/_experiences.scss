@@ -1,8 +1,10 @@
 .experiences {
     width:99vw;
-    height:125vw;
+    height:fit-content;
+    padding-bottom: 2rem;
     display:block;
     align-content: center;
+
 
     &__header {
         font-size: large;

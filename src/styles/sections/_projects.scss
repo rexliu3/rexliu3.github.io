@@ -2,6 +2,14 @@
     height:fit-content;
     display:block;
     align-content: center;
+    height:fit-content;
+    padding-bottom: 2rem;
+
+    background: url('../../assets/Header-Background10.jpg') no-repeat center center; 
+    -webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
 
     &__header {
         font-size: large;
