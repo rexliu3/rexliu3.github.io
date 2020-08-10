@@ -16,6 +16,9 @@ const AboutMe = () => {
 
   return (
     <div className="aboutme">
+      <svg className="divider" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <path d="M0 0 L50 100 L100 0 Z"></path>
+          </svg>
       <div className="popup" id="popup">
         <div className="overlay"></div>
         <div className="content">

@@ -4,18 +4,20 @@
     background-color: black;
     display:grid;
     margin:auto;
-    border-radius: 5vw;
+    border-radius: 3vw;
     grid-template-columns: 20vw 50vw;
     border: thick;
     border-color: white;
     border-style: solid;
     margin-bottom: 5rem;
+    padding:1rem;
 
     &__image {
         height:20vw;
         width:20vw;
-        margin-top:2vw;
-        border-radius:5vw;
+        border-radius:4vw;
+        align-self: center;
+        
     }
 
     &__content {

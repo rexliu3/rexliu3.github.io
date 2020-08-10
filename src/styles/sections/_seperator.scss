@@ -1,0 +1,24 @@
+.divider {
+  width: 99vw;
+  height: 10vh;
+  fill: black;
+  background-color: #212121;
+  margin:0;
+}
+
+#footerOne.divider {
+  background-color: #1a1a1a;
+}
+
+.line:before
+{
+	content: "";
+  position: absolute;
+  //position: relative;
+	height: 1px;
+	top: 0;
+	left: 5%;
+	right: 5%;
+	width: 90%;
+	background-image: linear-gradient(to right, transparent, rgb(48,49,51), transparent);
+}

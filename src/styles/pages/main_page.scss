@@ -1,9 +1,13 @@
 .main {
     display:block;
+    margin: 0;
+    overflow-x: hidden;
     &__header {
-        background-image:
-            url('../../assets/Header-Background.png');
-        background-repeat: no-repeat;
+        background: url('../../assets/Header-Background5.jpg') no-repeat center center; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
         height:100vh;
         width:99vw;
         display:block;
@@ -46,9 +50,5 @@
             transition: all 1s;
             border-radius: 5%;
         }
-    }
-
-    &__body {
-
     }
 }

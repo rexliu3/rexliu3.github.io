@@ -9,9 +9,9 @@ class MainPage extends React.Component {
     const togglePopup = () => {
       document.getElementById("popup").classList.toggle("active");
       document.getElementById("blur").classList.toggle("active");
-    }
+    }    
+
     return (
-      
       <main className="main">
         <header className="main__header">
         <nav className="main__navigation" id="nav">
@@ -60,7 +60,10 @@ class MainPage extends React.Component {
           <AboutMe />
         </div>
 
+        <div className="line"></div>
+
         <div class="main__Experiences" id="Experiences">
+          
           <Experiences />
         </div>
 
@@ -68,8 +71,14 @@ class MainPage extends React.Component {
           <Projects />
         </div>
 
+       
+        
+
         <footer className="main__footer">
           <div id="newline">
+          <svg className="divider" id="footerOne" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <path d="M0 0 L50 100 L100 0 Z"></path>
+          </svg>
           <ul className="main__footer__navitems">
               <li className="main__footer__item">
                 <a className="main__footer__link" href="https://linkedin.com/in/rexliu3" target="_blank">
