@@ -73,9 +73,12 @@ class MainPage extends React.Component {
 
         <footer className="main__footer">
           <div id="newline">
-          <svg className="divider" id="footerOne" viewBox="0 0 100 100" preserveAspectRatio="none">
+          {/*} className="divider" id="footerOne" viewBox="0 0 100 100" preserveAspectRatio="none">
             <path d="M0 0 L50 100 L100 0 Z"></path>
-          </svg>
+          </svg>*/}
+          <div className="divider" id="footerOne">
+            
+          </div>
           <ul className="main__footer__navitems">
               <li className="main__footer__item">
                 <a className="main__footer__link" href="https://linkedin.com/in/rexliu3" target="_blank">
