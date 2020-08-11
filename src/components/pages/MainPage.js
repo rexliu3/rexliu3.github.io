@@ -60,10 +60,8 @@ class MainPage extends React.Component {
           <AboutMe />
         </div>
 
-        <div className="line"></div>
 
         <div class="main__Experiences" id="Experiences">
-          
           <Experiences />
         </div>
 
@@ -76,9 +74,7 @@ class MainPage extends React.Component {
           {/*} className="divider" id="footerOne" viewBox="0 0 100 100" preserveAspectRatio="none">
             <path d="M0 0 L50 100 L100 0 Z"></path>
           </svg>*/}
-          <div className="divider" id="footerOne">
-            
-          </div>
+          <div className="divider" id="footerOne"/>
           <ul className="main__footer__navitems">
               <li className="main__footer__item">
                 <a className="main__footer__link" href="https://linkedin.com/in/rexliu3" target="_blank">

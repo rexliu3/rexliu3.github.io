@@ -12,6 +12,14 @@
   background: linear-gradient(black, #1f1f1f);
 }
 
+#footerTwo.divider {
+  /*fill: linear-gradient(#e66465, #9198e5);
+  background-color: #1f1f1f;*/
+  background: linear-gradient(#1f1f1f,black);
+}
+
+
+
 .line:before{
 	content: "";
   position: absolute;
