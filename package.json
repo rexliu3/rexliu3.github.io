@@ -22,7 +22,10 @@
   },
   "engines": {
     "node": "12.18.3"
-  }
+  },
+  "keywords": [
+    "heroku"
+  ],
   "browserslist": {
     "production": [
       ">0.2%",
