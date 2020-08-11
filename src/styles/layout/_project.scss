@@ -1,7 +1,7 @@
 .project__grid__item {
     width:70vw;
     height:fit-content;
-    background-color: black;
+    background-color: transparentize($color: #000000, $amount: 0.5);
     display:grid;
     margin:auto;
     border-radius: 3vw;

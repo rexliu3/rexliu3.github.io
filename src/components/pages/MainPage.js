@@ -71,9 +71,6 @@ class MainPage extends React.Component {
           <Projects />
         </div>
 
-       
-        
-
         <footer className="main__footer">
           <div id="newline">
           <svg className="divider" id="footerOne" viewBox="0 0 100 100" preserveAspectRatio="none">

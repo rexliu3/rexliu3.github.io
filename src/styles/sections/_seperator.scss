@@ -1,17 +1,17 @@
 .divider {
   width: 99vw;
-  height: 10vh;
+  height: 15vh;
   fill: black;
   background-color: #212121;
   margin:0;
 }
 
 #footerOne.divider {
+  fill: linear-gradient(#e66465, #9198e5);
   background-color: #1a1a1a;
 }
 
-.line:before
-{
+.line:before{
 	content: "";
   position: absolute;
   //position: relative;
