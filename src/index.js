@@ -17,3 +17,4 @@ ReactDOM.render(
 serviceWorker.unregister();
 
 //"start": "react-scripts start",
+//"start": "serve -s build",
