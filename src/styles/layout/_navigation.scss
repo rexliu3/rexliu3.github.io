@@ -1,13 +1,12 @@
 .main__navigation {
-  margin: auto auto -15rem auto;
-  padding-top:5rem;
+  margin: auto auto -9vw auto;
+  padding-top:4vw;
   display: flex;
   justify-content: center;
   flex-direction: row;
   align-items: center;
   position: relative;
   width: 100%;
-  top: 0rem;
   color: $color-white;
 
   transition: top 0.3s;

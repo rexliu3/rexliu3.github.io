@@ -2,6 +2,7 @@
     display:block;
     margin: 0;
     overflow-x: hidden;
+
     &__header {
         background: url('../../assets/Header-Background5.jpg') no-repeat center center; 
         -webkit-background-size: cover;
@@ -20,8 +21,8 @@
             justify-self: center;
             position:center;
             width:100%;       
-            padding-top:10%;     
-            padding-left:38%;
+            padding-top:10vw;     
+            padding-left:38vw;
             padding:auto;
             color:$color-white;
             font-size:10rem;
