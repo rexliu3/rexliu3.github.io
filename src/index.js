@@ -18,3 +18,9 @@ serviceWorker.unregister();
 
 //"start": "react-scripts start",
 //"start": "serve -s build",
+
+/*,
+    
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+    */
