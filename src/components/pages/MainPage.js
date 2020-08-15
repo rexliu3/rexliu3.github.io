@@ -82,6 +82,11 @@ class MainPage extends React.Component {
                 </a>
               </li>
               <li className="main__footer__item">
+                <a className="main__footer__link" href="https://github.com/rexliu3" target="_blank">
+                  <img className="main__footer__logo" src="assets/github.png"></img>
+                </a>
+              </li>
+              <li className="main__footer__item">
                 <a className="main__footer__link" href="https://instagram.com/rexliu3" target="_blank">
                   <img className="main__footer__logo" src="assets/instagram.png"></img>
                 </a>
