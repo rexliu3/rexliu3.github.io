@@ -96,11 +96,6 @@ class MainPage extends React.Component {
                   <img className="main__footer__logo" src="assets/facebook.png"></img>
                 </a>
               </li>
-              <li className="main__footer__item">
-                <a className="main__footer__link" href="https://open.spotify.com/user/rexliu3" target="_blank">
-                  <img className="main__footer__logo" src="assets/spotify.png"></img>
-                </a>
-              </li>
           </ul>
           
 
