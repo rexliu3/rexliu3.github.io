@@ -70,36 +70,8 @@ class MainPage extends React.Component {
       document.getElementById("blur").classList.toggle("active");
     };
 
-    const mystyle = {
-      height:'100vh',
-      //height: '265px',
-      boxSizing: 'border-box',
-      display: 'flex',
-      alignItems: 'center', 
-      justifyContent: 'center', 
-      border: '2px solid', 
-      margin: '1em 0', 
-      padding: '1em',
-      marginBottom: '-50vh',
-    };
-
     return (
       <main className="main">
-        <p
-            className="codepen"
-            data-height="265"
-            data-theme-id="dark"
-            data-default-tab="css,result"
-            data-user="arickle"
-            data-slug-hash="XKjMZY"
-            style={mystyle}
-            data-pen-title="CSS Rain Effect"
-            
-          ></p>
-          <script
-            async
-            src="https://cpwebassets.codepen.io/assets/embed/ei.js"
-          ></script>
         <header className="main__header">
           <h1 className="main__header__name">Rex Liu</h1>
           <hr className="main__header__horizontal"></hr>
