@@ -13,7 +13,7 @@
         width:99vw;
         display:block;
         z-index: 9999999999999;
-        padding-bottom:-50vw;
+        margin-bottom:-50vw;
 
         &__name {
             //padding-top:10vw;     
@@ -102,6 +102,6 @@
 }
 
 .animation {
-    margin-top: -50vw;
-    z-index: 0;
+    // margin-top: -50vw;
+    z-index: -4;
 }
