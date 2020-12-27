@@ -2,6 +2,7 @@
     display:block;
     margin: 0;
     overflow-x: hidden;
+    padding:0;
 
     &__header {
         background: url('../../assets/Header-Background5.jpg') no-repeat center center; 
@@ -9,11 +10,9 @@
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
-        height:100vh;
+        height:100%;
         width:99vw;
         display:block;
-        margin-bottom:200vw;
-        position: relative;
 
         &__name {
             color:$color-white;

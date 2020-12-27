@@ -1,33 +1,30 @@
 .projects {
-    height:fit-content;
-    display:block;
-    align-content: center;
-    height:fit-content;
+    width:99vw;
     padding-bottom: 2rem;
+    background-color: $color-white;
+    padding-top:3vw;
 
-    background: url('../../assets/Header-Background10.jpg') no-repeat center center; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
 
-    &__header {
-        font-size: large;
-        color:$color-secondary;
-        font-size:8rem;
-        display:flex;
-        flex-direction: center;
-        padding-left:40.3%;
-        text-align:center;
+    @include respond(big-desktop) {
+        padding: 2vw;
     }
 
-    &__about {
-        margin-top:-2rem;
-        color:$color-white;
-        font-size:4rem;
+    &__header {
+        color:$color-secondary;
+        font-size:$font-section;
         text-align:center;
-        line-height: normal;
-        margin-bottom:3rem;
+        margin: auto auto -1vw auto;
+        padding: auto;
+        font-family: 'Langar', cursive;
+    }
+
+    &__horizontal {
+        width: 10vw;
+        margin:auto;
+        height:10px;
+        border-radius: 7px;
+        background-color:$color-secondary;
+        border-color:$color-secondary;
     }
     
 }

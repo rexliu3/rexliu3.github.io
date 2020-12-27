@@ -40,7 +40,7 @@ const AboutMe = () => {
           />
           <div className="aboutme__content__description__text">
             <h3 className="aboutme__content__description__text__title">
-              all about Rex Liu
+              Rex Liu
             </h3>
             <p className="aboutme__content__description__text__text">Hello! I’m Rex, a Computer Science Student at UC Berkeley. I'm excited to learn new things, challenge myself, and use technology to make an impact. My interests are very diverse and I love learning more about different technologies and tools. After picking up web development over the summer and interning at several global startups as a web developer including RISE and Investocracy, I began learning Tensorflow and exploring the Alpaca Trading API to develop a Stock Trading Bot as a personal project. I expanded on this idea as a Data Scientist at the Data Science Society at Berkeley this past semester where I worked to develop a more robust stock analyzing model.</p>
             <p>&nbsp;</p>

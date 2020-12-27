@@ -99,11 +99,11 @@ class MainPage extends React.Component {
       helper(2)
     }
 
-    if (window.scrollY < 3000 && window.scrollY > 2000 ) {
+    if (window.scrollY < 3200 && window.scrollY > 2000 ) {
       helper(3)
     }
 
-    if (window.scrollY < 4000 && window.scrollY > 3000 ) {
+    if (window.scrollY < 4000 && window.scrollY > 3200 ) {
       helper(4)
     }
 

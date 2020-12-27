@@ -8,7 +8,8 @@
   -o-background-size: cover;
   background-size: cover;*/
     background-color: $color-white;
-    margin: 50vw auto auto auto;
+    margin: 55vw auto auto auto;
+    padding-top:4vw;
 
 
     @include respond(big-desktop) {
@@ -53,12 +54,11 @@
 
             &__image {
                 height: 20vw;
-                widows: 20vw;
                 margin:auto;
             }
 
             &__text {
-                padding-right:4vw;
+                padding-right:5vw;
 
                 &__title {
                     font-size: $font-title;
