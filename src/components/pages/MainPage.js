@@ -4,7 +4,7 @@ import Experiences from "../sections/Experiences";
 import Projects from "../sections/Projects";
 //import { particlesJS } from particles.js;
 import Particles from "react-particles-js";
-import NavBar from "../layouts/Navbar"
+import NavBar from "../layouts/Navbar";
 
 var TxtType = function (el, toRotate, period) {
   this.toRotate = toRotate;
@@ -67,6 +67,56 @@ window.onload = function () {
 };
 
 class MainPage extends React.Component {
+  componentDidMount() {
+    window.addEventListener("scroll", this.handleScroll);
+    window.scrollTo(0,0);
+    document.querySelector(".navigation__link.firstNav").className = "navigation__link firstNav"
+    document.querySelector(".navigation__link.secondNav").className = "navigation__link secondNav"
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.handleScroll);
+  }
+
+
+  handleScroll = () => {
+    var helper = function(num) {
+        let i = 1
+        let dictions = {1: 'firstNav', 2: 'secondNav', 3: 'thirdNav', 4: 'fourthNav', 5: 'fifthNav', 6: 'sixthNav'}
+        while (i <= 6) {
+            let oldNameSelector = ".navigation__link." + dictions[i]
+            let newName = "navigation__link " + dictions[i]
+            if (i == num) {
+              newName += ' scrolled'
+            }
+            document.querySelector(oldNameSelector).className = newName
+            i += 1
+        }
+
+    }
+
+    if (window.scrollY < 2000) {
+      helper(2)
+    }
+
+    if (window.scrollY < 3000 && window.scrollY > 2000 ) {
+      helper(3)
+    }
+
+    if (window.scrollY < 4000 && window.scrollY > 3000 ) {
+      helper(4)
+    }
+
+    if (window.scrollY < 5000 && window.scrollY > 4000 ) {
+      helper(5)
+    }
+
+    if (window.scrollY < 6000 && window.scrollY > 5000 ) {
+      helper(6)
+    }
+
+  };
+
   render() {
     const togglePopup = () => {
       document.getElementById("popup").classList.toggle("active");
@@ -75,52 +125,52 @@ class MainPage extends React.Component {
 
     return (
       <main className="main">
-        <div className="animation" style={{ position: "absolute"}}>
+        <div className="animation" style={{ position: "absolute" }}>
           <Particles
             className="animation"
             params={{
               particles: {
-                  number: {
-                      value: 60,
-                      density: {
-                          enable: true,
-                          value_area: 1500
-                      }
+                number: {
+                  value: 60,
+                  density: {
+                    enable: true,
+                    value_area: 1500,
                   },
-                  line_linked: {
-                      enable: true,
-                      opacity: 0.5
+                },
+                line_linked: {
+                  enable: true,
+                  opacity: 0.5,
+                },
+                move: {
+                  direction: "center",
+                  speed: 5,
+                },
+                size: {
+                  value: 2,
+                },
+                opacity: {
+                  anim: {
+                    enable: true,
+                    speed: 1,
+                    opacity_min: 0.5,
                   },
-                  move: {
-                      direction: "center",
-                      speed: 5
-                  },
-                  size: {
-                      value: 2
-                  },
-                  opacity: {
-                      anim: {
-                          enable: true,
-                          speed: 1,
-                          opacity_min: 0.5
-                      }
-                  }
+                },
               },
               interactivity: {
-                  events: {
-                      onclick: {
-                          enable: true,
-                          mode: "push"
-                      }
+                events: {
+                  onclick: {
+                    enable: true,
+                    mode: "push",
                   },
-                  modes: {
-                      push: {
-                          particles_nb: 1
-                      }
-                  }
+                },
+                modes: {
+                  push: {
+                    particles_nb: 1,
+                  },
+                },
               },
-              retina_detect: true
-          }}
+              retina_detect: true,
+            }}
           />
 
           <header className="main__header">
@@ -128,54 +178,54 @@ class MainPage extends React.Component {
         <script src="particles.js"></script>
         <div class="count-particles"> <span class="js-count-particles">--</span> particles </div> <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script><script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
     */}
-              <h1 className="main__header__name">Rex Liu</h1>
-              <hr className="main__header__horizontal"></hr>
-              <div className="main__header__aboutOuter">
-                <h2 className="main__header__about">Hi, I am a&nbsp;</h2>
-                <h2 className="main__header__about">
-                  <div
-                    href=""
-                    class="typewrite"
-                    data-period="2000"
-                    data-type='[ "Leader.", "Tech.", "Learner." , "Web Developer"]'
-                  >
-                    <span class="wrap"></span>
-                  </div>
-                </h2>
-              </div>
-              <div className="main__header__logos">
-                <a
-                  href="https://github.com/rexliu3"
-                  className="main__header__logos__link"
+            <h1 className="main__header__name">Rex Liu</h1>
+            <hr className="main__header__horizontal"></hr>
+            <div className="main__header__aboutOuter">
+              <h2 className="main__header__about">Hi, I am a&nbsp;</h2>
+              <h2 className="main__header__about">
+                <div
+                  href=""
+                  class="typewrite"
+                  data-period="2000"
+                  data-type='[ "Leader.", "Tech.", "Learner." , "Web Developer"]'
                 >
-                  <img
-                    className="main__header__logos__logo"
-                    src="assets/GitHub-Logo.png"
-                  ></img>
-                </a>
-                <a
-                  href="https://linkedin.com/in/rexliu3"
-                  className="main__header__logos__link"
-                >
-                  <img
-                    className="main__header__logos__logo"
-                    src="assets/linkedin.png"
-                  ></img>
-                </a>
-                <a
-                  href="mailto: rexliu3@berkeley.edu"
-                  className="main__header__logos__link"
-                >
-                  <img
-                    className="main__header__logos__logo"
-                    src="assets/email3.png"
-                  ></img>
-                </a>
-              </div>
-
-              <a href="#AboutMe">
-                <div class="main__header__arrow bounce"></div>
+                  <span class="wrap"></span>
+                </div>
+              </h2>
+            </div>
+            <div className="main__header__logos">
+              <a
+                href="https://github.com/rexliu3"
+                className="main__header__logos__link"
+              >
+                <img
+                  className="main__header__logos__logo"
+                  src="assets/GitHub-Logo.png"
+                ></img>
               </a>
+              <a
+                href="https://linkedin.com/in/rexliu3"
+                className="main__header__logos__link"
+              >
+                <img
+                  className="main__header__logos__logo"
+                  src="assets/linkedin.png"
+                ></img>
+              </a>
+              <a
+                href="mailto: rexliu3@berkeley.edu"
+                className="main__header__logos__link"
+              >
+                <img
+                  className="main__header__logos__logo"
+                  src="assets/email3.png"
+                ></img>
+              </a>
+            </div>
+
+            <a href="#AboutMe">
+              <div class="main__header__arrow bounce"></div>
+            </a>
           </header>
         </div>
         <NavBar />

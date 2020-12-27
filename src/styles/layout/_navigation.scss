@@ -10,6 +10,7 @@
   margin-bottom: 10vh;
   height:initial;
   text-align: left;
+  padding-top: 4px;
 
   &__logo {
     width: 10%;
@@ -34,7 +35,7 @@
   }
 
   &__horizontal {
-    width: 100vw;
+    width: 99vw;
     display: flex;
     position: fixed;
     height: 5px;
@@ -82,6 +83,10 @@
     text-transform: uppercase;
     text-decoration: none;
     text-align: right;
+  }
+
+  &__link.scrolled {
+    color: $color-primary;
   }
 
   &__link:hover {
