@@ -1,0 +1,52 @@
+.experience {
+    width:55vw;
+    height:fit-content;
+    display:grid;
+    margin:auto;
+    border-radius: 0.5vw;
+    grid-template-columns: 5vw 50vw;
+    background-color: $color-background-third;
+    margin-bottom: 3rem;
+    padding:1rem;
+
+    &__image {
+        height:4vw;
+        width:4vw;
+        border-radius:0.5vw;
+        vertical-align: top;
+        margin: auto;
+        display:flex;
+        margin-top: 0.5vw;
+        
+    }
+
+    &__content {
+        display:block;
+        margin-left:1rem;
+
+        &__header {
+            display:inline-block;
+            color:$color-black;
+            font-size: $font-subtitle;
+            text-align:left;
+        }
+
+        &__date {
+            font-size: $font-text;
+            color:$color-black;
+            margin: -1rem 0rem -2rem 0rem;
+        }
+
+        &__description {
+            font-size: $font-text;
+            color:$color-black;
+            position: relative;
+            line-height: 2.5rem;
+            
+            &__item {
+                margin-left: 3.5rem;
+            }
+        }
+    }
+
+}

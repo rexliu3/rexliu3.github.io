@@ -1,0 +1,25 @@
+.icon {
+    display: block;
+    margin:auto;
+
+    &__image {
+        height: 10vw;
+        width: 10vw;
+    }
+
+    &__title {
+        margin-top:- 1vw;
+        font-size: $font-title;
+        color:$color-secondary;
+    }
+
+    &__subtitle {
+        margin-top: -0.5vw;
+        font-size: $font-subtitle;
+        overflow: visible;
+        word-wrap: break-word;
+        white-space: initial;
+        color:$color-secondary;
+        line-height: normal;
+    }
+}

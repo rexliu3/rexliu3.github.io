@@ -1,12 +1,11 @@
 .experiences {
-    width:99vw;
     padding-bottom: 2rem;
     background-color: $color-background-secondary;
     padding-top:3vw;
 
 
     @include respond(big-desktop) {
-        padding: 2vw;
+        padding-top: 2vw;
     }
 
     &__header {

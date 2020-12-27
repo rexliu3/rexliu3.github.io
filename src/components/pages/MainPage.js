@@ -103,6 +103,7 @@ class MainPage extends React.Component {
       helper(3)
     }
 
+    // Experiences
     if (window.scrollY < 4000 && window.scrollY > 3200 ) {
       helper(4)
     }

@@ -1,5 +1,4 @@
 .aboutme {
-    width:99vw;
     height:fit-content;
     padding-bottom: 2rem;
     /*background: url('../../assets/Header-Background6.jpg') no-repeat center center; 
@@ -10,6 +9,7 @@
     background-color: $color-white;
     margin: 55vw auto auto auto;
     padding-top:4vw;
+    border:0;
 
 
     @include respond(big-desktop) {
