@@ -1,4 +1,9 @@
 import React from "react";
+import Hexagon from "react-hexagon";
+import Icon from "../layouts/Icon";
+import Button from '@material-ui/core/Button';
+
+
 
 const AboutMe = () => {
   
@@ -16,74 +21,41 @@ const AboutMe = () => {
 
   return (
     <div className="aboutme">
-      <div className="popup" id="popup">
-        <div className="overlay"></div>
-        <div className="content">
-          <div className="close-btn" onClick=
-          {() => {
-            togglePopup();
-          }}>&times;</div>
-          <h2 className="header">Education</h2>
-          <img className="logo" src="assets/Berkeley-Seal.png"></img>
-          <br></br>
-          <p className="bodycolor">University:&nbsp;</p>
-          <p className="body">University of California, Berkeley</p>
-          <br></br>
-          <p className="bodycolor">Major:&nbsp;</p>
-          <p className="body">Computer Science</p>
-          <br></br>
-          <p className="bodycolor">Graduation Year:&nbsp;</p>
-          <p className="body">2024</p>
-          <br></br>
-          <p className="bodycolor">GPA:&nbsp;</p>
-          <p className="body">N/A</p>
-        </div>
-      </div>
-
-      <h1 className="aboutme__header">About Me</h1>
-      <h2 className="aboutme__about">Learn More About Me!</h2>
+      <h1 className="aboutme__header">About</h1>
+      <hr className="aboutme__horizontal"></hr>
       <div className="aboutme__content">
-        <div className="aboutme__content__education">
-          <h2 className="aboutme__content__education__title">Education</h2>
-          <a onClick=
-          {() => {
-            togglePopup();
-          }}>
-            <div className="aboutme__content__education__content" id="blur">
-              <img src="assets/Education.png"></img>
-            </div>
-          </a>
+          <div className="aboutme__content__icons">
+            <Icon data={["assets/lead1.png", "Leader", "sjtjalj lajgljaljgalhahahdfhsd ghdhwshrhrwth"]}/>
+            <Icon data={["assets/linkedin.png", "Tech", "sjtjalj lajgljaljgalhahahdfhsd ghdhwshrhrwth"]}/>
+            <Icon data={["assets/linkedin.png", "Learner", "sjtjalj lajgljaljgalhahahdfhsd ghdhwshrhrwth"]}/>
+            <Icon data={["assets/linkedin.png", "Web Developer", "sjtjalj lajgljaljgalhahahdfhsd ghdhwshrhrwth"]}/>
         </div>
-        <div className="aboutme__content__central">
-          <div className="aboutme__content__central__experiences">
-            <h2 className="aboutme__content__central__experiences__title">
-              Experiences
-            </h2>
-            <a href="#Experiences">
-              <div className="aboutme__content__central__experiences__content">
-                <img src="assets/Experiences.png"></img>
-              </div>
+        <div className="aboutme__content__description">
+          <Hexagon 
+            className="aboutme__content__description__image"
+            style={{strokeWidth: '10', stroke:'#63A9AE'}}
+            backgroundImage="assets/Profile-Picture.jpg"
+            flatTop='True'
+            backgroundScale='1'
+          />
+          <div className="aboutme__content__description__text">
+            <h3 className="aboutme__content__description__text__title">
+              all about Rex Liu
+            </h3>
+            <p className="aboutme__content__description__text__text">Hello! I’m Rex, a Computer Science Student at UC Berkeley. I'm excited to learn new things, challenge myself, and use technology to make an impact. My interests are very diverse and I love learning more about different technologies and tools. After picking up web development over the summer and interning at several global startups as a web developer including RISE and Investocracy, I began learning Tensorflow and exploring the Alpaca Trading API to develop a Stock Trading Bot as a personal project. I expanded on this idea as a Data Scientist at the Data Science Society at Berkeley this past semester where I worked to develop a more robust stock analyzing model.</p>
+            <p>&nbsp;</p>
+            <p className="aboutme__content__description__text__text">So where am I today?</p>
+            <p className="aboutme__content__description__text__text">With extensive experience leading tech teams of 10+ interns and developing several web and mobile applications, I’ve become proficient developing and managing both the frontend and backend of mobile and web applications with tools such as React, HTML, CSS, Redux, SQL and more. I have strong leadership and collaboration skills in a software development environment and am looking to work on revolutionary products.</p>
+            <p>&nbsp;</p>
+            <p className="aboutme__content__description__text__text">If I’m not building a project behind the screen, you could find me learning the latest Chess strategies, practicing my Tennis skills, or competing in badminton tournaments. </p>
+            <p className="aboutme__content__description__text__text">If you’d like to witness my abilities firsthand, please feel free to reach out to me for Summer 2021 opportunities! </p>
+
+            <a className="aboutme__content__description__text__link" href="assets/Resume_Rex.pdf" download>
+              <Button className="aboutme__content__description__text__button" variant="outlined" style={{marginTop:'1vw', borderColor: '#63A9AE', borderWidth: '5px', fontWeight:'bolder', fontSize:'1.5rem', textTransform: 'capitalize'}}>
+                Resume
+              </Button>
             </a>
           </div>
-          <div className="aboutme__content__central__projects">
-            <h2 className="aboutme__content__central__projects__title">
-              Projects
-            </h2>
-            <a href="#Projects">
-              <div className="aboutme__content__central__projects__content">
-                <img src="assets/Projects.png"></img>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div className="aboutme__content__resume">
-          <h2 className="aboutme__content__resume__title">Resume</h2>
-          {/*<---------TODO Update Resume--------->*/}
-          <a href="assets/Resume_RexLiu.pdf" download>
-          <div className="aboutme__content__resume__content">
-              <img src="assets/Resume.png"></img>
-          </div>
-          </a>
         </div>
       </div>
     </div>

@@ -197,6 +197,8 @@ class MainPage extends React.Component {
               <a
                 href="https://github.com/rexliu3"
                 className="main__header__logos__link"
+                target="_blank" 
+                rel="noopener noreferrer"
               >
                 <img
                   className="main__header__logos__logo"
@@ -206,6 +208,8 @@ class MainPage extends React.Component {
               <a
                 href="https://linkedin.com/in/rexliu3"
                 className="main__header__logos__link"
+                target="_blank" 
+                rel="noopener noreferrer"
               >
                 <img
                   className="main__header__logos__logo"
@@ -215,6 +219,7 @@ class MainPage extends React.Component {
               <a
                 href="mailto: rexliu3@berkeley.edu"
                 className="main__header__logos__link"
+                rel="noopener noreferrer"
               >
                 <img
                   className="main__header__logos__logo"

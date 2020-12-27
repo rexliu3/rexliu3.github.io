@@ -16,10 +16,8 @@
         position: relative;
 
         &__name {
-            //padding-top:10vw;     
-            //padding-left:38vw;
             color:$color-white;
-            font-size:20rem;
+            font-size:$font-header;
             text-align: center;
             padding-top:5vw;
             margin: auto auto -5vw auto;
