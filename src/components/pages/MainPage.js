@@ -4,6 +4,7 @@ import Experiences from "../sections/Experiences";
 import Projects from "../sections/Projects";
 //import { particlesJS } from particles.js;
 import Particles from "react-particles-js";
+import NavBar from "../layouts/Navbar"
 
 var TxtType = function (el, toRotate, period) {
   this.toRotate = toRotate;
@@ -172,12 +173,12 @@ class MainPage extends React.Component {
                 </a>
               </div>
 
-              <a href="#">
+              <a href="#AboutMe">
                 <div class="main__header__arrow bounce"></div>
               </a>
           </header>
         </div>
-
+        <NavBar />
         <div class="main__AboutMe" id="AboutMe">
           <AboutMe />
         </div>
