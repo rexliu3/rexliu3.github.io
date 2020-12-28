@@ -4,8 +4,15 @@
     width:15vw;
 
     &__image {
-        height: 10vw;
-        width: 10vw;
+        &__outer {
+            height: 15vw;
+            width: 15vw;
+        }
+
+        &__inner {
+            height: 5vw;
+            width: 5vw;
+        }
     }
 
     &__title {
@@ -24,3 +31,51 @@
         line-height: normal;
     }
 }
+
+.hex-wrap {
+    display: inline-block;
+    height: 80px;
+    position: relative;
+    text-align: center;
+    width: 80px;
+  }
+  
+  .hexagon {
+    background-color: #04c2c9;
+    display: inline-block;
+    height: 100%;
+    width: calc(100% * 0.57735);
+
+    &__before {
+        background-color: inherit;
+        content: "";
+        height: inherit;
+        position: absolute;
+        right: calc((100% / 2) - ((100% * 0.57735) / 2));
+        top: 0;
+        transform: rotateZ(60deg);
+        width: inherit;
+    }
+
+    &__after {
+        background-color: inherit;
+        content: "";
+        height: inherit;
+        position: absolute;
+        right: calc((100% / 2) - ((100% * 0.57735) / 2));
+        top: 0;
+        transform: rotateZ(-60deg);
+        width: inherit;
+    }
+
+    &__image {
+        display: inline-block;
+        font: normal normal normal 24px/1 "Material Design Icons";
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        transform: translate(0, 0);
+    }
+
+  }

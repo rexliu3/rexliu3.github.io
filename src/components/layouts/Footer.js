@@ -5,84 +5,56 @@ class Footer extends Component {
   render() {
     return (
       <footer className="main__footer">
-        <div id="newline">
-          {/*} className="divider" id="footerOne" viewBox="0 0 100 100" preserveAspectRatio="none">
-            <path d="M0 0 L50 100 L100 0 Z"></path>
-          </svg>*/}
-          <div className="divider" id="footerOne" />
-          <ul className="main__footer__navitems">
-            <li className="main__footer__item">
+        <div classname="main__footer__arrow"></div>
+        <div id="main__footer__icons">
               <a
-                className="main__footer__link"
+                className="main__footer__icons__link"
                 href="https://linkedin.com/in/rexliu3"
                 target="_blank"
               >
-                <img
-                  className="main__footer__logo"
-                  src="assets/linkedin.png"
-                ></img>
+                <div className="main__footer__icons__icon">
+                    <img
+                    className="main__footer__icons__logo"
+                    src="assets/linkedin.png"
+                    ></img>
+                </div>
               </a>
-            </li>
-            <li className="main__footer__item">
               <a
-                className="main__footer__link"
+                className="main__footer__icons__link"
                 href="https://github.com/rexliu3"
                 target="_blank"
               >
-                <img
-                  className="main__footer__logo"
-                  src="assets/github.png"
-                ></img>
+                <div className="main__footer__icons__icon">
+                    <img
+                    className="main__footer__icons__logo"
+                    src="assets/github.png"
+                    ></img>
+                </div>
               </a>
-            </li>
-            <li className="main__footer__item">
               <a
-                className="main__footer__link"
+                className="main__footer__icons__link"
                 href="https://instagram.com/rexliu3"
                 target="_blank"
               >
-                <img
-                  className="main__footer__logo"
-                  src="assets/instagram.png"
-                ></img>
+                <div className="main__footer__icons__icon">
+                    <img
+                    className="main__footer__icons__logo"
+                    src="assets/instagram.png"
+                    ></img>
+                </div>
               </a>
-            </li>
-            <li className="main__footer__item">
               <a
-                className="main__footer__link"
+                className="main__footer__icons__link"
                 href="https://facebook.com/rexliu333"
                 target="_blank"
               >
-                <img
-                  className="main__footer__logo"
-                  src="assets/facebook.png"
-                ></img>
+                <div className="main__footer__icons__icon">
+                    <img
+                    className="main__footer__icons__logo"
+                    src="assets/facebook.png"
+                    ></img>
+                </div>
               </a>
-            </li>
-          </ul>
-
-          <ul className="main__footer__nav">
-            <li className="main__footer__item">
-              <a className="main__footer__link" href="#AboutMe">
-                About
-              </a>
-            </li>
-            <li className="main__footer__item">
-              <a className="main__footer__link" href="#Experiences">
-                Experiences
-              </a>
-            </li>
-            <li className="main__footer__item">
-              <a className="main__footer__link" href="#Projects">
-                Projects
-              </a>
-            </li>
-            <li className="main__footer__item">
-              <a className="main__footer__link" href="/">
-                Skills
-              </a>
-            </li>
-          </ul>
         </div>
       </footer>
     );

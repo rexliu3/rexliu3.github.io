@@ -10,10 +10,10 @@ const Interests = () => {
         <div className="interests__content__icons">
           <Icon
             data={[
-              "assets/chess.jpeg",
+              "assets/chess.png",
               "Chess",
               "chess.com Ratings: Rapid(912) Puzzles(1460)",
-              '1.1'
+              '0.75'
             ]}
           />
           <Icon

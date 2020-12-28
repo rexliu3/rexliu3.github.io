@@ -2,12 +2,11 @@
   /*background-image:
             url('../../assets/Footer-Background.png');
         background-repeat: no-repeat;*/
-  background: url("../../assets/Header-Background5.jpg") no-repeat center center;
+  /*background: url("../../assets/Header-Background5.jpg") no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
-  height: 100vh;
+  background-size: cover;*/
   width: 100%;
   display: flex;
   justify-content: center;
@@ -15,53 +14,78 @@
   color: $color-white;
   margin: auto;
   transition: top 0.3s;
+  background-color: $color-background;
+  height: fit-content;
+  padding: 70px 0 50px 0;
+  position: relative;
 
-  &__navitems {
-    list-style-type: none;
-    width: 100%;
-    margin-bottom: 2rem;
+  &__arrow {
+    background: #e31b6d;
+    cursor: pointer;
+    font-size: 30pt;
+    height: 50px;
+    left: 0;
+    line-height: 40pt;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    top: -25px;
+    transition: background 0.5s;
+    width: 47px;
+    display: inline-block;
+    font: normal normal normal 24px/1 "Material Design Icons";
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    transform: translate(0, 0);
+  }
+
+  &__icons {
+    display:flex;
+    flex-direction: row;
     align-items: center;
-    justify-items: center;
-    align-content: center;
     justify-content: center;
-    align-self: center;
-    justify-self: center;
-    position: relative;
-    padding-top: 5vw;
-    padding-left: 33vw;
-  }
-  
-  &__nav {
-    list-style-type: none;
-    width: 100%;
-    margin-bottom: 2rem;
-    align-items: center;
-    justify-items: center;
-    align-content: center;
-    justify-content: center;
-    align-self: center;
-    justify-self: center;
-    position: relative;
-    padding-left: 22.5vw;
-  }
+    margin-bottom: 20vw;    
 
-  &__item {
-    display: inline;
-  }
+    &__icon {
+      cursor: pointer;
+      font-size: 18pt;
+      height: 55px;
+      margin: 0 15px;
+      overflow: hidden;
+      position: relative;
+      text-align: center;
+      width: 55px;
+      align-items: center;
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: center;
+    }
 
-  &__link {
-    margin-right: 0rem;
-    padding: 1rem 3rem;
-    font-size: 2.5rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: $color-white;
-  }
+    &__logo {
+      display: inline-block;
+      font: normal normal normal 24px/1 "Material Design Icons";
+      font-size: inherit;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      transform: translate(0, 0);
+      color: #fff;
+      text-align: center;
+      cursor: pointer;
+      height: 55px;
+      width: 55px;
+    }
 
-  &__logo {
-    height: 4vw;
-    width: 4vw;
+    &__link {
+      text-decoration: none;
+    }
+
+    &__link:hover {
+      color: $color-secondary;
+      transition: all 0.5s;
+      text-decoration: none;
+    }
+
   }
 
   &__logo:hover {
@@ -70,12 +94,6 @@
     box-shadow: 0px 0px 25px 0px rgba(255, 255, 255, 1);
     border-radius: 40%;
     transition: all 1s;
-  }
-
-  &__link:hover {
-    color: $color-secondary;
-    transition: all 0.5s;
-    text-decoration: none;
   }
 
   /*@include respond(tab-land) {
@@ -117,9 +135,4 @@
       }
     }
   }*/
-}
-
-#newline {
-  width: 99vw;
-  display: block;
 }

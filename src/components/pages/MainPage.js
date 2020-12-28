@@ -5,8 +5,6 @@ import Projects from "../sections/Projects";
 import Courses from "../sections/Courses";
 import Interests from "../sections/Interests";
 
-import {isMobile} from 'react-device-detect';
-
 import Particles from "react-particles-js";
 import NavBar from "../layouts/Navbar";
 import Footer from "../layouts/Footer";
