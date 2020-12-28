@@ -8,15 +8,17 @@ const Icon = (props) => {
 [0] : Image Location
 [1] : Title
 [2] : Subtitle
+[3] : Background Scale
  */
 
   return (
     <section className="icon">
         <Hexagon
             className="icon__image"
-            style={{strokeWidth: '2', fill: '#63A9AE'}}
+            style={{strokeWidth: '0'}}
             backgroundImage={data[0]}
             flatTop='True'
+            backgroundScale={data.length == 4 && (data[3])}
         />
         <h3 className="icon__title">
             {data[1]}

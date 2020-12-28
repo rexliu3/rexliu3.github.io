@@ -1,6 +1,7 @@
 .icon {
     display: block;
-    margin:auto;
+    margin:0 auto;
+    width:15vw;
 
     &__image {
         height: 10vw;
@@ -8,7 +9,7 @@
     }
 
     &__title {
-        margin-top:- 1vw;
+        margin-top: -1vw;
         font-size: $font-title;
         color:$color-secondary;
     }

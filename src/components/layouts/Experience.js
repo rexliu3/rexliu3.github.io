@@ -20,7 +20,7 @@ const Experience = (props) => {
         </a>
         <div className="experience__content">
           <h3 className="experience__content__header">{data[0]}</h3>
-          <p className="experience__content__date"><strong>{data[2]}</strong> &#9679; {data[3]}</p>
+          <p className="experience__content__date"><strong>{data[2]} |</strong> {data[3]}</p>
           <br />
           <hr className="experience__content__horizontal"/>
           <ul className="experience__content__description">

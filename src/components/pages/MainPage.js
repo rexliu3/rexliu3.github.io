@@ -3,8 +3,13 @@ import AboutMe from "../sections/AboutMe";
 import Experiences from "../sections/Experiences";
 import Projects from "../sections/Projects";
 import Courses from "../sections/Courses";
+import Interests from "../sections/Interests";
+
+import {isMobile} from 'react-device-detect';
+
 import Particles from "react-particles-js";
 import NavBar from "../layouts/Navbar";
+import Footer from "../layouts/Footer";
 
 var TxtType = function (el, toRotate, period) {
   this.toRotate = toRotate;
@@ -80,8 +85,7 @@ class MainPage extends React.Component {
 
 
   handleScroll = () => {
-    function $(id) { return document.getElementById(id); }
-    $ = document.getElementById.bind(document)
+    var $ = document.getElementById;
 
     var helper = function(num) {
         let i = 1
@@ -98,29 +102,33 @@ class MainPage extends React.Component {
 
     }
 
-    /*var pos = $(window).scrollTop();
-    var pos2 = pos + 50;
-    var scrollBottom = pos + $(window).height();
+    var pos2 = window.scrollY + 15;
 
     // Link Highlighting
-    if (pos2 > $('#AboutMe').offset().top) {
-      helper(2)
+    if (pos2 > document.getElementById('Home').offsetTop) {
+      helper(1);
     }
-    if (pos2 > $('#portfolio').offset().top) {
-      helper(2)
+    if (pos2 > document.getElementById('AboutMe').offsetTop) {
+      helper(2);
     }
-    if (pos2 > $('#blog').offset().top) {
-      helper(2)
+    if (pos2 > document.getElementById('Experiences').offsetTop) {
+      helper(3);
     }
-
-    if (
-      pos2 > $('#contact').offset().top ||
-      pos + $(window).height() === $(document).height()
-    ) {
-      helper(2)
+    if (pos2 > document.getElementById('Projects').offsetTop) {
+      helper(4);
+    }
+    if (pos2 > document.getElementById('Courses').offsetTop) {
+      helper(5);
+    }
+    if (pos2 > document.getElementById('Interests').offsetTop) {
+      helper(6);
+    }
+    /*if (
+      pos2 > document.getElementById('Contact').offsetTop) {
+      helper(7)
     }*/
 
-    if (window.scrollY < 2000) {
+    /*if (window.scrollY < 2000) {
       helper(2)
     }
 
@@ -141,6 +149,10 @@ class MainPage extends React.Component {
       helper(6)
     }
 
+    if (window.scrollY < 7000 && window.scrollY > 6000 ) {
+      helper(7)
+    }*/
+
   };
 
   render() {
@@ -157,11 +169,14 @@ class MainPage extends React.Component {
             params={{
               particles: {
                 number: {
-                  value: 60,
+                  value: 80,
                   density: {
                     enable: true,
                     value_area: 1500,
-                  },
+                  }
+                },
+                  "color": {
+                      "value": "#63A9AE"
                 },
                 line_linked: {
                   enable: true,
@@ -172,7 +187,7 @@ class MainPage extends React.Component {
                   speed: 5,
                 },
                 size: {
-                  value: 2,
+                  value: 3,
                 },
                 opacity: {
                   anim: {
@@ -199,7 +214,7 @@ class MainPage extends React.Component {
             }}
           />
 
-          <header className="main__header">
+          <header className="main__header" id="Home">
             {/*<div id="particles-js"></div>
         <script src="particles.js"></script>
         <div class="count-particles"> <span class="js-count-particles">--</span> particles </div> <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script><script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
@@ -276,87 +291,10 @@ class MainPage extends React.Component {
           <Courses />
         </div>
 
-        <footer className="main__footer">
-          <div id="newline">
-            {/*} className="divider" id="footerOne" viewBox="0 0 100 100" preserveAspectRatio="none">
-            <path d="M0 0 L50 100 L100 0 Z"></path>
-          </svg>*/}
-            <div className="divider" id="footerOne" />
-            <ul className="main__footer__navitems">
-              <li className="main__footer__item">
-                <a
-                  className="main__footer__link"
-                  href="https://linkedin.com/in/rexliu3"
-                  target="_blank"
-                >
-                  <img
-                    className="main__footer__logo"
-                    src="assets/linkedin.png"
-                  ></img>
-                </a>
-              </li>
-              <li className="main__footer__item">
-                <a
-                  className="main__footer__link"
-                  href="https://github.com/rexliu3"
-                  target="_blank"
-                >
-                  <img
-                    className="main__footer__logo"
-                    src="assets/github.png"
-                  ></img>
-                </a>
-              </li>
-              <li className="main__footer__item">
-                <a
-                  className="main__footer__link"
-                  href="https://instagram.com/rexliu3"
-                  target="_blank"
-                >
-                  <img
-                    className="main__footer__logo"
-                    src="assets/instagram.png"
-                  ></img>
-                </a>
-              </li>
-              <li className="main__footer__item">
-                <a
-                  className="main__footer__link"
-                  href="https://facebook.com/rexliu333"
-                  target="_blank"
-                >
-                  <img
-                    className="main__footer__logo"
-                    src="assets/facebook.png"
-                  ></img>
-                </a>
-              </li>
-            </ul>
-
-            <ul className="main__footer__nav">
-              <li className="main__footer__item">
-                <a className="main__footer__link" href="#AboutMe">
-                  About
-                </a>
-              </li>
-              <li className="main__footer__item">
-                <a className="main__footer__link" href="#Experiences">
-                  Experiences
-                </a>
-              </li>
-              <li className="main__footer__item">
-                <a className="main__footer__link" href="#Projects">
-                  Projects
-                </a>
-              </li>
-              <li className="main__footer__item">
-                <a className="main__footer__link" href="/">
-                  Skills
-                </a>
-              </li>
-            </ul>
-          </div>
-        </footer>
+        <div class="main__Interests" id="Interests">
+          <Interests />
+        </div>
+      <Footer />
       </main>
     );
   }

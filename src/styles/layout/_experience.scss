@@ -3,7 +3,7 @@
     height:fit-content;
     display:grid;
     margin:auto;
-    border-radius: 0.5vw;
+    border-radius: $border-radius;
     grid-template-columns: 5vw 60vw;
     background-color: $color-background-third;
     margin-bottom: 3rem;
@@ -26,21 +26,21 @@
 
         &__header {
             display:inline-block;
-            color:$color-black;
+            color:$color-secondary;
             font-size: $font-subtitle;
             text-align:left;
         }
 
         &__date {
             font-size: $font-text;
-            color:$color-black;
+            color:$color-secondary;
             margin: -1rem 0rem -2rem 0rem;
         }
 
         &__horizontal {
-            width: 87%;
+            width: 40%;
             /* border: 1px #63A9AE; */
-            height: 1px;
+            height: 2px;
             border: 0;
             background-color: $color-primary;
         }
@@ -48,7 +48,7 @@
 
         &__description {
             font-size: $font-text;
-            color:$color-black;
+            color:$color-secondary;
             position: relative;
             line-height: 2.5rem;
 
