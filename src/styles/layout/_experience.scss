@@ -1,10 +1,10 @@
 .experience {
-    width:55vw;
+    width: 60vw;
     height:fit-content;
     display:grid;
     margin:auto;
     border-radius: 0.5vw;
-    grid-template-columns: 5vw 50vw;
+    grid-template-columns: 5vw 60vw;
     background-color: $color-background-third;
     margin-bottom: 3rem;
     padding:1rem;
@@ -37,15 +37,33 @@
             margin: -1rem 0rem -2rem 0rem;
         }
 
+        &__horizontal {
+            width: 87%;
+            /* border: 1px #63A9AE; */
+            height: 1px;
+            border: 0;
+            background-color: $color-primary;
+        }
+
+
         &__description {
             font-size: $font-text;
             color:$color-black;
             position: relative;
             line-height: 2.5rem;
-            
+
             &__item {
                 margin-left: 3.5rem;
             }
+        }
+
+        ul li::before {
+            content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+            color: $color-primary; /* Change the color */
+            font-weight: bold; /* If you want it to be bold */
+            display: inline-block; /* Needed to add space between the bullet and the text */
+            width: 1em; /* Also needed for space (tweak if needed) */
+            margin-left: -1em; /* Also needed for space (tweak if needed) */
         }
     }
 

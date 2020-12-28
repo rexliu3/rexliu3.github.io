@@ -39,3 +39,7 @@ body {
   background-color: $color-black;
   color: $color-primary;
 }
+
+ul {
+  list-style: none; /* Remove default bullets */
+}

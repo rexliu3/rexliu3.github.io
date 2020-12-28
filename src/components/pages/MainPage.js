@@ -2,7 +2,7 @@ import React from "react";
 import AboutMe from "../sections/AboutMe";
 import Experiences from "../sections/Experiences";
 import Projects from "../sections/Projects";
-//import { particlesJS } from particles.js;
+import Courses from "../sections/Courses";
 import Particles from "react-particles-js";
 import NavBar from "../layouts/Navbar";
 
@@ -80,6 +80,9 @@ class MainPage extends React.Component {
 
 
   handleScroll = () => {
+    function $(id) { return document.getElementById(id); }
+    $ = document.getElementById.bind(document)
+
     var helper = function(num) {
         let i = 1
         let dictions = {1: 'firstNav', 2: 'secondNav', 3: 'thirdNav', 4: 'fourthNav', 5: 'fifthNav', 6: 'sixthNav'}
@@ -95,11 +98,33 @@ class MainPage extends React.Component {
 
     }
 
+    /*var pos = $(window).scrollTop();
+    var pos2 = pos + 50;
+    var scrollBottom = pos + $(window).height();
+
+    // Link Highlighting
+    if (pos2 > $('#AboutMe').offset().top) {
+      helper(2)
+    }
+    if (pos2 > $('#portfolio').offset().top) {
+      helper(2)
+    }
+    if (pos2 > $('#blog').offset().top) {
+      helper(2)
+    }
+
+    if (
+      pos2 > $('#contact').offset().top ||
+      pos + $(window).height() === $(document).height()
+    ) {
+      helper(2)
+    }*/
+
     if (window.scrollY < 2000) {
       helper(2)
     }
 
-    if (window.scrollY < 3200 && window.scrollY > 2000 ) {
+    if (window.scrollY < 3200 && window.scrollY > 2000) {
       helper(3)
     }
 
@@ -245,6 +270,10 @@ class MainPage extends React.Component {
 
         <div class="main__Projects" id="Projects">
           <Projects />
+        </div>
+
+        <div class="main__Courses" id="Courses">
+          <Courses />
         </div>
 
         <footer className="main__footer">

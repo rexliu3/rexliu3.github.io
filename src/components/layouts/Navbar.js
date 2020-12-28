@@ -49,7 +49,7 @@ class Navbar extends Component {
               </li>
 
               <li className="navigation__item">
-                <a className="navigation__link fifthNav" href="/">
+                <a className="navigation__link fifthNav" href="#Courses">
                   Courses
                 </a>
               </li>
