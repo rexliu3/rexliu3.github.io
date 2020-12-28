@@ -1,0 +1,47 @@
+.courses {
+    padding-bottom: 2rem;
+    background-color: $color-background-secondary;
+    padding-top:4vw;
+
+
+    @include respond(big-desktop) {
+        padding-top: 2vw;
+    }
+
+    &__header {
+        color:$color-secondary;
+        font-size:$font-section;
+        text-align:center;
+        margin: auto auto -2vw auto;
+        padding: auto;
+        font-family: 'Langar', cursive;
+    }
+
+    &__subheader {
+        color:$color-secondary;
+        font-size:$font-subsection;
+        text-align:center;
+        padding: auto;
+        font-family: 'Langar', cursive;
+        margin: auto;
+    }
+
+
+    &__horizontal {
+        width: 10vw;
+        margin:auto;
+        height:10px;
+        border-radius: 7px;
+        background-color:$color-secondary;
+        border-color:$color-secondary;
+    }
+
+    &__content {
+        margin: 2vw auto auto auto;
+        display:grid;
+        grid-template-columns: 50% 50%;
+        justify-content: center;
+    }
+    
+
+}
