@@ -15,10 +15,11 @@ const Icon = (props) => {
     <section className="icon">
         <Hexagon
             className="icon__image__outer"
+            data-animation="flip-in-x"
             style={{strokeWidth: '0', fill: ' #63A9AE'}}
             flatTop='True'
             children = {
-              <Hexagon className="icon__image__inner" backgroundImage="assets/leads.png" 
+              <Hexagon className="icon__image__inner flip-in-x" backgroundImage="assets/leads.png" 
                 backgroundScale='0.5'
                 flatTop='True'
                 backgroundHeight="4"

@@ -70,14 +70,12 @@
                 margin:auto 1vw auto 1vw;
                 display: inline-flex;
                 z-index: 999999999999 !important;
+                color: $color-primary;
             }
 
             &__logo:hover {
-                -webkit-box-shadow: 0px 0px 10px 0px rgba(255,255,255,1);
-                -moz-box-shadow: 0px 0px 10px 0px rgba(255,255,255,1);
-                box-shadow: 0px 0px 10px 0px rgba(255,255,255,1);
+                transform: scale(1.2);
                 transition: all 0.5s;
-                border-radius: 20%;
             }
         }
         

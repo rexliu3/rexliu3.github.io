@@ -21,7 +21,7 @@ const AboutMe = () => {
 
   return (
     <div className="aboutme">
-      <h1 className="aboutme__header">About</h1>
+      <h1 className="aboutme__header" data-animation="slide-in-left" data-delay=".5s">About</h1>
       <hr className="aboutme__horizontal"></hr>
       <div className="aboutme__content">
           <div className="aboutme__content__icons">
@@ -51,9 +51,9 @@ const AboutMe = () => {
             <p className="aboutme__content__description__text__text">If you’d like to witness my abilities firsthand, please feel free to reach out to me for Summer 2021 opportunities! </p>
 
             <a className="aboutme__content__description__text__link" href="assets/Resume_Rex.pdf" download>
-              <Button className="aboutme__content__description__text__button" variant="outlined" style={{marginTop:'1vw', borderColor: '#63A9AE', borderWidth: '5px', fontWeight:'bolder', fontSize:'1.5rem', textTransform: 'capitalize'}}>
+              <button className="aboutme__content__description__text__button">
                 Resume
-              </Button>
+              </button>
             </a>
           </div>
         </div>

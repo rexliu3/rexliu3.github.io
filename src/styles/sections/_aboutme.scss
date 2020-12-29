@@ -1,11 +1,6 @@
 .aboutme {
     height:fit-content;
     padding-bottom: 2rem;
-    /*background: url('../../assets/Header-Background6.jpg') no-repeat center center; 
-        -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;*/
     background-color: $color-white;
     margin: 55vw auto auto auto;
     padding-top:4vw;
@@ -73,11 +68,29 @@
                 }
 
                 &__button {
+                    cursor: pointer;
                     width: 8vw;
                     height: 3vw;
+                    margin-top:1vw;
+                    font-weight:bold;
+                    font-size:1.5rem;
+                    text-transform: capitalize;
+                    box-shadow: none;
                     border-color: $color-primary;
-                    border-width: thick;
+                    border-style: solid;
+                    border-width: 3px;
+                    color: $color-primary;
+                    background-color: transparent;
+                    border-radius: 5%;
                 }
+
+                &__button:hover {
+                    transform: scale(1.05);
+                    background-color: $color-background-secondary;
+                    transition: all 0.5s;
+                }
+
+
             }
         }
 

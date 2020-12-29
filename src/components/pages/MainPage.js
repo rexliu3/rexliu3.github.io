@@ -9,6 +9,10 @@ import Particles from "react-particles-js";
 import NavBar from "../layouts/Navbar";
 import Footer from "../layouts/Footer";
 
+import GitHubIcon from '@material-ui/icons/GitHub';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import EmailIcon from '@material-ui/icons/Email';
+
 var TxtType = function (el, toRotate, period) {
   this.toRotate = toRotate;
   this.el = el;
@@ -121,36 +125,6 @@ class MainPage extends React.Component {
     if (pos2 > document.getElementById('Interests').offsetTop) {
       helper(6);
     }
-    /*if (
-      pos2 > document.getElementById('Contact').offsetTop) {
-      helper(7)
-    }*/
-
-    /*if (window.scrollY < 2000) {
-      helper(2)
-    }
-
-    if (window.scrollY < 3200 && window.scrollY > 2000) {
-      helper(3)
-    }
-
-    // Experiences
-    if (window.scrollY < 4000 && window.scrollY > 3200 ) {
-      helper(4)
-    }
-
-    if (window.scrollY < 5000 && window.scrollY > 4000 ) {
-      helper(5)
-    }
-
-    if (window.scrollY < 6000 && window.scrollY > 5000 ) {
-      helper(6)
-    }
-
-    if (window.scrollY < 7000 && window.scrollY > 6000 ) {
-      helper(7)
-    }*/
-
   };
 
   render() {
@@ -239,10 +213,10 @@ class MainPage extends React.Component {
                 target="_blank" 
                 rel="noopener noreferrer"
               >
-                <img
+                <GitHubIcon 
                   className="main__header__logos__logo"
-                  src="assets/GitHub-Logo.png"
-                ></img>
+                  style={{height:'2.5vw',
+                  width:'2.5vw'}}/>
               </a>
               <a
                 href="https://linkedin.com/in/rexliu3"
@@ -250,20 +224,20 @@ class MainPage extends React.Component {
                 target="_blank" 
                 rel="noopener noreferrer"
               >
-                <img
+                <LinkedInIcon 
                   className="main__header__logos__logo"
-                  src="assets/linkedin.png"
-                ></img>
+                  style={{height:'3vw',
+                  width:'3vw'}}/>
               </a>
               <a
                 href="mailto: rexliu3@berkeley.edu"
                 className="main__header__logos__link"
                 rel="noopener noreferrer"
               >
-                <img
+                <EmailIcon 
                   className="main__header__logos__logo"
-                  src="assets/email3.png"
-                ></img>
+                  style={{height:'3vw',
+                  width:'3vw'}}/>
               </a>
             </div>
 
