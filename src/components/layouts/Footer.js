@@ -1,11 +1,20 @@
 import React, { Component } from "react";
 
+import DoubleArrowIcon from '@material-ui/icons/DoubleArrow';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import InstagramIcon from '@material-ui/icons/Instagram';
+import FacebookIcon from '@material-ui/icons/Facebook';
 
 class Footer extends Component {
   render() {
     return (
       <footer className="main__footer">
-        <div classname="main__footer__arrow"></div>
+        <a className="main__footer__box" href="#">
+            <DoubleArrowIcon
+              className="main__footer__box__arrow"
+              fontSize='large'/>
+              </a>
         <div id="main__footer__icons">
               <a
                 className="main__footer__icons__link"
@@ -13,10 +22,10 @@ class Footer extends Component {
                 target="_blank"
               >
                 <div className="main__footer__icons__icon">
-                    <img
-                    className="main__footer__icons__logo"
-                    src="assets/linkedin.png"
-                    ></img>
+                    <LinkedInIcon
+                      className="main__footer__icons__logo"
+                      fontSize='large'
+                    />
                 </div>
               </a>
               <a
@@ -25,10 +34,10 @@ class Footer extends Component {
                 target="_blank"
               >
                 <div className="main__footer__icons__icon">
-                    <img
-                    className="main__footer__icons__logo"
-                    src="assets/github.png"
-                    ></img>
+                    <GitHubIcon
+                      className="main__footer__icons__logo"
+                      fontSize='large'
+                      />
                 </div>
               </a>
               <a
@@ -37,10 +46,10 @@ class Footer extends Component {
                 target="_blank"
               >
                 <div className="main__footer__icons__icon">
-                    <img
-                    className="main__footer__icons__logo"
-                    src="assets/instagram.png"
-                    ></img>
+                    <InstagramIcon
+                      className="main__footer__icons__logo"
+                      fontSize='large'
+                      />
                 </div>
               </a>
               <a
@@ -48,11 +57,11 @@ class Footer extends Component {
                 href="https://facebook.com/rexliu333"
                 target="_blank"
               >
-                <div className="main__footer__icons__icon">
-                    <img
-                    className="main__footer__icons__logo"
-                    src="assets/facebook.png"
-                    ></img>
+                 <div className="main__footer__icons__icon">
+                    <FacebookIcon
+                      className="main__footer__icons__logo"
+                      fontSize='large'
+                      />
                 </div>
               </a>
         </div>
