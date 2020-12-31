@@ -3,7 +3,6 @@
     background-color: $color-white;
     padding-top:3vw;
 
-
     @include respond(big-desktop) {
         padding: 2vw;
     }
@@ -24,6 +23,18 @@
         border-radius: 7px;
         background-color:$color-secondary;
         border-color:$color-secondary;
+        margin-bottom: 2vw;
+    }
+
+    &__grid {
+        display: flex;
+        grid-template-columns: 30% 30%;
+        grid-gap: 2vw;
+        align-items: start;
+        align-self: start;
+        margin: auto;
+        justify-content: center;
+        font-family: 'Times New Roman', Times, serif;
     }
     
 }

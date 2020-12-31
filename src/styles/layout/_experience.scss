@@ -51,9 +51,16 @@
             color:$color-secondary;
             position: relative;
             line-height: 2.5rem;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            width: 90%;
 
             &__item {
                 margin-left: 3.5rem;
+                overflow-wrap: break-word;
+                word-wrap: break-word;
+
+
             }
         }
 
