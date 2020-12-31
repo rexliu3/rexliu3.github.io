@@ -24,21 +24,9 @@ const Experience = (props) => {
           <br />
           <hr className="experience__content__horizontal"/>
           <ul className="experience__content__description">
-            {data[5][0] !== "" && (
-               <li className="experience__content__description__item">{data[5][0]}</li>
-            )}
-            {data[5][1] !== "" && (
-               <li className="experience__content__description__item">{data[5][1]}</li>
-            )}
-            {data[5][2] !== "" && (
-               <li className="experience__content__description__item">{data[5][2]}</li>
-            )}
-            {data[5][3] !== "" && (
-               <li className="experience__content__description__item">{data[5][3]}</li>
-            )}
-            {data[5][4] !== "" && (
-               <li className="experience__content__description__item">{data[5][4]}</li>
-            )}
+            {data[5].map(descript =>
+               <li className="experience__content__description__item">{descript}</li>
+               )}
           </ul>
       </div>
     </section>

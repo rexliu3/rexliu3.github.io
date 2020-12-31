@@ -67,7 +67,8 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: '-1rem'
   },
   chip: {
-    margin: '-2rem 0.25rem'
+    margin: '-2rem 0.25rem',
+    fontSize: '1rem'
   }
 }));
 
@@ -96,7 +97,8 @@ const Project = (props) => {
 [4] : github link
 [5] : date
 [6] : Short Summary
-[7] : Link
+[7] : Big Image
+[8] : Link
  */
 
   return (
@@ -113,7 +115,7 @@ const Project = (props) => {
       <CardMedia
         className='project__media'
         className={classes.media}
-        image="../../../assets/leads.png"
+        image={data[7]}
       />
 
       <CardContent>
@@ -139,8 +141,8 @@ const Project = (props) => {
           <GitHubIcon />
         </IconButton>
 
-        {data.length == 8 && 
-        <IconButton aria-label="link" href={data[7]} target="_blank">
+        {data.length == 9 && 
+        <IconButton aria-label="link" href={data[8]} target="_blank">
           <LinkIcon />
         </IconButton>
         }
@@ -159,7 +161,7 @@ const Project = (props) => {
 
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
-          <ui className={classes.list}>
+          <ui className={classes.list} className='listy'>
             {data[2].map(descript =>
               <li className={classes.list_item}><span className={classes.inner}>{descript}</span></li>
               )}
