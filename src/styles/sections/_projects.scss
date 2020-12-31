@@ -27,8 +27,8 @@
     }
 
     &__grid {
-        display: flex;
-        grid-template-columns: 30% 30%;
+        display: grid;
+        grid-template-columns: 30% 30% 30%;
         grid-gap: 2vw;
         align-items: start;
         align-self: start;

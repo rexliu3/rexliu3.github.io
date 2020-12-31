@@ -39,9 +39,6 @@ const useStyles = makeStyles((theme) => ({
   expandOpen: {
     transform: 'rotate(180deg)',
   },
-  avatar: {
-
-  },
   project: {
     fontSize: '2rem',
     fontFamily: 'Times New Roman'
@@ -67,7 +64,7 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: '-1rem'
   },
   chip: {
-    margin: '-2rem 0.25rem',
+    margin: '0.25rem',
     fontSize: '1rem'
   }
 }));
