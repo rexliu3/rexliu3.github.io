@@ -1,11 +1,12 @@
 .section {
     width: 45vw;
     height:fit-content;
-    margin:auto;
+    margin:0 auto 2rem auto;
     border-radius: $border-radius;
     background-color: $color-background-third;
     padding: 0.5rem;
     margin-bottom: 2rem;
+    align-self: start;
 
     &__content {
         display:block;

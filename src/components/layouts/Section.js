@@ -19,7 +19,14 @@ const Section = (props) => {
                 {data[0]}
             </div>
             <div className="section__content__courses">
-                <ul className="section__content__courses__list">{data[1].map(course => <li className="section__content__courses__item" key={course}><strong>{course[0]}</strong> {': ' + course[1] + ' (' + course[2] + ')'} </li>)}</ul>
+                <ul className="section__content__courses__list">{data[1].map(course => 
+                <li className="section__content__courses__item" key={course}>
+                  <strong>{course[0]}</strong> 
+                  {': ' + course[1]} 
+                  {course[2] !== "" && ' (' + course[2] + ')'}
+                  
+                  
+                  </li>)}</ul>
             </div>
         </div>
     </section>
