@@ -6,3 +6,9 @@
     line-height: 2rem;
     margin-top:-3vw;
 }
+
+.project {
+    @include respond(tab-land) {
+        margin: 0;
+      }
+}

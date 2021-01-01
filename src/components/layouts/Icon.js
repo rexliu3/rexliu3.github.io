@@ -1,10 +1,13 @@
 import React from "react";
-import Hexagon from 'react-hexagon';
+import Hexagon from "react-hexagon";
+import AccessibilityIcon from "@material-ui/icons/Accessibility";
+import Ic from "@mdi/react";
+import { mdiAccountMultiplePlus } from "@mdi/js";
 
 const Icon = (props) => {
   const { data } = props;
 
-/*
+  /*
 [0] : Image Location
 [1] : Title
 [2] : Subtitle
@@ -13,27 +16,19 @@ const Icon = (props) => {
 
   return (
     <section className="icon">
-        <Hexagon
+      {/*<Hexagon
             className="icon__image__outer"
             data-animation="flip-in-x"
-            style={{strokeWidth: '0', fill: ' #63A9AE'}}
+            style={{strokeWidth: '0', zIndex: '999'}}
+            backgroundImage="assets/leader.gif"
             flatTop='True'
-            children = {
-              <Hexagon className="icon__image__inner flip-in-x" backgroundImage="assets/leads.png" 
-                backgroundScale='0.5'
-                flatTop='True'
-                backgroundHeight="4"
-                backgroundWidth="4"
-              ></Hexagon>
-            }
-        />
-        
-        <h3 className="icon__title">
-            {data[1]}
-        </h3>
-        <div className="icon__subtitle">
-            {data[2]}
-        </div>
+            backgroundScale='0.97'
+            style={{marginLeft: '5vw'}}
+      />*/}
+      <img className="icon__image" src={data[0]}></img>
+
+      <h3 className="icon__title">{data[1]}</h3>
+      <div className="icon__subtitle">{data[2]}</div>
     </section>
   );
 };

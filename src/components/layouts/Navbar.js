@@ -55,12 +55,7 @@ class Navbar extends Component {
               </li>
               <li className="navigation__item">
                 <a className="navigation__link sixthNav" href="#Interests">
-                  Interests
-                </a>
-              </li>
-              <li className="navigation__item">
-                <a className="navigation__link seventhNav" href="#bottom">
-                  Contact
+                  Fun Facts
                 </a>
               </li>
             </ul>

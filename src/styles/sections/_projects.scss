@@ -33,9 +33,17 @@
         align-items: start;
         align-self: start;
         margin: auto;
-        justify-content: center;
+        justify-content: center; 
         font-family: 'Times New Roman', Times, serif;
         list-style-position: outside;
+        box-sizing: border-box;
+
+        @include respond(tab-land) {
+            grid-template-columns: 50% 50%;
+            margin: 0;
+          }
     }
+
+    
     
 }

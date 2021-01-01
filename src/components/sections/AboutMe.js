@@ -25,10 +25,10 @@ const AboutMe = () => {
       <hr className="aboutme__horizontal"></hr>
       <div className="aboutme__content">
           <div className="aboutme__content__icons">
-            <Icon data={["assets/lead1.png", "Leader", "sjtjalj lajgljaljgalhahahdfhsd ghdhwshrhrwth"]}/>
-            <Icon data={["assets/linkedin.png", "Tech", "sjtjalj lajgljaljgalhahahdfhsd ghdhwshrhrwth"]}/>
-            <Icon data={["assets/linkedin.png", "Learner", "sjtjalj lajgljaljgalhahahdfhsd ghdhwshrhrwth"]}/>
-            <Icon data={["assets/linkedin.png", "Web Developer", "sjtjalj lajgljaljgalhahahdfhsd ghdhwshrhrwth"]}/>
+            <Icon data={["assets/leader.svg", "Leader", ""]}/>
+            <Icon data={["assets/tech.png", "Tech Lover", ""]}/>
+            <Icon data={["assets/learner.png", "Learner", ""]}/>
+            <Icon data={["assets/web.png", "Developer", ""]}/>
         </div>
         <div className="aboutme__content__description">
           <Hexagon 

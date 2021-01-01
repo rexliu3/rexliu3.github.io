@@ -173,7 +173,7 @@ class MainPage extends React.Component {
                 events: {
                   onclick: {
                     enable: true,
-                    mode: "push",
+                    mode: "bubble",
                   },
                   onhover:{
                     enable:true,
@@ -204,7 +204,7 @@ class MainPage extends React.Component {
                   href=""
                   class="typewrite"
                   data-period="2000"
-                  data-type='[ "Leader.", "Tech.", "Learner." , "Web Developer"]'
+                  data-type='[ "Leader.", "Tech Lover.", "Learner." , "Developer."]'
                 >
                   <span class="wrap"></span>
                 </div>
@@ -271,7 +271,6 @@ class MainPage extends React.Component {
           <Interests />
         </div>
       <Footer />
-      <a id="bottom"></a>
       </main>
     );
   }
