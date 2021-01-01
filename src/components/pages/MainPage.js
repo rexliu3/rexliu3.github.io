@@ -175,6 +175,10 @@ class MainPage extends React.Component {
                     enable: true,
                     mode: "push",
                   },
+                  onhover:{
+                    enable:true,
+                    mode: "repulse"
+                  }
                 },
                 modes: {
                   push: {
@@ -267,6 +271,7 @@ class MainPage extends React.Component {
           <Interests />
         </div>
       <Footer />
+      <a id="bottom"></a>
       </main>
     );
   }

@@ -59,7 +59,7 @@ class Navbar extends Component {
                 </a>
               </li>
               <li className="navigation__item">
-                <a className="navigation__link seventhNav" href="/">
+                <a className="navigation__link seventhNav" href="#bottom">
                   Contact
                 </a>
               </li>
