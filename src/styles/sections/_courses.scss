@@ -39,9 +39,23 @@
     &__content {
         margin: 2vw auto auto auto;
         display:grid;
-        grid-template-columns: 50% 50%;
+        grid-template-columns: auto auto;
         align-items: start;
         align-self: start;
+
+        @include respond(big-desktop) {
+        }
+    
+        @include respond(tab-land) {
+          
+        }
+        @include respond(tab-port) {
+            grid-template-columns: auto;
+        }
+        @include respond(phone) {
+        }
+        @include respond(small-phone) {
+        }
     }
     
 

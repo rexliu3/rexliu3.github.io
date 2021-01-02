@@ -1,21 +1,35 @@
 import React, { Component } from "react";
+import { useState, useEffect } from 'react';
 
 class Navbar extends Component {
-  state = {};
-
-  componentDidMount = () => {};
-
-  // Close the navbar
-  closeNavbar = () => {
-    document.getElementById("myNav").style.width = "0%";
-  };
-
-  // Open the navbar
-  openNavbar = () => {
-    document.getElementById("myNav").style.width = "100%";
-  };
 
   render() {
+    
+
+    function getWindowDimensions() {
+      const { innerWidth: width, innerHeight: height } = window;
+      return {
+        width,
+        height
+      };
+    }
+    
+    function useWindowDimensions() {
+      const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
+    
+      useEffect(() => {
+        function handleResize() {
+          setWindowDimensions(getWindowDimensions());
+        }
+    
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+      }, []);
+    
+      return windowDimensions;
+    }
+    
+    const { height, width } = useWindowDimensions();
     return (
       <div>
         {/* Navigation starts now */}
@@ -23,6 +37,8 @@ class Navbar extends Component {
           <a className="nav__logo" href="#">
             Rex Liu
           </a>
+
+          {width > 900 && 
           <nav className="navigation" id="myNav">
             <ul className="navigation__nav">
               <li className="navigation__item">
@@ -59,7 +75,9 @@ class Navbar extends Component {
                 </a>
               </li>
             </ul>
-          </nav>
+          </nav>}
+
+          
           <hr className="nav__horizontal"></hr>
         </div>
       </div>

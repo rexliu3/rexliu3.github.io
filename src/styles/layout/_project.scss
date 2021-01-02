@@ -8,7 +8,27 @@
 }
 
 .project {
+    width: 30vw;
+
+
+    @include respond(small-phone) {
+        
+    }
+
+
+    @include respond(phone) {
+        width: 90vw;
+    }
+    
+    @include respond(tab-port) {
+
+    }
+
     @include respond(tab-land) {
-        margin: 0;
-      }
+    width: 40vw;
+    }
+
+    @include respond(big-desktop) {
+
+    }
 }

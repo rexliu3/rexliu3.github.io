@@ -43,42 +43,23 @@
             justify-content: center;
             width: 80%;
             text-align: center;
-        }
 
-        &__description {
-            display: grid;
-            grid-template-columns: 30% 70%;
-            margin-top: 2vw;
-
-            &__image {
-                height: 20vw;
-                margin:auto;
+            @include respond(big-desktop) {
             }
-
-            &__text {
-                padding-right:5vw;
-
-                &__title {
-                    font-size: $font-title;
-                }
-                &__text {
-                    font-size: $font-text;
-                    text-align: justify;
-                    text-justify: inter-word;
-                }
-                &__link {
-                    text-decoration: none;
-                }
-
-                &__button {
-                    width: 8vw;
-                    height: 3vw;
-                    border-color: $color-primary;
-                    border-width: thick;
-                }
+        
+            @include respond(tab-land) {
+              
+            }
+            @include respond(tab-port) {
+            }
+            @include respond(phone) {
+                display:grid;
+                grid-template-columns: auto;
+                grid-gap: 5vw;
+            }
+            @include respond(small-phone) {
             }
         }
-
     }
 }
 

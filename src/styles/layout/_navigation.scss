@@ -8,7 +8,7 @@
   z-index: 9999;
   transition: top 0.3s;
   margin-bottom: 10vh;
-  height:initial;
+  height: initial;
   text-align: left;
   padding-top: 4px;
   margin-top: 0;
@@ -17,7 +17,7 @@
     width: 10%;
     text-decoration: none;
     font-size: 30px;
-    font-family: 'Langar', cursive;
+    font-family: "Langar", cursive;
     margin: 0 0 0 10rem;
     color: $color-white;
 
@@ -56,14 +56,34 @@
   align-items: baseline;
   text-align: right;
   left: 50%;
+  font-size: 2rem;
 
+
+  @include respond(big-desktop) {
+  }
+  @include respond(semi-desktop) {
+    left: 40%;
+  }
+  @include respond(tab-land) {
+  }
+  @include respond(tab-inter) {
+    left: 30%;
+  }
+
+  @include respond(tab-port) {
+    // Make it a nav
+  }
+  @include respond(phone) {
+  }
+  @include respond(small-phone) {
+  }
 
   &__nav {
     list-style-type: none;
     margin: 0;
     padding: 0;
     vertical-align: top;
-    margin-top:1rem;
+    margin-top: 1rem;
     text-align: right;
   }
 
@@ -95,48 +115,5 @@
     transition: all 0.75s;
     text-decoration: none;
   }
-
-
-  @include respond(tab-land) {
-    margin: -2rem 0 2rem 0;
-    height: 110%;
-    width: 0;
-    position: fixed;
-    z-index: 100000;
-    left: 0;
-    top: 0;
-    background-color: rgba(0, 0, 0, 0.9);
-    overflow-x: hidden;
-    overflow-y: hidden;
-    transition: 0.5s;
-
-    &__nav {
-      position: relative;
-      top: 25%;
-      width: 100%;
-      text-align: center;
-      margin-top: 30px;
-      display:inline-flex;
-    }
-
-    &__link {
-      padding: 3rem;
-      text-decoration: none;
-      font-size: 4rem;
-      color: $color-primary;
-      display: block;
-      transform: translate(3rem, -6rem);
-
-      &:hover,
-      &:focus {
-        color: #f1f1f1;
-      }
-
-      @include respond(phone) {
-        font-size: 3rem;
-      }
-    }
-  }
+  
 }
-
-

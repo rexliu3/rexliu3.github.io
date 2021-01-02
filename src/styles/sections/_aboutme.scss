@@ -2,15 +2,9 @@
     height:fit-content;
     padding-bottom: 2rem;
     background-color: $color-white;
-    margin: 55vw auto auto auto;
-    padding-top:4vw;
+    margin-top: 101vh;
+    padding-top: 4vw;
     border:0;
-
-
-    @include respond(big-desktop) {
-        margin-top: 51vw;
-        padding-top:3vw;
-    }
 
     &__header {
         color:$color-secondary;
@@ -40,6 +34,12 @@
             justify-content: center;
             width: 80%;
             text-align: center;
+
+            @include respond(phone) {
+                display: grid;
+                grid-template-columns: auto auto;
+                grid-gap: 2vw;
+            }
         }
 
         &__description {
@@ -92,6 +92,29 @@
 
 
             }
+
+            @include respond(tab-port) {
+                display: grid;
+                grid-template-columns: auto;
+
+                &__text {
+                    margin: 2vw;
+
+                    &__title {
+                        font-size: 4rem;
+                    }
+
+                    &__text {
+                        font-size: 1.75rem;
+                    }
+
+                    &__button {
+                        width: 20vw;
+                        height: 6vw;
+                        margin-top: 1vw;
+                    }
+                }
+              }
         }
 
     }
