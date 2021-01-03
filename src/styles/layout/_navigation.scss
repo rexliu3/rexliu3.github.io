@@ -11,6 +11,8 @@
   text-align: left;
   padding-top: 4px;
   margin-top: 0;
+  z-index: 999;
+  -webkit-overflow-scrolling:touch;
 
   &__logo {
     width: 10%;
@@ -115,3 +117,11 @@
   }
   
 }
+
+/*
+About
+Experiences
+Projects
+Courses
+Fun Facts
+*/
