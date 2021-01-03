@@ -77,8 +77,6 @@ class MainPage extends React.Component {
   componentDidMount() {
     window.addEventListener("scroll", this.handleScroll);
     window.scrollTo(0,0);
-    document.querySelector(".navigation__link.firstNav").className = "navigation__link firstNav"
-    document.querySelector(".navigation__link.secondNav").className = "navigation__link secondNav"
   }
 
   componentWillUnmount() {
@@ -88,7 +86,8 @@ class MainPage extends React.Component {
 
   handleScroll = () => {
     var $ = document.getElementById;
-
+    const width = window.innerWidth;
+    
     var helper = function(num) {
         let i = 1
         let dictions = {1: 'firstNav', 2: 'secondNav', 3: 'thirdNav', 4: 'fourthNav', 5: 'fifthNav', 6: 'sixthNav'}
@@ -104,27 +103,29 @@ class MainPage extends React.Component {
 
     }
 
-    var pos2 = window.scrollY + 15;
+    if (width > 900) {
+      var pos2 = window.scrollY + 15;
 
-    // Link Highlighting
-    if (pos2 > document.getElementById('Home').offsetTop) {
-      helper(1);
-    }
-    if (pos2 > document.getElementById('AboutMe').offsetTop) {
-      helper(2);
-    }
-    if (pos2 > document.getElementById('Experiences').offsetTop) {
-      helper(3);
-    }
-    if (pos2 > document.getElementById('Projects').offsetTop) {
-      helper(4);
-    }
-    if (pos2 > document.getElementById('Courses').offsetTop) {
-      helper(5);
-    }
-    if (pos2 > document.getElementById('Interests').offsetTop) {
-      helper(6);
-    }
+      // Link Highlighting
+      if (pos2 > document.getElementById('Home').offsetTop) {
+        helper(1);
+      }
+      if (pos2 > document.getElementById('AboutMe').offsetTop) {
+        helper(2);
+      }
+      if (pos2 > document.getElementById('Experiences').offsetTop) {
+        helper(3);
+      }
+      if (pos2 > document.getElementById('Projects').offsetTop) {
+        helper(4);
+      }
+      if (pos2 > document.getElementById('Courses').offsetTop) {
+        helper(5);
+      }
+      if (pos2 > document.getElementById('Interests').offsetTop) {
+        helper(6);
+      }
+  }
   };
 
   render() {
