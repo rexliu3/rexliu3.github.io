@@ -216,7 +216,8 @@ class MainPage extends React.Component {
                 <GitHubIcon 
                   className="main__header__logos__logo"
                   style={{height:'3.5vw',
-                  width:'3.5vw', margin: 'auto 0.5rem'}}/>
+                  width:'3.5vw', margin: 'auto 0.5rem', color: 'white'}}
+                  />
               </a>
               <a
                 href="https://linkedin.com/in/rexliu3"
@@ -227,7 +228,7 @@ class MainPage extends React.Component {
                 <LinkedInIcon 
                   className="main__header__logos__logo"
                   s style={{height:'4vw',
-                  width:'4vw', margin: 'auto 0.5rem'}}/>
+                  width:'4vw', margin: 'auto 0.5rem', color: 'white'}}/>
               </a>
               <a
                 href="mailto: rexliu3@berkeley.edu"
@@ -237,7 +238,7 @@ class MainPage extends React.Component {
                 <EmailIcon 
                   className="main__header__logos__logo"
                   style={{height:'4vw',
-                  width:'4vw', margin: 'auto 0.5rem'}}/>
+                  width:'4vw', margin: 'auto 0.5rem', color: 'white'}}/>
               </a>
             </div>
 
