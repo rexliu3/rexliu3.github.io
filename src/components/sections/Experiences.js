@@ -1,15 +1,6 @@
 import React from "react";
 import Experience from "../layouts/Experience";
 
-/*
-[0] : Company
-[1] : Logo Location
-[2] : Position Name
-[3] : Date
-[4] : Website Link
-[5] : Description (list)
- */
-
 const experiences = [
   {
     company: "HKP Solutions",
@@ -71,10 +62,8 @@ const Experiences = () => {
       <hr className="experiences__horizontal" />
       <div className="experiences__content">
         {experiences.map(experience =>
-          <Experience data={[experience.company, experience.logo, experience.title, experience.date, experience.website, experience.description]}/>
+          <Experience data={experience}/>
           )}
-
-       
       </div>
     </div>
   );
