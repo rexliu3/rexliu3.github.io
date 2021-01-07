@@ -1,6 +1,42 @@
 import React from "react";
 import Icon from "../layouts/Icon";
 
+const hobbies = [
+  {
+    name: "Chess",
+    logo: "assets/chess.png",
+    description: "chess.com Ratings: Rapid(912) Puzzles(1460)",
+  },
+  {
+    name: "Badminton",
+    logo: "assets/badminton.png",
+    description: "BC Provincials 2018/2019 1st Doubles Regionals",
+  },
+  {
+    name: "Tennis",
+    logo: "assets/tennis.png",
+    description: "Recreational Player",
+  },
+];
+
+const interests = [
+  {
+    name: "Data Science",
+    logo: "assets/data.png",
+    description: null,
+  },
+  {
+    name: "Blockchain",
+    logo: "assets/blockchain.jpg",
+    description: null,
+  },
+  {
+    name: "Machine Learning",
+    logo: "assets/machine.png",
+    description: null,
+  },
+];
+
 const Interests = () => {
   return (
     <div className="interests">
@@ -8,28 +44,9 @@ const Interests = () => {
       <hr className="interests__horizontal"></hr>
       <div className="interests__content">
         <div className="interests__content__icons">
-          <Icon
-            data={[
-              "assets/chess.png",
-              "Chess",
-              "chess.com Ratings: Rapid(912) Puzzles(1460)",
-              '0.75'
-            ]}
-          />
-          <Icon
-            data={[
-              "assets/badminton.png",
-              "Badminton",
-              "BC Provincials 2018/2019 1st Doubles Regionals",
-            ]}
-          />
-          <Icon
-            data={[
-              "assets/tennis.png",
-              "Tennis",
-              "Recreational Player",
-            ]}
-          />
+          {hobbies.map(hobby =>
+            <Icon data={hobby} />
+            )}
         </div>
       </div>
 
@@ -37,27 +54,10 @@ const Interests = () => {
       <hr className="interests__horizontal"></hr>
       <div className="interests__content">
         <div className="interests__content__icons">
-          <Icon
-            data={[
-              "assets/data.png",
-              "Data Science",
-              "",
-            ]}
-          />
-          <Icon
-            data={[
-              "assets/blockchain.jpg",
-              "Blockchain",
-              "",
-            ]}
-          />
-          <Icon
-            data={[
-              "assets/machine.png",
-              "Machine Learning",
-              "",
-            ]}
-          />
+        {interests.map(interest =>
+            <Icon data={interest} />
+            )}
+
         </div>
       </div>
     </div>

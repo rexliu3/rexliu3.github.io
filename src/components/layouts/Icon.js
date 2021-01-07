@@ -16,19 +16,10 @@ const Icon = (props) => {
 
   return (
     <section className="icon">
-      {/*<Hexagon
-            className="icon__image__outer"
-            data-animation="flip-in-x"
-            style={{strokeWidth: '0', zIndex: '999'}}
-            backgroundImage="assets/leader.gif"
-            flatTop='True'
-            backgroundScale='0.97'
-            style={{marginLeft: '5vw'}}
-      />*/}
-      <img className="icon__image" src={data[0]}></img>
+      <img className="icon__image" src={data.logo}></img>
 
-      <h3 className="icon__title">{data[1]}</h3>
-      <div className="icon__subtitle">{data[2]}</div>
+      <h3 className="icon__title">{data.name}</h3>
+      <div className="icon__subtitle">{data.description}</div>
     </section>
   );
 };
