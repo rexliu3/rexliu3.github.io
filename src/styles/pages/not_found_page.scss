@@ -1,25 +1,39 @@
 .notfound {
-    height: 50vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    
   
     &__content {
       &__label {
-        margin: 3rem;
+        text-align: center;
+        color: $color-white;
+        font-size: $font-section;
+        margin-bottom: 2rem;
       }
+
+
+
       &__link {
-        &:hover {
-          text-decoration: none;
-        }
+        text-decoration: none;
       }
+
       &__button {
+        height: 4vw;
+        width: 10vw;
         display: block;
         margin: auto;
         background-color: $color-primary;
         color: $color-white;
         outline: none;
+        font-weight: bold;
+        font-size: $font-subtitle;
+
+        &:hover {
+          cursor: pointer;
+          transform: scale(1.1);
+          transition: all 1s;
+        }
       }
     }
   }
