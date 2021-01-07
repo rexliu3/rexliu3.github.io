@@ -1,15 +1,41 @@
 import React from "react";
 import Section from "../layouts/Section";
 
-/*
-[0] : Title (ex. Computer Science)
-[1] : Courses
-        [
-            ['CS 61A', 'the structure and interpretation of computer programs', 'A+']
-            ['EECS 61A', 'the structure and interpretation of computer programs', 'A+']
-            
-        ]
- */
+const courses = [
+  {
+    title: "Computer Science",
+    courses: [
+      ["CS 61A", "The Structure and Interpretation of Computer Programs", "A+"],
+      ["CS 61B (current)", "Data Structures", ""],
+    ],
+  },
+  {
+    title: "Business Administration",
+    courses: [["UGBA 10", "Principles of Business", "A-"]],
+  },
+  {
+    title: "Electrical Engineering & Computer Science",
+    courses: [
+      ["EECS 16A", "Designing Information Devices and Systems I", "A-"],
+      [
+        "EECS 16B (current)",
+        "Designing Information Devices and Systems II",
+        "",
+      ],
+    ],
+  },
+  {
+    title: "Math",
+    courses: [
+      ["Math 53", "Multivariable Calculus", "A-"],
+      ["Math 54 (current)", "Linear Algebra and Differential Equations", ""],
+    ],
+  },
+  {
+    title: "Data Science",
+    courses: [["Data C8 (current)", "Foundations of Data Science", ""]],
+  },
+];
 
 const Courses = () => {
   return (
@@ -18,57 +44,9 @@ const Courses = () => {
       <h2 className="courses__subheader">B.A. Computer Science 2024</h2>
       <hr className="courses__horizontal" />
       <div className="courses__content">
-        <Section
-          data={[
-            "Computer Science",
-            [
-              [
-                "CS 61A",
-                "The Structure and Interpretation of Computer Programs",
-                "A+",
-              ],
-              ["CS 61B (current)", "Data Structures", ""],
-            ],
-          ]}
-        />
-        <Section
-          data={[
-            "Business Administration",
-            [["UGBA 10", "Principles of Business", "A-"]],
-          ]}
-        />
-        <Section
-          data={[
-            "Electrical Engineering & Computer Science",
-            [
-              ["EECS 16A", "Designing Information Devices and Systems I", "A-"],
-              [
-                "EECS 16B (current)",
-                "Designing Information Devices and Systems II",
-                "",
-              ],
-            ],
-          ]}
-        />
-        <Section
-          data={[
-            "Math",
-            [
-              ["Math 53", "Multivariable Calculus", "A-"],
-              [
-                "Math 54 (current)",
-                "Linear Algebra and Differential Equations",
-                "",
-              ],
-            ],
-          ]}
-        />
-        <Section
-          data={[
-            "Data Science",
-            [["Data C8 (current)", "Foundations of Data Science", ""]],
-          ]}
-        />
+        {courses.map(course =>
+          <Section data={course}/>
+          )}
       </div>
     </div>
   );
