@@ -19,7 +19,6 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 import LinkIcon from '@material-ui/icons/Link';
 import Chip from "@material-ui/core/Chip"
 
-
 const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: '50vw',
@@ -86,44 +85,31 @@ const Project = (props) => {
 
   const handleClick = () => {};
 
-
-/*
-[0] : Project Name
-[1] : Image Location
-[2] : Description
-[3] : Tools
-[4] : github link
-[5] : date
-[6] : Short Summary
-[7] : Big Image
-[8] : Link
- */
-
   return (
     <Card className='project' className={classes.root}>
       <CardHeader
         avatar={
           <Avatar aria-label="recipe" className='project__logo' className={classes.avatar}
-          src={data[1]}>
+          src={data.logo}>
           </Avatar>
         }
-        title={<h2 className={classes.project}>{data[0]}</h2>}
+        title={<h2 className={classes.project}>{data.name}</h2>}
         className={classes.title}
       />
       <CardMedia
         className='project__media'
         className={classes.media}
-        image={data[7]}
+        image={data.image}
       />
 
       <CardContent>
         <Typography variant="body1" color="textSecondary" component="p" className={classes.summary}>
-          {data[6]}
+          {data.summary}
         </Typography>
       </CardContent>
 
       <CardContent>
-        {data[3].map(tool => 
+        {data.tools.map(tool => 
           <Chip className={classes.chip} onClick={handleClick} variant="outlined" size="small" label={tool}/>
           )}
       </CardContent>
@@ -135,12 +121,12 @@ const Project = (props) => {
           {liked && <FavoriteIcon color='secondary'/>}
         </IconButton>
 
-        <IconButton aria-label="github" href={data[4]} target="_blank">
+        <IconButton aria-label="github" href={data.github} target="_blank">
           <GitHubIcon />
         </IconButton>
 
-        {data.length == 9 && 
-        <IconButton aria-label="link" href={data[8]} target="_blank">
+        {data.link && 
+        <IconButton aria-label="link" href={data.link} target="_blank">
           <LinkIcon />
         </IconButton>
         }
@@ -160,46 +146,13 @@ const Project = (props) => {
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
           <ui className={classes.list} className='listy'>
-            {data[2].map(descript =>
+            {data.description.map(descript =>
               <li className={classes.list_item}><span className={classes.inner}>{descript}</span></li>
               )}
           </ui>
         </CardContent>
       </Collapse>
     </Card>
-
-    /*<section className="project__grid__item">
-        <img className="project__grid__item__image" src={data[1]}></img>
-        <div className="project__grid__item__content">
-          <h3 className="project__grid__item__content__header">{data[0]}</h3>
-          <a href={data[4]} target="_blank">
-            <img className="project__grid__item__content__github" src="assets/GitHub-Logo.png"></img>
-          </a>
-          <p className="project__grid__item__content__date">{data[5]}</p>
-          <br></br>
-          <p className="project__grid__item__content__descriptor">Description:</p>
-          <ul className="project__grid__item__content__description">
-            {data[2][0] !== "" && (
-               <li className="project__grid__item__content__description__item">{data[2][0]}</li>
-            )}
-            {data[2][1] !== "" && (
-               <li className="project__grid__item__content__description__item">{data[2][1]}</li>
-            )}
-            {data[2][2] !== "" && (
-               <li className="project__grid__item__content__description__item">{data[2][2]}</li>
-            )}
-            {data[2][3] !== "" && (
-               <li className="project__grid__item__content__description__item">{data[2][3]}</li>
-            )}
-            {data[2][4] !== "" && (
-               <li className="project__grid__item__content__description__item">{data[2][4]}</li>
-            )}
-          </ul>
-          <br></br>
-          <p className="project__grid__item__content__descriptor">Tools:&nbsp;</p>
-          <p className="project__grid__item__content__tools">{data[3]}</p>
-      </div>
-            </section>*/
   );
 };
 
