@@ -8,7 +8,7 @@
   background-size: cover;*/
     background-color: $color-white;
     border:0;
-    padding-top: 3vw;
+    padding-top:$nav-height;
 
 
     @include respond(big-desktop) {
