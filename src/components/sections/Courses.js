@@ -10,8 +10,11 @@ const courses = [
     ],
   },
   {
-    title: "Business Administration",
-    courses: [["UGBA 10", "Principles of Business", "A-"]],
+    title: "Business Administration/Economics",
+    courses: [["UGBA 10", "Principles of Business", "A-"],
+              ["Econ 1 (current)", "Introduction to Economics", ""]
+  
+  ],
   },
   {
     title: "Electrical Engineering & Computer Science",
