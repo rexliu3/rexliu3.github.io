@@ -144,7 +144,7 @@ class MainPage extends React.Component {
                   }
                 },
                   "color": {
-                      "value": "#63A9AE"
+                      "value": "#FFFFFF"
                 },
                 line_linked: {
                   enable: true,
