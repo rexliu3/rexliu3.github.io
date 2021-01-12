@@ -54,7 +54,6 @@ const AboutMe = () => {
             style={{ strokeWidth: "10", stroke: "#63A9AE" }}
             backgroundImage="assets/Profile-Picture.jpg"
             flatTop="True"
-            backgroundScale="1"
           />
           <div className="aboutme__content__description__text">
             <h3 className="aboutme__content__description__text__title">
@@ -72,10 +71,10 @@ const AboutMe = () => {
             </p>
             <p>&nbsp;</p>
             <p className="aboutme__content__description__text__text">
-              {content.description4}{" "}
+              {content.description4}
             </p>
             <p className="aboutme__content__description__text__text">
-              {content.description5}{" "}
+              {content.description5}
             </p>
             
             <a className="aboutme__content__description__text__link" href="/Resume_Rex.pdf" target="__blank">

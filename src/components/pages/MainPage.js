@@ -1,4 +1,5 @@
 import React from "react";
+
 import AboutMe from "../sections/AboutMe";
 import Experiences from "../sections/Experiences";
 import Projects from "../sections/Projects";
@@ -85,7 +86,6 @@ class MainPage extends React.Component {
 
 
   handleScroll = () => {
-    var $ = document.getElementById;
     const width = window.innerWidth;
     
     var helper = function(num) {
@@ -187,17 +187,12 @@ class MainPage extends React.Component {
           />
 
           <header className="main__header" id="Home">
-            {/*<div id="particles-js"></div>
-        <script src="particles.js"></script>
-        <div class="count-particles"> <span class="js-count-particles">--</span> particles </div> <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script><script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
-    */}
             <h1 className="main__header__name">Rex Liu</h1>
             <hr className="main__header__horizontal"></hr>
             <div className="main__header__aboutOuter">
               <h2 className="main__header__about">Hi, I am a&nbsp;</h2>
               <h2 className="main__header__about">
                 <div
-                  href=""
                   class="typewrite"
                   data-period="2000"
                   data-type='[ "Leader.", "Tech Lover.", "Learner." , "Developer."]'
@@ -248,6 +243,7 @@ class MainPage extends React.Component {
           </header>
         </div>
         <NavBar />
+        
         <div class="main__AboutMe" id="AboutMe">
           <AboutMe />
         </div>

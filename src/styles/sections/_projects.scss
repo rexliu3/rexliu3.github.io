@@ -1,29 +1,22 @@
 .projects {
-  padding-bottom: 2rem;
-  background-color: $color-white;
-  padding-top:$nav-height;
-
-  @include respond(big-desktop) {
-    padding: 2vw;
-  }
+  padding: 2rem;
+  background-color: $color-background-secondary;
+  padding-top: $nav-height;
 
   &__header {
     color: $color-secondary;
     font-size: $font-section;
     text-align: center;
-    margin: auto auto -1vw auto;
-    padding: auto;
+    margin-bottom: -1vw;
     font-family: "Langar", cursive;
   }
 
   &__horizontal {
     width: 10vw;
     margin: auto;
-    height: 10px;
+    height: 12px;
     border-radius: 7px;
     background-color: $color-secondary;
-    border-color: $color-secondary;
-    margin-bottom: 2vw;
   }
 
   &__grid {
@@ -32,26 +25,16 @@
     grid-gap: 2vw;
     align-items: start;
     align-self: start;
-    margin: auto;
-    justify-content: center;
     font-family: "Times New Roman", Times, serif;
     list-style-position: outside;
-    box-sizing: border-box;
-
-    @include respond(big-desktop) {
-    }
 
     @include respond(tab-land) {
       grid-template-columns: auto auto;
       margin: auto;
     }
-    @include respond(tab-port) {
-    }
     @include respond(phone) {
       grid-template-columns: auto;
       margin: auto;
-    }
-    @include respond(small-phone) {
     }
   }
 }

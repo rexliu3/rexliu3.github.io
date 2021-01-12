@@ -1,37 +1,31 @@
 .aboutme {
     height:fit-content;
-    padding-bottom: 2rem;
+    padding: $nav-height 0 2rem 0;
     background-color: $color-white;
     margin-top: 100vh;
-    padding-top:$nav-height;
-    border:0;
 
     &__header {
         color:$color-secondary;
         font-size:$font-section;
         text-align:center;
-        margin: auto auto -1vw auto;
-        padding: auto;
+        margin-bottom: -1vw;
         font-family: 'Langar', cursive;
     }
 
     &__horizontal {
         width: 10vw;
         margin:auto;
-        height:10px;
+        height:12px;
         border-radius: 7px;
         background-color:$color-secondary;
-        border-color:$color-secondary;
     }
 
     &__content {
-        margin:auto;
         padding-bottom: 2vw;
 
         &__icons {
             margin: 2vw auto auto auto;
             display: flex;
-            justify-content: center;
             width: 80%;
             text-align: center;
 
@@ -53,7 +47,7 @@
             }
 
             &__text {
-                padding-right:5vw;
+                padding-right: 5vw;
 
                 &__title {
                     font-size: $font-title;
@@ -63,6 +57,7 @@
                     text-align: justify;
                     text-justify: inter-word;
                 }
+
                 &__link {
                     text-decoration: none;
                 }
@@ -73,24 +68,21 @@
                     height: 3vw;
                     margin-top:1vw;
                     font-weight:bold;
-                    font-size:1.5rem;
-                    text-transform: capitalize;
-                    box-shadow: none;
+                    font-size:$font-text;
+
                     border-color: $color-primary;
                     border-style: solid;
                     border-width: 3px;
+                    
                     color: $color-primary;
                     background-color: transparent;
                     border-radius: 5%;
+                    
+                    &:hover {
+                        transform: scale(1.05);
+                        transition: all 0.5s;
+                    }
                 }
-
-                &__button:hover {
-                    transform: scale(1.05);
-                    background-color: $color-background-secondary;
-                    transition: all 0.5s;
-                }
-
-
             }
 
             @include respond(tab-port) {

@@ -15,9 +15,8 @@ import Typography from '@material-ui/core/Typography';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
 import LinkIcon from '@material-ui/icons/Link';
-import Chip from "@material-ui/core/Chip"
+import Chip from "@material-ui/core/Chip" 
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -146,8 +145,8 @@ const Project = (props) => {
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
           <ui className={classes.list} className='listy'>
-            {data.description.map(descript =>
-              <li className={classes.list_item}><span className={classes.inner}>{descript}</span></li>
+            {data.description.map(point =>
+              <li className={classes.list_item}><span className={classes.inner}>{point}</span></li>
               )}
           </ui>
         </CardContent>

@@ -1,7 +1,7 @@
 import React from "react";
 
 const Experience = (props) => {
-  const { data } = props;
+  const { data } = props; 
 
   return (
     <section className="experience">
@@ -15,8 +15,8 @@ const Experience = (props) => {
           <br />
           <hr className="experience__content__horizontal"/>
           <ul className="experience__content__description">
-            {data.description.map(descript =>
-               <li className="experience__content__description__item">{descript}</li>
+            {data.description.map(point =>
+               <li className="experience__content__description__item">{point}</li>
                )}
           </ul>
       </div>

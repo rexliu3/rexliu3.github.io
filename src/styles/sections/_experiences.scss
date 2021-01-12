@@ -1,29 +1,23 @@
 .experiences {
     padding-bottom: 2rem;
     background-color: $color-background-secondary;
-    padding-top:$nav-height;
+    padding-top: $nav-height;
 
-
-    @include respond(big-desktop) {
-        padding-top: 2vw;
-    }
 
     &__header {
         color:$color-secondary;
         font-size:$font-section;
         text-align:center;
-        margin: auto auto -1vw auto;
-        padding: auto;
+        margin-bottom: -1vw;
         font-family: 'Langar', cursive;
     }
 
     &__horizontal {
         width: 10vw;
         margin:auto;
-        height:10px;
+        height:12px;
         border-radius: 7px;
         background-color:$color-secondary;
-        border-color:$color-secondary;
     }
 
     &__content {

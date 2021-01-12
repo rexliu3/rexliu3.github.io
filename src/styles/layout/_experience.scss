@@ -2,12 +2,13 @@
     width: 60vw;
     height:fit-content;
     display:grid;
-    margin:auto;
-    border-radius: $border-radius;
+    margin:auto auto 3rem auto;
     grid-template-columns: 5vw 60vw;
+    
+    border-radius: $border-radius;
     background-color: $color-white;
-    margin-bottom: 3rem;
     padding:1rem;
+
     -webkit-box-shadow: 0px 0px 5px 0px #000000; 
     box-shadow: 0px 0px 5px 0px #000000;
 
@@ -16,21 +17,18 @@
         width:4vw;
         border-radius:0.5vw;
         vertical-align: top;
-        margin: auto;
-        display:flex;
-        margin-top: 0.5vw;
-        
+        margin: 0.5vw auto auto auto;
+        display:flex;        
     }
 
     &__content {
         display:block;
         margin-left:1rem;
+        text-align:left;
 
         &__header {
-            display:inline-block;
             color:$color-secondary;
             font-size: $font-subtitle;
-            text-align:left;
         }
 
         &__date {
@@ -41,28 +39,23 @@
 
         &__horizontal {
             width: 35%;
-            /* border: 1px #63A9AE; */
-            height: 2px;
+            height: 2.5px;
             border: 0;
             background-color: $color-primary;
+            border-radius: 5px;
         }
 
 
         &__description {
             font-size: $font-text;
             color:$color-secondary;
-            position: relative;
-            line-height: 2.5rem;
+            line-height: 2rem;
             overflow-wrap: break-word;
             word-wrap: break-word;
             width: 90%;
 
             &__item {
                 margin-left: 3.5rem;
-                overflow-wrap: break-word;
-                word-wrap: break-word;
-
-
             }
         }
 

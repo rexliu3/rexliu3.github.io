@@ -20,7 +20,7 @@ const projects = [
     link:
       "https://play.google.com/store/apps/details?id=org.pcov.pcovannouncements&hl=en&gl=US",
   },
-  {
+  { 
     name: "AI Stock Trading Bot",
     logo: "assets/AI.png",
     description: [
@@ -128,7 +128,7 @@ const projects = [
     logo: "assets/Scheme.png",
     description: [
       "Developed Scheme language interpreter in Python",
-      "Includes procedures, name binding, environments, etc.",
+      "Includes procedures, name binding, environments, etc.", 
     ],
     tools: ["Python", "Scheme"],
     github: "https://github.com/rexliu3/minesweeper",

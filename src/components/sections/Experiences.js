@@ -49,7 +49,7 @@ const experiences = [
     website: "https://ortexo.com",
     description: [
       "Conducted extensive unit and integrated tests to find and track bugs on all company code",
-      " Noted bugs, suggested improvements, and properly documented 20+ GitHub issues",
+      "Noted bugs, suggested improvements, and properly documented 20+ GitHub issues",
       "Create detailed project idea templates on W3Hacks.com",
     ],
   },

@@ -32,7 +32,7 @@ const interests = [
   },
   {
     name: "Machine Learning",
-    logo: "assets/machine.png",
+    logo: "assets/machine-learning.png",
     description: null,
   },
 ];
