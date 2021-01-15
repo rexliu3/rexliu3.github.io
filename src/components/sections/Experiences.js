@@ -18,7 +18,7 @@ const experiences = [
   {
     company: "Investocracy",
     logo: "assets/investocracy.png",
-    title: "Full Stack Web Developer Intern",
+    title: "Full Stack Software Developer Intern",
     date: "June 2020 - October 2020",
     website: "https://investocracy.co",
     description: [
