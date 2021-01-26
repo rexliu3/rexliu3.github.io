@@ -130,7 +130,7 @@ class Navbar extends Component {
             </nav>
           )}
 
-          {width <= 900 && (
+          {/*width <= 900 && (
             <ClickAwayListener mouseEvent="onMouseDown"
             touchEvent="onTouchStart"
             onClickAway={this.handleClickAway}>
@@ -193,7 +193,7 @@ class Navbar extends Component {
                 ) : null}
               </div>
             </ClickAwayListener>
-          )}
+          )*/}
 
           <hr className="nav__horizontal"></hr>
         </div>
