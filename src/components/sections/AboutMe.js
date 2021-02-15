@@ -52,7 +52,7 @@ const AboutMe = () => {
           <Hexagon
             className="aboutme__content__description__image"
             style={{ strokeWidth: "10", stroke: "#63A9AE" }}
-            backgroundImage="assets/Profile-Picture.jpg"
+            backgroundImage="assets/Profile-Picture.png"
             flatTop="True"
           />
           <div className="aboutme__content__description__text">
