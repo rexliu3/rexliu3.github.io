@@ -42,8 +42,11 @@
             margin-top: 2vw;
 
             &__image {
-                height: 20vw;
                 margin:auto;
+                width: 20vw;
+                height: 20vw;
+                border-radius: 50%;
+                object-fit: cover;
             }
 
             &__text {

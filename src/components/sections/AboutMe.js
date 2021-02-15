@@ -49,11 +49,10 @@ const AboutMe = () => {
           ))}
         </div>
         <div className="aboutme__content__description">
-          <Hexagon
+          <img
             className="aboutme__content__description__image"
-            style={{ strokeWidth: "10", stroke: "#63A9AE" }}
-            backgroundImage="assets/Profile-Picture.png"
-            flatTop="True"
+            src="assets/Profile-Picture.png"
+            
           />
           <div className="aboutme__content__description__text">
             <h3 className="aboutme__content__description__text__title">
