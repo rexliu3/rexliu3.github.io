@@ -77,7 +77,7 @@ const AboutMe = () => {
               {content.description5}
             </p>
             
-            <a className="aboutme__content__description__text__link" href="/Resume_Rex.pdf" target="__blank">
+            <a className="aboutme__content__description__text__link" href="/Resume_RexLiu.pdf" target="__blank">
               <button className="aboutme__content__description__text__button">
                 Resume
               </button>
