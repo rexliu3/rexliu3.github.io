@@ -11,17 +11,11 @@ const descriptors = [
 
 const content = {
   name: "Rex Liu",
-  description1: `Hello! I’m Rex, a Computer Science Student at UC Berkeley. I'm
-  excited to learn new things, challenge myself, and use technology
+  description1: `Hello! I’m Rex, a Computer Science Student at UC Berkeley. 
+  I'm particularly fascinated by the advent of new software technologies coupled with revolutionary hardware systems. 
+  I'm excited to learn new things, challenge myself, and use technology
   to make an impact. My interests are very diverse and I love
-  learning more about different technologies and tools. After
-  picking up web development over the summer and interning at
-  several global startups as a web developer including RISE and
-  Investocracy, I began learning Tensorflow and exploring the Alpaca
-  Trading API to develop a Stock Trading Bot as a personal project.
-  I expanded on this idea as a Data Scientist at the Data Science
-  Society at Berkeley this past semester where I worked to develop a
-  more robust stock analyzing model.`,
+  learning more about different technologies and tools.`,
   description2: "So where am I today?",
   description3: `With extensive experience leading tech teams of 10+ interns and
   developing several web and mobile applications, I’ve become
@@ -34,7 +28,7 @@ const content = {
   learning the latest Chess strategies, practicing my Tennis skills,
   or competing in badminton tournaments.`,
   description5: `If you’d like to witness my abilities firsthand, please feel free
-  to reach out to me for Summer 2021 opportunities!`,
+  to reach out to me for Summer 2022 opportunities!`,
 };
 
 const AboutMe = () => {
@@ -43,17 +37,11 @@ const AboutMe = () => {
       <h1 className="aboutme__header">About</h1>
       <hr className="aboutme__horizontal"></hr>
       <div className="aboutme__content">
-        <div className="aboutme__content__icons">
-          {descriptors.map((descriptor) => (
-            <Icon data={descriptor} />
-          ))}
-        </div>
         <div className="aboutme__content__description">
-          <img
-            className="aboutme__content__description__image"
-            src="assets/Profile-Picture.png"
-            
-          />
+            <img
+              className="aboutme__content__description__image"
+              src="assets/Profile-Picture.png"
+            />
           <div className="aboutme__content__description__text">
             <h3 className="aboutme__content__description__text__title">
               {content.name}
@@ -62,19 +50,19 @@ const AboutMe = () => {
               {content.description1}
             </p>
             <p>&nbsp;</p>
-            <p className="aboutme__content__description__text__text">
+            {/*<p className="aboutme__content__description__text__text">
               {content.description2}
             </p>
             <p className="aboutme__content__description__text__text">
               {content.description3}
             </p>
-            <p>&nbsp;</p>
+          <p>&nbsp;</p>
             <p className="aboutme__content__description__text__text">
               {content.description4}
             </p>
             <p className="aboutme__content__description__text__text">
               {content.description5}
-            </p>
+            </p>*/}
             
             <a className="aboutme__content__description__text__link" href="/Resume_RexLiu.pdf" target="__blank">
               <button className="aboutme__content__description__text__button">
@@ -82,6 +70,11 @@ const AboutMe = () => {
               </button>
             </a>
           </div>
+        </div>
+        <div className="aboutme__content__icons">
+          {descriptors.map((descriptor) => (
+            <Icon data={descriptor} />
+          ))}
         </div>
       </div>
     </div>

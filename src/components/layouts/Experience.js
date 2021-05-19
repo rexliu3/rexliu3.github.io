@@ -13,7 +13,6 @@ const Experience = (props) => {
           <h3 className="experience__content__header">{data.company}</h3>
           <p className="experience__content__date"><strong>{data.title} |</strong> {data.date}</p>
           <br />
-          <hr className="experience__content__horizontal"/>
           <ul className="experience__content__description">
             {data.description.map(point =>
                <li className="experience__content__description__item">{point}</li>

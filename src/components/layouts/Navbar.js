@@ -194,8 +194,6 @@ class Navbar extends Component {
               </div>
             </ClickAwayListener>
           )*/}
-
-          <hr className="nav__horizontal"></hr>
         </div>
       </div>
     );

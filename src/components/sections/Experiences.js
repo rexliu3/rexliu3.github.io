@@ -3,10 +3,21 @@ import Experience from "../layouts/Experience";
 
 const experiences = [
   {
+    company: "Berkeley SkyDeck",
+    logo: "assets/skydeck.png",
+    title: "Software Developer Intern",
+    date: "January 2021 - April 2021",
+    website: "https://skydeck.berkeley.edu",
+    description: [
+      "Reduced spam registration for company portal with 2000+ members by improving secure reCAPTCHA V2 system",
+      "Managed startup registration pages with 4000+ views per month to secure 30 startups in new cohort",
+    ],
+  },
+  {
     company: "HKP Solutions",
     logo: "assets/hkpsolutions.png",
     title: "Software Developer Tech Lead",
-    date: "June 2020 - Present",
+    date: "June 2020 - April 2021",
     website: "https://hkpsolutions.com",
     description: [
       "Lead 10 developers in creating hotel management Android mobile and React web applications aimed at reducing costs",
@@ -39,18 +50,6 @@ const experiences = [
       "Led team of 5 developers in creating job tracking and finding platform and community",
       "Created dynamic React frontend and implemented secure Firebase Authentication and MySQL Database",
       "Allocated work, provided guidance, and resolved issues to meet performance objectives",
-    ],
-  },
-  {
-    company: "Ortexo",
-    logo: "assets/Ortexo.jpeg",
-    title: "Quality Assurance Tester",
-    date: "June 2020 - August 2020",
-    website: "https://ortexo.com",
-    description: [
-      "Conducted extensive unit and integrated tests to find and track bugs on all company code",
-      "Noted bugs, suggested improvements, and properly documented 20+ GitHub issues",
-      "Create detailed project idea templates on W3Hacks.com",
     ],
   },
 ];

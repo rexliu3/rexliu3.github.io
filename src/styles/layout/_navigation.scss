@@ -2,7 +2,7 @@
   width: 100%;
   height: $nav-height;
   top: 0;
-  background-color: $color-background;
+  background-color: $color-primary;
   position: fixed;
   display: inline;
   z-index: 9999;
@@ -13,7 +13,7 @@
   margin-top: 0;
   z-index: 999;
   -webkit-overflow-scrolling:touch;
-
+ 
   &__logo {
     width: 10%;
     text-decoration: none;
@@ -107,15 +107,8 @@
   }
 
   &__link.scrolled {
-    color: $color-primary;
+    text-decoration: solid underline white 2px;
   }
-
-  &__link:hover {
-    color: $color-primary;
-    transition: all 0.75s;
-    text-decoration: none;
-  }
-  
 }
 
 /*

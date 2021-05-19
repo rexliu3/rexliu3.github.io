@@ -6,37 +6,40 @@ const courses = [
     title: "Computer Science",
     courses: [
       ["CS 61A", "The Structure and Interpretation of Computer Programs", "A+"],
-      ["CS 61B (current)", "Data Structures", ""],
+      ["CS 61B", "Data Structures", ""],
+      ["CS 70 (current)", "Discrete Mathematics and Probability Theory", ""],
     ],
   },
   {
     title: "Business Administration/Economics",
     courses: [["UGBA 10", "Principles of Business", "A-"],
-              ["Econ 1 (current)", "Introduction to Economics", ""]
+              ["Econ 1", "Introduction to Economics", ""],
+              ["UGBA 88 (current)", "Data and Decisions", ""],
   
   ],
   },
   {
-    title: "Electrical Engineering & Computer Science",
+    title: "Engineering",
     courses: [
       ["EECS 16A", "Designing Information Devices and Systems I", "A-"],
       [
-        "EECS 16B (current)",
+        "EECS 16B",
         "Designing Information Devices and Systems II",
         "",
       ],
+      ["ENGIN 120 (current)", "Principles of Engineering Economics", ""],
     ],
   },
   {
     title: "Math",
     courses: [
       ["Math 53", "Multivariable Calculus", "A-"],
-      ["Math 54 (current)", "Linear Algebra and Differential Equations", ""],
+      ["Math 54", "Linear Algebra and Differential Equations", ""],
     ],
   },
   {
     title: "Data Science",
-    courses: [["Data C8 (current)", "Foundations of Data Science", ""]],
+    courses: [["Data C8", "Foundations of Data Science", ""]],
   },
 ];
 
