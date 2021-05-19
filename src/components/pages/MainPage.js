@@ -5,6 +5,7 @@ import Experiences from "../sections/Experiences";
 import Projects from "../sections/Projects";
 import Courses from "../sections/Courses";
 import Interests from "../sections/Interests";
+import Extracurriculars from "../sections/Extracurriculars";
 
 import Particles from "react-particles-js";
 import NavBar from "../layouts/Navbar";
@@ -90,8 +91,8 @@ class MainPage extends React.Component {
     
     var helper = function(num) {
         let i = 1
-        let dictions = {1: 'firstNav', 2: 'secondNav', 3: 'thirdNav', 4: 'fourthNav', 5: 'fifthNav', 6: 'sixthNav'}
-        while (i <= 6) {
+        let dictions = {1: 'firstNav', 2: 'secondNav', 3: 'thirdNav', 4: 'fourthNav', 5: 'fifthNav', 6: 'sixthNav', 7: 'seventhNav'}
+        while (i <= 7) {
             let oldNameSelector = ".navigation__link." + dictions[i]
             let newName = "navigation__link " + dictions[i]
             if (i == num) {
@@ -119,11 +120,14 @@ class MainPage extends React.Component {
       if (pos2 > document.getElementById('Projects').offsetTop) {
         helper(4);
       }
-      if (pos2 > document.getElementById('Courses').offsetTop) {
+      if (pos2 > document.getElementById('Extracurriculars').offsetTop) {
         helper(5);
       }
-      if (pos2 > document.getElementById('Interests').offsetTop) {
+      if (pos2 > document.getElementById('Courses').offsetTop) {
         helper(6);
+      }
+      if (pos2 > document.getElementById('Interests').offsetTop) {
+        helper(7);
       }
   }
   };
@@ -254,6 +258,10 @@ class MainPage extends React.Component {
 
         <div class="main__Projects" id="Projects">
           <Projects />
+        </div>
+
+        <div class="main__Extracurriculars" id="Extracurriculars">
+          <Extracurriculars />
         </div>
 
         <div class="main__Courses" id="Courses">

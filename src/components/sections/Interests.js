@@ -5,17 +5,20 @@ const hobbies = [
   {
     name: "Chess",
     logo: "assets/chess.png",
-    description: "chess.com Ratings: Rapid(912) Puzzles(1460)",
+    description: "chess.com ratings: Blitz(1262) Puzzles(1630)",
+    link: "https://www.chess.com/member/rexliu3",
   },
   {
     name: "Badminton",
     logo: "assets/badminton.png",
     description: "BC Provincials 2018/2019 1st Doubles Regionals",
+    link: null,
   },
   {
     name: "Tennis",
     logo: "assets/tennis.png",
     description: "Recreational Player",
+    link: null,
   },
 ];
 
@@ -24,16 +27,19 @@ const interests = [
     name: "Data Science",
     logo: "assets/data.png",
     description: null,
+    link: null,
   },
   {
     name: "Blockchain",
     logo: "assets/blockchain.jpg",
     description: null,
+    link: null,
   },
   {
     name: "Machine Learning",
     logo: "assets/machine-learning.png",
     description: null,
+    link: null,
   },
 ];
 

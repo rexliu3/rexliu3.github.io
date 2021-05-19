@@ -115,14 +115,18 @@ class Navbar extends Component {
                     Projects
                   </a>
                 </li>
-
                 <li className="navigation__item">
-                  <a className="navigation__link fifthNav" href="#Courses">
+                  <a className="navigation__link fifthNav" href="#Extracurriculars">
+                    Extracurriculars
+                  </a>
+                </li>
+                <li className="navigation__item">
+                  <a className="navigation__link sixthNav" href="#Courses">
                     Courses
                   </a>
                 </li>
                 <li className="navigation__item">
-                  <a className="navigation__link sixthNav" href="#Interests">
+                  <a className="navigation__link seventhNav" href="#Interests">
                     Fun Facts
                   </a>
                 </li>

@@ -16,7 +16,7 @@ const Icon = (props) => {
 
   return (
     <section className="icon">
-      <img className="icon__image" src={data.logo}></img>
+      <a href={data.link} target="_blank"><img className="icon__image" src={data.logo}></img></a>
       <h3 className="icon__title">{data.name}</h3>
       <div className="icon__subtitle">{data.description}</div>
     </section>
