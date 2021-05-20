@@ -53,12 +53,12 @@
 
         &__description {
             font-size: $font-text;
-            color:$color-secondary;
+            color:$color-secondary-text;
             line-height: 2rem;
             overflow-wrap: break-word;
             word-wrap: break-word;
             width: 90%;
-
+ 
             &__item {
                 margin-left: 3.5rem;
             }
