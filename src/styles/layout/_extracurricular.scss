@@ -1,0 +1,24 @@
+.extracurricular {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 45vw;
+    border-radius:0.5vw;
+    
+    background-color: $color-white;
+
+    &__img {
+        height: 5vw;
+        width: 5vw;
+        margin: 1vw auto 0vw auto;
+        display: flex;
+    }
+
+    &:hover {
+        transform: scale(1.01);
+        transition: all 0.25s;
+    }
+}
