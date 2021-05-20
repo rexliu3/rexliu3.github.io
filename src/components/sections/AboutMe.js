@@ -2,6 +2,9 @@ import React from "react";
 import Hexagon from "react-hexagon";
 import Icon from "../layouts/Icon";
 
+import Bounce from "react-reveal/Bounce";
+import Flip from "react-reveal/Flip";
+
 const descriptors = [
   { name: "Leader", logo: "assets/leader.svg", description: null },
   { name: "Tech Lover", logo: "assets/tech.png", description: null },
@@ -34,22 +37,28 @@ const content = {
 const AboutMe = () => {
   return (
     <div className="aboutme">
-      <h1 className="aboutme__header">About</h1>
-      <hr className="aboutme__horizontal"></hr>
+      <Bounce top duration={2000}>
+        <h1 className="aboutme__header">About</h1>
+        <hr className="aboutme__horizontal"></hr>
+      </Bounce>
       <div className="aboutme__content">
         <div className="aboutme__content__description">
+          <Bounce left duration={3000} delay={1000}>
             <img
               className="aboutme__content__description__image"
               src="assets/Profile-Picture.png"
             />
-          <div className="aboutme__content__description__text">
-            <h3 className="aboutme__content__description__text__title">
-              {content.name}
-            </h3>
-            <p className="aboutme__content__description__text__text">
-              {content.description1}
-            </p>
-            <p>&nbsp;</p>
+            </Bounce>
+            <Bounce right duration={3000} delay={1000}>
+              <div className="aboutme__content__description__text">
+                <h3 className="aboutme__content__description__text__title">
+                  {content.name}
+                </h3>
+                <p className="aboutme__content__description__text__text">
+                  {content.description1}
+                </p>
+                <p>&nbsp;</p>
+            
             {/*<p className="aboutme__content__description__text__text">
               {content.description2}
             </p>
@@ -70,12 +79,15 @@ const AboutMe = () => {
               </button>
             </a>
           </div>
+          </Bounce>
         </div>
-        <div className="aboutme__content__icons">
-          {descriptors.map((descriptor) => (
-            <Icon data={descriptor} />
-          ))}
-        </div>
+        <Flip bottom duration={3000} delay={1000}>
+          <div className="aboutme__content__icons">
+            {descriptors.map((descriptor) => (
+              <Icon data={descriptor} />
+            ))}
+          </div>
+        </Flip>
       </div>
     </div>
   );

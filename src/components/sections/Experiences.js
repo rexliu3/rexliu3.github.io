@@ -1,6 +1,8 @@
 import React from "react";
 import Experience from "../layouts/Experience";
 
+import Bounce from "react-reveal/Bounce";
+
 const experiences = [
   {
     company: "Berkeley SkyDeck",
@@ -57,13 +59,19 @@ const experiences = [
 const Experiences = () => {
   return (
     <div className="experiences">
-      <h1 className="experiences__header">Experiences</h1>
-      <hr className="experiences__horizontal" />
-      <div className="experiences__content">
-        {experiences.map(experience =>
-          <Experience data={experience}/>
-          )}
-      </div>
+      <Bounce top duration={2000}>
+        <h1 className="experiences__header">Experiences</h1>
+        <hr className="experiences__horizontal" />
+      </Bounce>
+      
+        <div className="experiences__content">
+          {experiences.map(experience =>
+          <Bounce right duation={3000} delay={1000}>
+            <Experience data={experience}/>
+            </Bounce>
+            )}
+        </div>
+      
     </div>
   );
 };

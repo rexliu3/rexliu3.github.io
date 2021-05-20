@@ -1,6 +1,10 @@
 import React from "react";
 import Icon from "../layouts/Icon";
 
+import Bounce from 'react-reveal/Bounce';
+import Flip from 'react-reveal/Flip';
+
+
 const hobbies = [
   {
     name: "Chess",
@@ -46,25 +50,33 @@ const interests = [
 const Interests = () => {
   return (
     <div className="interests">
-      <h1 className="interests__header">Hobbies</h1>
-      <hr className="interests__horizontal"></hr>
+      <Bounce top duration={2000}>
+        <h1 className="interests__header">Hobbies</h1>
+        <hr className="interests__horizontal"></hr>
+      </Bounce>
       <div className="interests__content">
+      <Flip bottom duration={3000} delay={1000}>
         <div className="interests__content__icons">
           {hobbies.map(hobby =>
             <Icon data={hobby} />
             )}
         </div>
+        </Flip>
       </div>
 
-      <h1 className="interests__header">Interests</h1>
-      <hr className="interests__horizontal"></hr>
+      <Bounce top duration={2000}>
+        <h1 className="interests__header">Interests</h1>
+        <hr className="interests__horizontal"></hr>
+      </Bounce>
       <div className="interests__content">
+      <Flip bottom duration={3000} delay={1000}>
         <div className="interests__content__icons">
         {interests.map(interest =>
             <Icon data={interest} />
             )}
 
         </div>
+        </Flip>
       </div>
     </div>
   );

@@ -1,6 +1,11 @@
 import React from "react";
 import Project from "../layouts/Project";
 
+import Bounce from "react-reveal/Bounce";
+import LightSpeed from 'react-reveal/LightSpeed';
+import Zoom from 'react-reveal/Zoom';
+
+
 const projects = [
   {
     name: "PCOV Church Application",
@@ -142,11 +147,15 @@ const projects = [
 const Projects = () => {
   return (
     <div className="projects">
-      <h1 className="projects__header">Projects</h1>
-      <hr className="projects__horizontal" />
+      <Bounce top duration={2000}>
+        <h1 className="projects__header">Projects</h1>
+        <hr className="projects__horizontal" />
+      </Bounce>
       <div className="projects__grid">
         {projects.map((project) => (
-          <Project data={project} />
+          <Zoom top duration={1000} delay={500}>
+            <Project data={project} />
+          </Zoom>
         ))}
       </div>
     </div>
