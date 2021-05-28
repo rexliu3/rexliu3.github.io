@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Project from "../layouts/Project";
 
 import Bounce from "react-reveal/Bounce";
-import LightSpeed from 'react-reveal/LightSpeed';
 import Zoom from 'react-reveal/Zoom';
 
+import db from "./../../firebase.config";
 
-const projects = [
+
+const projectsArr = [
   {
     name: "PCOV Church Application",
     logo: "assets/PCOV.png",
@@ -59,7 +60,6 @@ const projects = [
       "Developing unique algorithm to match seniors to volunteers based on preferences",
     ],
     tools: ["HTML", "CSS", "JavaScript", "MySQL"],
-    github: "https://github.com/rexliu3/LocationBasedActions",
     date: "Apr 2020 – May 2020",
     summary:
       "React website to encourage personal bonds between volunteers and seniors at Senior Homes",
@@ -91,7 +91,7 @@ const projects = [
       "Published to Google Play Store",
     ],
     tools: ["Java", "XML", "Geofences", "Android Studio"],
-    github: "https://github.com/rexliu3/StockTradingBotCloud",
+    github: "https://github.com/rexliu3/LocationBasedActions",
     date: "May 2020 - Jun 2020",
     summary:
       "Android application that notifies users when they enter a preset region",
@@ -117,8 +117,8 @@ const projects = [
     name: "Minesweeper Game and Generator",
     logo: "assets/Minesweeper.png",
     description: [
-      "Implemented Minesweeper board generator based on difficult",
-      "Implemented Minesweeper board generator based on difficult",
+      "Designed playable Minesweeper game GUI with Python and the PyGame module",
+      "Implemented Minesweeper board generator based on difficultly",
       "Users can flag and reveal boxes",
     ],
     tools: ["Python", "PyGame"],
@@ -136,7 +136,7 @@ const projects = [
       "Includes procedures, name binding, environments, etc.", 
     ],
     tools: ["Python", "Scheme"],
-    github: "https://github.com/rexliu3/minesweeper",
+    github: "https://github.com/rexliu3/Scheme-Interpreter",
     date: "Nov 2020",
     summary: "A Scheme interpreter built in Python",
     image: "assets/Scheme-Wall.gif",
@@ -145,6 +145,19 @@ const projects = [
 ];
 
 const Projects = () => {
+  const [projects, setProjects] = useState([]);
+
+  useEffect(() => {
+    db.collection("Projects")
+      .get()
+      .then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+          setProjects(oldArray => [...oldArray, doc.data()]);
+          console.log(doc.data());
+        });
+      });
+  }, []);
+
   return (
     <div className="projects">
       <Bounce top duration={2000}>

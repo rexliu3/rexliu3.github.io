@@ -29,7 +29,7 @@ const courses = [
         "Designing Information Devices and Systems II",
         "",
       ],
-      ["ENGIN 120 (current)", "Principles of Engineering Economics", ""],
+      ["INDENG 190E (current)", "Advanced Topics in Industrial Engineering and Operations Research: Entrepreneurship & Innovation", ""],
     ],
   },
   {

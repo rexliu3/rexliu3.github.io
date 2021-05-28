@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Experience from "../layouts/Experience";
 
 import Bounce from "react-reveal/Bounce";
 
-const experiences = [
+import db from "./../../firebase.config";
+
+/*const experiencesArr = [
   {
     company: "Berkeley SkyDeck",
     logo: "assets/skydeck.png",
@@ -54,24 +56,37 @@ const experiences = [
       "Allocated work, provided guidance, and resolved issues to meet performance objectives",
     ],
   },
-];
+];*/
 
 const Experiences = () => {
+  const [experiences, setExperiences] = useState([]);
+
+  useEffect(() => {
+    db.collection("Experiences")
+      .get()
+      .then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+          setExperiences(oldArray => [...oldArray, doc.data()]);
+          console.log(doc.data());
+        });
+      });
+  }, []);
+
   return (
     <div className="experiences">
       <Bounce top duration={2000}>
         <h1 className="experiences__header">Experiences</h1>
         <hr className="experiences__horizontal" />
       </Bounce>
-      
-        <div className="experiences__content">
-          {experiences.map(experience =>
-          <Bounce right duation={3000} delay={1000}>
-            <Experience data={experience}/>
+
+      <div className="experiences__content">
+        {experiences &&
+          experiences.map((experience) => (
+            <Bounce right duation={3000} delay={1000}>
+              <Experience data={experience} />
             </Bounce>
-            )}
-        </div>
-      
+          ))}
+      </div>
     </div>
   );
 };
