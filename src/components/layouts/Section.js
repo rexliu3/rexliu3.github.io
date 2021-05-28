@@ -11,7 +11,7 @@ const Section = (props) => {
           <ul className="section__content__courses__list">
             {data.courses.map((course) => (
               <li className="section__content__courses__item" key={course}>
-                <strong style={{color:"#63A9AE"}}>{course[0]}: </strong> {course[1]}
+                <strong style={{color:"#63A9AE"}}>{course.shortName}: </strong> {course.fullName}
               </li>
             ))}
           </ul>

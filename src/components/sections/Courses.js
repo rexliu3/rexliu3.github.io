@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Section from "../layouts/Section";
 
 import Bounce from 'react-reveal/Bounce';
 
-const courses = [
+import db from "./../../firebase.config";
+
+const coursesArr = [
   {
     title: "Computer Science",
     courses: [
@@ -46,6 +48,22 @@ const courses = [
 ];
 
 const Courses = () => {
+  const [courses, setCourses] = useState([]);
+
+  const sortFunc = (a, b) => {
+
+  }
+
+  useEffect(() => {
+    db.collection("Courses")
+      .get()
+      .then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+          setCourses(oldArray => [...oldArray, doc.data()]);
+        });
+      });
+  }, []);
+
   return (
     <div className="courses">
       <Bounce top duration={2000}>
@@ -54,7 +72,7 @@ const Courses = () => {
         <hr className="courses__horizontal" />
       </Bounce>
       <div className="courses__content">
-        {courses.map(course =>
+        {courses.sort(function compareFn(firstEl, secondEl) { return firstEl.order - secondEl.order}).map(course =>
         <Bounce right duration={3000} delay={1000}>
           <Section data={course}/>
           </Bounce>

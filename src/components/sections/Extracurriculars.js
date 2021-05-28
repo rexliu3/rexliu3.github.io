@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Extracurricular from "../layouts/Extracurricular";
 
 import Bounce from 'react-reveal/Bounce';
 
-const extracurriculars = [
+import db from "./../../firebase.config";
+
+const extracurricularsArr = [
   {
     company: "Web Development at Berkeley",
     logo: "assets/wdb.jpeg",
@@ -89,6 +91,19 @@ const extracurriculars = [
 ];
 
 const Extracurriculars = () => {
+  const [extracurriculars, setExtracurriculars] = useState([]);
+
+  useEffect(() => {
+    db.collection("Extracurriculars")
+      .get()
+      .then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+          setExtracurriculars(oldArray => [...oldArray, doc.data()]);
+          console.log(doc.data());
+        });
+      });
+  }, []);
+
   return (
     <div className="extracurriculars">
       <Bounce top duration={2000}>
