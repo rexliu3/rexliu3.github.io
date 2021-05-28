@@ -7,7 +7,7 @@ import Zoom from 'react-reveal/Zoom';
 import db from "./../../firebase.config";
 
 
-const projectsArr = [
+/* const projectsArr = [
   {
     name: "PCOV Church Application",
     logo: "assets/PCOV.png",
@@ -142,7 +142,7 @@ const projectsArr = [
     image: "assets/Scheme-Wall.gif",
     link: null,
   },
-];
+];*/
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
