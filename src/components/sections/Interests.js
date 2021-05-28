@@ -74,7 +74,6 @@ const Interests = () => {
         {interests.map(interest =>
             <Icon data={interest} />
             )}
-
         </div>
         </Flip>
       </div>

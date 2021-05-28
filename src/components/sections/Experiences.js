@@ -67,7 +67,6 @@ const Experiences = () => {
       .then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
           setExperiences(oldArray => [...oldArray, doc.data()]);
-          console.log(doc.data());
         });
       });
   }, []);

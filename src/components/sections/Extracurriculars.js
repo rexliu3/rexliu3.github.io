@@ -5,7 +5,7 @@ import Bounce from 'react-reveal/Bounce';
 
 import db from "./../../firebase.config";
 
-const extracurricularsArr = [
+/* const extracurricularsArr = [
   {
     company: "Web Development at Berkeley",
     logo: "assets/wdb.jpeg",
@@ -88,7 +88,7 @@ const extracurricularsArr = [
       "Managed 7 mentors in developing weekly lessons and teaching classes",
     ],
   },
-];
+];*/
 
 const Extracurriculars = () => {
   const [extracurriculars, setExtracurriculars] = useState([]);
@@ -99,7 +99,6 @@ const Extracurriculars = () => {
       .then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
           setExtracurriculars(oldArray => [...oldArray, doc.data()]);
-          console.log(doc.data());
         });
       });
   }, []);

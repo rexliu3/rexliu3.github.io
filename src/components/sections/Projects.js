@@ -153,7 +153,6 @@ const Projects = () => {
       .then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
           setProjects(oldArray => [...oldArray, doc.data()]);
-          console.log(doc.data());
         });
       });
   }, []);

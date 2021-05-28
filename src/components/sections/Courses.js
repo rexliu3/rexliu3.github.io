@@ -5,7 +5,7 @@ import Bounce from 'react-reveal/Bounce';
 
 import db from "./../../firebase.config";
 
-const coursesArr = [
+/* const coursesArr = [
   {
     title: "Computer Science",
     courses: [
@@ -45,14 +45,10 @@ const coursesArr = [
     title: "Data Science",
     courses: [["Data C8", "Foundations of Data Science", ""]],
   },
-];
+];*/
 
 const Courses = () => {
   const [courses, setCourses] = useState([]);
-
-  const sortFunc = (a, b) => {
-
-  }
 
   useEffect(() => {
     db.collection("Courses")
