@@ -91,6 +91,12 @@
     display: inline;
   }
 
+  &__item#fun_facts {
+    @include respond(tab-land) {
+      display: none;
+    }
+  }
+
   &__open {
     display: none;
   }
@@ -115,6 +121,7 @@
 About
 Experiences
 Projects
+Extracurriculars
 Courses
 Fun Facts
 */

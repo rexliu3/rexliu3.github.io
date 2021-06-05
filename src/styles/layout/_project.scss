@@ -9,7 +9,6 @@
 
 .project {
     width: 30vw;
-
     @include respond(phone) {
         width: 90vw;
     }

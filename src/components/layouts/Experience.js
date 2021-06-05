@@ -12,7 +12,7 @@ const Experience = (props) => {
         </a>
         <div className="experience__content">
           <h3 className="experience__content__header">{data.company}</h3>
-          <p className="experience__content__date"><strong style={{color:"#63A9AE"}}>{data.title} |</strong> {data.date}</p>
+          <p className="experience__content__date"><strong style={{color:"#63A9AE"}}>{data.title} |</strong> <br id="break"/> {data.date}</p>
           <br />
           <ul className="experience__content__description">
             {data.description.map(point =>

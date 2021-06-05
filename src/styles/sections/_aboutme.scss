@@ -47,6 +47,11 @@
                 height: 20vw;
                 border-radius: 50%;
                 object-fit: cover;
+
+                @include respond(phone) {
+                    width: 30vw;
+                    height: 30vw;
+                }
             } 
 
             &__text {
@@ -59,6 +64,10 @@
                     font-size: 2rem;
                     text-align: justify;
                     text-justify: inter-word;
+
+                    @include respond(phone) {
+                        width: 90vw;
+                    }
                 }
 
                 &__link {

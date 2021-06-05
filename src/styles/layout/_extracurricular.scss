@@ -15,10 +15,31 @@
         width: 5vw;
         margin: 1vw auto 0vw auto;
         display: flex;
+
+         @include respond(tab-port-large) {
+            width: 7vw;
+            height: 7vw;
+         }
+         @include respond(phone) {
+            width: 10vw;
+            height: 10vw;
+         }
     }
 
     &:hover {
         transform: scale(1.01);
         transition: all 0.25s;
+    }
+
+    @include respond(phone) {
+       width: 90vw;
+    }
+}
+
+#extra {
+    display: none;
+
+    @include respond(tab-port) {
+        display: inline;
     }
 }

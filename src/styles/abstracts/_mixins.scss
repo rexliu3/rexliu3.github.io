@@ -37,6 +37,11 @@ ORDER: Base + typography > general layout + grid > page layout > components
       @content;
     } //416px
   }
+  @if $breakpoint == medium-phone {
+    @media only screen and (max-width: 31.25em) {
+      @content;
+    } //500px
+  }
   @if $breakpoint == phone {
     @media only screen and (max-width: 37.5em) {
       @content;
@@ -46,6 +51,11 @@ ORDER: Base + typography > general layout + grid > page layout > components
     @media only screen and (max-width: 56.25em) {
       @content;
     } //900px
+  }
+  @if $breakpoint == tab-port-large {
+    @media only screen and (max-width: 59.375em) {
+      @content;
+    } //950px
   }
   @if $breakpoint == tab-inter {
     @media only screen and (max-width: 68.75em) {

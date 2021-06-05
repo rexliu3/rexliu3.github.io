@@ -11,7 +11,7 @@ const Extracurricular = (props) => {
   const { data } = props; 
 
   return (
-    <Card className="extracurricular">
+    <Card className="extracurricular" style={{maxWidth:'90vw'}}>
       <img className="extracurricular__img"  src={data.logo} />
       <div>
         <CardActionArea>
@@ -20,7 +20,7 @@ const Extracurricular = (props) => {
               {data.company}
             </Typography>
             <Typography variant="h5" component="h3">
-              &nbsp; <strong style={{color:"#63A9AE", fontWeight: "normal"}} >{data.title}</strong> | {data.date}
+              &nbsp; <strong style={{color:"#63A9AE", fontWeight: "normal"}} >{data.title} | </strong> <p id="extra"><br />&nbsp;&nbsp;</p>{data.date}
             </Typography>
             <ul>
             {data.description.map(point =>

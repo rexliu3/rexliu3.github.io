@@ -125,7 +125,7 @@ class Navbar extends Component {
                     Courses
                   </a>
                 </li>
-                <li className="navigation__item">
+                <li className="navigation__item" id="fun_facts">
                   <a className="navigation__link seventhNav" href="#Interests">
                     Fun Facts
                   </a>
