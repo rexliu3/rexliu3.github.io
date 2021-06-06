@@ -147,7 +147,6 @@ class Navbar extends Component {
                 >
                   <MenuIcon className={classes.icon} fontSize="large" />
                 </Button>
-
                 {this.state.opens ? (
                   <Portal>
                     <StyledMenu
@@ -167,7 +166,6 @@ class Navbar extends Component {
                         </ListItemIcon>
                         <ListItemText primary="About" />
                       </MenuItem>
-
                       <MenuItem>
                         <ListItemIcon>
                           <ExtensionIcon fontSize="large" />

@@ -8,8 +8,8 @@ import Interests from "../sections/Interests";
 import Extracurriculars from "../sections/Extracurriculars";
 
 import Particles from "react-particles-js";
-import NavBar from "../layouts/Navbar";
 import Footer from "../layouts/Footer";
+import Navbar from "../layouts/Navbar"
 
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
@@ -76,7 +76,7 @@ window.onload = function () {
 };
 
 class MainPage extends React.Component {
-  componentDidMount() {
+  /*componentDidMount() {
     window.addEventListener("scroll", this.handleScroll);
     window.scrollTo(0,0);
   }
@@ -130,7 +130,7 @@ class MainPage extends React.Component {
         helper(7);
       }
   }
-  };
+  };*/
 
   render() {
     return (
@@ -246,7 +246,7 @@ class MainPage extends React.Component {
             </a>
           </header>
         </div>
-        <NavBar />
+        <Navbar />
         
         <div class="main__AboutMe" id="AboutMe">
           <AboutMe />
