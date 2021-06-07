@@ -76,7 +76,7 @@ window.onload = function () {
 };
 
 class MainPage extends React.Component {
-  /*componentDidMount() {
+  componentDidMount() {
     window.addEventListener("scroll", this.handleScroll);
     window.scrollTo(0,0);
   }
@@ -130,7 +130,7 @@ class MainPage extends React.Component {
         helper(7);
       }
   }
-  };*/
+  };
 
   render() {
     return (
