@@ -11,6 +11,17 @@
       width: 110vw;
     }
 
+    @include respond(medium-phone) {
+      width: 112vw;
+    }
+
+    @include respond(small-phone) {
+      width: 130vw;
+    }
+    @include respond(tiny-phone) {
+      width: 160vw;
+    }
+
     &__name {
       color: $color-white;
       text-shadow: -3px -3px 0 $color-primary, 4px -4px 0 $color-primary,
