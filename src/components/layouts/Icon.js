@@ -1,26 +1,8 @@
 import React from "react";
-import Hexagon from "react-hexagon";
-import AccessibilityIcon from "@material-ui/icons/Accessibility";
-import Ic from "@mdi/react";
-import { mdiAccountMultiplePlus } from "@mdi/js";
 
-const Icon = (props) => {
-  const { data } = props;
-
-  /*
-[0] : Image Location
-[1] : Title
-[2] : Subtitle
-[3] : Background Scale
- */
-
-  return (
-    <section className="icon">
-      <a href={data.link} target="_blank"><img className="icon__image" src={data.logo}></img></a>
-      <h3 className="icon__title">{data.name}</h3>
-      <div className="icon__subtitle">{data.description}</div>
-    </section>
-  );
+const Icon = ({ data }) => {
+  const content = <><img src={data.logo} alt="" /><div><h3>{data.name}</h3>{data.description && <p>{data.description}</p>}</div>{data.link && <span aria-hidden="true">↗</span>}</>;
+  return data.link ? <a className="interest-card" href={data.link} target="_blank" rel="noopener noreferrer">{content}</a> : <article className="interest-card">{content}</article>;
 };
 
 export default Icon;

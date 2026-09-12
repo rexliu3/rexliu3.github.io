@@ -1,27 +1,20 @@
 import React from "react";
-import Card from '@material-ui/core/Card';
 
-const Experience = (props) => {
-  const { data } = props; 
-
-  return (
-    <Card className="experience">
-         <a href={data.website} target="_blank" 
-                rel="noopener noreferrer" >
-        <img className="experience__image" src={data.logo}></img>
-        </a>
-        <div className="experience__content">
-          <h3 className="experience__content__header">{data.company}</h3>
-          <p className="experience__content__date"><strong style={{color:"#63A9AE"}}>{data.title} |</strong> <br id="break"/> {data.date}</p>
-          <br />
-          <ul className="experience__content__description">
-            {data.description.map(point =>
-               <li className="experience__content__description__item">{point}</li>
-               )}
-          </ul>
+const Experience = ({ data }) => (
+  <article className="experience-row">
+    <div className="experience-row__company">
+      {data.logo ? <img src={data.logo} alt="" /> : <span className="experience-row__monogram" aria-hidden="true">{data.company.charAt(0)}</span>}
+      <div>
+        <h3>{data.company}</h3>
+        {data.website && <a href={data.website} target="_blank" rel="noopener noreferrer">Visit company ↗</a>}
       </div>
-    </Card>
-  );
-};
+    </div>
+    <div className="experience-row__details">
+      <p className="experience-row__role">{data.title}</p>
+      <p className="experience-row__date">{data.date}</p>
+      {data.description && <ul>{data.description.map((point, index) => <li key={index}>{point}</li>)}</ul>}
+    </div>
+  </article>
+);
 
 export default Experience;

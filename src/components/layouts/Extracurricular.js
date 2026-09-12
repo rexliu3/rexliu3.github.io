@@ -1,49 +1,13 @@
 import React from "react";
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
 
-const Extracurricular = (props) => {
-  const { data } = props; 
-
-  return (
-    <Card className="extracurricular" style={{maxWidth:'90vw'}}>
-      <img className="extracurricular__img"  src={data.logo} />
-      <div>
-        <CardActionArea>
-          <CardContent>
-            <Typography variant="h4" component="h2">
-              {data.company}
-            </Typography>
-            <Typography variant="h5" component="h3">
-              &nbsp; <strong style={{color:"#63A9AE", fontWeight: "normal"}} >{data.title} | </strong> <p id="extra"><br />&nbsp;&nbsp;</p>{data.date}
-            </Typography>
-            <ul>
-            {data.description.map(point =>
-            <li style={{"list-style-type": "circle", "margin-left": '1vw'}}>
-              <Typography style={{fontSize:"1.25rem"}} color="textSecondary">
-                {point}
-              </Typography> 
-              </li>              
-              )}
-              </ul>
-          </CardContent>
-        </CardActionArea>
-
-        <CardActions>
-          <a href={data.website} target="_blank" style={{textDecoration:'None'}}>
-            <Button style={{marginTop:"-1vw"}} className="extracurriculars__button" size="large" variant="text">
-              Learn More
-            </Button>
-          </a>
-        </CardActions>
-      </div>
-    </Card>
-  );
-};
+const Extracurricular = ({ data }) => (
+  <article className="community-card">
+    <div className="community-card__top"><img src={data.logo} alt="" /><span>{data.date}</span></div>
+    <h3>{data.company}</h3>
+    <p className="community-card__role">{data.title}</p>
+    {data.description && <p>{data.description[0]}</p>}
+    {data.website && <a href={data.website} target="_blank" rel="noopener noreferrer">Learn more ↗</a>}
+  </article>
+);
 
 export default Extracurricular;
