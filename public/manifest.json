@@ -1,15 +1,15 @@
 {
-  "short_name": "Rex Liu",
-  "name": "Rex Liu — Software Engineer at Palantir Technologies",
+  "short_name": "Rex’s Apartment",
+  "name": "Rex’s Internet Apartment",
   "icons": [
     {
-      "src": "assets/icon2.png",
-      "type": "image/png",
+      "src": "apartment-icon.svg",
+      "type": "image/svg+xml",
       "sizes": "any"
     }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#f3f0e9",
-  "background_color": "#f3f0e9"
+  "theme_color": "#f8f6f0",
+  "background_color": "#f8f6f0"
 }
