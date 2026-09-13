@@ -2,14 +2,6 @@ import React from "react";
 import Experience from "../layouts/Experience";
 import useCollection from "../../hooks/useCollection";
 
-const currentExperience = {
-  id: "palantir-technologies",
-  company: "Palantir Technologies",
-  title: "Current role",
-  date: "New York · Present",
-  website: "https://www.linkedin.com/company/palantir-technologies",
-};
-
 const Experiences = () => {
   const { items, loading, error } = useCollection("Experiences");
   return (
@@ -21,8 +13,8 @@ const Experiences = () => {
       {loading && <p className="collection-status">Loading experience…</p>}
       {error && <p className="collection-status">Experience is unavailable right now.</p>}
       <div className="experience-list">
-        {[currentExperience, ...items.filter((item) => item.company !== currentExperience.company)].map((experience) => (
-          <Experience key={experience.id} data={experience} />
+        {items.map((experience) => (
+          <Experience key={experience._id} data={experience} />
         ))}
       </div>
     </div>

@@ -1,13 +1,5 @@
 import React from "react";
 
-export const rooms = [
-  { id: "books", name: "The bookshelf", short: "Books", icon: "book" },
-  { id: "travel", name: "The world map", short: "Travel", icon: "globe" },
-  { id: "projects", name: "The laptop", short: "Side projects", icon: "laptop" },
-  { id: "music", name: "The record player", short: "Café jazz", icon: "music" },
-  { id: "photos", name: "The camera", short: "Photos", icon: "camera" },
-  { id: "berkeley", name: "The diploma", short: "Berkeley", icon: "diploma" },
-];
 export function Icon({ name, size = 20, ...props }) {
   const paths = {
     home: <><path d="m3 10 9-7 9 7v10H3Z"/><path d="M9 20v-7h6v7"/></>,

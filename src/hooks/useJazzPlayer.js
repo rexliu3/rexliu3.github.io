@@ -1,11 +1,9 @@
 import { useEffect, useRef, useState } from "react";
-import { jazzTracks } from "../components/apartment/jazzTracks";
-
-export default function useJazzPlayer() {
+export default function useJazzPlayer(jazzTracks = []) {
   const audio = useRef(null);
   const request = useRef(0);
   const enabled = useRef(false);
-  const [track, setTrack] = useState(jazzTracks[0]);
+  const [track, setTrack] = useState(null);
   const [sound, setSound] = useState(false);
   const [loading, setLoading] = useState(false);
   const [volume, setVolume] = useState(0.15);
@@ -17,7 +15,12 @@ export default function useJazzPlayer() {
     return () => { request.current += 1; player.pause(); player.removeAttribute("src"); player.load(); };
   }, []);
 
+  useEffect(() => {
+    if (!track && jazzTracks.length) setTrack(jazzTracks[0]);
+  }, [jazzTracks, track]);
+
   const playTrack = async next => {
+    if (!next) return;
     const player = audio.current;
     const currentRequest = ++request.current;
     setTrack(next);
@@ -42,6 +45,7 @@ export default function useJazzPlayer() {
   };
 
   const toggleSound = () => {
+    if (!track) return;
     if (enabled.current) {
       enabled.current = false;
       request.current += 1;
@@ -60,7 +64,7 @@ export default function useJazzPlayer() {
     else { setTrack(next); setAudioError(""); }
   };
   const onEnded = () => {
-    if (!enabled.current) return;
+    if (!enabled.current || !jazzTracks.length) return;
     const nextIndex = (jazzTracks.findIndex(item => item.id === track.id) + 1) % jazzTracks.length;
     playTrack(jazzTracks[nextIndex]);
   };

@@ -1,33 +1,16 @@
-import { useEffect, useState } from "react";
-import db from "../firebase.config";
+import { useSanityContent } from "../sanity/ContentContext";
+
+const collectionKeys = {
+  Experiences: "experiences",
+  Projects: "projects",
+  Courses: "courseGroups",
+  Extracurriculars: "extracurriculars",
+};
 
 const useCollection = (name) => {
-  const [items, setItems] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(false);
-
-  useEffect(() => {
-    let mounted = true;
-
-    db.collection(name)
-      .get()
-      .then((snapshot) => {
-        if (mounted) {
-          setItems(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
-          setLoading(false);
-        }
-      })
-      .catch(() => {
-        if (mounted) {
-          setError(true);
-          setLoading(false);
-        }
-      });
-
-    return () => { mounted = false; };
-  }, [name]);
-
-  return { items, loading, error };
+  const { content, loading, error } = useSanityContent();
+  const key = collectionKeys[name];
+  return { items: content && key ? content[key] || [] : [], loading, error: Boolean(error) };
 };
 
 export default useCollection;

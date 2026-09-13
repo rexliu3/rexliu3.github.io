@@ -13,7 +13,7 @@ const Courses = () => {
       </div>
       {loading && <p className="collection-status">Loading coursework…</p>}
       {error && <p className="collection-status">Coursework is unavailable right now.</p>}
-      <div className="course-grid">{courses.map((course) => <Section key={course.id} data={course} />)}</div>
+      <div className="course-grid">{courses.map((course) => <Section key={course._id} data={course} />)}</div>
     </div>
   );
 };

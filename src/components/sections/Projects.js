@@ -12,7 +12,7 @@ const Projects = () => {
       </div>
       {loading && <p className="collection-status">Loading projects…</p>}
       {error && <p className="collection-status">Projects are unavailable right now.</p>}
-      <div className="project-grid">{items.map((project, index) => <Project key={project.id} data={project} index={index} />)}</div>
+      <div className="project-grid">{items.map((project, index) => <Project key={project._id} data={project} index={index} />)}</div>
     </div>
   );
 };
