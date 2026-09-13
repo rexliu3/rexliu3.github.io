@@ -1,0 +1,10 @@
+node_modules/
+build/
+studio/node_modules/
+studio/dist/
+studio/.sanity/
+package-lock.json
+studio/package-lock.json
+public/audio/
+public/assets/
+src/assets/

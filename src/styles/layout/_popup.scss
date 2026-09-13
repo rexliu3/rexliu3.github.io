@@ -10,12 +10,11 @@
     display:none;
   }*/
 
-
 .popup .content {
   position: fixed;
   top: 40%;
   left: 17%;
-  margin:auto;
+  margin: auto;
   transform: translate(-50%, -50%) scale(0);
   background: $color-black;
   width: 30vw;
@@ -25,7 +24,7 @@
   padding: 20px;
   box-sizing: border-box;
   border-radius: 10%;
-  border:thick;
+  border: thick;
   border-color: white;
   border-style: solid;
 }
@@ -57,30 +56,27 @@
 
 .header {
   color: $color-secondary;
-  font-size:4rem;
-  display:inline-block;
-
+  font-size: 4rem;
+  display: inline-block;
 }
 
 .body {
   color: white;
-  font-size:2rem;
-  display:inline-block;
-
+  font-size: 2rem;
+  display: inline-block;
 }
 
 .bodycolor {
   color: $color-secondary;
-  font-size:2rem;
-  display:inline-block;
-
+  font-size: 2rem;
+  display: inline-block;
 }
 
 .logo {
-  display:inline-block;
+  display: inline-block;
   width: 6rem;
-  height:6rem;
-  margin-left:2rem;
+  height: 6rem;
+  margin-left: 2rem;
   margin-bottom: -1rem;
 }
 

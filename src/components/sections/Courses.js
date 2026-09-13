@@ -8,12 +8,23 @@ const Courses = () => {
   return (
     <div>
       <div className="section-heading section-heading--split">
-        <div><p className="section-kicker">05 · Education</p><h2>Foundations for<br />lifelong learning.</h2></div>
+        <div>
+          <p className="section-kicker">05 · Education</p>
+          <h2>
+            Foundations for
+            <br />
+            lifelong learning.
+          </h2>
+        </div>
         <p>UC Berkeley · B.A. Computer Science · 2020–2023</p>
       </div>
       {loading && <p className="collection-status">Loading coursework…</p>}
       {error && <p className="collection-status">Coursework is unavailable right now.</p>}
-      <div className="course-grid">{courses.map((course) => <Section key={course._id} data={course} />)}</div>
+      <div className="course-grid">
+        {courses.map((course) => (
+          <Section key={course._id} data={course} />
+        ))}
+      </div>
     </div>
   );
 };

@@ -12,9 +12,15 @@ const Footer = () => (
     <div className="site-footer__bottom">
       <p>© {new Date().getFullYear()} Rex Liu</p>
       <div className="site-footer__links">
-        <a href="https://github.com/rexliu3" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="https://linkedin.com/in/rexliu3" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="/Resume_RexLiu.pdf" target="_blank" rel="noopener noreferrer">Résumé</a>
+        <a href="https://github.com/rexliu3" target="_blank" rel="noopener noreferrer">
+          GitHub
+        </a>
+        <a href="https://linkedin.com/in/rexliu3" target="_blank" rel="noopener noreferrer">
+          LinkedIn
+        </a>
+        <a href="/Resume_RexLiu.pdf" target="_blank" rel="noopener noreferrer">
+          Résumé
+        </a>
         <a href="#Home">Back to top ↑</a>
       </div>
     </div>

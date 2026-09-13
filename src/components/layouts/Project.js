@@ -8,18 +8,41 @@ const Project = ({ data, index }) => (
     </div>
     <div className="project-card__body">
       <div className="project-card__title-row">
-        <div><p className="project-card__date">{data.date}</p><h3>{data.name}</h3></div>
+        <div>
+          <p className="project-card__date">{data.date}</p>
+          <h3>{data.name}</h3>
+        </div>
         <div className="project-card__links">
-          {data.github && <a href={data.github} target="_blank" rel="noopener noreferrer">GitHub ↗</a>}
-          {data.link && <a href={data.link} target="_blank" rel="noopener noreferrer">Live ↗</a>}
+          {data.github && (
+            <a href={data.github} target="_blank" rel="noopener noreferrer">
+              GitHub ↗
+            </a>
+          )}
+          {data.link && (
+            <a href={data.link} target="_blank" rel="noopener noreferrer">
+              Live ↗
+            </a>
+          )}
         </div>
       </div>
       <p className="project-card__summary">{data.summary}</p>
-      {data.tools && <ul className="tag-list" aria-label="Technologies">{data.tools.map((tool) => <li key={tool}>{tool}</li>)}</ul>}
+      {data.tools && (
+        <ul className="tag-list" aria-label="Technologies">
+          {data.tools.map((tool) => (
+            <li key={tool}>{tool}</li>
+          ))}
+        </ul>
+      )}
       {data.description && (
         <details className="project-card__details">
-          <summary>Project details <span aria-hidden="true">+</span></summary>
-          <ul>{data.description.map((point, pointIndex) => <li key={pointIndex}>{point}</li>)}</ul>
+          <summary>
+            Project details <span aria-hidden="true">+</span>
+          </summary>
+          <ul>
+            {data.description.map((point, pointIndex) => (
+              <li key={pointIndex}>{point}</li>
+            ))}
+          </ul>
         </details>
       )}
     </div>

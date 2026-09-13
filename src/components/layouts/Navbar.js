@@ -14,7 +14,9 @@ const Navbar = () => {
   return (
     <div className={`site-nav ${isOpen ? "site-nav--open" : ""}`}>
       <a className="site-nav__brand" href="#Home" onClick={() => setIsOpen(false)}>
-        <span className="site-nav__mark" aria-hidden="true">R</span>
+        <span className="site-nav__mark" aria-hidden="true">
+          R
+        </span>
         <span>Rex Liu</span>
       </a>
       <button
@@ -25,11 +27,14 @@ const Navbar = () => {
         aria-label={isOpen ? "Close navigation" : "Open navigation"}
         onClick={() => setIsOpen(!isOpen)}
       >
-        <span /><span />
+        <span />
+        <span />
       </button>
       <nav className="site-nav__links" id="primary-navigation" aria-label="Primary navigation">
         {links.map(([label, href]) => (
-          <a key={href} href={href} onClick={() => setIsOpen(false)}>{label}</a>
+          <a key={href} href={href} onClick={() => setIsOpen(false)}>
+            {label}
+          </a>
         ))}
       </nav>
     </div>

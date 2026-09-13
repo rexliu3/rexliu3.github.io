@@ -12,8 +12,8 @@
   padding-top: 4px;
   margin-top: 0;
   z-index: 999;
-  -webkit-overflow-scrolling:touch;
- 
+  -webkit-overflow-scrolling: touch;
+
   &__logo {
     width: 10%;
     text-decoration: none;
@@ -58,7 +58,6 @@
   left: 35%;
   font-size: 1.5rem;
 
-
   @include respond(big-desktop) {
   }
   @include respond(semi-desktop) {
@@ -73,7 +72,6 @@
   @include respond(tab-port) {
   }
   @include respond(phone) {
-   
   }
   @include respond(small-phone) {
   }

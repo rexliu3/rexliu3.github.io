@@ -1,6 +1,7 @@
 .main {
   &__header {
-    background: url("../../assets/teal.jpeg") no-repeat center center fixed;     -webkit-background-size: cover;
+    background: url("../../assets/teal.jpeg") no-repeat center center fixed;
+    -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
@@ -24,8 +25,11 @@
 
     &__name {
       color: $color-white;
-      text-shadow: -3px -3px 0 $color-primary, 4px -4px 0 $color-primary,
-        -3px 3px 0 $color-primary, 3px 3px 0 $color-primary;
+      text-shadow:
+        -3px -3px 0 $color-primary,
+        4px -4px 0 $color-primary,
+        -3px 3px 0 $color-primary,
+        3px 3px 0 $color-primary;
       font-size: $font-header;
       text-align: center;
       padding-top: 5vw;

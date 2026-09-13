@@ -1,0 +1,324 @@
+{
+  "settings": {
+    "_id": "siteSettings",
+    "_type": "siteSettings",
+    "name": "Rex Liu",
+    "brand": "rex’s apartment",
+    "location": "Somewhere in New York",
+    "email": "rexliu3@berkeley.edu",
+    "helloLabel": "Say hello",
+    "githubUrl": "https://github.com/rexliu3",
+    "linkedinUrl": "https://linkedin.com/in/rexliu3",
+    "resumeUrl": "/Resume_RexLiu.pdf",
+    "introEyebrow": "THE DOOR’S ALWAYS OPEN",
+    "introTitle": "Make yourself",
+    "introEmphasis": "at home.",
+    "introLines": [
+      "I’m Rex. Builder, wanderer, and collector of little joys.",
+      "Welcome to my little corner of the internet."
+    ],
+    "apartmentLabel": "APT. 001",
+    "apartmentNote": "A WORK IN PROGRESS, LIKE ME",
+    "asideLines": ["a few of my", "favorite things"],
+    "idleCaption": "Every object has a story. Click around.",
+    "catCaption": "Pet the cat",
+    "speakerLabel": "the speaker",
+    "signature": "stay a little while ♡",
+    "footerTagline": "Built with curiosity. Lived in with love.",
+    "panelEyebrow": "A LITTLE PIECE OF MY WORLD",
+    "profile": {
+      "portrait": "/assets/Profile-Picture.png",
+      "aboutLead": "I’m a UC Berkeley computer science graduate based in New York and working at Palantir Technologies.",
+      "aboutParagraphs": [
+        "My experience spans frontend and backend development, mobile apps, data, and leading engineering teams. I enjoy turning ambitious ideas into clear, dependable software that solves meaningful problems.",
+        "Away from a screen, you’ll usually find me studying chess positions, playing tennis, or competing on a badminton court."
+      ],
+      "languages": ["English", "Mandarin", "Spanish"],
+      "recognition": ["Runner-up · Hack at UCI 2021", "Grand Winner · 41st UBC Physics Olympics"]
+    },
+    "panels": {
+      "books": {
+        "spines": ["STORIES", "IDEAS", "CURIOSITY", "OTHER WORLDS"],
+        "noteTitle": "The shelf is still being unpacked.",
+        "noteBody": "My reading list and personal notes will live here. Check back for the first stack."
+      },
+      "travel": {
+        "tabsLabel": "Cities on my journey",
+        "footnote": "Travel logs and favorite places are still being unpacked."
+      },
+      "projects": {
+        "linkLabel": "More things on GitHub"
+      },
+      "music": {
+        "choicesLabel": "FIVE RECORDS FOR A SLOW AFTERNOON",
+        "creditsPrefix": "All five recordings by",
+        "artistLabel": "Kevin MacLeod (incompetech.com)",
+        "artistUrl": "https://incompetech.com/music/royalty-free/",
+        "licensePrefix": "licensed under",
+        "licenseLabel": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "photos": {
+        "image": "/assets/Profile-Picture.png",
+        "imageAlt": "Rex Liu",
+        "caption": "Hello from the other side of the camera.",
+        "byline": "— Rex",
+        "noteTitle": "A photo album in the making.",
+        "noteBody": "More snapshots and stories will find their way here."
+      },
+      "education": {
+        "seal": "B",
+        "institutionLabel": "UNIVERSITY OF CALIFORNIA",
+        "school": "Berkeley",
+        "degree": "B.A. Computer Science",
+        "years": "2020–2023",
+        "storyTitle": "Curiosity found a home.",
+        "storyParagraphs": [
+          "My Berkeley journey laid the foundation for my work in software engineering—from frontend and backend development to mobile apps, data, and leading engineering teams.",
+          "Today, I’m building at Palantir Technologies in New York. The habit of asking questions came with me."
+        ],
+        "linkLabel": "Take a look at my résumé"
+      }
+    }
+  },
+  "rooms": [
+    {
+      "_id": "room-books",
+      "_type": "room",
+      "id": "books",
+      "name": "The bookshelf",
+      "short": "Books",
+      "icon": "book",
+      "panelTitle": "Between the covers.",
+      "lede": "A home for the books I like, the ideas that linger, and the pages worth coming back to.",
+      "order": 0
+    },
+    {
+      "_id": "room-travel",
+      "_type": "room",
+      "id": "travel",
+      "name": "The world map",
+      "short": "Travel",
+      "icon": "globe",
+      "panelTitle": "Places that stay with you.",
+      "lede": "Three cities. Different chapters. One ongoing adventure.",
+      "order": 1
+    },
+    {
+      "_id": "room-projects",
+      "_type": "room",
+      "id": "projects",
+      "name": "The laptop",
+      "short": "Side projects",
+      "icon": "laptop",
+      "panelTitle": "Made just because.",
+      "lede": "Small experiments and familiar games. Sometimes curiosity is the whole brief.",
+      "order": 2
+    },
+    {
+      "_id": "room-music",
+      "_type": "room",
+      "id": "music",
+      "name": "The record player",
+      "short": "Café jazz",
+      "icon": "music",
+      "panelTitle": "A little café jazz.",
+      "lede": "Pick a record, pour something warm, and stay a little while.",
+      "order": 3
+    },
+    {
+      "_id": "room-photos",
+      "_type": "room",
+      "id": "photos",
+      "name": "The camera",
+      "short": "Photos",
+      "icon": "camera",
+      "panelTitle": "The little moments.",
+      "lede": "People, places, and ordinary days worth remembering.",
+      "order": 4
+    },
+    {
+      "_id": "room-berkeley",
+      "_type": "room",
+      "id": "berkeley",
+      "name": "The diploma",
+      "short": "Berkeley",
+      "icon": "diploma",
+      "panelTitle": "A chapter in blue & gold.",
+      "lede": "Three years of questions, late nights, and learning how to build things that matter.",
+      "order": 5
+    }
+  ],
+  "cities": [
+    {
+      "_id": "city-vancouver",
+      "_type": "city",
+      "name": "Vancouver",
+      "label": "01 / THE FIRST CHAPTER",
+      "subtitle": "Mountains. Ocean. Beginnings.",
+      "text": "The first pin on the map. Vancouver marks the beginning of a journey that would lead down the West Coast and across the continent.",
+      "illustration": "vancouver",
+      "illustrationAlt": "Illustration of mountains in Vancouver",
+      "order": 0
+    },
+    {
+      "_id": "city-san-francisco",
+      "_type": "city",
+      "name": "San Francisco",
+      "label": "02 / THE BAY AREA CHAPTER",
+      "subtitle": "A little fog. A lot of possibility.",
+      "text": "The Bay Area chapter, with Berkeley just across the water. A place for learning, building, and finding new directions.",
+      "illustration": "san-francisco",
+      "illustrationAlt": "Illustration of the Golden Gate Bridge",
+      "order": 1
+    },
+    {
+      "_id": "city-new-york",
+      "_type": "city",
+      "name": "New York",
+      "label": "03 / THE CURRENT CHAPTER",
+      "subtitle": "A city that keeps you curious.",
+      "text": "The latest pin, and the place I call home. I’m a software engineer at Palantir Technologies, making things in a city that never runs out of things to discover.",
+      "illustration": "new-york",
+      "illustrationAlt": "Illustration of the New York skyline",
+      "order": 2
+    }
+  ],
+  "apartmentProjects": [
+    {
+      "_id": "apartment-project-minesweeper",
+      "_type": "apartmentProject",
+      "name": "Minesweeper",
+      "image": "/assets/Minesweeper-Wall.png",
+      "type": "A classic, rebuilt",
+      "text": "A little logic, a little luck, and one more game.",
+      "order": 0
+    },
+    {
+      "_id": "apartment-project-sorting-visualizer",
+      "_type": "apartmentProject",
+      "name": "Sorting visualizer",
+      "image": "/assets/Sorting-Wall.png",
+      "type": "Making algorithms visible",
+      "text": "A visual exploration of how order emerges from a jumble of numbers.",
+      "order": 1
+    },
+    {
+      "_id": "apartment-project-sudoku",
+      "_type": "apartmentProject",
+      "name": "Sudoku",
+      "image": "/assets/Sudoku-Wall.gif",
+      "type": "For the puzzle people",
+      "text": "A playground for numbers, patterns, and satisfying solutions.",
+      "order": 2
+    }
+  ],
+  "jazzTracks": [
+    {
+      "_id": "jazz-bossa-antigua",
+      "_type": "jazzTrack",
+      "id": "bossa-antigua",
+      "title": "Bossa Antigua",
+      "mood": "A sunny little bossa nova",
+      "duration": "4:43",
+      "color": "#b96743",
+      "src": "/audio/bossa-antigua.mp3",
+      "order": 0
+    },
+    {
+      "_id": "jazz-jazz-brunch",
+      "_type": "jazzTrack",
+      "id": "jazz-brunch",
+      "title": "Jazz Brunch",
+      "mood": "Easy Sunday café grooves",
+      "duration": "5:23",
+      "color": "#859574",
+      "src": "/audio/jazz-brunch.mp3",
+      "order": 1
+    },
+    {
+      "_id": "jazz-george-street-shuffle",
+      "_type": "jazzTrack",
+      "id": "george-street-shuffle",
+      "title": "George Street Shuffle",
+      "mood": "Light swing & mellow vibraphone",
+      "duration": "4:28",
+      "color": "#b59a5f",
+      "src": "/audio/george-street-shuffle.mp3",
+      "order": 2
+    },
+    {
+      "_id": "jazz-local-forecast-slower",
+      "_type": "jazzTrack",
+      "id": "local-forecast-slower",
+      "title": "Local Forecast - Slower",
+      "mood": "Laid-back lounge for a slow afternoon",
+      "duration": "3:19",
+      "color": "#738e8a",
+      "src": "/audio/local-forecast-slower.mp3",
+      "order": 3
+    },
+    {
+      "_id": "jazz-apero-hour",
+      "_type": "jazzTrack",
+      "id": "apero-hour",
+      "title": "Apero Hour",
+      "mood": "Cool jazz for the golden hour",
+      "duration": "4:43",
+      "color": "#9a7c88",
+      "src": "/audio/apero-hour.mp3",
+      "order": 4
+    }
+  ],
+  "interests": [
+    {
+      "_id": "interest-chess",
+      "_type": "interest",
+      "name": "Chess",
+      "logo": "/assets/Chess.png",
+      "description": "Strategy, pattern recognition, and a good long game.",
+      "link": "https://www.chess.com/member/rexliu3",
+      "order": 0
+    },
+    {
+      "_id": "interest-badminton",
+      "_type": "interest",
+      "name": "Badminton",
+      "logo": "/assets/badminton.png",
+      "description": "BC regional doubles champion.",
+      "order": 1
+    },
+    {
+      "_id": "interest-tennis",
+      "_type": "interest",
+      "name": "Tennis",
+      "logo": "/assets/tennis.png",
+      "description": "Always working on the next rally.",
+      "order": 2
+    },
+    {
+      "_id": "interest-data-science",
+      "_type": "interest",
+      "name": "Data science",
+      "logo": "/assets/data.png",
+      "description": "Finding useful signals in complex systems.",
+      "order": 3
+    },
+    {
+      "_id": "interest-blockchain",
+      "_type": "interest",
+      "name": "Blockchain",
+      "logo": "/assets/Blockchain.jpg",
+      "description": "Exploring open, distributed infrastructure.",
+      "order": 4
+    },
+    {
+      "_id": "interest-machine-learning",
+      "_type": "interest",
+      "name": "Machine learning",
+      "logo": "/assets/machine-learning.png",
+      "description": "Building software that learns and adapts.",
+      "order": 5
+    }
+  ]
+}

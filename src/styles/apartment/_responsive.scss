@@ -1,0 +1,200 @@
+@media (min-width: 1500px) {
+  .room-section {
+    margin-top: 27px;
+  }
+  .apartment-intro {
+    padding-top: 48px;
+  }
+}
+@media (max-width: 1000px) {
+  .apartment-site {
+    padding: 0 4%;
+  }
+  .apartment-header {
+    height: 78px;
+  }
+  .apartment-intro {
+    padding-top: 36px;
+  }
+  .room-coordinate {
+    font-size: 7px;
+    letter-spacing: 0.8px;
+  }
+  .room-aside {
+    left: 0;
+    font-size: 17px;
+  }
+  .room-signature {
+    font-size: 17px;
+    bottom: 7px;
+    right: 0;
+  }
+  .explore-nav {
+    gap: 6px;
+    margin-top: 22px;
+  }
+  .explore-nav button {
+    padding: 13px 9px;
+    gap: 7px;
+    font-size: 10px;
+  }
+  .explore-nav button svg {
+    width: 17px;
+  }
+  .nav-arrow {
+    display: none;
+  }
+}
+@media (max-width: 650px) {
+  .apartment-site {
+    padding: 0 5%;
+    overflow-x: clip;
+  }
+  .apartment-header {
+    height: 72px;
+  }
+  .brand {
+    font-size: 15px;
+  }
+  .brand-icon {
+    height: 28px;
+    width: 28px;
+  }
+  .header-right {
+    gap: 0;
+  }
+  .location {
+    display: none;
+  }
+  .say-hello {
+    padding: 9px 12px;
+    gap: 10px;
+    font-size: 10px;
+  }
+  .apartment-intro {
+    padding-top: 38px;
+  }
+  .welcome-note {
+    font-size: 7px;
+    letter-spacing: 1.8px;
+  }
+  .apartment-intro h1 {
+    font-size: clamp(35px, 8vw, 49px);
+    letter-spacing: -1.1px;
+    margin: 18px 0 15px;
+  }
+  .apartment-intro > p {
+    font-size: 11px;
+    line-height: 1.9;
+  }
+  .room-section {
+    margin-top: 30px;
+  }
+  .room-topline {
+    padding: 0;
+  }
+  .room-coordinate {
+    max-width: 135px;
+    line-height: 1.7;
+    font-size: 6.5px;
+  }
+  .room-controls {
+    padding: 7px 9px;
+    gap: 9px;
+  }
+  .room-controls button {
+    font-size: 9px;
+    gap: 5px;
+  }
+  .room-stage {
+    margin: 5px -14% 0;
+  }
+  .room-aside,
+  .room-signature {
+    display: none;
+  }
+  .room-caption {
+    font-size: 10px;
+    margin: 0;
+  }
+  .explore-nav {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin: 25px auto 32px;
+  }
+  .explore-nav button {
+    font-size: 10px;
+    padding: 15px 7px;
+  }
+  .explore-nav button svg {
+    width: 18px;
+  }
+  .apartment-footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 24px 0;
+    font-size: 9px;
+  }
+  .apartment-footer > div {
+    gap: 20px;
+  }
+  .panel-backdrop {
+    padding: 14px;
+  }
+  .room-panel {
+    max-height: 94dvh;
+    border-radius: 12px;
+  }
+  .panel-content {
+    padding: 25px 22px;
+  }
+  .panel-top {
+    padding: 11px 17px;
+  }
+  .panel-bottom {
+    padding: 18px;
+    gap: 12px;
+  }
+  .panel-bottom button {
+    font-size: 9px;
+    gap: 4px;
+  }
+  .city-tabs button {
+    font-size: 9px;
+  }
+  .city-tabs button span {
+    margin-left: 4px;
+  }
+  .apartment-projects article {
+    grid-template-columns: 90px 1fr;
+    gap: 13px;
+  }
+  .apartment-projects img {
+    width: 90px;
+    height: 110px;
+  }
+  .apartment-projects h3 {
+    font-size: 20px;
+  }
+  .book-vignette {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .now-playing h3 {
+    font-size: 20px;
+  }
+  .photo-print img {
+    height: 270px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,39 @@
+.is-night {
+  --paper: #292e2c;
+  --ink: #ede8d9;
+  --muted: #a4ab9b;
+  --line: #444a40;
+  --accent: #dea77e;
+}
+.is-night .apartment-illustration {
+  filter: brightness(0.72) saturate(0.8);
+}
+.is-night .apartment-intro > p,
+.is-night .room-caption,
+.is-night .room-coordinate {
+  color: #a6ad9b;
+}
+.is-night .room-controls {
+  background: #353c34;
+  border-color: #4b5246;
+}
+.is-night .room-controls button,
+.is-night .explore-nav button > svg {
+  color: #b3bba2;
+}
+.is-night .explore-nav button {
+  background: #373e34;
+  border-color: #454d3e;
+}
+.is-night .explore-nav button:hover {
+  background: #444e3c;
+}
+.is-night .say-hello {
+  border-color: #505748;
+}
+.is-night .say-hello:hover {
+  background: #3b4437;
+}
+.is-night .apartment-footer a {
+  color: #b6bda6;
+}

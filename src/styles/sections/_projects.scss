@@ -32,7 +32,7 @@
       grid-template-columns: auto auto;
       margin: auto;
     }
-    
+
     @include respond(phone) {
       grid-template-columns: auto;
       margin: auto;
