@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 // One world unit is approximately a centimetre. Every wall, floor plane and
 // piece of furniture uses this same oblique projection and vertical scale.
@@ -30,15 +30,15 @@ function Plant({ x, y, z = 0, scale = 1 }) {
     <ellipse cy="2" rx="25" ry="7" fill="#72573f" opacity=".12"/>
     <path d="M-19-32h38L14 0Q0 8-14 0Z" fill="#bd805a" stroke="#92704e" strokeWidth="1.5"/>
     <ellipse cy="-32" rx="19" ry="6" fill="#8d694b"/>
-    <g className="plant-leaves"><path d="M0-32v-70m0 37-25-25m25 11 24-28M0-84l-15-23" stroke="#718153" strokeWidth="2.5" fill="none"/>
+    <g className="plant-leaves" style={{ animationDelay: `${-x / 70}s` }}><path d="M0-32v-70m0 37-25-25m25 11 24-28M0-84l-15-23" stroke="#718153" strokeWidth="2.5" fill="none"/>
       <path d="M0-54Q-37-54-34-83Q-6-88 0-54" fill="#879b6c"/><path d="M1-70Q4-104 31-102Q35-74 1-70" fill="#6e875a"/>
       <path d="M0-88Q-28-79-25-113Q-1-116 0-88" fill="#94a67a"/><path d="M1-91Q-3-117 16-128Q34-105 1-91" fill="#71895b"/>
       <path d="M-4-58-25-77M6-78l19-19" stroke="#b3bf90" fill="none"/>
     </g><path d="m-12-25 3 23" stroke="#d7a17a" strokeWidth="2.5"/>
   </g>;
 }
-function Hotspot({ id, label, children, onOpen, hovered, onHover }) {
-  return <g role="button" tabIndex="0" aria-label={`Explore ${label}`} className={`room-object ${hovered === id ? "is-highlighted" : ""}`} onClick={() => onOpen(id)} onMouseEnter={() => onHover(id)} onMouseLeave={() => onHover(null)} onFocus={() => onHover(id)} onBlur={() => onHover(null)} onKeyDown={event => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); onOpen(id); } }}>{children}</g>;
+function Hotspot({ id, panelId = id, label, children, onOpen, hovered, onHover }) {
+  return <g role="button" tabIndex="0" aria-label={`Explore ${label}`} className={`room-object ${hovered === id ? "is-highlighted" : ""}`} onClick={() => onOpen(panelId)} onMouseEnter={() => onHover(id)} onMouseLeave={() => onHover(null)} onFocus={() => onHover(id)} onBlur={() => onHover(null)} onKeyDown={event => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); onOpen(panelId); } }}>{children}</g>;
 }
 function ObjectTag({ x, y, z, label }) {
   return <g className="object-tag" transform={`translate(${project(x,y,z).join(" ")})`}><rect x={-(label.length * 3.6 + 17)} y="-15" width={label.length * 7.2 + 34} height="30" rx="15"/><text textAnchor="middle" y="4">{label} ↗</text></g>;
@@ -74,7 +74,7 @@ function Window({ night }) {
     <rect x="-5" y="-5" width="200" height="147" rx="3" fill="#c6b18c"/>
     <rect width="190" height="137" fill="url(#sky)"/>
     <g clipPath="url(#window-clip)" stroke="none">
-      {night ? <g fill="#f6e5b9"><circle cx="148" cy="29" r="12"/><circle cx="36" cy="21" r="1.5"/><circle cx="79" cy="37" r="1"/><circle cx="170" cy="62" r="1.4"/></g> : <g className="window-clouds" fill="#f7f4e3" opacity=".85"><path d="M13 37q9-14 19-7 9-17 21-3 15-2 20 10Z"/><path d="M119 20q8-9 14-4 9-12 20-1 10-1 16 9h-50Z"/></g>}
+      {night ? <g fill="#f6e5b9"><circle cx="148" cy="29" r="12"/><g className="window-stars"><circle cx="36" cy="21" r="1.5"/><circle cx="79" cy="37" r="1"/><circle cx="170" cy="62" r="1.4"/></g></g> : <g className="window-clouds" fill="#f7f4e3" opacity=".85"><path d="M0 37q9-14 19-7 9-17 21-3 15-2 20 10Z"/><path d="M0 20q8-9 14-4 9-12 20-1 10-1 16 9H0Z"/></g>}
       <path d="M0 137V87h17V69h18v38h13V82h18v-8h17v33h14V65h8V51h4V35h3v16h4v14h8v39h12V79h16v-9h21v35h17v32Z" fill={night ? "#374b54" : "#a0b5a7"}/>
       <path d="M0 137v-29h25V93h25v27h19V97h26v-8h20v27h14V94h32v15h29v28Z" fill={night ? "#2a3e46" : "#819b8d"}/>
       {[29,43,76,87,101,137,149,174].map(x => <path key={x} d={`M${x} 106h3v5h-3Zm0 12h3v5h-3Z`} fill={night ? "#e8cc85" : "#d3d9bc"}/>)}
@@ -135,7 +135,7 @@ function Desk({ common, night }) {
         <rect transform={front(490,55,119)} width="64" height="59" fill="transparent"/>
       </g><ObjectTag x={521} y={47} z={143} label="Side projects"/>
     </Hotspot>
-    <g transform={`translate(${project(465,57,78).join(" ")})`}><ellipse cy="1" rx="11" ry="4" fill="#a68d6c" opacity=".25"/><path d="M-7-13H7v12q-7 6-14 0Z" fill="#f4ebd6" stroke="#a08d6b" strokeWidth="1"/><ellipse cy="-13" rx="7" ry="2.5" fill="#806346"/><path d="M7-10q10-1 8 5-1 5-8 3" fill="none" stroke="#a08d6b" strokeWidth="1.4"/><g className="coffee-steam" fill="none" stroke="#faf6e9" strokeWidth="1.7"><path d="M-2-19q-4-6 0-12t0-9M4-19q4-5 0-10"/></g></g>
+    <g transform={`translate(${project(465,57,78).join(" ")})`}><ellipse cy="1" rx="11" ry="4" fill="#a68d6c" opacity=".25"/><path d="M-7-13H7v12q-7 6-14 0Z" fill="#f4ebd6" stroke="#a08d6b" strokeWidth="1"/><ellipse cy="-13" rx="7" ry="2.5" fill="#806346"/><path d="M7-10q10-1 8 5-1 5-8 3" fill="none" stroke="#a08d6b" strokeWidth="1.4"/><g className="coffee-steam" fill="none" stroke="#fffaf0" strokeWidth="2.2" strokeLinecap="round"><path d="M-4-18q-5-5 0-11t0-10"/><path d="M1-18q5-6 0-12t0-8"/><path d="M5-17q-4-5 0-10t0-8"/></g></g>
     <Hotspot id="photos" label="photos" {...common}>
       <g transform={front(570,75,97)} stroke="#535f4e" strokeWidth="1.1">
         <rect x="-9" y="-10" width="48" height="45" fill="transparent" stroke="none"/>
@@ -153,6 +153,22 @@ function Desk({ common, night }) {
   </>;
 }
 
+function Pillow({ x, y, z, color, accent, tilt = 0, pattern = false }) {
+  return <g className="sofa-pillow" transform={front(x,y,z)}>
+    <g transform={`rotate(${tilt} 24 20)`}>
+      <path d="M6 6C16 1 34 0 43 5c5 9 6 24 0 33-10 5-29 5-40 0C-1 28 0 14 6 6Z" fill="#5d5543" opacity=".16" transform="translate(2 4)"/>
+      <path d="M6 3C16-1 34-2 43 4c5 9 6 24 0 33-10 5-29 5-40 0C-1 27 0 11 6 3Z" fill={color} stroke={accent} strokeWidth="1.7"/>
+      <path d="M3 37c11-4 29-4 40 0-10 5-29 5-40 0Z" fill={accent} opacity=".4"/>
+      <path d="M43 4c5 9 6 24 0 33-2-5-3-27 0-33Z" fill={accent} opacity=".25"/>
+      <path d="M7 6C17 2 33 2 40 6" fill="none" stroke="#fff9e9" strokeWidth="1.4" strokeLinecap="round" opacity=".55"/>
+      <path d="M6 3C16-1 34-2 43 4c5 9 6 24 0 33-10 5-29 5-40 0C-1 27 0 11 6 3Z" fill="none" stroke="#f8ebd0" strokeWidth=".7" strokeDasharray="2.2 2.2" opacity=".8" transform="scale(.91) translate(2.4 2.2)"/>
+      <path d="M22 17q3 3 6 0M22 23q3-3 6 0" fill="none" stroke={accent} strokeWidth="1" opacity=".55"/>
+      {pattern && <g fill="none" stroke="#f1b08d" strokeWidth="1" opacity=".75"><path d="M9 11 17 6l8 5-8 5Zm16 0 8-5 8 5-8 5ZM9 25l8-5 8 5-8 5Zm16 0 8-5 8 5-8 5"/><path d="M5 18h39" opacity=".45"/></g>}
+      <circle cx="1.5" cy="5" r="1.5" fill={accent}/><circle cx="44" cy="36" r="1.5" fill={accent}/>
+    </g>
+  </g>;
+}
+
 function Sofa() {
   const green = {top: "#a7b38f", side: "#7b8d69", face: "#92a17d", stroke: "#728260"};
   return <g>
@@ -163,21 +179,42 @@ function Sofa() {
     {[175,287].map(x => <Box key={x} x={x} y={210} z={39} w={108} d={76} h={12} {...green} top="#b1bc9a"/>)}
     <Box x={155} y={208} z={39} w={18} d={82} h={31} {...green}/>
     <Box x={397} y={208} z={39} w={18} d={82} h={31} {...green}/>
-    <g transform={front(185,220,78)}><path d="m0 0 36-2 8 36-39 2Z" fill="#eee2bd" stroke="#b8ad86" strokeWidth="1.2"/><path d="m8 5 22-1 5 25-23 2Z" fill="none" stroke="#dfd2ad"/></g>
-    <g transform={front(235,224,75)}><path d="m0 1 33-3 8 34-36 4Z" fill="#bd805e" stroke="#a57050" strokeWidth="1.2"/><path d="m7 7 22 18m-7-23 9 25" stroke="#d8a27b" strokeWidth="1.2"/></g>
+    <Pillow x={181} y={219} z={79} color="url(#pillow-cream)" accent="#b3a37f" tilt={-3}/>
+    <Pillow x={237} y={223} z={76} color="url(#pillow-rust)" accent="#9d5f47" tilt={4} pattern/>
     <Face vertices={[[332,231,52],[367,231,52],[367,290,52],[332,290,52]]} fill="#d9c9a6" stroke="#b4a47f" strokeWidth="1"/>
     <Face vertices={[[332,291,52],[367,291,52],[367,291,17],[332,291,17]]} fill="#d5c29f" stroke="#b4a47f" strokeWidth="1"/>
     {[338,349,360].map(x => <g key={x} stroke="#f1e5cb" strokeWidth="2"><Edge from={[x,231,52.5]} to={[x,291,52.5]}/><Edge from={[x,291,52.5]} to={[x,291,18]}/></g>)}
   </g>;
 }
 
-function CoffeeTable() {
+function CoffeeTable({ common, sound }) {
   return <g>
     <Shadow x={240} y={321} w={133} d={66}/>
     {[[252,334],[351,334],[252,375],[351,375]].map(([x,y]) => <Box key={`${x}-${y}`} x={x} y={y} w={5} d={5} h={38} face="#b78d5f" side="#98764e"/>)}
     <rect transform={floor(235,320,37)} width="135" height="65" rx="24" fill="#b98d5f" stroke="#97764f" strokeWidth="1.5"/>
     <rect transform={floor(235,320,42)} width="135" height="65" rx="24" fill="#dfbd8e" stroke="#a9885c" strokeWidth="1.5"/>
-    <g transform={floor(275,336,43)}><rect width="45" height="29" fill="#f8efd9" stroke="#b7a383" strokeWidth="1"/><path d="M22 0v29M4 7h13M4 12h13M28 7h12M28 12h12M28 17h9" stroke="#c4b594" strokeWidth="1"/></g>
+    <g transform={floor(330,342,43)}><rect width="24" height="27" fill="#f8efd9" stroke="#b7a383"/><path d="M4 6h16M4 10h12M4 19h16" stroke="#c4b594"/></g>
+    <Hotspot id="music" label="the record player — choose café jazz" {...common}>
+      <g>
+        <Box x={258} y={329} z={43} w={65} d={43} h={8} top="#bc926c" face="#a47750" side="#906b48" stroke="#806447"/>
+        <g transform={floor(258,329,51)}>
+          <rect x="3" y="3" width="59" height="37" rx="2" fill="#d1b18b"/>
+          <g transform="translate(25 21)">
+            <g className={`table-vinyl${sound ? " is-playing" : ""}`}>
+              <circle r="17" fill="#343c32" stroke="#59604e"/>
+              {[10,13,15].map(r => <circle key={r} r={r} fill="none" stroke="#626650" strokeWidth=".5"/>)}
+              <path d="M-14-6A15 15 0 0 1-6-14M6 14A15 15 0 0 0 14 6" fill="none" stroke="#92917b" strokeWidth="1.5" opacity=".65"/>
+              <circle r="6" fill="#b96743"/><path d="M-3-2h6M-2 2h4" stroke="#eadab8" strokeWidth=".8"/><circle r="1.3" fill="#ddd5bb"/>
+            </g>
+          </g>
+          <circle cx="53" cy="8" r="3" fill="#7b785f"/>
+          <g transform="translate(53 8)"><path className={`table-tonearm${sound ? " is-playing" : ""}`} d="M0 0v24l-3 3" fill="none" stroke="#e4dcc3" strokeWidth="2.5" strokeLinecap="round"/></g>
+          <circle cx="56" cy="35" r="2" fill={sound ? "#b8d28d" : "#8f8568"}/>
+        </g>
+        <rect transform={floor(250,320,53)} width="80" height="57" rx="5" fill="transparent"/>
+      </g>
+      <ObjectTag x={290} y={343} z={85} label="Café jazz"/>
+    </Hotspot>
   </g>;
 }
 
@@ -187,7 +224,7 @@ function Speaker({ common, sound }) {
     {[[454,218],[454,267],[508,218],[508,267]].map(([x,y]) => <Box key={`${x}-${y}`} x={x} y={y} w={4} d={4} h={14}/>)}
     <Box x={450} y={210} z={12} w={70} d={65} h={38}/>
     <g transform={front(457,276,42)}><rect width="56" height="21" fill="none" stroke="#a58257" strokeWidth="1"/><path d="M23 9h11" stroke="#8e734e" strokeWidth="2"/></g>
-    <Hotspot id="music" label="music and dance" {...common}>
+    <Hotspot id="speaker" panelId="music" label="music and dance" {...common}>
       <g><Box x={466} y={224} z={50} w={35} d={25} h={44} top="#c2ab7f" face="#686d57" side="#9d855e" stroke="#807253"/>
         <g transform={front(469,250,90)}><rect width="29" height="37" fill="url(#speaker-mesh)"/><circle cx="14.5" cy="24" r="11" fill="#505c4b" stroke="#8a9478" strokeWidth="1" className={sound ? "speaker-cone is-playing" : "speaker-cone"}/><circle cx="14.5" cy="24" r="5" fill="#768466"/><circle cx="14.5" cy="6" r="4" fill="#b3a882"/><circle cx="26" cy="2" r="1.3" fill={sound ? "#c3de98" : "#c6b28a"}/></g>
         <g className={`music-notes${sound ? " is-playing" : ""}`} transform={front(505,244,105)} fill="#a18b60" fontFamily="Georgia" fontSize="19"><text>♪</text><text x="16" y="-17">♫</text></g>
@@ -196,15 +233,53 @@ function Speaker({ common, sound }) {
   </>;
 }
 
+function Cat({ hovered, onHover }) {
+  const [reaction, setReaction] = useState(0);
+  const reactions = ["Sleeping", "Surprised", "Happy", "Stretching"];
+  const interact = () => setReaction(current => (current + 1) % reactions.length);
+  return <g transform={`translate(${project(433,352,2).join(" ")}) scale(.65)`}>
+    <g
+      role="button"
+      tabIndex="0"
+      aria-label={`Pet the cat. ${reactions[reaction]}.`}
+      className={`room-object apartment-cat cat-reaction-${reaction}${hovered === "cat" ? " is-highlighted" : ""}`}
+      onClick={interact}
+      onMouseEnter={() => onHover("cat")}
+      onMouseLeave={() => onHover(null)}
+      onFocus={() => onHover("cat")}
+      onBlur={() => onHover(null)}
+      onKeyDown={event => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); interact(); } }}
+    >
+      <ellipse className="cat-hit-area" cy="-10" rx="54" ry="38" fill="transparent"/>
+      <g className="cat-motion">
+        <ellipse cy="6" rx="38" ry="10" fill="#846744" opacity=".12"/>
+        <path className="cat-body" d="M-28 0q-7-25 22-22t28 25Z" fill="#c38e5b" stroke="#9e7049" strokeWidth="1.5"/>
+        <g className="cat-head">
+          <path d="M13-8 12-24l11 8 11-3-1 14Q24 7 13-8" fill="#d0a16f" stroke="#9e7049" strokeWidth="1.5"/>
+          {reaction === 0
+            ? <path d="M19-7q3 3 5 0m3 0 4-2" fill="none" stroke="#765d43" strokeWidth="1.5"/>
+            : <><circle cx="21" cy="-8" r="1.6" fill="#594a37"/><circle cx="29" cy="-9" r="1.6" fill="#594a37"/><path d="M24-4q2 2 4-.5" fill="none" stroke="#765d43" strokeWidth="1.2"/></>}
+        </g>
+        <path className="cat-tail" d="M-21 1q-24-9-16-20 5-7 10-2" fill="none" stroke="#c38e5b" strokeWidth="9" strokeLinecap="round"/>
+        <path d="m-8-19-4 9m13-7-4 9" stroke="#ac764a" strokeWidth="3"/>
+        <text className="cat-emote" x="36" y="-26" fontSize="13" fill="#a79372" fontFamily="Georgia">{["z z", "!", "♥", "prrr"][reaction]}</text>
+      </g>
+      <ObjectTag x={0} y={0} z={0} label="Pet the cat"/>
+    </g>
+  </g>;
+}
+
 export default function Apartment({ onOpen, hovered, onHover, night, sound }) {
   const common = { onOpen, hovered, onHover };
   return <svg className="apartment-illustration" viewBox="0 0 1200 680" xmlns="http://www.w3.org/2000/svg" aria-labelledby="room-title room-description">
-    <title id="room-title">Rex’s Internet Apartment</title><desc id="room-description">A sunlit apartment with a bookshelf and desk against the back wall, a sofa facing a coffee table, and space to walk between them. Explore books, a Vancouver to San Francisco to New York map, side projects on the laptop, music on the speaker, photos on the camera, and a Berkeley diploma.</desc>
+    <title id="room-title">Rex’s Internet Apartment</title><desc id="room-description">A sunlit apartment with a bookshelf and desk against the back wall, a sofa facing a coffee table, and space to walk between them. Explore books, a Vancouver to San Francisco to New York map, side projects on the laptop, five café jazz records on the coffee-table turntable, music on the speaker, photos on the camera, and a Berkeley diploma.</desc>
     <defs>
       <linearGradient id="wall" x2="0" y2="1"><stop stopColor="#f3ead8"/><stop offset="1" stopColor="#e8dcc5"/></linearGradient>
       <linearGradient id="floor" x2=".5" y2="1"><stop stopColor="#e6c79e"/><stop offset="1" stopColor="#f2ddbc"/></linearGradient>
       <linearGradient id="sky" x2="0" y2="1"><stop stopColor={night ? "#253c58" : "#b9d3cd"}/><stop offset="1" stopColor={night ? "#697282" : "#e2e6cf"}/></linearGradient>
       <radialGradient id="lamp-glow"><stop stopColor="#ffe6a1" stopOpacity=".7"/><stop offset="1" stopColor="#ffe6a1" stopOpacity="0"/></radialGradient>
+      <linearGradient id="pillow-cream" x1="0" y1="0" x2="1" y2="1"><stop stopColor="#fff5d9"/><stop offset=".55" stopColor="#eadcb9"/><stop offset="1" stopColor="#cabb96"/></linearGradient>
+      <linearGradient id="pillow-rust" x1="0" y1="0" x2="1" y2="1"><stop stopColor="#da9a76"/><stop offset=".55" stopColor="#bd795b"/><stop offset="1" stopColor="#9f624b"/></linearGradient>
       <pattern id="rug" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#dfb499"/><path d="M0 2h8M2 0v8" stroke="#ae7f65" strokeOpacity=".13" strokeWidth=".8"/></pattern>
       <pattern id="speaker-mesh" width="3" height="3" patternUnits="userSpaceOnUse"><rect width="3" height="3" fill="#66705a"/><circle cx="1" cy="1" r=".5" fill="#a4ab8c"/></pattern>
       <filter id="room-shadow" x="-20%" y="-20%" width="150%" height="160%"><feDropShadow dx="0" dy="13" stdDeviation="14" floodColor="#786149" floodOpacity=".12"/></filter>
@@ -234,10 +309,8 @@ export default function Apartment({ onOpen, hovered, onHover, night, sound }) {
     <Plant x={660} y={145} scale={.9}/>
     <Sofa/>
     <Speaker common={common} sound={sound}/>
-    <CoffeeTable/>
-    <g transform={`translate(${project(433,352,2).join(" ")}) scale(.65)`}>
-      <g className="sleeping-cat"><ellipse cy="6" rx="38" ry="10" fill="#846744" opacity=".12"/><path d="M-28 0q-7-25 22-22t28 25Z" fill="#c38e5b" stroke="#9e7049" strokeWidth="1.5"/><path d="M13-8 12-24l11 8 11-3-1 14Q24 7 13-8" fill="#d0a16f" stroke="#9e7049" strokeWidth="1.5"/><path d="M19-7q3 3 5 0m3 0 4-2" fill="none" stroke="#765d43" strokeWidth="1.5"/><path d="M-21 1q-24-9-16-20 5-7 10-2" fill="none" stroke="#c38e5b" strokeWidth="9" strokeLinecap="round"/><path d="m-8-19-4 9m13-7-4 9" stroke="#ac764a" strokeWidth="3"/><text className="cat-zzz" x="36" y="-26" fontSize="13" fill="#a79372" fontFamily="Georgia">z z</text></g>
-    </g>
+    <CoffeeTable common={common} sound={sound}/>
+    <Cat hovered={hovered} onHover={onHover}/>
     <g fill="#d7b577" className="floating-dust"><circle cx="440" cy="315" r="1.5"/><circle cx="674" cy="252" r="1.5"/><circle cx="609" cy="321" r="1.5"/></g>
   </svg>;
 }

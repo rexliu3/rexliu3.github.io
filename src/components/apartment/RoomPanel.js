@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Icon, rooms } from "./roomData";
+import JazzPlayer from "./JazzPlayer";
 
 const projects = [
   { name: "Minesweeper", image: "/assets/Minesweeper-Wall.png", type: "A classic, rebuilt", text: "A little logic, a little luck, and one more game." },
@@ -7,7 +8,7 @@ const projects = [
   { name: "Sudoku", image: "/assets/Sudoku-Wall.gif", type: "For the puzzle people", text: "A playground for numbers, patterns, and satisfying solutions." },
 ];
 
-export default function RoomPanel({ active, onClose, onNavigate, sound, toggleSound, audioError }) {
+export default function RoomPanel({ active, onClose, onNavigate, player }) {
   const panel = useRef(null);
   const closeButton = useRef(null);
   const [city, setCity] = useState(0);
@@ -19,7 +20,7 @@ export default function RoomPanel({ active, onClose, onNavigate, sound, toggleSo
     const onKey = event => {
       if (event.key === "Escape") onClose();
       if (event.key === "Tab") {
-        const focusable = panel.current.querySelectorAll('button:not([tabindex="-1"]), a[href], [tabindex="0"]');
+        const focusable = panel.current.querySelectorAll('button:not([disabled]):not([tabindex="-1"]), a[href], input:not([disabled]), [tabindex="0"]');
         const first = focusable[0], last = focusable[focusable.length - 1];
         if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
         else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
@@ -38,11 +39,11 @@ export default function RoomPanel({ active, onClose, onNavigate, sound, toggleSo
       <div className="panel-top"><span><Icon name={room.icon} size={17}/> {room.name}</span><button className="close-panel" onClick={onClose} ref={closeButton} aria-label="Back to the apartment"><Icon name="close"/></button></div>
       <div className="panel-content">
         <p className="eyebrow">A LITTLE PIECE OF MY WORLD</p>
-        <h2 id="panel-title">{active === "books" ? "Between the covers." : active === "travel" ? "Places that stay with you." : active === "projects" ? "Made just because." : active === "music" ? "Find a little rhythm." : active === "photos" ? "The little moments." : "A chapter in blue & gold."}</h2>
+        <h2 id="panel-title">{active === "books" ? "Between the covers." : active === "travel" ? "Places that stay with you." : active === "projects" ? "Made just because." : active === "music" ? "A little café jazz." : active === "photos" ? "The little moments." : "A chapter in blue & gold."}</h2>
         {active === "books" && <><p className="panel-lede">A home for the books I like, the ideas that linger, and the pages worth coming back to.</p><div className="book-vignette" aria-hidden="true"><div className="decorative-book">STORIES</div><div className="decorative-book">IDEAS</div><div className="decorative-book">CURIOSITY</div><div className="decorative-book">OTHER WORLDS</div></div><div className="quiet-note"><span className="small-star">✳</span><h3>The shelf is still being unpacked.</h3><p>My reading list and personal notes will live here. Check back for the first stack.</p></div></>}
         {active === "travel" && <><p className="panel-lede">Three cities. Different chapters. One ongoing adventure.</p><div className="city-tabs" role="tablist" aria-label="Cities on my journey">{cities.map((item, index) => <button key={item.name} id={`city-tab-${index}`} role="tab" aria-selected={city === index} aria-controls="city-story" tabIndex={city === index ? 0 : -1} onClick={() => setCity(index)} onKeyDown={event => { if (["ArrowRight", "ArrowLeft", "Home", "End"].includes(event.key)) { event.preventDefault(); const next = event.key === "Home" ? 0 : event.key === "End" ? 2 : (city + (event.key === "ArrowRight" ? 1 : 2)) % 3; setCity(next); document.getElementById(`city-tab-${next}`).focus(); } }}>{item.name}{index < 2 && <span aria-hidden="true">→</span>}</button>)}</div><div className="city-story" id="city-story" role="tabpanel" aria-labelledby={`city-tab-${city}`}><CityDrawing city={city}/><p className="eyebrow">{cities[city].label}</p><h3>{cities[city].subtitle}</h3><p>{cities[city].text}</p></div><p className="content-footnote">Travel logs and favorite places are still being unpacked.</p></>}
         {active === "projects" && <><p className="panel-lede">Small experiments and familiar games. Sometimes curiosity is the whole brief.</p><div className="apartment-projects">{projects.map(project => <article key={project.name}><img src={project.image} alt={`${project.name} project preview`}/><div><p className="eyebrow">{project.type}</p><h3>{project.name}</h3><p>{project.text}</p></div></article>)}</div><a className="panel-link" href="https://github.com/rexliu3" target="_blank" rel="noopener noreferrer">More things on GitHub <span>↗</span></a></>}
-        {active === "music" && <><p className="panel-lede">For moving around the room, getting lost in a song, and stepping away from the screen.</p><div className={`record-player${sound ? " is-playing" : ""}`} aria-hidden="true"><div className="vinyl-record"><span>REX’S<br/>ROOM</span></div><div className="record-arm"/></div><div className="now-playing"><div><p className="eyebrow">{sound ? "NOW PLAYING" : "A LITTLE ATMOSPHERE"}</p><h3>Afternoon in the apartment</h3><p>An original, softly pulsing ambient chord.</p></div><button className="round-play" onClick={toggleSound} aria-label={sound ? "Pause ambience" : "Play ambience"}>{sound ? "Ⅱ" : "▶"}</button></div>{audioError && <p role="status">{audioError}</p>}<div className="quiet-note"><h3>The dance floor is open.</h3><p>Playlists, favorite tracks, and dance stories are coming to this corner soon.</p></div></>}
+        {active === "music" && <JazzPlayer player={player}/>}
         {active === "photos" && <><p className="panel-lede">People, places, and ordinary days worth remembering.</p><figure className="photo-print"><img src="/assets/Profile-Picture.png" alt="Rex Liu"/><figcaption>Hello from the other side of the camera. <span>— Rex</span></figcaption></figure><div className="quiet-note"><h3>A photo album in the making.</h3><p>More snapshots and stories will find their way here.</p></div></>}
         {active === "berkeley" && <><p className="panel-lede">Three years of questions, late nights, and learning how to build things that matter.</p><div className="berkeley-card"><span className="berkeley-seal">B</span><p>UNIVERSITY OF CALIFORNIA</p><h3>Berkeley</h3><div>B.A. Computer Science <span>·</span> 2020–2023</div></div><div className="berkeley-story"><h3>Curiosity found a home.</h3><p>My Berkeley journey laid the foundation for my work in software engineering—from frontend and backend development to mobile apps, data, and leading engineering teams.</p><p>Today, I’m building at Palantir Technologies in New York. The habit of asking questions came with me.</p></div><a className="panel-link" href="/Resume_RexLiu.pdf" target="_blank" rel="noopener noreferrer">Take a look at my résumé <span>↗</span></a></>}
       </div>

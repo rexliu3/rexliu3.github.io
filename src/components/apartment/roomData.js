@@ -4,7 +4,7 @@ export const rooms = [
   { id: "books", name: "The bookshelf", short: "Books", icon: "book" },
   { id: "travel", name: "The world map", short: "Travel", icon: "globe" },
   { id: "projects", name: "The laptop", short: "Side projects", icon: "laptop" },
-  { id: "music", name: "The speaker", short: "Music & dance", icon: "music" },
+  { id: "music", name: "The record player", short: "Café jazz", icon: "music" },
   { id: "photos", name: "The camera", short: "Photos", icon: "camera" },
   { id: "berkeley", name: "The diploma", short: "Berkeley", icon: "diploma" },
 ];
