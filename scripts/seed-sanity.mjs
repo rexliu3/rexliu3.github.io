@@ -46,7 +46,7 @@ async function fetchLegacyCollection(name) {
   }));
 }
 
-const { settings, rooms, cities, apartmentProjects, jazzTracks, interests } = defaultContent;
+const { cities, apartmentProjects, jazzTracks, interests } = defaultContent;
 
 const [legacyExperiences, legacyProjects, legacyCourseGroups, legacyExtracurriculars] =
   await Promise.all([
@@ -100,8 +100,6 @@ const extracurriculars = legacyExtracurriculars.map((document, order) => ({
 }));
 
 const documents = [
-  settings,
-  ...rooms,
   ...cities,
   ...apartmentProjects,
   ...jazzTracks,
@@ -125,5 +123,5 @@ const response = await fetch(
 
 if (!response.ok)
   throw new Error(`Sanity mutation failed (${response.status}): ${await response.text()}`);
-const result = await response.json();
-console.log(`Seeded ${result.results.length} documents into ${projectId}/${dataset}.`);
+await response.json();
+console.log(`Seeded ${documents.length} documents into ${projectId}/${dataset}.`);

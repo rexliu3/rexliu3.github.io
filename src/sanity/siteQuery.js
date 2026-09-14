@@ -1,6 +1,6 @@
 const siteQuery = `{
-  "settings": *[_type == "siteSettings" && _id == "siteSettings"][0],
-  "rooms": *[_type == "room"] | order(order asc),
+  "contentModel": "dynamic-v1",
+  "resumeUrl": *[_type == "resume" && _id == "resume"][0].file.asset->url,
   "cities": *[_type == "city"] | order(order asc),
   "apartmentProjects": *[_type == "apartmentProject"] | order(order asc),
   "jazzTracks": *[_type == "jazzTrack"] | order(order asc),
@@ -8,7 +8,8 @@ const siteQuery = `{
   "projects": *[_type == "project"] | order(order asc),
   "courseGroups": *[_type == "courseGroup"] | order(order asc),
   "extracurriculars": *[_type == "extracurricular"] | order(order asc),
-  "interests": *[_type == "interest"] | order(order asc)
+  "interests": *[_type == "interest"] | order(order asc),
+  "instagramPosts": *[_type == "instagramPost"] | order(timestamp desc)[0...12]
 }`;
 
 export default siteQuery;

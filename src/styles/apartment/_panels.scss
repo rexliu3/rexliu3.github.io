@@ -482,6 +482,71 @@
   display: block;
   text-align: right;
 }
+.instagram-feed-label {
+  margin: 5px 0 12px;
+}
+.instagram-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.instagram-gallery > a {
+  min-width: 0;
+  color: #626657;
+}
+.instagram-gallery__image {
+  position: relative;
+  display: block;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 5px;
+  background: #e7e4d6;
+}
+.instagram-gallery__image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 180ms ease;
+}
+.instagram-gallery > a:hover .instagram-gallery__image img,
+.instagram-gallery > a:focus-visible .instagram-gallery__image img {
+  transform: scale(1.035);
+}
+.instagram-gallery > a:focus-visible {
+  outline: 2px solid #ae7754;
+  outline-offset: 3px;
+}
+.instagram-gallery__type {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  color: #fff;
+  background: #343d31b8;
+  font-size: 9px;
+}
+.instagram-gallery__caption {
+  display: -webkit-box;
+  margin-top: 7px;
+  overflow: hidden;
+  font-size: 10px;
+  line-height: 1.45;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.instagram-gallery time {
+  display: block;
+  margin-top: 3px;
+  color: #9b9988;
+  font-size: 8px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
 .berkeley-card {
   background: #eae9db;
   border: 1px solid #c7c5ad;

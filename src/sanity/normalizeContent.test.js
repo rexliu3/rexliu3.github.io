@@ -1,37 +1,30 @@
 import normalizeContent from "./normalizeContent";
 import fallbackContent from "./fallbackContent";
 
-test("fills missing panel settings and hotspot metadata without replacing live copy", () => {
-  const content = normalizeContent({
+const normalize = (content) => normalizeContent({ contentModel: "dynamic-v1", ...content });
+
+test("keeps website copy and room metadata local while accepting a hosted résumé", () => {
+  const content = normalize({
     settings: { brand: "Updated brand", panels: { books: { noteTitle: "New books" } } },
     rooms: [{ id: "books", name: "My library", order: 2 }],
+    resumeUrl: "https://cdn.sanity.io/files/example/resume.pdf",
     jazzTracks: [null, { id: "broken" }],
   });
-  expect(content.settings.brand).toBe("Updated brand");
-  expect(content.settings.panels.books.noteTitle).toBe("New books");
-  expect(content.settings.panels.books.spines).toEqual(
-    fallbackContent.settings.panels.books.spines
-  );
-  expect(content.rooms).toHaveLength(6);
-  expect(content.rooms.find((room) => room.id === "books").name).toBe("My library");
+  expect(content.settings.brand).toBe(fallbackContent.settings.brand);
+  expect(content.settings.panels.books).toEqual(fallbackContent.settings.panels.books);
+  expect(content.settings.resumeUrl).toBe("https://cdn.sanity.io/files/example/resume.pdf");
+  expect(content.rooms).toEqual(fallbackContent.rooms);
   expect(content.jazzTracks).toEqual([]);
 });
 
-test("preserves intentional empty fields and rejects invalid field types", () => {
-  const content = normalizeContent({
-    settings: { introLines: [], signature: "", asideLines: [null, "Hello"], panels: null },
-    cities: [],
-  });
-  expect(content.settings.introLines).toEqual([]);
-  expect(content.settings.signature).toBe("");
-  expect(content.settings.asideLines).toEqual(["Hello"]);
-  expect(content.settings.panels).toEqual(fallbackContent.settings.panels);
+test("uses the bundled résumé and preserves an intentionally empty collection", () => {
+  const content = normalize({ resumeUrl: null, cities: [] });
+  expect(content.settings.resumeUrl).toBe(fallbackContent.settings.resumeUrl);
   expect(content.cities).toEqual([]);
 });
 
 test("normalizes nested courses and keeps only playable music", () => {
-  const content = normalizeContent({
-    settings: {},
+  const content = normalize({
     courseGroups: [
       {
         title: "Computer science",
@@ -49,4 +42,27 @@ test("normalizes nested courses and keeps only playable music", () => {
   });
   expect(content.jazzTracks).toHaveLength(1);
   expect(content.jazzTracks[0]).toMatchObject({ id: "record", src: "/audio/record.mp3" });
+});
+
+test("keeps only Instagram posts that have a link and displayable media", () => {
+  const content = normalize({
+    instagramPosts: [
+      {
+        instagramId: "image",
+        mediaType: "IMAGE",
+        mediaUrl: "https://cdn.example.com/image.jpg",
+        permalink: "https://www.instagram.com/p/image/",
+      },
+      {
+        instagramId: "video",
+        mediaType: "VIDEO",
+        thumbnailUrl: "https://cdn.example.com/video.jpg",
+        permalink: "https://www.instagram.com/reel/video/",
+      },
+      { instagramId: "missing-media", permalink: "https://www.instagram.com/p/missing/" },
+      { instagramId: "missing-link", mediaUrl: "https://cdn.example.com/orphan.jpg" },
+    ],
+  });
+
+  expect(content.instagramPosts.map((post) => post.instagramId)).toEqual(["image", "video"]);
 });

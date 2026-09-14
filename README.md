@@ -50,7 +50,11 @@ or removing unused direct dependencies.
 
 ## Content management
 
-The site reads all profile, apartment, experience, project, education, community, city, interest, and music metadata from the public `production` dataset in the **Rex’s Internet Apartment** Sanity project.
+Website copy, labels, room metadata, and presentation text live in
+`src/sanity/defaultContent.json` and ship with the application. Sanity contains
+only content expected to change independently, including the résumé, Instagram
+gallery, experience, projects, coursework, community work, interests, travel
+entries, and music.
 
 To edit content locally:
 
@@ -66,15 +70,19 @@ Project, dataset, and API version defaults are centralized in
 fields at the content boundary, and falls back to bundled apartment content if a
 request fails or exceeds eight seconds. Cancellation is preserved when a view unmounts.
 
+Upload résumé updates in **Résumé → PDF** in Sanity Studio and publish the
+document. The site uses the uploaded PDF from Sanity’s CDN and falls back to
+`public/Resume_RexLiu.pdf` when the field is empty.
+
 Hosted preview origins may be rejected by Sanity's CORS allowlist. The fallback
 keeps those previews usable, but does not grant access to live CMS changes. Add the
 exact preview origin in the project's API/CORS settings when live content is needed.
 No write token belongs in browser configuration.
 
-`src/sanity/defaultContent.json` is shared by the browser fallback and seed script.
-Update it when changing the baseline apartment content. Live publishing does not
-automatically update that snapshot. The older portfolio collections have no bundled
-snapshot and are empty when the API cannot be reached.
+`src/sanity/defaultContent.json` is the source of truth for website copy and
+provides browser fallbacks for selected collections. Copy changes require a site
+deployment. The older portfolio collections have no bundled snapshot and are empty
+when the API cannot be reached.
 
 To seed a dataset, provide a write token and run the script below. It reads the
 legacy portfolio collections and uses `createOrReplace`: existing documents with
@@ -86,3 +94,30 @@ SANITY_API_TOKEN=... npm run sanity:seed
 ```
 
 Optional `SANITY_PROJECT_ID` and `SANITY_DATASET` environment variables override the default target. The write token is used only by the seed script and must never be exposed to the browser or committed.
+
+## Instagram gallery
+
+The camera panel reads cached Instagram posts from Sanity. A scheduled GitHub
+Actions workflow refreshes the latest 12 posts every six hours, so the Instagram
+access token never reaches the browser. If no posts have been synced, the panel
+keeps showing the configured fallback photo.
+
+The connected Instagram account must be a professional Business or Creator
+account. Create a Meta app with Instagram API with Instagram Login, authorize that
+account with the `instagram_business_basic` scope, and add these GitHub repository
+secrets:
+
+- `INSTAGRAM_ACCESS_TOKEN`: the access token for the connected Instagram account.
+- `SANITY_API_TOKEN`: a Sanity token with permission to create and delete documents
+  in the configured dataset.
+
+Run **Sync Instagram gallery** from the repository’s Actions tab for the first
+import. For a local manual sync, use:
+
+```bash
+INSTAGRAM_ACCESS_TOKEN=... SANITY_API_TOKEN=... npm run instagram:sync
+```
+
+`INSTAGRAM_API_VERSION`, `INSTAGRAM_MEDIA_LIMIT`, `SANITY_PROJECT_ID`, and
+`SANITY_DATASET` are optional overrides. Rotate or refresh the Instagram token
+before it expires; a failed sync leaves the last successful gallery in Sanity.

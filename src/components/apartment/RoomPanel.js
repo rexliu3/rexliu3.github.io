@@ -24,6 +24,7 @@ export default function RoomPanel({
   rooms,
   cities,
   projects,
+  instagramPosts,
   tracks,
   settings,
 }) {
@@ -80,6 +81,7 @@ export default function RoomPanel({
               content={settings.panels[definition.contentKey]}
               cities={cities}
               projects={projects}
+              posts={instagramPosts}
               settings={settings}
             />
           )}

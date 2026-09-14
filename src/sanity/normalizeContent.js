@@ -40,6 +40,16 @@ const DOCUMENT_FIELDS = {
   courseGroups: { title: "" },
   extracurriculars: { company: "", title: "", date: "", website: "", logo: "", description: [] },
   interests: { name: "", logo: "", description: "", link: "" },
+  instagramPosts: {
+    instagramId: "",
+    mediaType: "",
+    mediaUrl: "",
+    thumbnailUrl: "",
+    permalink: "",
+    caption: "",
+    timestamp: "",
+    username: "",
+  },
 };
 
 function normalizeCollection(name, value) {
@@ -56,25 +66,26 @@ function normalizeCollection(name, value) {
     }
     return normalized;
   });
-  return name === "jazzTracks" ? collection.filter((track) => track.id && track.src) : collection;
+  if (name === "jazzTracks") return collection.filter((track) => track.id && track.src);
+  if (name === "instagramPosts") {
+    return collection.filter(
+      (post) => post.instagramId && post.permalink && (post.thumbnailUrl || post.mediaUrl)
+    );
+  }
+  return collection;
 }
 
 export default function normalizeContent(content) {
-  if (!isObject(content) || !isObject(content.settings)) {
+  if (!isObject(content) || content.contentModel !== "dynamic-v1") {
     throw new Error("Sanity content is not initialized");
   }
-  const rooms = documents(content.rooms);
+  const resumeUrl =
+    typeof content.resumeUrl === "string" && content.resumeUrl
+      ? content.resumeUrl
+      : fallbackContent.settings.resumeUrl;
   return {
-    settings: withDefaults(content.settings, fallbackContent.settings),
-    // Hotspots are part of the drawing, so every supported room needs metadata.
-    rooms: fallbackContent.rooms
-      .map((room) =>
-        withDefaults(
-          rooms.find((item) => item.id === room.id),
-          room
-        )
-      )
-      .sort((a, b) => a.order - b.order),
+    settings: { ...fallbackContent.settings, resumeUrl },
+    rooms: fallbackContent.rooms,
     ...Object.fromEntries(
       Object.keys(DOCUMENT_FIELDS).map((name) => [name, normalizeCollection(name, content[name])])
     ),

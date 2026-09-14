@@ -18,6 +18,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "sanity:seed": "node scripts/seed-sanity.mjs",
+    "instagram:sync": "node scripts/sync-instagram.mjs",
     "sanity:dev": "npm --prefix studio run dev",
     "sanity:build": "npm --prefix studio run build",
     "preview": "serve -s build -l 3000",

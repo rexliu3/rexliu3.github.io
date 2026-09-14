@@ -1,7 +1,5 @@
 {
   "settings": {
-    "_id": "siteSettings",
-    "_type": "siteSettings",
     "name": "Rex Liu",
     "brand": "rex’s apartment",
     "location": "Somewhere in New York",
@@ -63,6 +61,8 @@
         "imageAlt": "Rex Liu",
         "caption": "Hello from the other side of the camera.",
         "byline": "— Rex",
+        "feedLabel": "LATEST FROM INSTAGRAM",
+        "instagramLinkLabel": "View on Instagram",
         "noteTitle": "A photo album in the making.",
         "noteBody": "More snapshots and stories will find their way here."
       },
@@ -83,8 +83,6 @@
   },
   "rooms": [
     {
-      "_id": "room-books",
-      "_type": "room",
       "id": "books",
       "name": "The bookshelf",
       "short": "Books",
@@ -94,8 +92,6 @@
       "order": 0
     },
     {
-      "_id": "room-travel",
-      "_type": "room",
       "id": "travel",
       "name": "The world map",
       "short": "Travel",
@@ -105,8 +101,6 @@
       "order": 1
     },
     {
-      "_id": "room-projects",
-      "_type": "room",
       "id": "projects",
       "name": "The laptop",
       "short": "Side projects",
@@ -116,8 +110,6 @@
       "order": 2
     },
     {
-      "_id": "room-music",
-      "_type": "room",
       "id": "music",
       "name": "The record player",
       "short": "Café jazz",
@@ -127,8 +119,6 @@
       "order": 3
     },
     {
-      "_id": "room-photos",
-      "_type": "room",
       "id": "photos",
       "name": "The camera",
       "short": "Photos",
@@ -138,8 +128,6 @@
       "order": 4
     },
     {
-      "_id": "room-berkeley",
-      "_type": "room",
       "id": "berkeley",
       "name": "The diploma",
       "short": "Berkeley",

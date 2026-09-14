@@ -71,6 +71,32 @@ test("the scene camera opens the photo panel with the configured image", () => {
   expect(view.getByRole("dialog")).toBeTruthy();
 });
 
+test("the camera gallery links synced Instagram posts", () => {
+  const instagramPost = {
+    _id: "instagram-123",
+    instagramId: "123",
+    mediaType: "VIDEO",
+    mediaUrl: "https://cdn.example.com/video.mp4",
+    thumbnailUrl: "https://cdn.example.com/thumbnail.jpg",
+    permalink: "https://www.instagram.com/p/example/",
+    caption: "A quiet afternoon in New York",
+    timestamp: "2026-09-14T12:00:00Z",
+    username: "rexliu3",
+  };
+  const view = render(
+    <ApartmentPage content={{ ...fallbackContent, instagramPosts: [instagramPost] }} />
+  );
+  fireEvent.click(view.getByText("Photos"));
+
+  const dialog = within(view.getByRole("dialog"));
+  const postLink = dialog.getByLabelText(/A quiet afternoon in New York/);
+  expect(postLink.getAttribute("href")).toBe(instagramPost.permalink);
+  expect(dialog.getByAltText(instagramPost.caption).getAttribute("src")).toBe(
+    instagramPost.thumbnailUrl
+  );
+  expect(dialog.queryByAltText(fallbackContent.settings.panels.photos.imageAlt)).toBeNull();
+});
+
 test("day/night and sound controls remain functional", async () => {
   const view = render(<ApartmentPage content={fallbackContent} />);
   fireEvent.click(view.getByLabelText("Switch to nighttime"));

@@ -10,13 +10,24 @@ afterEach(() => {
 });
 
 test("returns content from Sanity when the request succeeds", async () => {
-  const content = { settings: { brand: "Live content" } };
+  const content = {
+    contentModel: "dynamic-v1",
+    resumeUrl: "https://cdn.sanity.io/files/example/resume.pdf",
+    experiences: [{ _id: "experience-1", company: "Example" }],
+  };
   global.fetch = jest.fn().mockResolvedValue({
     ok: true,
     json: jest.fn().mockResolvedValue({ result: content }),
   });
 
-  await expect(fetchSiteContent()).resolves.toMatchObject(content);
+  await expect(fetchSiteContent()).resolves.toMatchObject({
+    settings: {
+      brand: fallbackContent.settings.brand,
+      resumeUrl: content.resumeUrl,
+    },
+    experiences: content.experiences,
+    rooms: fallbackContent.rooms,
+  });
 });
 
 test("uses bundled content when a preview origin is rejected", async () => {

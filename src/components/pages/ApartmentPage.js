@@ -7,7 +7,7 @@ import RoomPanel from "../apartment/RoomPanel";
 import useJazzPlayer from "../../hooks/useJazzPlayer";
 
 const ApartmentPage = ({ content }) => {
-  const { settings, rooms, cities, apartmentProjects, jazzTracks } = content;
+  const { settings, rooms, cities, apartmentProjects, jazzTracks, instagramPosts } = content;
   const [activeRoomId, setActiveRoomId] = useState(null);
   const [night, setNight] = useState(false);
   const player = useJazzPlayer(jazzTracks);
@@ -44,6 +44,7 @@ const ApartmentPage = ({ content }) => {
           rooms={rooms}
           cities={cities}
           projects={apartmentProjects}
+          instagramPosts={instagramPosts}
           tracks={jazzTracks}
           settings={settings}
         />

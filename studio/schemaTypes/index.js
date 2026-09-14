@@ -1,5 +1,3 @@
-import { siteSettings } from "./siteSettings";
-import { room } from "./room";
 import { city } from "./city";
 import { apartmentProject } from "./apartmentProject";
 import { jazzTrack } from "./jazzTrack";
@@ -8,10 +6,10 @@ import { project } from "./project";
 import { courseGroup } from "./courseGroup";
 import { extracurricular } from "./extracurricular";
 import { interest } from "./interest";
+import { instagramPost } from "./instagramPost";
+import { resume } from "./resume";
 
 export {
-  siteSettings,
-  room,
   city,
   apartmentProject,
   jazzTrack,
@@ -20,11 +18,11 @@ export {
   courseGroup,
   extracurricular,
   interest,
+  instagramPost,
+  resume,
 };
 
 export const schemaTypes = [
-  siteSettings,
-  room,
   city,
   apartmentProject,
   jazzTrack,
@@ -33,4 +31,6 @@ export const schemaTypes = [
   courseGroup,
   extracurricular,
   interest,
+  instagramPost,
+  resume,
 ];
