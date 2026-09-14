@@ -7,6 +7,7 @@ Find it here: [rexliu.dev](https://rexliu.dev).
 Use Node.js 22.12 or newer and install dependencies from the lockfile:
 
 ```bash
+nvm use # Optional: selects the Node.js version in .nvmrc
 npm ci --legacy-peer-deps
 npm run dev
 ```
@@ -16,12 +17,14 @@ The application runs on port 3000. For a production preview, run
 
 Run `npm run check` before committing. It runs ESLint, Prettier checks, the test
 suite, and the production build. Use `npm run format` to apply the shared style.
+GitHub Actions runs the website checks and Studio build on pushes and pull requests.
 Studio changes additionally require `npm run sanity:build` after installing its
 dependencies with `npm --prefix studio ci`.
 
 ## Code organization
 
 - `src/components/pages/`: routing views, loading states, and apartment state.
+- `src/components/apartment/`: apartment presentation, navigation, and room dialogs.
 - `src/components/apartment/scene/`: SVG objects and shared projection helpers.
 - `src/components/apartment/panels/`: individual room content.
 - `src/hooks/`: audio lifecycle, dialog keyboard behavior, and collection access.
@@ -33,7 +36,11 @@ dependencies with `npm --prefix studio ci`.
 
 Keep side effects in hooks or maintenance scripts and validate remote data at the
 content boundary. Components should receive normalized data through props or
-`useSanityContent`. Keep the shared SVG projection in `scene/geometry.js` so
+`useSanityContent`. Collection consumers use canonical content keys, such as
+`useCollection("courseGroups")`, rather than legacy database collection names.
+Keep page state in `ApartmentPage` and pass explicit values and event handlers to
+its presentation components. The CMS query lives in `src/sanity/siteQuery.js`;
+transport, cancellation, and fallback handling live in `client.js`. Keep the shared SVG projection in `scene/geometry.js` so
 objects stay aligned. Preserve dialog keyboard controls and reduced-motion styles.
 
 The app retains its existing React 16 / Create React App toolchain for compatibility.

@@ -64,3 +64,22 @@ test("day/night and sound controls remain functional", async () => {
   fireEvent.click(view.getByLabelText("Pause café jazz"));
   expect(view.getByLabelText("Play café jazz")).toBeTruthy();
 });
+
+test("room navigation updates captions and cycles back to the first room", () => {
+  const view = render(<ApartmentPage content={fallbackContent} />);
+  const navigation = within(view.getByLabelText("Explore the apartment"));
+  const firstRoom = fallbackContent.rooms[0];
+  const trigger = navigation.getByText(firstRoom.short).closest("button");
+  fireEvent.mouseEnter(trigger);
+  expect(view.getByText(`Explore ${firstRoom.name.toLowerCase()}`)).toBeTruthy();
+  fireEvent.mouseLeave(trigger);
+  expect(view.getByText(fallbackContent.settings.idleCaption)).toBeTruthy();
+  fireEvent.click(trigger);
+
+  for (let index = 1; index <= fallbackContent.rooms.length; index += 1) {
+    fireEvent.click(view.getByLabelText("Explore the next object"));
+    const room = fallbackContent.rooms[index % fallbackContent.rooms.length];
+    expect(within(view.getByRole("dialog")).getByText(room.panelTitle)).toBeTruthy();
+    expect(document.activeElement).toBe(view.getByLabelText("Back to the apartment"));
+  }
+});

@@ -3,7 +3,7 @@ import Extracurricular from "../layouts/Extracurricular";
 import useCollection from "../../hooks/useCollection";
 
 const Extracurriculars = () => {
-  const { items, loading, error } = useCollection("Extracurriculars");
+  const { items, loading, error } = useCollection("extracurriculars");
   return (
     <div>
       <div className="section-heading">

@@ -13,6 +13,7 @@ function withDefaults(value, defaults) {
       Object.entries(defaults).map(([key, fallback]) => [key, withDefaults(source[key], fallback)])
     );
   }
+  if (typeof defaults === "number") return Number.isFinite(value) ? value : defaults;
   return typeof value === typeof defaults ? value : defaults;
 }
 
@@ -42,7 +43,7 @@ const DOCUMENT_FIELDS = {
 };
 
 function normalizeCollection(name, value) {
-  return documents(value).map((document, index) => {
+  const collection = documents(value).map((document, index) => {
     const normalized = withDefaults(document, {
       _id: `${name}-${index}`,
       order: index,
@@ -55,6 +56,7 @@ function normalizeCollection(name, value) {
     }
     return normalized;
   });
+  return name === "jazzTracks" ? collection.filter((track) => track.id && track.src) : collection;
 }
 
 export default function normalizeContent(content) {
@@ -75,9 +77,6 @@ export default function normalizeContent(content) {
       .sort((a, b) => a.order - b.order),
     ...Object.fromEntries(
       Object.keys(DOCUMENT_FIELDS).map((name) => [name, normalizeCollection(name, content[name])])
-    ),
-    jazzTracks: normalizeCollection("jazzTracks", content.jazzTracks).filter(
-      (track) => track.id && track.src
     ),
   };
 }

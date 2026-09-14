@@ -3,7 +3,7 @@ import Section from "../layouts/Section";
 import useCollection from "../../hooks/useCollection";
 
 const Courses = () => {
-  const { items, loading, error } = useCollection("Courses");
+  const { items, loading, error } = useCollection("courseGroups");
   const courses = [...items].sort((a, b) => (a.order || 0) - (b.order || 0));
   return (
     <div>

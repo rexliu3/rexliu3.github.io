@@ -3,7 +3,7 @@ import Project from "../layouts/Project";
 import useCollection from "../../hooks/useCollection";
 
 const Projects = () => {
-  const { items, loading, error } = useCollection("Projects");
+  const { items, loading, error } = useCollection("projects");
   return (
     <div>
       <div className="section-heading section-heading--split">

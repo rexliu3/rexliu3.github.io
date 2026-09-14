@@ -28,3 +28,25 @@ test("preserves intentional empty fields and rejects invalid field types", () =>
   expect(content.settings.panels).toEqual(fallbackContent.settings.panels);
   expect(content.cities).toEqual([]);
 });
+
+test("normalizes nested courses and keeps only playable music", () => {
+  const content = normalizeContent({
+    settings: {},
+    courseGroups: [
+      {
+        title: "Computer science",
+        order: Infinity,
+        courses: [null, { shortName: "CS 61A", grade: 42 }],
+      },
+    ],
+    jazzTracks: [{ id: "record", src: "/audio/record.mp3" }, { id: "missing-source" }, null],
+  });
+  expect(content.courseGroups[0]).toEqual({
+    _id: "courseGroups-0",
+    order: 0,
+    title: "Computer science",
+    courses: [{ _key: "", shortName: "CS 61A", fullName: "", grade: "" }],
+  });
+  expect(content.jazzTracks).toHaveLength(1);
+  expect(content.jazzTracks[0]).toMatchObject({ id: "record", src: "/audio/record.mp3" });
+});

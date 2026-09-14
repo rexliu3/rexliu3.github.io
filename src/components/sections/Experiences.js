@@ -3,7 +3,7 @@ import Experience from "../layouts/Experience";
 import useCollection from "../../hooks/useCollection";
 
 const Experiences = () => {
-  const { items, loading, error } = useCollection("Experiences");
+  const { items, loading, error } = useCollection("experiences");
   return (
     <div>
       <div className="section-heading section-heading--split">
