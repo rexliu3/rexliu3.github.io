@@ -31,6 +31,15 @@ export default function Desk({ common, night }) {
       </g>
       <Box x={435} y={18} z={72} w={205} d={75} h={5} />
 
+      <Hotspot id="resume" label="résumé" {...common}>
+        <g transform={floor(447, 33, 78)} filter="url(#object-shadow)">
+          <rect width="37" height="48" rx="1" fill="#fffdf6" stroke="#b8aa8c" />
+          <path d="M6 10h18M6 16h25M6 22h25M6 28h18M6 37h11" stroke="#a89b81" />
+          <circle cx="28" cy="38" r="4" fill="none" stroke="#b96743" />
+        </g>
+        <ObjectTag x={465} y={57} z={112} label="Résumé" />
+      </Hotspot>
+
       <g className="desk-lamp" transform={`translate(${project(612, 34, 78).join(" ")})`}>
         {night && <ellipse cx="-15" cy="-20" rx="62" ry="50" fill="url(#lamp-glow)" />}
         <ellipse rx="14" ry="5" fill="#b9a276" stroke="#97805a" strokeWidth="1.2" />
@@ -72,7 +81,7 @@ export default function Desk({ common, night }) {
         </g>
         <ObjectTag x={521} y={47} z={143} label="Side projects" />
       </Hotspot>
-      <g transform={`translate(${project(465, 57, 78).join(" ")})`}>
+      <g transform={`translate(${project(574, 46, 78).join(" ")})`}>
         <ellipse cy="1" rx="11" ry="4" fill="#a68d6c" opacity=".25" />
         <path d="M-7-13H7v12q-7 6-14 0Z" fill="#f4ebd6" stroke="#a08d6b" strokeWidth="1" />
         <ellipse cy="-13" rx="7" ry="2.5" fill="#806346" />

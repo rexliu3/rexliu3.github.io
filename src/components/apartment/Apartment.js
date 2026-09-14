@@ -25,7 +25,7 @@ export default function Apartment({ onOpen, hovered, onHover, night, sound }) {
         A sunlit apartment with a bookshelf and desk against the back wall, a sofa facing a coffee
         table, and space to walk between them. Explore books, a Vancouver to San Francisco to New
         York map, side projects on the laptop, five café jazz records on the coffee-table turntable,
-        music on the speaker, photos on the camera, and a Berkeley diploma.
+        music on the speaker, photos on the camera, a résumé on the desk, and a Berkeley diploma.
       </desc>
       <defs>
         <linearGradient id="wall" x2="0" y2="1">

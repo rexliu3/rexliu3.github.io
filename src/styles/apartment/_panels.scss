@@ -547,6 +547,51 @@
   letter-spacing: 0.4px;
   text-transform: uppercase;
 }
+.panel-resume {
+  width: 760px;
+}
+.resume-preview-label {
+  margin: 24px 0 10px;
+}
+.resume-preview {
+  width: min(100%, 510px);
+  aspect-ratio: 8.5 / 11;
+  margin: 0 auto;
+  overflow: hidden;
+  border: 1px solid #d8d2c2;
+  border-radius: 5px;
+  background: #e8e5dc;
+  box-shadow: 0 8px 28px #4d4a3c1a;
+}
+.resume-preview iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: 0;
+  background: #fff;
+}
+.resume-actions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  width: min(100%, 510px);
+  margin: 14px auto 0;
+}
+.resume-actions a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  border: 1px solid #dcdcc9;
+  border-radius: 6px;
+  background: #eeeee1;
+  font-size: 11px;
+}
+.resume-actions a:hover,
+.resume-actions a:focus-visible {
+  background: #e5e7d4;
+  border-color: #b8bea3;
+}
 .berkeley-card {
   background: #eae9db;
   border: 1px solid #c7c5ad;

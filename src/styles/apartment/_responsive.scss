@@ -192,6 +192,12 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 14px 10px;
   }
+  .resume-preview {
+    aspect-ratio: 3 / 4;
+  }
+  .resume-actions {
+    grid-template-columns: 1fr;
+  }
 }
 @media (prefers-reduced-motion: reduce) {
   *,

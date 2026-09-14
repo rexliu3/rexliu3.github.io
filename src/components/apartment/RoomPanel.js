@@ -7,6 +7,7 @@ import TravelPanel from "./panels/TravelPanel";
 import ProjectsPanel from "./panels/ProjectsPanel";
 import PhotosPanel from "./panels/PhotosPanel";
 import EducationPanel from "./panels/EducationPanel";
+import ResumePanel from "./panels/ResumePanel";
 
 const PANELS = {
   books: { Component: BooksPanel, contentKey: "books" },
@@ -14,6 +15,7 @@ const PANELS = {
   projects: { Component: ProjectsPanel, contentKey: "projects" },
   photos: { Component: PhotosPanel, contentKey: "photos" },
   berkeley: { Component: EducationPanel, contentKey: "education" },
+  resume: { Component: ResumePanel, contentKey: "resume" },
 };
 
 export default function RoomPanel({

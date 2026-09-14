@@ -66,6 +66,12 @@
         "noteTitle": "A photo album in the making.",
         "noteBody": "More snapshots and stories will find their way here."
       },
+      "resume": {
+        "previewLabel": "A QUICK LOOK",
+        "previewTitle": "Preview of Rex Liu’s résumé",
+        "openLabel": "Open full résumé",
+        "downloadLabel": "Download PDF"
+      },
       "education": {
         "seal": "B",
         "institutionLabel": "UNIVERSITY OF CALIFORNIA",
@@ -135,6 +141,16 @@
       "panelTitle": "A chapter in blue & gold.",
       "lede": "Three years of questions, late nights, and learning how to build things that matter.",
       "order": 5
+    },
+    {
+      "id": "resume",
+      "name": "The résumé",
+      "short": "Résumé",
+      "icon": "document",
+      "panelTitle": "The work so far.",
+      "lede": "A closer look at the roles, projects, and experiences that shaped how I build.",
+      "navigation": false,
+      "order": 6
     }
   ],
   "cities": [

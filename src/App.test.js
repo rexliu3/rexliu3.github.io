@@ -25,9 +25,12 @@ test("a rejected content request still opens every room and restores keyboard fo
   await wait(() => expect(view.getByText("Make yourself")).toBeTruthy());
 
   for (const room of fallbackContent.rooms) {
-    const trigger = within(view.getByLabelText("Explore the apartment"))
-      .getByText(room.short)
-      .closest("button");
+    const trigger =
+      room.navigation === false
+        ? view.getByLabelText(`Explore ${room.short.toLowerCase()}`)
+        : within(view.getByLabelText("Explore the apartment"))
+            .getByText(room.short)
+            .closest("button");
     trigger.focus();
     fireEvent.click(trigger);
     expect(view.getByRole("dialog")).toBeTruthy();
@@ -95,6 +98,30 @@ test("the camera gallery links synced Instagram posts", () => {
     instagramPost.thumbnailUrl
   );
   expect(dialog.queryByAltText(fallbackContent.settings.panels.photos.imageAlt)).toBeNull();
+});
+
+test("the desk résumé opens a preview with open and download options", () => {
+  const resumeUrl = "https://cdn.sanity.io/files/example/production/resume.pdf";
+  const content = {
+    ...fallbackContent,
+    settings: { ...fallbackContent.settings, resumeUrl },
+  };
+  const view = render(<ApartmentPage content={content} />);
+  const paper = view.getByLabelText("Explore résumé");
+  paper.focus();
+  fireEvent.click(paper);
+
+  const dialog = within(view.getByRole("dialog"));
+  expect(dialog.getByTitle("Preview of Rex Liu’s résumé").getAttribute("src")).toBe(
+    `${resumeUrl}#view=FitH`
+  );
+  expect(dialog.getByText("Open full résumé").closest("a").getAttribute("href")).toBe(resumeUrl);
+  expect(dialog.getByText("Download PDF").closest("a").getAttribute("href")).toBe(
+    `${resumeUrl}?dl=Rex-Liu-Resume.pdf`
+  );
+
+  fireEvent.keyDown(document, { key: "Escape" });
+  expect(document.activeElement).toBe(paper);
 });
 
 test("day/night and sound controls remain functional", async () => {

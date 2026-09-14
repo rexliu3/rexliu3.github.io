@@ -45,6 +45,12 @@ const paths = {
       <circle cx="12" cy="15" r="2" />
     </>
   ),
+  document: (
+    <>
+      <path d="M6 2h8l4 4v16H6Z" />
+      <path d="M14 2v5h4M9 11h6m-6 4h6m-6 4h4" />
+    </>
+  ),
   sun: (
     <>
       <circle cx="12" cy="12" r="4" />
