@@ -1,9 +1,10 @@
 import React from "react";
+import SiteImage from "../SiteImage";
 
 const Project = ({ data, index }) => (
   <article className="project-card">
     <div className="project-card__visual">
-      <img src={data.image || data.logo} alt="" />
+      <SiteImage src={data.image || data.logo} alt="" />
       <span>{String(index + 1).padStart(2, "0")}</span>
     </div>
     <div className="project-card__body">

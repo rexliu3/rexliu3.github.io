@@ -1,9 +1,10 @@
 import React from "react";
+import SiteImage from "../SiteImage";
 
 const Extracurricular = ({ data }) => (
   <article className="community-card">
     <div className="community-card__top">
-      <img src={data.logo} alt="" />
+      <SiteImage src={data.logo} alt="" />
       <span>{data.date}</span>
     </div>
     <h3>{data.company}</h3>

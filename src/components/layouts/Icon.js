@@ -1,9 +1,10 @@
 import React from "react";
+import SiteImage from "../SiteImage";
 
 const Icon = ({ data }) => {
   const content = (
     <>
-      <img src={data.logo} alt="" />
+      <SiteImage src={data.logo} alt="" />
       <div>
         <h3>{data.name}</h3>
         {data.description && <p>{data.description}</p>}

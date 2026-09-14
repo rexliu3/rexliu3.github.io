@@ -1,4 +1,5 @@
 import React from "react";
+import SiteImage from "../../SiteImage";
 
 export default function ProjectsPanel({ room, content, projects, settings }) {
   return (
@@ -7,7 +8,7 @@ export default function ProjectsPanel({ room, content, projects, settings }) {
       <div className="apartment-projects">
         {projects.map((project) => (
           <article key={project._id}>
-            <img src={project.image} alt={`${project.name} project preview`} />
+            <SiteImage src={project.image} alt={`${project.name} project preview`} />
             <div>
               <p className="eyebrow">{project.type}</p>
               <h3>{project.name}</h3>

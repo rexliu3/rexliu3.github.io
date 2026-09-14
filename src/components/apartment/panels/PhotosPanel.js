@@ -1,11 +1,12 @@
 import React from "react";
+import SiteImage from "../../SiteImage";
 
 export default function PhotosPanel({ room, content }) {
   return (
     <>
       <p className="panel-lede">{room.lede}</p>
       <figure className="photo-print">
-        <img src={content.image} alt={content.imageAlt} />
+        <SiteImage src={content.image} alt={content.imageAlt} />
         <figcaption>
           {content.caption} <span>{content.byline}</span>
         </figcaption>

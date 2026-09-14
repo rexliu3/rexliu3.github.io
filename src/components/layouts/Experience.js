@@ -1,10 +1,11 @@
 import React from "react";
+import SiteImage from "../SiteImage";
 
 const Experience = ({ data }) => (
   <article className="experience-row">
     <div className="experience-row__company">
       {data.logo ? (
-        <img src={data.logo} alt="" />
+        <SiteImage src={data.logo} alt="" />
       ) : (
         <span className="experience-row__monogram" aria-hidden="true">
           {data.company.charAt(0)}

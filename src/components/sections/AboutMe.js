@@ -1,4 +1,5 @@
 import React from "react";
+import SiteImage from "../SiteImage";
 import { useSanityContent } from "../../sanity/ContentContext";
 
 const AboutMe = () => {
@@ -17,7 +18,7 @@ const AboutMe = () => {
       </div>
       <div className="about-grid">
         <div className="about-grid__portrait">
-          <img src={settings.profile.portrait} alt={settings.name} />
+          <SiteImage src={settings.profile.portrait} alt={settings.name} />
         </div>
         <div className="about-grid__copy">
           <p className="about-grid__lead">{settings.profile.aboutLead}</p>

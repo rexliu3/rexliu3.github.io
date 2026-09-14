@@ -55,6 +55,22 @@ test("travel tabs support keyboard navigation and an empty city list", () => {
   expect(view.queryByRole("tabpanel")).toBeNull();
 });
 
+test("the scene camera opens the photo panel with the configured image", () => {
+  const view = render(<ApartmentPage content={fallbackContent} />);
+  const camera = view.getByLabelText("Explore photos");
+  camera.focus();
+  fireEvent.click(camera);
+
+  const dialog = within(view.getByRole("dialog"));
+  const photo = dialog.getByAltText(fallbackContent.settings.panels.photos.imageAlt);
+  expect(photo.getAttribute("src")).toBe(fallbackContent.settings.panels.photos.image);
+  fireEvent.keyDown(document, { key: "Escape" });
+  expect(document.activeElement).toBe(camera);
+
+  fireEvent.keyDown(camera, { key: "Enter" });
+  expect(view.getByRole("dialog")).toBeTruthy();
+});
+
 test("day/night and sound controls remain functional", async () => {
   const view = render(<ApartmentPage content={fallbackContent} />);
   fireEvent.click(view.getByLabelText("Switch to nighttime"));
