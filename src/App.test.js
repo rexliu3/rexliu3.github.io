@@ -104,6 +104,10 @@ test("the wall portrait opens the experience introduction", () => {
   expect(dialog.getByText("Hello from the other side.")).toBeTruthy();
   expect(dialog.getByText(/software engineer at Palantir/i)).toBeTruthy();
   expect(dialog.getByAltText(fallbackContent.apartmentPortrait.alt)).toBeTruthy();
+  expect(dialog.getByText("say hello by email").closest("a").getAttribute("href")).toBe(
+    `mailto:${fallbackContent.settings.email}`
+  );
+  expect(dialog.getByText(/click whatever catches your eye/i)).toBeTruthy();
 });
 
 test("the desk résumé opens past experience with open and download options", () => {
