@@ -271,6 +271,13 @@
 .apartment-projects .eyebrow {
   font-size: 7px;
 }
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 12px;
+  font-size: 11px;
+}
 .record-player {
   width: 275px;
   max-width: 100%;

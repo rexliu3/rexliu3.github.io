@@ -9,6 +9,7 @@ import PhotosPanel from "./panels/PhotosPanel";
 import EducationPanel from "./panels/EducationPanel";
 import ResumePanel from "./panels/ResumePanel";
 import PortraitPanel from "./panels/PortraitPanel";
+import ShareRoomButton from "./ShareRoomButton";
 
 const PANELS = {
   books: { Component: BooksPanel, contentKey: "books" },
@@ -75,6 +76,7 @@ export default function RoomPanel({ active, onClose, onNavigate, player, content
           </button>
         </div>
         <div className="panel-content">
+          <ShareRoomButton key={`share-${active}`} />
           <p className="eyebrow">{settings.panelEyebrow}</p>
           <h2 id="panel-title">{room.panelTitle}</h2>
           {PanelContent && (

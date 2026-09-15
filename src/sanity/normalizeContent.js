@@ -1,4 +1,5 @@
 import fallbackContent from "./fallbackContent";
+import { safeUrl } from "../utils/urls";
 
 const isObject = (value) => value !== null && typeof value === "object" && !Array.isArray(value);
 
@@ -23,7 +24,7 @@ function documents(value) {
 
 const DOCUMENT_FIELDS = {
   cities: { name: "", label: "", subtitle: "", text: "", illustration: "", illustrationAlt: "" },
-  apartmentProjects: { name: "", image: "", type: "", text: "" },
+  apartmentProjects: { name: "", image: "", type: "", text: "", url: "", sourceUrl: "" },
   experiences: { company: "", title: "", date: "", website: "", logo: "", description: [] },
   photographyPhotos: { _key: "", imageUrl: "", alt: "", caption: "", location: "" },
 };
@@ -35,6 +36,9 @@ function normalizeCollection(name, value) {
       order: index,
       ...DOCUMENT_FIELDS[name],
     });
+    for (const key of ["image", "imageUrl", "website", "logo", "url", "sourceUrl"]) {
+      if (key in normalized) normalized[key] = safeUrl(normalized[key]);
+    }
     return normalized;
   });
   if (name === "photographyPhotos") {
@@ -47,13 +51,14 @@ export default function normalizeContent(content) {
   if (!isObject(content) || content.contentModel !== "dynamic-v1") {
     throw new Error("Sanity content is not initialized");
   }
-  const resumeUrl =
-    typeof content.resumeUrl === "string" && content.resumeUrl
-      ? content.resumeUrl
-      : fallbackContent.settings.resumeUrl;
+  const resumeUrl = safeUrl(content.resumeUrl, fallbackContent.settings.resumeUrl);
   const apartmentPortrait = withDefaults(
     content.apartmentPortrait,
     fallbackContent.apartmentPortrait
+  );
+  apartmentPortrait.imageUrl = safeUrl(
+    apartmentPortrait.imageUrl,
+    fallbackContent.apartmentPortrait.imageUrl
   );
   return {
     settings: { ...fallbackContent.settings, resumeUrl },

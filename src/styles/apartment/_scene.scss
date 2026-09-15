@@ -1,0 +1,183 @@
+.room-section {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background:
+    radial-gradient(ellipse at 50% 50%, var(--scene-glow), transparent 68%), var(--surface-raised);
+}
+.room-topline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 24px;
+  border-bottom: 1px solid var(--line);
+  position: relative;
+  z-index: 1;
+}
+.room-coordinate {
+  color: var(--muted);
+  font-size: 9px;
+  letter-spacing: 1.35px;
+}
+.room-coordinate > span {
+  margin: 0 7px;
+}
+.room-controls {
+  display: flex;
+  gap: 13px;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 30px;
+  padding: 0 12px;
+  background: var(--paper);
+}
+.room-controls button {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 10px;
+  background: transparent;
+  padding: 8px 0;
+  min-height: 40px;
+  color: var(--muted);
+}
+.room-controls button:hover {
+  color: var(--accent);
+}
+.control-divider {
+  width: 1px;
+  height: 13px;
+  background: var(--line);
+}
+.room-stage {
+  position: relative;
+  margin: -20px auto 0;
+  max-width: 1050px;
+}
+.apartment-illustration {
+  width: 100%;
+  height: auto;
+  display: block;
+  overflow: visible;
+  transition: filter 700ms;
+}
+.room-aside {
+  position: absolute;
+  top: 22%;
+  left: 2.5%;
+  font-family: "Caveat", cursive;
+  font-size: 20px;
+  line-height: 1.1;
+  color: var(--olive);
+  transform: rotate(-10deg);
+  z-index: 1;
+  pointer-events: none;
+}
+.room-aside span {
+  display: block;
+  font-size: 40px;
+  margin: -3px 0 0 39px;
+  transform: rotate(-15deg);
+}
+.room-caption {
+  position: relative;
+  text-align: center;
+  margin: -6px 0 12px;
+  color: var(--muted);
+  font-size: 11px;
+  letter-spacing: 0.1px;
+  min-height: 23px;
+}
+.tiny-cross {
+  font-size: 19px;
+  vertical-align: -2px;
+  margin-right: 5px;
+  color: #a6aa89;
+}
+.room-signature {
+  position: absolute;
+  bottom: 22px;
+  right: 12px;
+  color: var(--olive);
+  font-family: "Caveat", cursive;
+  font-size: 20px;
+  transform: rotate(-6deg);
+}
+.room-object {
+  cursor: pointer;
+  outline: none;
+}
+.room-object > g:first-child {
+  transition: filter 220ms;
+}
+.room-object.is-highlighted > g:first-child {
+  filter: drop-shadow(0 0 7px #dfb67d);
+}
+.object-tag {
+  opacity: 0;
+  transform-box: fill-box;
+  transition: opacity 180ms;
+  pointer-events: none;
+}
+.object-tag rect {
+  fill: #fffaf0;
+  stroke: #d3c1a0;
+  stroke-width: 1;
+  filter: url(#object-shadow);
+}
+.object-tag text {
+  font:
+    11px "DM Sans",
+    sans-serif;
+  fill: #746044;
+}
+.room-object.is-highlighted .object-tag,
+.object-tag.is-visible {
+  opacity: 1;
+}
+.room-bottomline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  border-top: 1px solid var(--line);
+  padding: 8px 24px;
+}
+.room-record {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--muted);
+  font-size: 11px;
+}
+.record-indicator {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--ink);
+  position: relative;
+}
+.record-indicator::after {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  border-radius: 50%;
+  background: var(--paper);
+}
+.record-indicator.is-playing {
+  background: var(--accent);
+}
+.directory-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  color: var(--ink);
+  font-size: 11px;
+  min-height: 40px;
+  padding: 6px 0;
+}
+.directory-toggle > span {
+  margin-left: 14px;
+  font-size: 17px;
+  color: var(--muted);
+}

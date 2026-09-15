@@ -24,6 +24,19 @@
     "signature": "stay a little while",
     "footerTagline": "Built with curiosity. Lived in with love.",
     "panelEyebrow": "A LITTLE PIECE OF MY WORLD",
+    "overview": {
+      "eyebrow": "A FEW THINGS TO GET YOU STARTED",
+      "title": "Beyond the welcome mat.",
+      "description": "A little of what I build, where I’ve been, and what makes me curious.",
+      "projectsTitle": "Built out of curiosity.",
+      "projectsDescription": "Small experiments. Familiar games. Ideas made tangible.",
+      "travelTitle": "A few places called home.",
+      "travelDescription": "Different cities, different chapters. The story is still unfolding.",
+      "aboutTitle": "Hello, I’m Rex.",
+      "aboutDescription": "Software engineer, Berkeley alum, and a collector of experiences. I like making useful things and seeing where curiosity leads.",
+      "note": "This is a little home for the things I make and the things that make me, me.",
+      "contactTitle": "Good conversations start with a hello."
+    },
     "panels": {
       "books": {
         "spines": ["STORIES", "IDEAS", "CURIOSITY", "OTHER WORLDS"],
@@ -49,7 +62,7 @@
       "photos": {
         "portfolioLabel": "PHOTOGRAPHY PORTFOLIO",
         "noteTitle": "A photo album in the making.",
-        "noteBody": "Photographs will appear here after they are published in Sanity Studio."
+        "noteBody": "I’m gathering a few favorite moments. Come back soon to see what caught my eye."
       },
       "resume": {
         "previewLabel": "A QUICK LOOK",

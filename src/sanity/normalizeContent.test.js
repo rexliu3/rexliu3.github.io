@@ -3,6 +3,22 @@ import fallbackContent from "./fallbackContent";
 
 const normalize = (content) => normalizeContent({ contentModel: "dynamic-v1", ...content });
 
+test("rejects executable CMS links and retains valid project destinations", () => {
+  const content = normalize({
+    resumeUrl: "javascript:alert(1)",
+    apartmentProjects: [
+      { name: "Demo", url: "https://example.com/demo", sourceUrl: "javascript:alert(1)" },
+    ],
+    experiences: [{ website: "data:text/html,hello" }],
+    apartmentPortrait: { imageUrl: "//unknown.example/photo.jpg" },
+  });
+  expect(content.settings.resumeUrl).toBe(fallbackContent.settings.resumeUrl);
+  expect(content.apartmentProjects[0].url).toBe("https://example.com/demo");
+  expect(content.apartmentProjects[0].sourceUrl).toBe("");
+  expect(content.experiences[0].website).toBe("");
+  expect(content.apartmentPortrait.imageUrl).toBe(fallbackContent.apartmentPortrait.imageUrl);
+});
+
 test("keeps website copy and room metadata local while accepting a hosted résumé", () => {
   const content = normalize({
     settings: { brand: "Updated brand", panels: { books: { noteTitle: "New books" } } },

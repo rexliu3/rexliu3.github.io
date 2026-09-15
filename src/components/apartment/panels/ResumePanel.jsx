@@ -1,11 +1,6 @@
 import React from "react";
 import ExperienceItem from "./ExperienceItem";
-
-function getDownloadUrl(url) {
-  if (!url.startsWith("https://cdn.sanity.io/files/")) return url;
-  const separator = url.includes("?") ? "&" : "?";
-  return `${url}${separator}dl=Rex-Liu-Resume.pdf`;
-}
+import { resumeDownloadUrl } from "../../../utils/urls";
 
 export default function ResumePanel({ room, content, experiences = [], settings }) {
   const resumeUrl = settings.resumeUrl;
@@ -29,7 +24,7 @@ export default function ResumePanel({ room, content, experiences = [], settings 
           {content.openLabel}
         </a>
         <a
-          href={getDownloadUrl(resumeUrl)}
+          href={resumeDownloadUrl(resumeUrl)}
           download={isBundledFile ? "Rex-Liu-Resume.pdf" : undefined}
         >
           {content.downloadLabel}
