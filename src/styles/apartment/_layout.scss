@@ -262,7 +262,8 @@
     sans-serif;
   fill: #746044;
 }
-.room-object.is-highlighted .object-tag {
+.room-object.is-highlighted .object-tag,
+.object-tag.is-visible {
   opacity: 1;
 }
 .explore-nav {

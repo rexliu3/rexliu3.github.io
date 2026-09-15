@@ -141,6 +141,22 @@ test("the desk résumé opens past experience with open and download options", (
   expect(document.activeElement).toBe(paper);
 });
 
+test("the résumé label is painted above the laptop", () => {
+  const view = render(<ApartmentPage content={fallbackContent} />);
+  const paper = view.getByLabelText("Explore résumé");
+  const laptop = view.getByLabelText("Explore things built for fun");
+  const label = view.container.querySelector(".object-tag.is-visible");
+
+  expect(label).toBeNull();
+  fireEvent.mouseEnter(paper);
+
+  const visibleLabel = view.container.querySelector(".object-tag.is-visible");
+  expect(visibleLabel.textContent).toContain("Résumé");
+  expect(laptop.compareDocumentPosition(visibleLabel) & Node.DOCUMENT_POSITION_FOLLOWING).toBe(
+    Node.DOCUMENT_POSITION_FOLLOWING
+  );
+});
+
 test("day/night and sound controls remain functional", async () => {
   const view = render(<ApartmentPage content={fallbackContent} />);
   fireEvent.click(view.getByLabelText("Switch to nighttime"));

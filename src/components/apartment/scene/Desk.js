@@ -37,7 +37,6 @@ export default function Desk({ common, night }) {
           <path d="M6 10h18M6 16h25M6 22h25M6 28h18M6 37h11" stroke="#a89b81" />
           <circle cx="28" cy="38" r="4" fill="none" stroke="#b96743" />
         </g>
-        <ObjectTag x={465} y={57} z={112} label="Résumé" />
       </Hotspot>
 
       <g className="desk-lamp" transform={`translate(${project(612, 34, 78).join(" ")})`}>
@@ -146,6 +145,7 @@ export default function Desk({ common, night }) {
           stroke="#768366"
         />
       </g>
+      <ObjectTag x={465} y={57} z={112} label="Résumé" visible={common.hovered === "resume"} />
     </>
   );
 }

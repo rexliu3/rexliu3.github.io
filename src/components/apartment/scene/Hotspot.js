@@ -24,9 +24,13 @@ export function Hotspot({ id, panelId = id, label, children, onOpen, hovered, on
     </g>
   );
 }
-export function ObjectTag({ x, y, z, label }) {
+export function ObjectTag({ x, y, z, label, visible = false }) {
   return (
-    <g className="object-tag" transform={`translate(${project(x, y, z).join(" ")})`}>
+    <g
+      aria-hidden="true"
+      className={`object-tag${visible ? " is-visible" : ""}`}
+      transform={`translate(${project(x, y, z).join(" ")})`}
+    >
       <rect
         x={-(label.length * 3.6 + 17)}
         y="-15"
