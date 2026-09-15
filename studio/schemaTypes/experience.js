@@ -1,5 +1,5 @@
 import { defineType } from "sanity";
-import { stringField, urlField, orderField, stringArray } from "./fields";
+import { stringField, urlField, imageField, orderField, stringArray } from "./fields";
 
 export const experience = defineType({
   name: "experience",
@@ -10,7 +10,7 @@ export const experience = defineType({
     stringField("title", "Role"),
     stringField("date", "Date and location"),
     urlField("website", "Website"),
-    stringField("logo", "Logo path"),
+    imageField("logoUpload", "Logo"),
     stringArray("description", "Highlights"),
     orderField,
   ],

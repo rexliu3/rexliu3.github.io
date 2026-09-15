@@ -127,6 +127,18 @@
   text-align: center;
   padding: 23px 10px 4px;
 }
+.portrait-panel-image {
+  width: min(320px, 100%);
+  margin: 28px auto 4px;
+}
+.portrait-panel-image img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 10px;
+  background: #e8dfcd;
+}
 .quiet-note h3 {
   font-size: 22px;
 }
@@ -456,126 +468,139 @@
   text-decoration: underline;
   text-underline-offset: 3px;
 }
-.photo-print {
-  background: #fffdf7;
-  padding: 12px 12px 4px;
-  margin: 27px auto 15px;
-  max-width: 330px;
-  transform: rotate(-3deg);
-  box-shadow: 0 4px 17px #625f3b15;
-  border: 1px solid #ece7d9;
-}
-.photo-print img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  object-position: top;
-  display: block;
-}
-.photo-print figcaption {
-  font-family: "Caveat", cursive;
-  font-size: 19px;
-  padding: 15px 7px 10px;
-  color: #8c846e;
-}
-.photo-print figcaption span {
-  display: block;
-  text-align: right;
-}
-.instagram-feed-label {
+.photography-gallery-label {
   margin: 5px 0 12px;
 }
-.instagram-gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
+.photography-gallery {
+  columns: 2;
+  column-gap: 12px;
 }
-.instagram-gallery > a {
-  min-width: 0;
-  color: #626657;
-}
-.instagram-gallery__image {
-  position: relative;
-  display: block;
-  aspect-ratio: 1;
+.photography-gallery figure {
+  break-inside: avoid;
+  margin: 0 0 12px;
   overflow: hidden;
+  border: 1px solid #e0ddcf;
   border-radius: 5px;
-  background: #e7e4d6;
+  background: #f3f0e6;
 }
-.instagram-gallery__image img {
+.photography-gallery img {
+  display: block;
   width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-  transition: transform 180ms ease;
+  height: auto;
 }
-.instagram-gallery > a:hover .instagram-gallery__image img,
-.instagram-gallery > a:focus-visible .instagram-gallery__image img {
-  transform: scale(1.035);
-}
-.instagram-gallery > a:focus-visible {
-  outline: 2px solid #ae7754;
-  outline-offset: 3px;
-}
-.instagram-gallery__type {
-  position: absolute;
-  top: 7px;
-  right: 7px;
-  display: grid;
-  place-items: center;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  color: #fff;
-  background: #343d31b8;
-  font-size: 9px;
-}
-.instagram-gallery__caption {
-  display: -webkit-box;
-  margin-top: 7px;
-  overflow: hidden;
+.photography-gallery figcaption {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 9px 10px;
+  color: #626657;
   font-size: 10px;
-  line-height: 1.45;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
 }
-.instagram-gallery time {
-  display: block;
-  margin-top: 3px;
-  color: #9b9988;
+.photography-gallery figcaption small {
+  color: #929080;
   font-size: 8px;
   letter-spacing: 0.4px;
+  text-align: right;
   text-transform: uppercase;
+}
+.photography-empty {
+  padding: 42px 20px;
 }
 .panel-resume {
   width: 760px;
 }
-.resume-preview-label {
+.resume-experience-label {
   margin: 24px 0 10px;
 }
-.resume-preview {
-  width: min(100%, 510px);
-  aspect-ratio: 8.5 / 11;
-  margin: 0 auto;
-  overflow: hidden;
-  border: 1px solid #d8d2c2;
-  border-radius: 5px;
-  background: #e8e5dc;
-  box-shadow: 0 8px 28px #4d4a3c1a;
+.resume-experience-list {
+  display: grid;
+  gap: 12px;
 }
-.resume-preview iframe {
-  width: 100%;
-  height: 100%;
-  display: block;
-  border: 0;
+.resume-experience-list .experience-row {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.8fr) minmax(0, 1.2fr);
+  gap: 24px;
+  padding: 20px;
+  border: 1px solid #d8d2c2;
+  border-radius: 6px;
+  background: #f4f2e8;
+}
+.resume-experience-list .experience-row__company {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+.resume-experience-list .experience-row__company img,
+.resume-experience-list .experience-row__monogram {
+  flex: 0 0 42px;
+  width: 42px;
+  height: 42px;
+  border-radius: 5px;
+}
+.resume-experience-list .experience-row__company img {
+  object-fit: contain;
   background: #fff;
+}
+.resume-experience-list .experience-row__monogram {
+  display: grid;
+  place-items: center;
+  background: #dadccc;
+  color: #3b5358;
+  font-family: Georgia, serif;
+  font-size: 20px;
+}
+.resume-experience-list h3,
+.resume-experience-list p {
+  margin: 0;
+}
+.resume-experience-list h3 {
+  font-family: Georgia, serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+.resume-experience-list .experience-row__company a {
+  display: inline-block;
+  margin-top: 5px;
+  color: #6d765e;
+  font-size: 9px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+.resume-experience-list .experience-row__role {
+  font-size: 12px;
+  font-weight: 600;
+}
+.resume-experience-list .experience-row__date {
+  margin-top: 4px;
+  color: #898675;
+  font-size: 9px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+.resume-experience-list ul {
+  margin: 12px 0 0;
+  padding-left: 17px;
+  color: #5e5c51;
+  font-size: 11px;
+  line-height: 1.6;
+}
+.resume-experience-list li + li {
+  margin-top: 5px;
+}
+.resume-experience-empty {
+  padding: 20px;
+  border: 1px solid #d8d2c2;
+  border-radius: 6px;
+  background: #f4f2e8;
+  color: #777466;
+  font-size: 11px;
 }
 .resume-actions {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
-  width: min(100%, 510px);
-  margin: 14px auto 0;
+  margin: 14px 0 0;
 }
 .resume-actions a {
   display: flex;

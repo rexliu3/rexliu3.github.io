@@ -34,6 +34,15 @@
 .is-night .say-hello:hover {
   background: #3b4437;
 }
+.is-night .intro-button {
+  background: #373e34;
+  border-color: #454d3e;
+  color: #b3bba2;
+}
+.is-night .intro-button:hover,
+.is-night .intro-button:focus-visible {
+  background: #444e3c;
+}
 .is-night .apartment-footer a {
   color: #b6bda6;
 }

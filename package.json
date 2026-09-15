@@ -17,12 +17,10 @@
     "heroku-postbuild": "npm run build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "sanity:seed": "node scripts/seed-sanity.mjs",
-    "instagram:sync": "node scripts/sync-instagram.mjs",
     "sanity:dev": "npm --prefix studio run dev",
     "sanity:build": "npm --prefix studio run build",
     "preview": "serve -s build -l 3000",
-    "lint": "eslint src scripts studio --ext .js,.mjs --ignore-pattern studio/node_modules --ignore-pattern studio/dist --ignore-pattern studio/.sanity --max-warnings 0",
+    "lint": "eslint src studio --ext .js,.mjs --ignore-pattern studio/node_modules --ignore-pattern studio/dist --ignore-pattern studio/.sanity --max-warnings 0",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "check": "npm run lint && npm run format:check && npm test -- --watchAll=false --runInBand && npm run build"
@@ -42,7 +40,6 @@
     "overrides": [
       {
         "files": [
-          "scripts/**/*.mjs",
           "studio/**/*.js"
         ],
         "env": {

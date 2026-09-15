@@ -18,7 +18,6 @@ export default function ApartmentNavigation({ rooms, onOpen, onHover }) {
           >
             <Icon name={room.icon} size={20} />
             <span>{room.short}</span>
-            <span className="nav-arrow">↗</span>
           </button>
         ))}
     </nav>

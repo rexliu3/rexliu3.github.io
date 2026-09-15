@@ -3,6 +3,8 @@ import { structureTool } from "sanity/structure";
 import { schemaTypes } from "./schemaTypes";
 import sanityConfig from "../src/sanity/config.json";
 
+const singletonTypes = ["resume", "photographyPortfolio", "apartmentPortrait"];
+
 export default defineConfig({
   name: "rex_internet_apartment",
   title: "Rex’s Internet Apartment",
@@ -18,13 +20,24 @@ export default defineConfig({
               .title("Résumé")
               .id("resume")
               .child(S.document().schemaType("resume").documentId("resume")),
+            S.listItem()
+              .title("Photography portfolio")
+              .id("photographyPortfolio")
+              .child(
+                S.document().schemaType("photographyPortfolio").documentId("photographyPortfolio")
+              ),
+            S.listItem()
+              .title("Apartment portrait")
+              .id("apartmentPortrait")
+              .child(S.document().schemaType("apartmentPortrait").documentId("apartmentPortrait")),
             S.divider(),
-            ...S.documentTypeListItems().filter((item) => item.getId() !== "resume"),
+            ...S.documentTypeListItems().filter((item) => !singletonTypes.includes(item.getId())),
           ]),
     }),
   ],
   schema: {
     types: schemaTypes,
-    templates: (templates) => templates.filter(({ schemaType }) => schemaType !== "resume"),
+    templates: (templates) =>
+      templates.filter(({ schemaType }) => !singletonTypes.includes(schemaType)),
   },
 });

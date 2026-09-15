@@ -19,7 +19,7 @@ export default function EducationPanel({ room, content, settings }) {
         ))}
       </div>
       <a className="panel-link" href={settings.resumeUrl} target="_blank" rel="noopener noreferrer">
-        {content.linkLabel} <span>↗</span>
+        {content.linkLabel}
       </a>
     </>
   );

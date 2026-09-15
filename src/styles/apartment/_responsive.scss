@@ -41,9 +41,6 @@
   .explore-nav button svg {
     width: 17px;
   }
-  .nav-arrow {
-    display: none;
-  }
 }
 @media (max-width: 650px) {
   .apartment-site {
@@ -185,15 +182,12 @@
   .now-playing h3 {
     font-size: 20px;
   }
-  .photo-print img {
-    height: 270px;
+  .photography-gallery {
+    columns: 1;
   }
-  .instagram-gallery {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 14px 10px;
-  }
-  .resume-preview {
-    aspect-ratio: 3 / 4;
+  .resume-experience-list .experience-row {
+    grid-template-columns: 1fr;
+    gap: 16px;
   }
   .resume-actions {
     grid-template-columns: 1fr;

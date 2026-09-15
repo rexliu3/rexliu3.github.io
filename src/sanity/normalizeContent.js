@@ -24,32 +24,8 @@ function documents(value) {
 const DOCUMENT_FIELDS = {
   cities: { name: "", label: "", subtitle: "", text: "", illustration: "", illustrationAlt: "" },
   apartmentProjects: { name: "", image: "", type: "", text: "" },
-  jazzTracks: { id: "", title: "", mood: "", duration: "", color: "", src: "" },
   experiences: { company: "", title: "", date: "", website: "", logo: "", description: [] },
-  projects: {
-    name: "",
-    date: "",
-    summary: "",
-    image: "",
-    logo: "",
-    github: "",
-    link: "",
-    tools: [],
-    description: [],
-  },
-  courseGroups: { title: "" },
-  extracurriculars: { company: "", title: "", date: "", website: "", logo: "", description: [] },
-  interests: { name: "", logo: "", description: "", link: "" },
-  instagramPosts: {
-    instagramId: "",
-    mediaType: "",
-    mediaUrl: "",
-    thumbnailUrl: "",
-    permalink: "",
-    caption: "",
-    timestamp: "",
-    username: "",
-  },
+  photographyPhotos: { _key: "", imageUrl: "", alt: "", caption: "", location: "" },
 };
 
 function normalizeCollection(name, value) {
@@ -59,18 +35,10 @@ function normalizeCollection(name, value) {
       order: index,
       ...DOCUMENT_FIELDS[name],
     });
-    if (name === "courseGroups") {
-      normalized.courses = documents(document.courses).map((course) =>
-        withDefaults(course, { _key: "", shortName: "", fullName: "", grade: "" })
-      );
-    }
     return normalized;
   });
-  if (name === "jazzTracks") return collection.filter((track) => track.id && track.src);
-  if (name === "instagramPosts") {
-    return collection.filter(
-      (post) => post.instagramId && post.permalink && (post.thumbnailUrl || post.mediaUrl)
-    );
+  if (name === "photographyPhotos") {
+    return collection.filter((photo) => photo.imageUrl && photo.alt);
   }
   return collection;
 }
@@ -83,9 +51,15 @@ export default function normalizeContent(content) {
     typeof content.resumeUrl === "string" && content.resumeUrl
       ? content.resumeUrl
       : fallbackContent.settings.resumeUrl;
+  const apartmentPortrait = withDefaults(
+    content.apartmentPortrait,
+    fallbackContent.apartmentPortrait
+  );
   return {
     settings: { ...fallbackContent.settings, resumeUrl },
     rooms: fallbackContent.rooms,
+    jazzTracks: fallbackContent.jazzTracks,
+    apartmentPortrait,
     ...Object.fromEntries(
       Object.keys(DOCUMENT_FIELDS).map((name) => [name, normalizeCollection(name, content[name])])
     ),

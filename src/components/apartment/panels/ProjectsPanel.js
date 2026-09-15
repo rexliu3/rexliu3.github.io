@@ -18,7 +18,7 @@ export default function ProjectsPanel({ room, content, projects, settings }) {
         ))}
       </div>
       <a className="panel-link" href={settings.githubUrl} target="_blank" rel="noopener noreferrer">
-        {content.linkLabel} <span>↗</span>
+        {content.linkLabel}
       </a>
     </>
   );

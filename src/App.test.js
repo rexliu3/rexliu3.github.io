@@ -58,15 +58,14 @@ test("travel tabs support keyboard navigation and an empty city list", () => {
   expect(view.queryByRole("tabpanel")).toBeNull();
 });
 
-test("the scene camera opens the photo panel with the configured image", () => {
+test("the scene camera opens the photography portfolio", () => {
   const view = render(<ApartmentPage content={fallbackContent} />);
   const camera = view.getByLabelText("Explore photos");
   camera.focus();
   fireEvent.click(camera);
 
   const dialog = within(view.getByRole("dialog"));
-  const photo = dialog.getByAltText(fallbackContent.settings.panels.photos.imageAlt);
-  expect(photo.getAttribute("src")).toBe(fallbackContent.settings.panels.photos.image);
+  expect(dialog.getByText(fallbackContent.settings.panels.photos.noteTitle)).toBeTruthy();
   fireEvent.keyDown(document, { key: "Escape" });
   expect(document.activeElement).toBe(camera);
 
@@ -74,37 +73,55 @@ test("the scene camera opens the photo panel with the configured image", () => {
   expect(view.getByRole("dialog")).toBeTruthy();
 });
 
-test("the camera gallery links synced Instagram posts", () => {
-  const instagramPost = {
-    _id: "instagram-123",
-    instagramId: "123",
-    mediaType: "VIDEO",
-    mediaUrl: "https://cdn.example.com/video.mp4",
-    thumbnailUrl: "https://cdn.example.com/thumbnail.jpg",
-    permalink: "https://www.instagram.com/p/example/",
-    caption: "A quiet afternoon in New York",
-    timestamp: "2026-09-14T12:00:00Z",
-    username: "rexliu3",
+test("the camera shows curated Sanity photos", () => {
+  const photo = {
+    _key: "portfolio-photo",
+    imageUrl: "https://cdn.sanity.io/images/example/production/photo.jpg",
+    alt: "Sunlight across a New York street",
+    caption: "Late afternoon",
+    location: "New York",
   };
   const view = render(
-    <ApartmentPage content={{ ...fallbackContent, instagramPosts: [instagramPost] }} />
+    <ApartmentPage
+      content={{
+        ...fallbackContent,
+        photographyPhotos: [photo],
+      }}
+    />
   );
   fireEvent.click(view.getByText("Photos"));
 
   const dialog = within(view.getByRole("dialog"));
-  const postLink = dialog.getByLabelText(/A quiet afternoon in New York/);
-  expect(postLink.getAttribute("href")).toBe(instagramPost.permalink);
-  expect(dialog.getByAltText(instagramPost.caption).getAttribute("src")).toBe(
-    instagramPost.thumbnailUrl
-  );
-  expect(dialog.queryByAltText(fallbackContent.settings.panels.photos.imageAlt)).toBeNull();
+  expect(dialog.getByAltText(photo.alt).getAttribute("src")).toBe(photo.imageUrl);
+  expect(dialog.getByText(photo.caption)).toBeTruthy();
 });
 
-test("the desk résumé opens a preview with open and download options", () => {
+test("the wall portrait opens the experience introduction", () => {
+  const view = render(<ApartmentPage content={fallbackContent} />);
+  fireEvent.click(view.getByText("Start with an intro"));
+
+  const dialog = within(view.getByRole("dialog"));
+  expect(dialog.getByText("Hello from the other side.")).toBeTruthy();
+  expect(dialog.getByText(/software engineer at Palantir/i)).toBeTruthy();
+  expect(dialog.getByAltText(fallbackContent.apartmentPortrait.alt)).toBeTruthy();
+});
+
+test("the desk résumé opens past experience with open and download options", () => {
   const resumeUrl = "https://cdn.sanity.io/files/example/production/resume.pdf";
+  const experiences = [
+    {
+      _id: "experience-example",
+      company: "Example Company",
+      title: "Software Engineer",
+      date: "2024–Present",
+      website: "https://example.com",
+      description: ["Built useful things."],
+    },
+  ];
   const content = {
     ...fallbackContent,
     settings: { ...fallbackContent.settings, resumeUrl },
+    experiences,
   };
   const view = render(<ApartmentPage content={content} />);
   const paper = view.getByLabelText("Explore résumé");
@@ -112,9 +129,9 @@ test("the desk résumé opens a preview with open and download options", () => {
   fireEvent.click(paper);
 
   const dialog = within(view.getByRole("dialog"));
-  expect(dialog.getByTitle("Preview of Rex Liu’s résumé").getAttribute("src")).toBe(
-    `${resumeUrl}#view=FitH`
-  );
+  expect(dialog.getByText("Example Company")).toBeTruthy();
+  expect(dialog.getByText("Software Engineer")).toBeTruthy();
+  expect(dialog.queryByTitle("Preview of Rex Liu’s résumé")).toBeNull();
   expect(dialog.getByText("Open full résumé").closest("a").getAttribute("href")).toBe(resumeUrl);
   expect(dialog.getByText("Download PDF").closest("a").getAttribute("href")).toBe(
     `${resumeUrl}?dl=Rex-Liu-Resume.pdf`

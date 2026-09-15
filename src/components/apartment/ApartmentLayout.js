@@ -16,7 +16,7 @@ export function ApartmentHeader({ settings }) {
           <span className="status-dot" /> {settings.location}
         </span>
         <a className="say-hello" href={`mailto:${settings.email}`}>
-          {settings.helloLabel} <span>↗</span>
+          {settings.helloLabel}
         </a>
       </div>
     </header>
@@ -28,10 +28,10 @@ export function ApartmentFooter({ settings }) {
       <p>{settings.footerTagline}</p>
       <div>
         <a href={settings.githubUrl} target="_blank" rel="noopener noreferrer">
-          GitHub ↗
+          GitHub
         </a>
         <a href={settings.linkedinUrl} target="_blank" rel="noopener noreferrer">
-          LinkedIn ↗
+          LinkedIn
         </a>
         <span>
           © {new Date().getFullYear()} {settings.name}

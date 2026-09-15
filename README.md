@@ -27,19 +27,15 @@ dependencies with `npm --prefix studio ci`.
 - `src/components/apartment/`: apartment presentation, navigation, and room dialogs.
 - `src/components/apartment/scene/`: SVG objects and shared projection helpers.
 - `src/components/apartment/panels/`: individual room content.
-- `src/hooks/`: audio lifecycle, dialog keyboard behavior, and collection access.
+- `src/hooks/`: audio lifecycle and dialog keyboard behavior.
 - `src/sanity/`: shared configuration, content defaults, fetching, and validation.
-- `src/styles/apartment/`: active styles, split by responsibility; `styles.scss`
-  is the entry point. Other style folders support the retained portfolio components.
+- `src/styles/apartment/`: styles split by responsibility; `styles.scss` is the entry point.
 - `studio/schemaTypes/`: one schema per document type with shared field helpers.
-- `scripts/`: explicit maintenance operations such as dataset seeding.
 
 Keep side effects in hooks or maintenance scripts and validate remote data at the
 content boundary. Components should receive normalized data through props or
-`useSanityContent`. Collection consumers use canonical content keys, such as
-`useCollection("courseGroups")`, rather than legacy database collection names.
-Keep page state in `ApartmentPage` and pass explicit values and event handlers to
-its presentation components. The CMS query lives in `src/sanity/siteQuery.js`;
+`useSanityContent`. Keep page state in `ApartmentPage` and pass normalized content
+and explicit event handlers to its presentation components. The CMS query lives in `src/sanity/siteQuery.js`;
 transport, cancellation, and fallback handling live in `client.js`. Keep the shared SVG projection in `scene/geometry.js` so
 objects stay aligned. Preserve dialog keyboard controls and reduced-motion styles.
 
@@ -52,9 +48,9 @@ or removing unused direct dependencies.
 
 Website copy, labels, room metadata, and presentation text live in
 `src/sanity/defaultContent.json` and ship with the application. Sanity contains
-only content expected to change independently, including the résumé, Instagram
-gallery, experience, projects, coursework, community work, interests, travel
-entries, and music.
+only content expected to change independently: the résumé, wall portrait,
+photography portfolio, experience, side projects, and travel entries. The jazz
+playlist and presentation copy remain bundled with the site.
 
 To edit content locally:
 
@@ -74,50 +70,20 @@ Upload résumé updates in **Résumé → PDF** in Sanity Studio and publish the
 document. The site uses the uploaded PDF from Sanity’s CDN and falls back to
 `public/Resume_RexLiu.pdf` when the field is empty.
 
+Upload portfolio photographs in **Photography portfolio → Images**. Each image
+supports alternative text, a caption, and a location, and the array order controls
+the display order. Published images appear in the camera panel.
+
+Upload the framed wall image in **Apartment portrait → Portrait** and provide its
+alternative text. The bundled profile picture remains the fallback until an upload
+is published.
+
 Hosted preview origins may be rejected by Sanity's CORS allowlist. The fallback
 keeps those previews usable, but does not grant access to live CMS changes. Add the
 exact preview origin in the project's API/CORS settings when live content is needed.
 No write token belongs in browser configuration.
 
-`src/sanity/defaultContent.json` is the source of truth for website copy and
-provides browser fallbacks for selected collections. Copy changes require a site
-deployment. The older portfolio collections have no bundled snapshot and are empty
-when the API cannot be reached.
-
-To seed a dataset, provide a write token and run the script below. It reads the
-legacy portfolio collections and uses `createOrReplace`: existing documents with
-the same IDs are overwritten. It is a maintenance operation, not part of preview
-or build.
-
-```bash
-SANITY_API_TOKEN=... npm run sanity:seed
-```
-
-Optional `SANITY_PROJECT_ID` and `SANITY_DATASET` environment variables override the default target. The write token is used only by the seed script and must never be exposed to the browser or committed.
-
-## Instagram gallery
-
-The camera panel reads cached Instagram posts from Sanity. A scheduled GitHub
-Actions workflow refreshes the latest 12 posts every six hours, so the Instagram
-access token never reaches the browser. If no posts have been synced, the panel
-keeps showing the configured fallback photo.
-
-The connected Instagram account must be a professional Business or Creator
-account. Create a Meta app with Instagram API with Instagram Login, authorize that
-account with the `instagram_business_basic` scope, and add these GitHub repository
-secrets:
-
-- `INSTAGRAM_ACCESS_TOKEN`: the access token for the connected Instagram account.
-- `SANITY_API_TOKEN`: a Sanity token with permission to create and delete documents
-  in the configured dataset.
-
-Run **Sync Instagram gallery** from the repository’s Actions tab for the first
-import. For a local manual sync, use:
-
-```bash
-INSTAGRAM_ACCESS_TOKEN=... SANITY_API_TOKEN=... npm run instagram:sync
-```
-
-`INSTAGRAM_API_VERSION`, `INSTAGRAM_MEDIA_LIMIT`, `SANITY_PROJECT_ID`, and
-`SANITY_DATASET` are optional overrides. Rotate or refresh the Instagram token
-before it expires; a failed sync leaves the last successful gallery in Sanity.
+`src/sanity/defaultContent.json` is the source of truth for website copy and the
+bundled fallback for apartment content. Copy changes require a site deployment.
+Sanity write tokens are used only for explicit maintenance and deployment work;
+they must never be exposed to browser code or committed.

@@ -69,6 +69,12 @@ const paths = {
     </>
   ),
   arrow: <path d="M5 12h14m-5-5 5 5-5 5" />,
+  portrait: (
+    <>
+      <circle cx="12" cy="9" r="4" />
+      <path d="M5 21c.8-4.2 3.1-6 7-6s6.2 1.8 7 6" />
+    </>
+  ),
   close: <path d="m6 6 12 12M6 18 18 6" />,
 };
 export function Icon({ name, size = 20, ...props }) {

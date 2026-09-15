@@ -5,10 +5,11 @@ import defaultContent from "./defaultContent.json";
 const fallbackContent = {
   ...defaultContent,
   experiences: [],
-  projects: [],
-  courseGroups: [],
-  extracurriculars: [],
-  instagramPosts: [],
+  photographyPhotos: [],
+  apartmentPortrait: {
+    imageUrl: "/assets/Profile-Picture.png",
+    alt: "Portrait of Rex Liu",
+  },
 };
 
 export default fallbackContent;

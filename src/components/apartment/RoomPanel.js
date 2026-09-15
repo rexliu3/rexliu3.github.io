@@ -8,6 +8,7 @@ import ProjectsPanel from "./panels/ProjectsPanel";
 import PhotosPanel from "./panels/PhotosPanel";
 import EducationPanel from "./panels/EducationPanel";
 import ResumePanel from "./panels/ResumePanel";
+import PortraitPanel from "./panels/PortraitPanel";
 
 const PANELS = {
   books: { Component: BooksPanel, contentKey: "books" },
@@ -16,20 +17,20 @@ const PANELS = {
   photos: { Component: PhotosPanel, contentKey: "photos" },
   berkeley: { Component: EducationPanel, contentKey: "education" },
   resume: { Component: ResumePanel, contentKey: "resume" },
+  portrait: { Component: PortraitPanel },
 };
 
-export default function RoomPanel({
-  active,
-  onClose,
-  onNavigate,
-  player,
-  rooms,
-  cities,
-  projects,
-  instagramPosts,
-  tracks,
-  settings,
-}) {
+export default function RoomPanel({ active, onClose, onNavigate, player, content }) {
+  const {
+    apartmentPortrait: portrait,
+    apartmentProjects: projects,
+    cities,
+    experiences,
+    jazzTracks: tracks,
+    photographyPhotos,
+    rooms,
+    settings,
+  } = content;
   const { panel, closeButton } = useDialog(onClose);
   const roomIndex = rooms.findIndex((item) => item.id === active);
   const room = rooms[roomIndex];
@@ -80,10 +81,12 @@ export default function RoomPanel({
             <PanelContent
               key={active}
               room={room}
-              content={settings.panels[definition.contentKey]}
+              content={definition.contentKey ? settings.panels[definition.contentKey] : undefined}
               cities={cities}
               projects={projects}
-              posts={instagramPosts}
+              experiences={experiences}
+              photos={photographyPhotos}
+              portrait={portrait}
               settings={settings}
             />
           )}

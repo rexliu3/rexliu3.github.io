@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function ApartmentIntro({ settings }) {
+export default function ApartmentIntro({ settings, onOpen }) {
   return (
     <section className="apartment-intro" aria-labelledby="welcome-title">
       <div className="welcome-note">
@@ -17,6 +17,9 @@ export default function ApartmentIntro({ settings }) {
           </React.Fragment>
         ))}
       </p>
+      <button className="intro-button" type="button" onClick={() => onOpen("portrait")}>
+        Start with an intro
+      </button>
     </section>
   );
 }

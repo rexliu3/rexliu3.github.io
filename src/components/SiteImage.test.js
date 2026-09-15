@@ -21,8 +21,10 @@ test("uses the app base path and retries a missing bundled image only once", () 
   fireEvent.error(photo);
   expect(photo.getAttribute("src")).toBe("https://rexliu3.github.io/assets/Profile-Picture.png");
 
-  view.rerender(<SiteImage src="/assets/Chess.png" alt="Chess" />);
-  expect(view.getByAltText("Chess").getAttribute("src")).toBe("/preview/assets/Chess.png");
+  view.rerender(<SiteImage src="/assets/Minesweeper-Wall.png" alt="Minesweeper" />);
+  expect(view.getByAltText("Minesweeper").getAttribute("src")).toBe(
+    "/preview/assets/Minesweeper-Wall.png"
+  );
 });
 
 test("preserves remote CMS image URLs even when they fail", () => {

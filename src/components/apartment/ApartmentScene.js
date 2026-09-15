@@ -18,6 +18,7 @@ export default function ApartmentScene({
   hovered,
   night,
   sound,
+  portrait,
   audioError,
   onOpen,
   onHover,
@@ -69,6 +70,7 @@ export default function ApartmentScene({
           onHover={onHover}
           night={night}
           sound={sound}
+          portrait={portrait}
         />
         <div className="room-caption">
           <span className="tiny-cross">✧</span> {caption}

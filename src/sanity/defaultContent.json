@@ -12,7 +12,7 @@
     "introTitle": "Make yourself",
     "introEmphasis": "at home.",
     "introLines": [
-      "I’m Rex. Builder, wanderer, and collector of little joys.",
+      "I’m Rex. Builder, wanderer, and collector of experiences.",
       "Welcome to my little corner of the internet."
     ],
     "apartmentLabel": "APT. 001",
@@ -24,16 +24,6 @@
     "signature": "stay a little while ♡",
     "footerTagline": "Built with curiosity. Lived in with love.",
     "panelEyebrow": "A LITTLE PIECE OF MY WORLD",
-    "profile": {
-      "portrait": "/assets/Profile-Picture.png",
-      "aboutLead": "I’m a UC Berkeley computer science graduate based in New York and working at Palantir Technologies.",
-      "aboutParagraphs": [
-        "My experience spans frontend and backend development, mobile apps, data, and leading engineering teams. I enjoy turning ambitious ideas into clear, dependable software that solves meaningful problems.",
-        "Away from a screen, you’ll usually find me studying chess positions, playing tennis, or competing on a badminton court."
-      ],
-      "languages": ["English", "Mandarin", "Spanish"],
-      "recognition": ["Runner-up · Hack at UCI 2021", "Grand Winner · 41st UBC Physics Olympics"]
-    },
     "panels": {
       "books": {
         "spines": ["STORIES", "IDEAS", "CURIOSITY", "OTHER WORLDS"],
@@ -57,14 +47,9 @@
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       },
       "photos": {
-        "image": "/assets/Profile-Picture.png",
-        "imageAlt": "Rex Liu",
-        "caption": "Hello from the other side of the camera.",
-        "byline": "— Rex",
-        "feedLabel": "LATEST FROM INSTAGRAM",
-        "instagramLinkLabel": "View on Instagram",
+        "portfolioLabel": "PHOTOGRAPHY PORTFOLIO",
         "noteTitle": "A photo album in the making.",
-        "noteBody": "More snapshots and stories will find their way here."
+        "noteBody": "Photographs will appear here after they are published in Sanity Studio."
       },
       "resume": {
         "previewLabel": "A QUICK LOOK",
@@ -143,6 +128,16 @@
       "order": 5
     },
     {
+      "id": "portrait",
+      "name": "The portrait",
+      "short": "Portrait",
+      "icon": "portrait",
+      "panelTitle": "Hello from the other side.",
+      "lede": "Hey, I’m Rex — a software engineer at Palantir in New York. I like turning messy ideas into useful web and mobile products, and I’ve had a lot of fun building and leading teams along the way at Berkeley SkyDeck, HKP Solutions, Investocracy, and RISE.",
+      "navigation": false,
+      "order": 6
+    },
+    {
       "id": "resume",
       "name": "The résumé",
       "short": "Résumé",
@@ -150,7 +145,7 @@
       "panelTitle": "The work so far.",
       "lede": "A closer look at the roles, projects, and experiences that shaped how I build.",
       "navigation": false,
-      "order": 6
+      "order": 7
     }
   ],
   "cities": [
@@ -220,7 +215,6 @@
   "jazzTracks": [
     {
       "_id": "jazz-bossa-antigua",
-      "_type": "jazzTrack",
       "id": "bossa-antigua",
       "title": "Bossa Antigua",
       "mood": "A sunny little bossa nova",
@@ -231,7 +225,6 @@
     },
     {
       "_id": "jazz-jazz-brunch",
-      "_type": "jazzTrack",
       "id": "jazz-brunch",
       "title": "Jazz Brunch",
       "mood": "Easy Sunday café grooves",
@@ -242,7 +235,6 @@
     },
     {
       "_id": "jazz-george-street-shuffle",
-      "_type": "jazzTrack",
       "id": "george-street-shuffle",
       "title": "George Street Shuffle",
       "mood": "Light swing & mellow vibraphone",
@@ -253,7 +245,6 @@
     },
     {
       "_id": "jazz-local-forecast-slower",
-      "_type": "jazzTrack",
       "id": "local-forecast-slower",
       "title": "Local Forecast - Slower",
       "mood": "Laid-back lounge for a slow afternoon",
@@ -264,7 +255,6 @@
     },
     {
       "_id": "jazz-apero-hour",
-      "_type": "jazzTrack",
       "id": "apero-hour",
       "title": "Apero Hour",
       "mood": "Cool jazz for the golden hour",
@@ -272,57 +262,6 @@
       "color": "#9a7c88",
       "src": "/audio/apero-hour.mp3",
       "order": 4
-    }
-  ],
-  "interests": [
-    {
-      "_id": "interest-chess",
-      "_type": "interest",
-      "name": "Chess",
-      "logo": "/assets/Chess.png",
-      "description": "Strategy, pattern recognition, and a good long game.",
-      "link": "https://www.chess.com/member/rexliu3",
-      "order": 0
-    },
-    {
-      "_id": "interest-badminton",
-      "_type": "interest",
-      "name": "Badminton",
-      "logo": "/assets/badminton.png",
-      "description": "BC regional doubles champion.",
-      "order": 1
-    },
-    {
-      "_id": "interest-tennis",
-      "_type": "interest",
-      "name": "Tennis",
-      "logo": "/assets/tennis.png",
-      "description": "Always working on the next rally.",
-      "order": 2
-    },
-    {
-      "_id": "interest-data-science",
-      "_type": "interest",
-      "name": "Data science",
-      "logo": "/assets/data.png",
-      "description": "Finding useful signals in complex systems.",
-      "order": 3
-    },
-    {
-      "_id": "interest-blockchain",
-      "_type": "interest",
-      "name": "Blockchain",
-      "logo": "/assets/Blockchain.jpg",
-      "description": "Exploring open, distributed infrastructure.",
-      "order": 4
-    },
-    {
-      "_id": "interest-machine-learning",
-      "_type": "interest",
-      "name": "Machine learning",
-      "logo": "/assets/machine-learning.png",
-      "description": "Building software that learns and adapts.",
-      "order": 5
     }
   ]
 }

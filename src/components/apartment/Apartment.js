@@ -11,7 +11,7 @@ import Speaker from "./scene/Speaker";
 import Cat from "./scene/Cat";
 import Plant from "./scene/Plant";
 
-export default function Apartment({ onOpen, hovered, onHover, night, sound }) {
+export default function Apartment({ onOpen, hovered, onHover, night, sound, portrait }) {
   const common = { onOpen, hovered, onHover };
   return (
     <svg
@@ -25,7 +25,8 @@ export default function Apartment({ onOpen, hovered, onHover, night, sound }) {
         A sunlit apartment with a bookshelf and desk against the back wall, a sofa facing a coffee
         table, and space to walk between them. Explore books, a Vancouver to San Francisco to New
         York map, side projects on the laptop, five café jazz records on the coffee-table turntable,
-        music on the speaker, photos on the camera, a résumé on the desk, and a Berkeley diploma.
+        music on the speaker, photos on the camera, a résumé on the desk, a Berkeley diploma, and a
+        framed portrait.
       </desc>
       <defs>
         <linearGradient id="wall" x2="0" y2="1">
@@ -70,6 +71,9 @@ export default function Apartment({ onOpen, hovered, onHover, night, sound }) {
         </filter>
         <clipPath id="window-clip">
           <rect width="190" height="137" />
+        </clipPath>
+        <clipPath id="portrait-clip">
+          <rect x="7" y="7" width="40" height="51" rx="1" />
         </clipPath>
       </defs>
       <RoomShell night={night} />
@@ -133,7 +137,7 @@ export default function Apartment({ onOpen, hovered, onHover, night, sound }) {
       </Hotspot>
       <Hotspot id="berkeley" label="the Berkeley journey" {...common}>
         <g
-          transform={`matrix(.5 .5 0 1 ${project(718, 112, 216).join(" ")})`}
+          transform={`matrix(.5 .5 0 1 ${project(718, 170, 216).join(" ")})`}
           filter="url(#object-shadow)"
         >
           <rect
@@ -160,7 +164,38 @@ export default function Apartment({ onOpen, hovered, onHover, night, sound }) {
           <path d="M22 33h52m-45 5h38m-33 5h28" stroke="#b3a584" strokeWidth="1" />
           <circle cx="48" cy="53" r="6" fill="#bd9e55" />
         </g>
-        <ObjectTag x={718} y={160} z={246} label="Berkeley" />
+        <ObjectTag x={718} y={218} z={246} label="Berkeley" />
+      </Hotspot>
+      <Hotspot id="portrait" label="portrait" {...common}>
+        <g
+          transform={`matrix(.5 .5 0 1 ${project(718, 45, 216).join(" ")})`}
+          filter="url(#object-shadow)"
+        >
+          <rect
+            x="-5"
+            y="-5"
+            width="64"
+            height="76"
+            fill="#8d704e"
+            stroke="#745b41"
+            strokeWidth="2"
+          />
+          <rect x="-2" y="-2" width="58" height="70" fill="#b49162" />
+          <rect width="54" height="66" fill="#efe3ca" />
+          <rect x="4" y="4" width="46" height="58" fill="#d8c7a8" />
+          <image
+            href={portrait.imageUrl}
+            x="7"
+            y="7"
+            width="40"
+            height="51"
+            preserveAspectRatio="xMidYMid slice"
+            clipPath="url(#portrait-clip)"
+          />
+          <path d="M0 0h54M0 0v66" fill="none" stroke="#d6b985" strokeWidth="1" />
+          <path d="M0 66h54M54 0v66" fill="none" stroke="#624d38" strokeWidth="1" />
+        </g>
+        <ObjectTag x={718} y={80} z={246} label="Say hello" />
       </Hotspot>
       <Bookshelf common={common} />
       <Desk common={common} night={night} />

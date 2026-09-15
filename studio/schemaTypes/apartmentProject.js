@@ -1,5 +1,5 @@
 import { defineType } from "sanity";
-import { stringField, textField, orderField } from "./fields";
+import { stringField, textField, imageField, orderField } from "./fields";
 
 export const apartmentProject = defineType({
   name: "apartmentProject",
@@ -7,7 +7,7 @@ export const apartmentProject = defineType({
   type: "document",
   fields: [
     stringField("name", "Name"),
-    stringField("image", "Image path"),
+    imageField("imageUpload", "Project image"),
     stringField("type", "Kicker"),
     textField("text", "Description"),
     orderField,
