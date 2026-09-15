@@ -10,6 +10,8 @@ export default defineConfig({
   title: "Rex’s Internet Apartment",
   projectId: sanityConfig.projectId,
   dataset: sanityConfig.dataset,
+  releases: { enabled: false },
+  scheduledDrafts: { enabled: false },
   plugins: [
     structureTool({
       structure: (S) =>
