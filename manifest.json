@@ -1,20 +1,15 @@
 {
-  "short_name": "Rex Liu",
-  "name": "Create React App Sample",
+  "short_name": "Rex’s Apartment",
+  "name": "Rex’s Internet Apartment",
   "icons": [
     {
-      "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
+      "src": "apartment-icon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
     }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#f8f6f0",
+  "background_color": "#f8f6f0"
 }
