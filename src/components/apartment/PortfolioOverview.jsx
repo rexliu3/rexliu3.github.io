@@ -1,10 +1,10 @@
 import React from "react";
 import { Icon } from "./Icon";
-import SiteImage from "../SiteImage";
 
 export default function PortfolioOverview({ content, onOpen }) {
-  const { settings, apartmentProjects, cities } = content;
+  const { settings, experiences } = content;
   const copy = settings.overview;
+  const education = settings.panels.education;
 
   return (
     <section className="portfolio-overview" aria-labelledby="overview-title" id="out-and-about">
@@ -16,55 +16,49 @@ export default function PortfolioOverview({ content, onOpen }) {
         <p>{copy.description}</p>
       </div>
       <div className="overview-grid">
-        <article className="overview-work">
+        <article className="overview-education">
           <div className="card-topline">
-            <span className="eyebrow">01 / THE WORKBENCH</span>
-            <Icon name="laptop" />
+            <span className="eyebrow">01 / EDUCATION</span>
+            <Icon name="diploma" />
           </div>
-          <h3>{copy.projectsTitle}</h3>
-          <p>{copy.projectsDescription}</p>
-          <div className="project-preview-list">
-            {apartmentProjects.slice(0, 3).map((project) => (
-              <button type="button" key={project._id} onClick={() => onOpen("projects")}>
-                <SiteImage src={project.image} alt="" loading="lazy" />
-                <span>
-                  <strong>{project.name}</strong>
-                  <small>{project.type}</small>
-                </span>
-                <Icon name="arrow" size={17} />
-              </button>
-            ))}
-            {!apartmentProjects.length && <p>More experiments are on the way.</p>}
+          <h3>{copy.educationTitle}</h3>
+          <p>{copy.educationDescription}</p>
+          <div className="education-preview">
+            <span aria-hidden="true">{education.seal}</span>
+            <small>{education.institutionLabel}</small>
+            <strong>{education.school}</strong>
+            <div>{education.degree}</div>
+            <small>{education.years}</small>
           </div>
-          <a
-            className="text-link"
-            href={settings.githubUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Explore GitHub <Icon name="arrow" size={16} />
-          </a>
+          <button type="button" className="text-link" onClick={() => onOpen("berkeley")}>
+            The Berkeley chapter <Icon name="arrow" size={16} />
+          </button>
         </article>
-        <article className="overview-journey">
+        <article className="overview-experience">
           <div className="card-topline">
-            <span className="eyebrow">02 / OUT IN THE WORLD</span>
-            <Icon name="globe" />
+            <span className="eyebrow">02 / EXPERIENCE</span>
+            <Icon name="document" />
           </div>
-          <h3>{copy.travelTitle}</h3>
-          <p>{copy.travelDescription}</p>
-          <ol className="journey-stops">
-            {cities.map((city, index) => (
-              <li key={city._id}>
-                <span>{String(index + 1).padStart(2, "0")}</span>
-                <div>
-                  <strong>{city.name}</strong>
-                  <small>{city.subtitle}</small>
-                </div>
-              </li>
-            ))}
-          </ol>
-          <button type="button" className="text-link" onClick={() => onOpen("travel")}>
-            Follow the journey <Icon name="arrow" size={16} />
+          <h3>{copy.experienceTitle}</h3>
+          <p>{copy.experienceDescription}</p>
+          {experiences.length ? (
+            <ol className="experience-preview-list">
+              {experiences.slice(0, 3).map((experience, index) => (
+                <li key={experience._id}>
+                  <span aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
+                  <div>
+                    <strong>{experience.company}</strong>
+                    <small>{experience.title}</small>
+                    <small>{experience.date}</small>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          ) : (
+            <p>{copy.experienceEmpty}</p>
+          )}
+          <button type="button" className="text-link" onClick={() => onOpen("resume")}>
+            Explore my experience <Icon name="arrow" size={16} />
           </button>
         </article>
         <article className="overview-about">

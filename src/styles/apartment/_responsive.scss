@@ -94,6 +94,12 @@
   .explore-nav button:nth-child(-n + 3) {
     border-bottom: 1px solid var(--line);
   }
+  .apartment-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px 0;
+    gap: 18px;
+  }
   .section-heading {
     display: block;
   }
@@ -121,12 +127,6 @@
   }
   .contact-note > span {
     font-size: 22px;
-  }
-  .apartment-footer {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 24px 0;
-    gap: 18px;
   }
 }
 @media (max-width: 500px) {

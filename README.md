@@ -64,13 +64,12 @@ icon components when extending the apartment.
 Objects and the navigation strip open the same accessible room dialogs. The
 **Browse all corners** directory searches room names and descriptions, including
 the portrait and résumé. Rooms have shareable links such as `/?room=projects`;
-browser back/forward navigation and refresh preserve the selected room. The
-**Copy room link** button uses the clipboard when available and otherwise points
-visitors to the address bar.
+browser back/forward navigation and refresh preserve the selected room.
 
 Day/night mode starts with the browser’s color preference and saves the visitor’s
 choice locally. Jazz starts only after a visitor presses play. The homepage also
-surfaces side projects, the travel timeline, a résumé shortcut, and contact links.
+surfaces education, the first three experience entries from Sanity, a résumé shortcut,
+and contact links.
 
 ## Content management
 

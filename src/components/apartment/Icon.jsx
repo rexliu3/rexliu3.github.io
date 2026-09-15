@@ -15,14 +15,6 @@ const paths = {
       <rect x="14" y="14" width="7" height="7" rx="1" />
     </>
   ),
-  link: (
-    <>
-      <path
-        d="m10 13 4-4m-6 7-2 2a4 4 0 0 1-6-6l4-4a4 4 0 0 1 6 0m2 0 2-2a4 4 0 0 1 6 6l-4 4a4 4 0 0 1-6 0"
-        transform="translate(2 0)"
-      />
-    </>
-  ),
   home: (
     <>
       <path d="m3 10 9-7 9 7v10H3Z" />

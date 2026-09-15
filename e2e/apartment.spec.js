@@ -16,14 +16,6 @@ test("the apartment works offline from the CMS and fits the viewport", async ({
     () => document.documentElement.scrollWidth > window.innerWidth
   );
   expect(overflow).toBe(false);
-  await page.locator(".project-preview-list img").evaluateAll((images) =>
-    Promise.all(
-      images.map((image) => {
-        image.loading = "eager";
-        return image.decode();
-      })
-    )
-  );
   await page.screenshot({ path: testInfo.outputPath("homepage.png"), fullPage: true });
   await page.getByRole("button", { name: "Start with an intro" }).click();
   await expect(page.getByRole("dialog")).toBeVisible();
@@ -59,14 +51,6 @@ test("day/night preference survives a reload", async ({ page }, testInfo) => {
   await expect(page.getByRole("button", { name: "Switch to daytime" })).toHaveAttribute(
     "aria-pressed",
     "true"
-  );
-  await page.locator(".project-preview-list img").evaluateAll((images) =>
-    Promise.all(
-      images.map((image) => {
-        image.loading = "eager";
-        return image.decode();
-      })
-    )
   );
   await page.screenshot({ path: testInfo.outputPath("night.png"), fullPage: true });
 });

@@ -12,7 +12,15 @@
   gap: 20px;
 }
 .directory-heading h2 {
+  margin: 10px 0 0;
+  font-family: var(--serif);
   font-size: 30px;
+  font-weight: 400;
+  letter-spacing: -0.8px;
+}
+.room-directory .eyebrow {
+  color: var(--muted);
+  font-size: 9px;
 }
 .icon-button {
   display: grid;
@@ -95,23 +103,4 @@
   background: transparent;
   text-decoration: underline;
   padding: 0;
-}
-.share-room {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 24px;
-  font-size: 11px;
-}
-.share-room button {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  background: transparent;
-  color: #59634e;
-  padding: 8px 0;
-}
-.share-room span {
-  color: #59634e;
 }
