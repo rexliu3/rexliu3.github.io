@@ -8,3 +8,5 @@ studio/package-lock.json
 public/audio/
 public/assets/
 src/assets/
+playwright-report/
+test-results/

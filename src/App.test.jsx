@@ -1,33 +1,42 @@
 import React from "react";
-import { cleanup, fireEvent, render, wait, within } from "@testing-library/react";
+import { cleanup, fireEvent, render, waitFor, within } from "@testing-library/react";
 import App from "./App";
-import ApartmentPage from "./components/pages/ApartmentPage";
+import ApartmentPage from "./pages/ApartmentPage";
 import fallbackContent from "./sanity/fallbackContent";
+import { getContentRooms } from "./components/apartment/rooms";
 
 const originalFetch = global.fetch;
 
 beforeEach(() => {
-  jest.spyOn(HTMLMediaElement.prototype, "pause").mockImplementation(() => {});
-  jest.spyOn(HTMLMediaElement.prototype, "load").mockImplementation(() => {});
-  jest.spyOn(HTMLMediaElement.prototype, "play").mockResolvedValue();
+  vi.spyOn(HTMLMediaElement.prototype, "pause").mockImplementation(() => {});
+  vi.spyOn(HTMLMediaElement.prototype, "load").mockImplementation(() => {});
+  vi.spyOn(HTMLMediaElement.prototype, "play").mockResolvedValue();
 });
 
 afterEach(() => {
   cleanup();
   global.fetch = originalFetch;
-  jest.restoreAllMocks();
+  vi.restoreAllMocks();
+});
+
+test("renders bundled content immediately while the CMS is still pending", () => {
+  global.fetch = vi.fn().mockReturnValue(new Promise(() => {}));
+  const view = render(<App />);
+  expect(view.getByRole("heading", { name: "Make yourself at home." })).toBeTruthy();
+  fireEvent.click(view.getByRole("button", { name: "Start with an intro" }));
+  expect(view.getByRole("dialog")).toBeTruthy();
 });
 
 test("a rejected content request still opens every room and restores keyboard focus", async () => {
-  global.fetch = jest.fn().mockRejectedValue(new TypeError("Failed to fetch"));
-  jest.spyOn(console, "warn").mockImplementation(() => {});
+  global.fetch = vi.fn().mockRejectedValue(new TypeError("Failed to fetch"));
+  vi.spyOn(console, "warn").mockImplementation(() => {});
   const view = render(<App />);
-  await wait(() => expect(view.getByText("Make yourself")).toBeTruthy());
+  await waitFor(() => expect(view.getByText("Make yourself")).toBeTruthy());
 
   for (const room of fallbackContent.rooms) {
     const trigger =
-      room.navigation === false
-        ? view.getByLabelText(`Explore ${room.short.toLowerCase()}`)
+      room.content === false
+        ? view.getByLabelText("Explore the record player — choose café jazz")
         : within(view.getByLabelText("Explore the apartment"))
             .getByText(room.short)
             .closest("button");
@@ -53,7 +62,7 @@ test("travel tabs support keyboard navigation and an empty city list", () => {
   firstTab.focus();
   fireEvent.keyDown(firstTab, { key: "End" });
   expect(document.activeElement.textContent).toContain("New York");
-  expect(view.getByText("A city that keeps you curious.")).toBeTruthy();
+  expect(within(view.getByRole("dialog")).getByText("A city that keeps you curious.")).toBeTruthy();
   view.rerender(<ApartmentPage content={{ ...fallbackContent, cities: [] }} />);
   expect(view.queryByRole("tabpanel")).toBeNull();
 });
@@ -166,7 +175,7 @@ test("day/night and sound controls remain functional", async () => {
   fireEvent.click(view.getByLabelText("Switch to nighttime"));
   expect(view.container.querySelector("main").classList.contains("is-night")).toBe(true);
   fireEvent.click(view.getByLabelText("Play café jazz"));
-  await wait(() => expect(view.getByLabelText("Pause café jazz")).toBeTruthy());
+  await waitFor(() => expect(view.getByLabelText("Pause café jazz")).toBeTruthy());
   fireEvent.click(view.getByLabelText("Pause café jazz"));
   expect(view.getByLabelText("Play café jazz")).toBeTruthy();
 });
@@ -182,10 +191,33 @@ test("room navigation updates captions and cycles back to the first room", () =>
   expect(view.getByText(fallbackContent.settings.idleCaption)).toBeTruthy();
   fireEvent.click(trigger);
 
-  for (let index = 1; index <= fallbackContent.rooms.length; index += 1) {
+  const destinations = getContentRooms(fallbackContent.rooms);
+  for (let index = 1; index <= destinations.length; index += 1) {
     fireEvent.click(view.getByLabelText("Explore the next object"));
-    const room = fallbackContent.rooms[index % fallbackContent.rooms.length];
+    const room = destinations[index % destinations.length];
     expect(within(view.getByRole("dialog")).getByText(room.panelTitle)).toBeTruthy();
     expect(document.activeElement).toBe(view.getByLabelText("Back to the apartment"));
   }
+});
+
+test("music and dance opens a blank content panel while the record player opens jazz", () => {
+  const view = render(<ApartmentPage content={fallbackContent} />);
+  fireEvent.click(view.getByLabelText("Explore music and dance"));
+  const dialog = within(view.getByRole("dialog"));
+  expect(dialog.getByRole("heading", { name: "Music & dance." })).toBeTruthy();
+  expect(view.container.querySelector(".record-player")).toBeNull();
+  expect(HTMLMediaElement.prototype.play).not.toHaveBeenCalled();
+  fireEvent.keyDown(document, { key: "Escape" });
+  fireEvent.click(view.getByLabelText("Explore the record player — choose café jazz"));
+  expect(within(view.getByRole("dialog")).getByText("A little café jazz.")).toBeTruthy();
+  expect(view.container.querySelector(".record-player")).toBeTruthy();
+});
+
+test("bottom navigation contains content, including music taste and résumé", () => {
+  const view = render(<ApartmentPage content={fallbackContent} />);
+  const navigation = within(view.getByRole("navigation", { name: "Explore the apartment" }));
+  expect(navigation.getByRole("button", { name: "Music & dance" })).toBeTruthy();
+  expect(navigation.queryByRole("button", { name: /jazz|cat|record player/i })).toBeNull();
+  fireEvent.click(navigation.getByRole("button", { name: "Résumé" }));
+  expect(within(view.getByRole("dialog")).getByText("The work so far.")).toBeTruthy();
 });

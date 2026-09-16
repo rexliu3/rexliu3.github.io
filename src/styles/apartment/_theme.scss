@@ -1,48 +1,34 @@
+:root {
+  --paper: #f8f6f0;
+  --surface: #eeeee4;
+  --surface-raised: #fdfbf6;
+  --ink: #343d31;
+  --muted: #6e7266;
+  --accent: #a95132;
+  --olive: #657557;
+  --line: #e0dfd3;
+  --line-strong: #cbcebd;
+  --scene-glow: #e7d9be55;
+  --sans: "DM Sans", sans-serif;
+  --serif: "DM Serif Display", Georgia, serif;
+}
+:root[data-theme="night"],
 .is-night {
+  color-scheme: dark;
   --paper: #292e2c;
+  --surface: #343c34;
+  --surface-raised: #2e3430;
   --ink: #ede8d9;
-  --muted: #a4ab9b;
-  --line: #444a40;
-  --accent: #dea77e;
+  --muted: #b0b6a8;
+  --accent: #e5ad89;
+  --olive: #b3c39e;
+  --line: #444c42;
+  --line-strong: #626c59;
+  --scene-glow: #cbb5800d;
 }
 .is-night .apartment-illustration {
-  filter: brightness(0.72) saturate(0.8);
+  filter: brightness(0.76) saturate(0.8);
 }
-.is-night .apartment-intro > p,
-.is-night .room-caption,
-.is-night .room-coordinate {
-  color: #a6ad9b;
-}
-.is-night .room-controls {
-  background: #353c34;
-  border-color: #4b5246;
-}
-.is-night .room-controls button,
-.is-night .explore-nav button > svg {
-  color: #b3bba2;
-}
-.is-night .explore-nav button {
-  background: #373e34;
-  border-color: #454d3e;
-}
-.is-night .explore-nav button:hover {
-  background: #444e3c;
-}
-.is-night .say-hello {
-  border-color: #505748;
-}
-.is-night .say-hello:hover {
-  background: #3b4437;
-}
-.is-night .intro-button {
-  background: #373e34;
-  border-color: #454d3e;
-  color: #b3bba2;
-}
-.is-night .intro-button:hover,
-.is-night .intro-button:focus-visible {
-  background: #444e3c;
-}
-.is-night .apartment-footer a {
-  color: #b6bda6;
+.room-panel {
+  color-scheme: light;
 }

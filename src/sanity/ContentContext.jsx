@@ -1,10 +1,11 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
 import { fetchSiteContent } from "./client";
+import fallbackContent from "./fallbackContent";
 
 const ContentContext = createContext(null);
 
 export function SanityContentProvider({ children }) {
-  const [state, setState] = useState({ content: null, loading: true, error: null });
+  const [state, setState] = useState({ content: fallbackContent, loading: true, error: null });
 
   useEffect(() => {
     const controller = new AbortController();
@@ -13,7 +14,8 @@ export function SanityContentProvider({ children }) {
         if (!controller.signal.aborted) setState({ content, loading: false, error: null });
       })
       .catch((error) => {
-        if (!controller.signal.aborted) setState({ content: null, loading: false, error });
+        if (!controller.signal.aborted)
+          setState({ content: fallbackContent, loading: false, error });
       });
     return () => controller.abort();
   }, []);

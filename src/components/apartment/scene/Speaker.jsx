@@ -20,7 +20,7 @@ export default function Speaker({ common, sound }) {
         <rect width="56" height="21" fill="none" stroke="#a58257" strokeWidth="1" />
         <path d="M23 9h11" stroke="#8e734e" strokeWidth="2" />
       </g>
-      <Hotspot id="speaker" panelId="music" label="music and dance" {...common}>
+      <Hotspot id="speaker" label="music and dance" {...common}>
         <g>
           <Box
             x={466}

@@ -24,13 +24,18 @@ export default function ApartmentScene({
   onHover,
   onToggleNight,
   onToggleSound,
+  directoryOpen,
+  directoryToggle,
+  onToggleDirectory,
+  track,
 }) {
   const caption = getCaption(hovered, rooms, settings);
   return (
     <section className="room-section" aria-label="Rex’s interactive apartment">
       <div className="room-topline">
         <span className="room-coordinate">
-          {settings.apartmentLabel} <span>·</span> {settings.apartmentNote}
+          {settings.apartmentLabel} <span>·</span>{" "}
+          <span className="room-note">{settings.apartmentNote}</span>
         </span>
         <div className="room-controls">
           <button
@@ -72,12 +77,31 @@ export default function ApartmentScene({
           sound={sound}
           portrait={portrait}
         />
-        <div className="room-caption">
+        <div className="room-caption" role="status">
           <span className="tiny-cross">✧</span> {caption}
         </div>
         <span className="room-signature" aria-hidden="true">
           {settings.signature}
         </span>
+      </div>
+      <div className="room-bottomline">
+        <span className="room-record">
+          <span className={`record-indicator${sound ? " is-playing" : ""}`} aria-hidden="true" />
+          {sound && track
+            ? `On the record · ${track.title}`
+            : "A little jazz makes it feel like home."}
+        </span>
+        <button
+          type="button"
+          className="directory-toggle"
+          ref={directoryToggle}
+          aria-expanded={directoryOpen}
+          aria-controls="room-directory"
+          onClick={onToggleDirectory}
+        >
+          <Icon name="grid" size={16} /> Browse all corners{" "}
+          <span aria-hidden="true">{directoryOpen ? "−" : "+"}</span>
+        </button>
       </div>
       {audioError && (
         <p className="audio-error" role="status">

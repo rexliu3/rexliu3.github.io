@@ -5,8 +5,8 @@ const originalFetch = global.fetch;
 
 afterEach(() => {
   global.fetch = originalFetch;
-  jest.useRealTimers();
-  jest.restoreAllMocks();
+  vi.useRealTimers();
+  vi.restoreAllMocks();
 });
 
 test("returns content from Sanity when the request succeeds", async () => {
@@ -15,9 +15,9 @@ test("returns content from Sanity when the request succeeds", async () => {
     resumeUrl: "https://cdn.sanity.io/files/example/resume.pdf",
     experiences: [{ _id: "experience-1", company: "Example" }],
   };
-  global.fetch = jest.fn().mockResolvedValue({
+  global.fetch = vi.fn().mockResolvedValue({
     ok: true,
-    json: jest.fn().mockResolvedValue({ result: content }),
+    json: vi.fn().mockResolvedValue({ result: content }),
   });
 
   await expect(fetchSiteContent()).resolves.toMatchObject({
@@ -31,8 +31,8 @@ test("returns content from Sanity when the request succeeds", async () => {
 });
 
 test("uses bundled content when a preview origin is rejected", async () => {
-  jest.spyOn(console, "warn").mockImplementation(() => {});
-  global.fetch = jest.fn().mockResolvedValue({ ok: false, status: 403 });
+  vi.spyOn(console, "warn").mockImplementation(() => {});
+  global.fetch = vi.fn().mockResolvedValue({ ok: false, status: 403 });
 
   await expect(fetchSiteContent()).resolves.toBe(fallbackContent);
 });
@@ -40,18 +40,18 @@ test("uses bundled content when a preview origin is rejected", async () => {
 test("does not turn a cancelled request into fallback content", async () => {
   const error = new Error("cancelled");
   error.name = "AbortError";
-  global.fetch = jest.fn().mockRejectedValue(error);
+  global.fetch = vi.fn().mockRejectedValue(error);
 
   await expect(fetchSiteContent()).rejects.toBe(error);
 });
 
 test("falls back after a timeout instead of leaving the apartment loading", async () => {
-  jest.useFakeTimers();
-  jest.spyOn(console, "warn").mockImplementation(() => {});
-  global.fetch = jest.fn().mockReturnValue(new Promise(() => {}));
+  vi.useFakeTimers();
+  vi.spyOn(console, "warn").mockImplementation(() => {});
+  global.fetch = vi.fn().mockReturnValue(new Promise(() => {}));
 
   const content = fetchSiteContent();
-  jest.advanceTimersByTime(CONTENT_TIMEOUT_MS);
+  vi.advanceTimersByTime(CONTENT_TIMEOUT_MS);
   await expect(content).resolves.toBe(fallbackContent);
   expect(global.fetch.mock.calls[0][1].signal.aborted).toBe(true);
 });
@@ -59,7 +59,7 @@ test("falls back after a timeout instead of leaving the apartment loading", asyn
 test("does not fetch when the caller has already cancelled", async () => {
   const controller = new AbortController();
   controller.abort();
-  global.fetch = jest.fn();
+  global.fetch = vi.fn();
   await expect(fetchSiteContent(controller.signal)).rejects.toMatchObject({ name: "AbortError" });
   expect(global.fetch).not.toHaveBeenCalled();
 });
@@ -76,7 +76,7 @@ test.each([
     () => Promise.resolve({ ok: true, json: () => Promise.resolve({ result: {} }) }),
   ],
 ])("uses fallback for %s", async (description, response) => {
-  jest.spyOn(console, "warn").mockImplementation(() => {});
-  global.fetch = jest.fn(response);
+  vi.spyOn(console, "warn").mockImplementation(() => {});
+  global.fetch = vi.fn(response);
   await expect(fetchSiteContent()).resolves.toBe(fallbackContent);
 });

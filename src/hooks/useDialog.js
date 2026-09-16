@@ -17,7 +17,7 @@ export default function useDialog(onClose) {
     const trigger = document.activeElement;
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
-    if (closeButton.current) closeButton.current.focus();
+    if (closeButton.current) closeButton.current.focus({ preventScroll: true });
 
     function handleKeyDown(event) {
       if (event.key === "Escape") {
@@ -51,7 +51,7 @@ export default function useDialog(onClose) {
     return () => {
       document.body.style.overflow = previousOverflow;
       document.removeEventListener("keydown", handleKeyDown);
-      if (trigger?.isConnected) trigger.focus();
+      if (trigger?.isConnected) trigger.focus({ preventScroll: true });
     };
   }, []);
 

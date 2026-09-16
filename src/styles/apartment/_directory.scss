@@ -1,0 +1,106 @@
+.room-directory {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 28px;
+  margin-top: 16px;
+  background: var(--surface-raised);
+}
+.directory-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.directory-heading h2 {
+  margin: 10px 0 0;
+  font-family: var(--serif);
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: -0.8px;
+}
+.room-directory .eyebrow {
+  color: var(--muted);
+  font-size: 9px;
+}
+.icon-button {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  background: var(--surface);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.directory-search {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+  padding: 0 16px;
+  margin: 24px 0;
+  color: var(--muted);
+}
+.directory-search:focus-within {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+.directory-search input {
+  width: 100%;
+  min-height: 48px;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  font-size: 14px;
+}
+.directory-search input::placeholder {
+  color: var(--muted);
+}
+.directory-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+.directory-grid button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  text-align: left;
+  background: var(--surface);
+  border: 1px solid transparent;
+  border-radius: 7px;
+}
+.directory-grid button:hover {
+  border-color: var(--line-strong);
+}
+.directory-grid button > svg {
+  flex-shrink: 0;
+  color: var(--olive);
+}
+.directory-grid button > svg:last-child {
+  margin-left: auto;
+}
+.directory-grid strong {
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+}
+.directory-grid small {
+  display: block;
+  font-size: 10px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+.directory-empty {
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--muted);
+}
+.directory-empty button {
+  background: transparent;
+  text-decoration: underline;
+  padding: 0;
+}

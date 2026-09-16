@@ -20,8 +20,8 @@ test("keeps focus through callback changes and uses the latest close callback", 
   const trigger = document.createElement("button");
   document.body.appendChild(trigger);
   trigger.focus();
-  const originalClose = jest.fn();
-  const latestClose = jest.fn();
+  const originalClose = vi.fn();
+  const latestClose = vi.fn();
   const view = render(<Dialog onClose={originalClose} />);
   const last = view.getByText("Last control");
   last.focus();

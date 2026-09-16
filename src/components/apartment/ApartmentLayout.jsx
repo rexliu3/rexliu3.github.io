@@ -1,7 +1,7 @@
 import React from "react";
 import { Icon } from "./Icon";
 
-export function ApartmentHeader({ settings }) {
+export function ApartmentHeader({ settings, onOpen }) {
   return (
     <header className="apartment-header">
       <a className="brand" href="/" aria-label={`${settings.brand} home`}>
@@ -11,12 +11,20 @@ export function ApartmentHeader({ settings }) {
         {settings.brand}
         <span className="brand-period">.</span>
       </a>
+      <nav className="header-nav" aria-label="Main navigation">
+        <a href="#explore">The apartment</a>
+        <a href="#out-and-about">Out & about</a>
+        <button type="button" onClick={() => onOpen("resume")}>
+          Résumé <Icon name="arrow" size={14} />
+        </button>
+      </nav>
       <div className="header-right">
         <span className="location">
           <span className="status-dot" /> {settings.location}
         </span>
         <a className="say-hello" href={`mailto:${settings.email}`}>
           {settings.helloLabel}
+          <Icon name="arrow" size={15} />
         </a>
       </div>
     </header>

@@ -24,6 +24,20 @@
     "signature": "stay a little while",
     "footerTagline": "Built with curiosity. Lived in with love.",
     "panelEyebrow": "A LITTLE PIECE OF MY WORLD",
+    "overview": {
+      "eyebrow": "A FEW THINGS TO GET YOU STARTED",
+      "title": "Beyond the welcome mat.",
+      "description": "Where I’ve learned, what I’ve worked on, and a little about me.",
+      "educationTitle": "Education.",
+      "educationDescription": "The foundation for a life of learning and building.",
+      "experienceTitle": "Experience.",
+      "experienceDescription": "A few of the roles that shaped how I build.",
+      "experienceEmpty": "Take a look at my résumé for the work so far.",
+      "aboutTitle": "Hello, I’m Rex.",
+      "aboutDescription": "Software engineer, Berkeley alum, and a collector of experiences. I like making useful things and seeing where curiosity leads.",
+      "note": "This is a little home for the things I make and the things that make me, me.",
+      "contactTitle": "Good conversations start with a hello."
+    },
     "panels": {
       "books": {
         "spines": ["STORIES", "IDEAS", "CURIOSITY", "OTHER WORLDS"],
@@ -37,6 +51,14 @@
       "projects": {
         "linkLabel": "More things on GitHub"
       },
+      "musicTaste": {
+        "artists": [],
+        "genres": [],
+        "danceStyles": [],
+        "note": "",
+        "playlistUrl": "",
+        "playlistLabel": "Listen to my playlist"
+      },
       "music": {
         "choicesLabel": "FIVE RECORDS FOR A SLOW AFTERNOON",
         "creditsPrefix": "All five recordings by",
@@ -49,7 +71,7 @@
       "photos": {
         "portfolioLabel": "PHOTOGRAPHY PORTFOLIO",
         "noteTitle": "A photo album in the making.",
-        "noteBody": "Photographs will appear here after they are published in Sanity Studio."
+        "noteBody": "I’m gathering a few favorite moments. Come back soon to see what caught my eye."
       },
       "resume": {
         "previewLabel": "A QUICK LOOK",
@@ -101,13 +123,23 @@
       "order": 2
     },
     {
+      "id": "speaker",
+      "name": "Music & dance",
+      "short": "Music & dance",
+      "icon": "music",
+      "panelTitle": "Music & dance.",
+      "lede": "",
+      "order": 3
+    },
+    {
       "id": "music",
       "name": "The record player",
       "short": "Café jazz",
       "icon": "music",
       "panelTitle": "A little café jazz.",
       "lede": "Pick a record, pour something warm, and stay a little while.",
-      "order": 3
+      "content": false,
+      "order": 4
     },
     {
       "id": "photos",
@@ -116,7 +148,7 @@
       "icon": "camera",
       "panelTitle": "The little moments.",
       "lede": "People, places, and ordinary days worth remembering.",
-      "order": 4
+      "order": 5
     },
     {
       "id": "berkeley",
@@ -125,17 +157,16 @@
       "icon": "diploma",
       "panelTitle": "A chapter in blue & gold.",
       "lede": "Three years of questions, late nights, and learning how to build things that matter.",
-      "order": 5
+      "order": 6
     },
     {
       "id": "portrait",
       "name": "The portrait",
-      "short": "Portrait",
+      "short": "About me",
       "icon": "portrait",
       "panelTitle": "Hello from the other side.",
       "lede": "Hey, I’m Rex — a software engineer at Palantir in New York. I like turning messy ideas into useful web and mobile products, and I’ve had a lot of fun building and leading teams along the way at Berkeley SkyDeck, HKP Solutions, Investocracy, and RISE.",
-      "navigation": false,
-      "order": 6
+      "order": 7
     },
     {
       "id": "resume",
@@ -144,8 +175,7 @@
       "icon": "document",
       "panelTitle": "The work so far.",
       "lede": "A closer look at the roles, projects, and experiences that shaped how I build.",
-      "navigation": false,
-      "order": 7
+      "order": 8
     }
   ],
   "cities": [

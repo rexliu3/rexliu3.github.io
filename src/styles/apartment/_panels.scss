@@ -1,4 +1,22 @@
 /* Notebook panels keep the apartment in view. */
+.music-taste-section {
+  margin: 24px 0;
+}
+.music-taste-section ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 14px 0;
+  padding: 0;
+  list-style: none;
+}
+.music-taste-section li {
+  padding: 9px 14px;
+  border: 1px solid #dcdcc9;
+  border-radius: 20px;
+  background: #eeeee1;
+  font-size: 12px;
+}
 .panel-backdrop {
   position: fixed;
   inset: 0;
@@ -270,6 +288,13 @@
 }
 .apartment-projects .eyebrow {
   font-size: 7px;
+}
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 12px;
+  font-size: 11px;
 }
 .record-player {
   width: 275px;
