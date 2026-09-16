@@ -25,7 +25,7 @@ Error generating stack: `+a.message+`
     ...,
     "image": coalesce(imageUpload.asset->url, image)
   },
-  "experiences": *[_type == "experience"] | order(order asc){
+  "experiences": *[_type == "experience"] | order(order desc){
     ...,
     "logo": coalesce(logoUpload.asset->url, logo)
   }
