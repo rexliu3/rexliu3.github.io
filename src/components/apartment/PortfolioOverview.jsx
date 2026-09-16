@@ -50,6 +50,9 @@ export default function PortfolioOverview({ content, onOpen }) {
                     <strong>{experience.company}</strong>
                     <small>{experience.title}</small>
                     <small>{experience.date}</small>
+                    {experience.note && (
+                      <p className="experience-preview-note">{experience.note}</p>
+                    )}
                   </div>
                 </li>
               ))}

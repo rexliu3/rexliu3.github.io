@@ -119,7 +119,7 @@ test("the wall portrait opens the experience introduction", () => {
   expect(dialog.getByText(/click whatever catches your eye/i)).toBeTruthy();
 });
 
-test("the desk résumé opens past experience with open and download options", () => {
+test("the desk résumé opens work notes with open and download options", () => {
   const resumeUrl = "https://cdn.sanity.io/files/example/production/resume.pdf";
   const experiences = [
     {
@@ -128,7 +128,7 @@ test("the desk résumé opens past experience with open and download options", (
       title: "Software Engineer",
       date: "2024–Present",
       website: "https://example.com",
-      description: ["Built useful things."],
+      note: "Built useful things.",
     },
   ];
   const content = {
@@ -144,6 +144,7 @@ test("the desk résumé opens past experience with open and download options", (
   const dialog = within(view.getByRole("dialog"));
   expect(dialog.getByText("Example Company")).toBeTruthy();
   expect(dialog.getByText("Software Engineer")).toBeTruthy();
+  expect(dialog.getByText("Built useful things.").tagName).toBe("P");
   expect(dialog.queryByTitle("Preview of Rex Liu’s résumé")).toBeNull();
   expect(dialog.getByText("Open full résumé").closest("a").getAttribute("href")).toBe(resumeUrl);
   expect(dialog.getByText("Download PDF").closest("a").getAttribute("href")).toBe(
@@ -152,6 +153,26 @@ test("the desk résumé opens past experience with open and download options", (
 
   fireEvent.keyDown(document, { key: "Escape" });
   expect(document.activeElement).toBe(paper);
+});
+
+test("Sanity work notes appear in the homepage preview and experience popup", async () => {
+  const note = "Building useful software with partners.";
+  global.fetch = vi.fn().mockResolvedValue({
+    ok: true,
+    json: async () => ({
+      result: {
+        contentModel: "dynamic-v1",
+        experiences: [{ _id: "current-work", company: "Example", title: "Engineer", note }],
+      },
+    }),
+  });
+  const view = render(<App />);
+  const overview = within(view.container.querySelector(".overview-experience"));
+  await waitFor(() => expect(overview.getByText(note)).toBeTruthy());
+  fireEvent.click(overview.getByRole("button", { name: /Explore my experience/i }));
+  const dialog = within(view.getByRole("dialog"));
+  expect(dialog.getByText(note).tagName).toBe("P");
+  expect(dialog.getByLabelText("Current and past work").querySelector("ul")).toBeNull();
 });
 
 test("the résumé label is painted above the laptop", () => {
