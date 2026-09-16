@@ -41,6 +41,9 @@ export function ApartmentFooter({ settings }) {
         <a href={settings.linkedinUrl} target="_blank" rel="noopener noreferrer">
           LinkedIn
         </a>
+        <a href={settings.instagramUrl} target="_blank" rel="noopener noreferrer">
+          Instagram
+        </a>
         <span>
           © {new Date().getFullYear()} {settings.name}
         </span>

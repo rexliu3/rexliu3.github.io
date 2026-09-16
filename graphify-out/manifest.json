@@ -78,10 +78,10 @@
     "semantic_hash": "7873c3980019c43c4b3f1d0bc36cb245"
   },
   "src/components/apartment/ApartmentLayout.jsx": {
-    "mtime": 1789582094.5412865,
-    "seen": 1789584479.606625,
-    "ast_hash": "5ca204005410baf0fdcbb24b8e6e2bf1",
-    "semantic_hash": "5ca204005410baf0fdcbb24b8e6e2bf1"
+    "mtime": 1789596157.0994215,
+    "seen": 1789596169.1531231,
+    "ast_hash": "42a0c4f3d92a7bccc2f00344975dffff",
+    "semantic_hash": ""
   },
   "src/components/apartment/ApartmentScene.jsx": {
     "mtime": 1789593600.5387547,
@@ -360,10 +360,10 @@
     "semantic_hash": "e063d32113431bfd47d8918d2e64910f"
   },
   "src/sanity/defaultContent.json": {
-    "mtime": 1789582094.5476873,
-    "seen": 1789584479.606642,
-    "ast_hash": "8b3126d7b933e97b7844790004d59bbe",
-    "semantic_hash": "8b3126d7b933e97b7844790004d59bbe"
+    "mtime": 1789596157.0979934,
+    "seen": 1789596169.153148,
+    "ast_hash": "e8220ed359a87a754f47144b44b138c6",
+    "semantic_hash": ""
   },
   "src/sanity/fallbackContent.js": {
     "mtime": 1789595119.7608309,
