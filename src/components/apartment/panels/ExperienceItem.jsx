@@ -2,7 +2,7 @@ import React from "react";
 import SiteImage from "../../SiteImage";
 
 export default function ExperienceItem({ experience }) {
-  const { company, date, description, logo, title, website } = experience;
+  const { company, date, logo, note, title, website } = experience;
 
   return (
     <article className="experience-row">
@@ -26,13 +26,7 @@ export default function ExperienceItem({ experience }) {
       <div className="experience-row__details">
         <p className="experience-row__role">{title}</p>
         <p className="experience-row__date">{date}</p>
-        {description.length > 0 && (
-          <ul>
-            {description.map((point) => (
-              <li key={point}>{point}</li>
-            ))}
-          </ul>
-        )}
+        {note && <p className="experience-row__note">{note}</p>}
       </div>
     </article>
   );

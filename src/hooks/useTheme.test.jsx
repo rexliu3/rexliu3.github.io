@@ -10,6 +10,12 @@ test("restores the saved preference and persists changes", () => {
   expect(document.documentElement.dataset.theme).toBe("day");
 });
 
+test("defaults to light when no preference has been saved", () => {
+  localStorage.removeItem("apartment-theme");
+  const { result } = renderHook(useTheme);
+  expect(result.current.night).toBe(false);
+});
+
 test("theme controls still work when storage is unavailable", () => {
   vi.spyOn(Storage.prototype, "getItem").mockImplementation(() => {
     throw new Error("Blocked");

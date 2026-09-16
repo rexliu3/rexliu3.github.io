@@ -25,7 +25,7 @@ function documents(value) {
 const DOCUMENT_FIELDS = {
   cities: { name: "", label: "", subtitle: "", text: "", illustration: "", illustrationAlt: "" },
   apartmentProjects: { name: "", image: "", type: "", text: "", url: "", sourceUrl: "" },
-  experiences: { company: "", title: "", date: "", website: "", logo: "", description: [] },
+  experiences: { company: "", title: "", date: "", website: "", logo: "", note: "" },
   photographyPhotos: { _key: "", imageUrl: "", alt: "", caption: "", location: "" },
 };
 
@@ -36,6 +36,9 @@ function normalizeCollection(name, value) {
       order: index,
       ...DOCUMENT_FIELDS[name],
     });
+    if (name === "experiences" && !normalized.note && Array.isArray(document.description)) {
+      normalized.note = document.description.filter((item) => typeof item === "string").join(" ");
+    }
     for (const key of ["image", "imageUrl", "website", "logo", "url", "sourceUrl"]) {
       if (key in normalized) normalized[key] = safeUrl(normalized[key]);
     }

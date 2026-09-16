@@ -9,7 +9,7 @@ function preferredNight() {
   } catch {
     // The apartment remains usable when browser storage is disabled.
   }
-  return window.matchMedia?.("(prefers-color-scheme: dark)").matches || false;
+  return false;
 }
 
 export default function useTheme() {

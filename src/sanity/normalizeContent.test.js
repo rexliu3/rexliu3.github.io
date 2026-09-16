@@ -46,6 +46,16 @@ test("keeps the bundled music collection", () => {
   expect(content.jazzTracks).toEqual(fallbackContent.jazzTracks);
 });
 
+test("uses a single experience note and migrates legacy highlights", () => {
+  expect(
+    normalize({ experiences: [{ note: "Building useful software." }] }).experiences[0].note
+  ).toBe("Building useful software.");
+  expect(
+    normalize({ experiences: [{ description: ["First point.", "Second point."] }] }).experiences[0]
+      .note
+  ).toBe("First point. Second point.");
+});
+
 test("keeps only photography portfolio entries with an image and alternative text", () => {
   const content = normalize({
     photographyPhotos: [

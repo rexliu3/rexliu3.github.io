@@ -589,7 +589,6 @@
 }
 .resume-experience-list .experience-row__company img {
   object-fit: contain;
-  background: #fff;
 }
 .resume-experience-list .experience-row__monogram {
   display: grid;
@@ -626,6 +625,12 @@
   font-size: 9px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
+}
+.resume-experience-list .experience-row__note {
+  margin-top: 10px;
+  color: #55584e;
+  font-size: 13px;
+  line-height: 1.55;
 }
 .resume-experience-list ul {
   margin: 12px 0 0;
