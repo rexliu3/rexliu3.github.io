@@ -622,12 +622,14 @@
   flex: 0 0 42px;
   width: 42px;
   height: 42px;
-  border-radius: 5px;
 }
 .resume-experience-list .experience-row__company img {
+  background: transparent;
+  border-radius: 0;
   object-fit: contain;
 }
 .resume-experience-list .experience-row__monogram {
+  border-radius: 5px;
   display: grid;
   place-items: center;
   background: #dadccc;
