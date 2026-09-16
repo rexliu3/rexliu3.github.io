@@ -274,9 +274,12 @@
   border-bottom: 1px solid #e5e0d3;
 }
 .apartment-projects img {
+  display: block;
   width: 125px;
   height: 110px;
-  object-fit: cover;
+  padding: 8px;
+  object-fit: contain;
+  object-position: center;
   border-radius: 6px;
   background: #e7e4d6;
 }
