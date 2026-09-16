@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { Icon } from "./Icon";
+import { getContentRooms } from "./rooms";
 
 export default function RoomDirectory({ rooms, onOpen, onClose }) {
   const [query, setQuery] = useState("");
-  const matches = rooms.filter((room) =>
+  const matches = getContentRooms(rooms).filter((room) =>
     `${room.short} ${room.name} ${room.lede}`.toLowerCase().includes(query.trim().toLowerCase())
   );
 

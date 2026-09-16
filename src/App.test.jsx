@@ -3,6 +3,7 @@ import { cleanup, fireEvent, render, waitFor, within } from "@testing-library/re
 import App from "./App";
 import ApartmentPage from "./pages/ApartmentPage";
 import fallbackContent from "./sanity/fallbackContent";
+import { getContentRooms } from "./components/apartment/rooms";
 
 const originalFetch = global.fetch;
 
@@ -34,8 +35,8 @@ test("a rejected content request still opens every room and restores keyboard fo
 
   for (const room of fallbackContent.rooms) {
     const trigger =
-      room.navigation === false
-        ? view.getByLabelText(`Explore ${room.short.toLowerCase()}`)
+      room.content === false
+        ? view.getByLabelText("Explore the record player — choose café jazz")
         : within(view.getByLabelText("Explore the apartment"))
             .getByText(room.short)
             .closest("button");
@@ -190,10 +191,33 @@ test("room navigation updates captions and cycles back to the first room", () =>
   expect(view.getByText(fallbackContent.settings.idleCaption)).toBeTruthy();
   fireEvent.click(trigger);
 
-  for (let index = 1; index <= fallbackContent.rooms.length; index += 1) {
+  const destinations = getContentRooms(fallbackContent.rooms);
+  for (let index = 1; index <= destinations.length; index += 1) {
     fireEvent.click(view.getByLabelText("Explore the next object"));
-    const room = fallbackContent.rooms[index % fallbackContent.rooms.length];
+    const room = destinations[index % destinations.length];
     expect(within(view.getByRole("dialog")).getByText(room.panelTitle)).toBeTruthy();
     expect(document.activeElement).toBe(view.getByLabelText("Back to the apartment"));
   }
+});
+
+test("music and dance opens a blank content panel while the record player opens jazz", () => {
+  const view = render(<ApartmentPage content={fallbackContent} />);
+  fireEvent.click(view.getByLabelText("Explore music and dance"));
+  const dialog = within(view.getByRole("dialog"));
+  expect(dialog.getByRole("heading", { name: "Music & dance." })).toBeTruthy();
+  expect(view.container.querySelector(".record-player")).toBeNull();
+  expect(HTMLMediaElement.prototype.play).not.toHaveBeenCalled();
+  fireEvent.keyDown(document, { key: "Escape" });
+  fireEvent.click(view.getByLabelText("Explore the record player — choose café jazz"));
+  expect(within(view.getByRole("dialog")).getByText("A little café jazz.")).toBeTruthy();
+  expect(view.container.querySelector(".record-player")).toBeTruthy();
+});
+
+test("bottom navigation contains content, including music taste and résumé", () => {
+  const view = render(<ApartmentPage content={fallbackContent} />);
+  const navigation = within(view.getByRole("navigation", { name: "Explore the apartment" }));
+  expect(navigation.getByRole("button", { name: "Music & dance" })).toBeTruthy();
+  expect(navigation.queryByRole("button", { name: /jazz|cat|record player/i })).toBeNull();
+  fireEvent.click(navigation.getByRole("button", { name: "Résumé" }));
+  expect(within(view.getByRole("dialog")).getByText("The work so far.")).toBeTruthy();
 });

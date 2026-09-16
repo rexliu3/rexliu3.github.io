@@ -66,6 +66,13 @@ Objects and the navigation strip open the same accessible room dialogs. The
 the portrait and résumé. Rooms have shareable links such as `/?room=projects`;
 browser back/forward navigation and refresh preserve the selected room.
 
+The bottom navigation and directory show content destinations, including **Music & dance**,
+**About me**, and **Résumé**. Scene-only ambience, such as the jazz record player,
+is excluded. The speaker opens a separate music-taste panel, currently left blank;
+its optional artists, genres, dance styles, notes, and playlist link live in
+`settings.panels.musicTaste` in `src/sanity/defaultContent.json`. The record player
+still opens the jazz controls.
+
 Day/night mode starts with the browser’s color preference and saves the visitor’s
 choice locally. Jazz starts only after a visitor presses play. The homepage also
 surfaces education, the first three experience entries from Sanity, a résumé shortcut,

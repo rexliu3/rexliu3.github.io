@@ -9,6 +9,8 @@ import PhotosPanel from "./panels/PhotosPanel";
 import EducationPanel from "./panels/EducationPanel";
 import ResumePanel from "./panels/ResumePanel";
 import PortraitPanel from "./panels/PortraitPanel";
+import MusicTastePanel from "./panels/MusicTastePanel";
+import { getContentRooms } from "./rooms";
 
 const PANELS = {
   books: { Component: BooksPanel, contentKey: "books" },
@@ -18,6 +20,7 @@ const PANELS = {
   berkeley: { Component: EducationPanel, contentKey: "education" },
   resume: { Component: ResumePanel, contentKey: "resume" },
   portrait: { Component: PortraitPanel },
+  speaker: { Component: MusicTastePanel, contentKey: "musicTaste" },
 };
 
 export default function RoomPanel({ active, onClose, onNavigate, player, content }) {
@@ -40,7 +43,9 @@ export default function RoomPanel({ active, onClose, onNavigate, player, content
   const PanelContent = definition?.Component;
 
   function navigateNext() {
-    onNavigate(rooms[(roomIndex + 1) % rooms.length].id);
+    const destinations = getContentRooms(rooms);
+    const index = destinations.findIndex((item) => item.id === active);
+    onNavigate(destinations[(index + 1) % destinations.length].id);
     panel.current.scrollTop = 0;
     closeButton.current.focus();
   }
