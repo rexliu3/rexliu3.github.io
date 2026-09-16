@@ -1,17 +1,17 @@
 # Graph Report - rexliu3.github.io  (2026-09-16)
 
 ## Corpus Check
-- 93 files · ~144,891 words
+- 94 files · ~145,326 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 17 file(s) not represented in the graph (top: .scss 10, (none) 5, .toml 1)
 
 ## Summary
-- 353 nodes · 627 edges · 35 communities (20 shown, 15 thin omitted)
-- Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 16 edges (avg confidence: 0.85)
+- 356 nodes · 641 edges · 35 communities (20 shown, 15 thin omitted)
+- Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 17 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `c2e205a8`
+- Built from commit: `1594aded`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -21,7 +21,7 @@
 - normalizeContent.js
 - package.json
 - ref_react
-- fields.js
+- index.js
 - devDependencies
 - scripts
 - studio/package.json
@@ -50,7 +50,7 @@
 - graphify reference: transcribe video and audio
 - AGENTS.md
 - extraction-spec.md
-- App.jsx
+- index.jsx
 
 ## God Nodes (most connected - your core abstractions)
 1. `scripts` - 16 edges
@@ -83,27 +83,27 @@
 
 ### Community 0 - "ApartmentPage.jsx"
 Cohesion: 0.12
-Nodes (20): @testing-library/react, ApartmentIntro(), ApartmentFooter(), ApartmentHeader(), ApartmentScene(), getCaption(), Icon(), paths (+12 more)
+Nodes (19): ApartmentIntro(), ApartmentFooter(), ApartmentHeader(), ApartmentScene(), getCaption(), Icon(), paths, PortfolioOverview() (+11 more)
 
 ### Community 1 - "Apartment.jsx"
 Cohesion: 0.21
 Nodes (22): Apartment(), Bookshelf(), Cat(), CoffeeTable(), Desk(), floor(), front(), points() (+14 more)
 
 ### Community 2 - "normalizeContent.js"
-Cohesion: 0.18
-Nodes (17): ref_sanity_cli, CONTENT_TIMEOUT_MS, fetchSiteContent(), sanityConfig, src_sanity_config, ContentContext, SanityContentProvider(), src_sanity_defaultcontent (+9 more)
+Cohesion: 0.12
+Nodes (22): ref_testing_library_jest_dom_vitest, @testing-library/react, vitest, App(), MainPage(), NotFoundPage(), CONTENT_TIMEOUT_MS, fetchSiteContent() (+14 more)
 
 ### Community 3 - "package.json"
-Cohesion: 0.06
-Nodes (29): dependencies, react, react-dom, sanity, engines, node, react, react-dom (+21 more)
+Cohesion: 0.07
+Nodes (27): dependencies, react, react-dom, sanity, engines, node, react, react-dom (+19 more)
 
 ### Community 4 - "ref_react"
 Cohesion: 0.12
 Nodes (17): ref_react, JazzPlayer(), BooksPanel(), CityDrawing(), EducationPanel(), ExperienceItem(), MusicTastePanel(), PhotosPanel() (+9 more)
 
-### Community 5 - "fields.js"
-Cohesion: 0.17
-Nodes (16): ref_sanity, ref_sanity_structure, singletonTypes, apartmentPortrait, apartmentProject, city, experience, imageField() (+8 more)
+### Community 5 - "index.js"
+Cohesion: 0.15
+Nodes (20): ref_sanity, ref_sanity_cli, ref_sanity_structure, src_sanity_config, singletonTypes, apartmentPortrait, apartmentProject, bookList() (+12 more)
 
 ### Community 6 - "devDependencies"
 Cohesion: 0.12
@@ -157,9 +157,9 @@ Nodes (3): For git commit hook, For native CLAUDE.md integration, graphify refer
 Cohesion: 0.50
 Nodes (3): For --cluster-only, For --update (incremental re-extraction), graphify reference: incremental update and cluster-only
 
-### Community 34 - "App.jsx"
-Cohesion: 0.24
-Nodes (7): ref_react_dom_client, App(), MainPage(), NotFoundPage(), useSanityContent(), unregister(), src_styles_styles
+### Community 34 - "index.jsx"
+Cohesion: 0.50
+Nodes (3): ref_react_dom_client, unregister(), src_styles_styles
 
 ## Knowledge Gaps
 - **142 isolated node(s):** `printWidth`, `tabWidth`, `semi`, `singleQuote`, `trailingComma` (+137 more)
@@ -169,7 +169,7 @@ Nodes (7): ref_react_dom_client, App(), MainPage(), NotFoundPage(), useSanityCon
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `@testing-library/react` connect `ApartmentPage.jsx` to `package.json`, `ref_react`?**
+- **Why does `@testing-library/react` connect `normalizeContent.js` to `ApartmentPage.jsx`, `package.json`, `ref_react`?**
   _High betweenness centrality (0.180) - this node is a cross-community bridge._
 - **Why does `scripts` connect `scripts` to `package.json`?**
   _High betweenness centrality (0.056) - this node is a cross-community bridge._
@@ -178,8 +178,8 @@ _Questions this graph is uniquely positioned to answer:_
 - **What connects `printWidth`, `tabWidth`, `semi` to the rest of the system?**
   _142 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `ApartmentPage.jsx` be split into smaller, more focused modules?**
-  _Cohesion score 0.11932773109243698 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.12298387096774194 - nodes in this community are weakly interconnected._
+- **Should `normalizeContent.js` be split into smaller, more focused modules?**
+  _Cohesion score 0.11587301587301588 - nodes in this community are weakly interconnected._
 - **Should `package.json` be split into smaller, more focused modules?**
-  _Cohesion score 0.05855855855855856 - nodes in this community are weakly interconnected._
-- **Should `ref_react` be split into smaller, more focused modules?**
-  _Cohesion score 0.11904761904761904 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.06854838709677419 - nodes in this community are weakly interconnected._

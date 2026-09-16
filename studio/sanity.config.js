@@ -3,7 +3,7 @@ import { structureTool } from "sanity/structure";
 import { schemaTypes } from "./schemaTypes";
 import sanityConfig from "../src/sanity/config.json";
 
-const singletonTypes = ["resume", "photographyPortfolio", "apartmentPortrait"];
+const singletonTypes = ["resume", "photographyPortfolio", "apartmentPortrait", "bookshelf"];
 
 export default defineConfig({
   name: "rex_internet_apartment",
@@ -18,6 +18,10 @@ export default defineConfig({
         S.list()
           .title("Content")
           .items([
+            S.listItem()
+              .title("Bookshelf")
+              .id("bookshelf")
+              .child(S.document().schemaType("bookshelf").documentId("bookshelf")),
             S.listItem()
               .title("Résumé")
               .id("resume")

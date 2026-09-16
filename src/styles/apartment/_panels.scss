@@ -201,6 +201,27 @@
   border-bottom: 10px solid #be9e75;
   margin: 30px 25px 8px;
 }
+.favorite-books {
+  margin-top: 28px;
+}
+.favorite-books article {
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+}
+.favorite-books h4 {
+  margin: 0;
+  font-size: 16px;
+}
+.favorite-books p {
+  margin: 6px 0 0;
+}
+.book-author {
+  color: var(--muted);
+  font-size: 12px;
+}
+.book-note {
+  white-space: pre-line;
+}
 .decorative-book {
   width: 47px;
   height: 160px;

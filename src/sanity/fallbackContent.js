@@ -5,6 +5,8 @@ import defaultContent from "./defaultContent.json";
 const fallbackContent = {
   ...defaultContent,
   experiences: [],
+  nonfictionBooks: [],
+  fictionBooks: [],
   photographyPhotos: [],
   apartmentPortrait: {
     imageUrl: "/assets/Profile-Picture.png",

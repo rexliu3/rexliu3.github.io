@@ -4,6 +4,7 @@ import { experience } from "./experience";
 import { resume } from "./resume";
 import { photographyPortfolio } from "./photographyPortfolio";
 import { apartmentPortrait } from "./apartmentPortrait";
+import { bookshelf } from "./bookshelf";
 
 export const schemaTypes = [
   city,
@@ -12,4 +13,5 @@ export const schemaTypes = [
   resume,
   photographyPortfolio,
   apartmentPortrait,
+  bookshelf,
 ];

@@ -1,5 +1,7 @@
 const siteQuery = `{
   "contentModel": "dynamic-v1",
+  "nonfictionBooks": *[_type == "bookshelf" && _id == "bookshelf"][0].nonfiction,
+  "fictionBooks": *[_type == "bookshelf" && _id == "bookshelf"][0].fiction,
   "resumeUrl": *[_type == "resume" && _id == "resume"][0].file.asset->url,
   "apartmentPortrait": *[_type == "apartmentPortrait" && _id == "apartmentPortrait"][0]{
     "imageUrl": image.asset->url,

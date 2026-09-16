@@ -107,6 +107,43 @@ test("the camera shows curated Sanity photos", () => {
   expect(dialog.getByText(photo.caption)).toBeTruthy();
 });
 
+test("Sanity book favorites appear in their categories with a Goodreads link", async () => {
+  global.fetch = vi.fn().mockResolvedValue({
+    ok: true,
+    json: async () => ({
+      result: {
+        contentModel: "dynamic-v1",
+        nonfictionBooks: [
+          { _key: "first", title: "First nonfiction", author: "One", note: "A lasting idea." },
+          { _key: "second", title: "Second nonfiction", author: "Two", url: "javascript:alert(1)" },
+        ],
+        fictionBooks: [
+          { _key: "novel", title: "A novel", author: "Three", url: "https://example.com/novel" },
+        ],
+      },
+    }),
+  });
+  const view = render(<App />);
+  await waitFor(() => expect(global.fetch).toHaveBeenCalled());
+  await waitFor(() => expect(view.getByText("Make yourself")).toBeTruthy());
+  fireEvent.click(view.getByRole("button", { name: "Explore books I like" }));
+  const dialog = within(view.getByRole("dialog"));
+  const nonfiction = within(await dialog.findByRole("region", { name: "Favorite nonfiction" }));
+  expect(
+    nonfiction.getAllByRole("heading", { level: 4 }).map((heading) => heading.textContent)
+  ).toEqual(["First nonfiction", "Second nonfiction"]);
+  expect(nonfiction.getByText("A lasting idea.")).toBeTruthy();
+  expect(nonfiction.queryByRole("link")).toBeNull();
+  const fiction = within(dialog.getByRole("region", { name: "Favorite fiction" }));
+  expect(fiction.getByRole("link", { name: /A novel/ }).getAttribute("href")).toBe(
+    "https://example.com/novel"
+  );
+  expect(
+    dialog.getByRole("link", { name: /My reading list on Goodreads/ }).getAttribute("href")
+  ).toBe("https://www.goodreads.com/rexliu");
+  expect(dialog.queryByText("The shelf is still being unpacked.")).toBeNull();
+});
+
 test("the wall portrait opens the experience introduction", () => {
   const view = render(<ApartmentPage content={fallbackContent} />);
   fireEvent.click(view.getByText("Start with an intro"));

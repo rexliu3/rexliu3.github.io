@@ -121,7 +121,7 @@
       "file_type": "code",
       "norm_label": "navigatenext()",
       "source_file": "src/components/apartment/RoomPanel.jsx",
-      "source_location": "L45"
+      "source_location": "L47"
     },
     {
       "id": "src_components_apartment_rooms_getcontentrooms",
@@ -472,6 +472,42 @@
       "source_location": "L4"
     },
     {
+      "id": "src_app_app",
+      "label": "App()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "normalizeContent.js",
+      "file_type": "code",
+      "norm_label": "app()",
+      "source_file": "src/App.jsx",
+      "source_location": "L6"
+    },
+    {
+      "id": "src_pages_mainpage_mainpage",
+      "label": "MainPage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "normalizeContent.js",
+      "file_type": "code",
+      "norm_label": "mainpage()",
+      "source_file": "src/pages/MainPage.jsx",
+      "source_location": "L5"
+    },
+    {
+      "id": "src_pages_notfoundpage_notfoundpage",
+      "label": "NotFoundPage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "normalizeContent.js",
+      "file_type": "code",
+      "norm_label": "notfoundpage()",
+      "source_file": "src/pages/NotFoundPage.jsx",
+      "source_location": "L3"
+    },
+    {
       "id": "src_sanity_client_fetchsitecontent",
       "label": "fetchSiteContent()",
       "_callable": true,
@@ -494,6 +530,18 @@
       "norm_label": "sanitycontentprovider()",
       "source_file": "src/sanity/ContentContext.jsx",
       "source_location": "L7"
+    },
+    {
+      "id": "src_sanity_contentcontext_usesanitycontent",
+      "label": "useSanityContent()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "normalizeContent.js",
+      "file_type": "code",
+      "norm_label": "usesanitycontent()",
+      "source_file": "src/sanity/ContentContext.jsx",
+      "source_location": "L26"
     },
     {
       "id": "src_sanity_normalizecontent_documents",
@@ -529,7 +577,7 @@
       "file_type": "code",
       "norm_label": "normalizecollection()",
       "source_file": "src/sanity/normalizeContent.js",
-      "source_location": "L32"
+      "source_location": "L34"
     },
     {
       "id": "src_sanity_normalizecontent_normalizecontent",
@@ -541,7 +589,7 @@
       "file_type": "code",
       "norm_label": "normalizecontent()",
       "source_file": "src/sanity/normalizeContent.js",
-      "source_location": "L53"
+      "source_location": "L58"
     },
     {
       "id": "src_sanity_normalizecontent_test_normalize",
@@ -580,60 +628,12 @@
       "source_location": "L2"
     },
     {
-      "id": "src_app_app",
-      "label": "App()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 34,
-      "community_name": "App.jsx",
-      "file_type": "code",
-      "norm_label": "app()",
-      "source_file": "src/App.jsx",
-      "source_location": "L6"
-    },
-    {
-      "id": "src_pages_mainpage_mainpage",
-      "label": "MainPage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 34,
-      "community_name": "App.jsx",
-      "file_type": "code",
-      "norm_label": "mainpage()",
-      "source_file": "src/pages/MainPage.jsx",
-      "source_location": "L5"
-    },
-    {
-      "id": "src_pages_notfoundpage_notfoundpage",
-      "label": "NotFoundPage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 34,
-      "community_name": "App.jsx",
-      "file_type": "code",
-      "norm_label": "notfoundpage()",
-      "source_file": "src/pages/NotFoundPage.jsx",
-      "source_location": "L3"
-    },
-    {
-      "id": "src_sanity_contentcontext_usesanitycontent",
-      "label": "useSanityContent()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 34,
-      "community_name": "App.jsx",
-      "file_type": "code",
-      "norm_label": "usesanitycontent()",
-      "source_file": "src/sanity/ContentContext.jsx",
-      "source_location": "L26"
-    },
-    {
       "id": "src_serviceworker_unregister",
       "label": "unregister()",
       "_callable": true,
       "_origin": "ast",
       "community": 34,
-      "community_name": "App.jsx",
+      "community_name": "index.jsx",
       "file_type": "code",
       "norm_label": "unregister()",
       "source_file": "src/serviceWorker.js",
@@ -844,12 +844,24 @@
       "source_location": "L17"
     },
     {
+      "id": "studio_schematypes_bookshelf_booklist",
+      "label": "bookList()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "index.js",
+      "file_type": "code",
+      "norm_label": "booklist()",
+      "source_file": "studio/schemaTypes/bookshelf.js",
+      "source_location": "L4"
+    },
+    {
       "id": "studio_schematypes_fields_imagefield",
       "label": "imageField()",
       "_callable": true,
       "_origin": "ast",
       "community": 5,
-      "community_name": "fields.js",
+      "community_name": "index.js",
       "file_type": "code",
       "norm_label": "imagefield()",
       "source_file": "studio/schemaTypes/fields.js",
@@ -861,7 +873,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 5,
-      "community_name": "fields.js",
+      "community_name": "index.js",
       "file_type": "code",
       "norm_label": "panelobject()",
       "source_file": "studio/schemaTypes/fields.js",
@@ -873,7 +885,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 5,
-      "community_name": "fields.js",
+      "community_name": "index.js",
       "file_type": "code",
       "norm_label": "required()",
       "source_file": "studio/schemaTypes/fields.js",
@@ -885,7 +897,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 5,
-      "community_name": "fields.js",
+      "community_name": "index.js",
       "file_type": "code",
       "norm_label": "stringarray()",
       "source_file": "studio/schemaTypes/fields.js",
@@ -897,7 +909,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 5,
-      "community_name": "fields.js",
+      "community_name": "index.js",
       "file_type": "code",
       "norm_label": "stringfield()",
       "source_file": "studio/schemaTypes/fields.js",
@@ -909,7 +921,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 5,
-      "community_name": "fields.js",
+      "community_name": "index.js",
       "file_type": "code",
       "norm_label": "textfield()",
       "source_file": "studio/schemaTypes/fields.js",
@@ -921,22 +933,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 5,
-      "community_name": "fields.js",
+      "community_name": "index.js",
       "file_type": "code",
       "norm_label": "urlfield()",
       "source_file": "studio/schemaTypes/fields.js",
       "source_location": "L8"
-    },
-    {
-      "id": "src_app_test",
-      "label": "App.test.jsx",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "ApartmentPage.jsx",
-      "file_type": "code",
-      "norm_label": "app.test.jsx",
-      "source_file": "src/App.test.jsx",
-      "source_location": "L1"
     },
     {
       "id": "src_components_apartment_apartmentintro",
@@ -1013,17 +1014,6 @@
       "file_type": "code",
       "norm_label": "roomdirectory.jsx",
       "source_file": "src/components/apartment/RoomDirectory.jsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_components_apartment_roomdirectory_test",
-      "label": "RoomDirectory.test.jsx",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "ApartmentPage.jsx",
-      "file_type": "code",
-      "norm_label": "roomdirectory.test.jsx",
-      "source_file": "src/components/apartment/RoomDirectory.test.jsx",
       "source_location": "L1"
     },
     {
@@ -1113,17 +1103,6 @@
       "norm_label": "apartmentpage.jsx",
       "source_file": "src/pages/ApartmentPage.jsx",
       "source_location": "L1"
-    },
-    {
-      "id": "ref_testing_library_react",
-      "label": "@testing-library/react",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "ApartmentPage.jsx",
-      "file_type": "concept",
-      "norm_label": "@testing-library/react",
-      "source_file": "package.json",
-      "source_location": "L35"
     },
     {
       "id": "src_components_apartment_apartment",
@@ -1346,6 +1325,61 @@
       "source_location": "L6"
     },
     {
+      "id": "src_app",
+      "label": "App.jsx",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "normalizeContent.js",
+      "file_type": "code",
+      "norm_label": "app.jsx",
+      "source_file": "src/App.jsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_app_test",
+      "label": "App.test.jsx",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "normalizeContent.js",
+      "file_type": "code",
+      "norm_label": "app.test.jsx",
+      "source_file": "src/App.test.jsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_components_apartment_roomdirectory_test",
+      "label": "RoomDirectory.test.jsx",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "normalizeContent.js",
+      "file_type": "code",
+      "norm_label": "roomdirectory.test.jsx",
+      "source_file": "src/components/apartment/RoomDirectory.test.jsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_pages_mainpage",
+      "label": "MainPage.jsx",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "normalizeContent.js",
+      "file_type": "code",
+      "norm_label": "mainpage.jsx",
+      "source_file": "src/pages/MainPage.jsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_pages_notfoundpage",
+      "label": "NotFoundPage.jsx",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "normalizeContent.js",
+      "file_type": "code",
+      "norm_label": "notfoundpage.jsx",
+      "source_file": "src/pages/NotFoundPage.jsx",
+      "source_location": "L1"
+    },
+    {
       "id": "src_sanity_client",
       "label": "client.js",
       "_origin": "ast",
@@ -1467,15 +1501,59 @@
       "source_location": "L1"
     },
     {
-      "id": "studio_sanity_cli",
-      "label": "sanity.cli.js",
+      "id": "src_sanity_sitequery",
+      "label": "siteQuery.js",
       "_origin": "ast",
       "community": 2,
       "community_name": "normalizeContent.js",
       "file_type": "code",
-      "norm_label": "sanity.cli.js",
-      "source_file": "studio/sanity.cli.js",
+      "norm_label": "sitequery.js",
+      "source_file": "src/sanity/siteQuery.js",
       "source_location": "L1"
+    },
+    {
+      "id": "src_sanity_sitequery_test",
+      "label": "siteQuery.test.js",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "normalizeContent.js",
+      "file_type": "code",
+      "norm_label": "sitequery.test.js",
+      "source_file": "src/sanity/siteQuery.test.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_setuptests",
+      "label": "setupTests.js",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "normalizeContent.js",
+      "file_type": "code",
+      "norm_label": "setuptests.js",
+      "source_file": "src/setupTests.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "ref_testing_library_react",
+      "label": "@testing-library/react",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "normalizeContent.js",
+      "file_type": "concept",
+      "norm_label": "@testing-library/react",
+      "source_file": "package.json",
+      "source_location": "L35"
+    },
+    {
+      "id": "ref_vitest",
+      "label": "vitest",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "normalizeContent.js",
+      "file_type": "concept",
+      "norm_label": "vitest",
+      "source_file": "package.json",
+      "source_location": "L46"
     },
     {
       "id": "codex_skills_graphify_skill",
@@ -2260,39 +2338,6 @@
       "source_location": "L1"
     },
     {
-      "id": "src_sanity_sitequery",
-      "label": "siteQuery.js",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "package.json",
-      "file_type": "code",
-      "norm_label": "sitequery.js",
-      "source_file": "src/sanity/siteQuery.js",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_sanity_sitequery_test",
-      "label": "siteQuery.test.js",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "package.json",
-      "file_type": "code",
-      "norm_label": "sitequery.test.js",
-      "source_file": "src/sanity/siteQuery.test.js",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_setuptests",
-      "label": "setupTests.js",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "package.json",
-      "file_type": "code",
-      "norm_label": "setuptests.js",
-      "source_file": "src/setupTests.js",
-      "source_location": "L1"
-    },
-    {
       "id": "vite_config",
       "label": "vite.config.js",
       "_origin": "ast",
@@ -2480,17 +2525,6 @@
       "source_location": "L36"
     },
     {
-      "id": "ref_vitest",
-      "label": "vitest",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "package.json",
-      "file_type": "concept",
-      "norm_label": "vitest",
-      "source_file": "package.json",
-      "source_location": "L46"
-    },
-    {
       "id": "codex_skills_graphify_references_github_and_merge",
       "label": "github-and-merge.md",
       "_origin": "ast",
@@ -2611,47 +2645,14 @@
       "source_location": "L1"
     },
     {
-      "id": "src_app",
-      "label": "App.jsx",
-      "_origin": "ast",
-      "community": 34,
-      "community_name": "App.jsx",
-      "file_type": "code",
-      "norm_label": "app.jsx",
-      "source_file": "src/App.jsx",
-      "source_location": "L1"
-    },
-    {
       "id": "src_index",
       "label": "index.jsx",
       "_origin": "ast",
       "community": 34,
-      "community_name": "App.jsx",
+      "community_name": "index.jsx",
       "file_type": "code",
       "norm_label": "index.jsx",
       "source_file": "src/index.jsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_pages_mainpage",
-      "label": "MainPage.jsx",
-      "_origin": "ast",
-      "community": 34,
-      "community_name": "App.jsx",
-      "file_type": "code",
-      "norm_label": "mainpage.jsx",
-      "source_file": "src/pages/MainPage.jsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_pages_notfoundpage",
-      "label": "NotFoundPage.jsx",
-      "_origin": "ast",
-      "community": 34,
-      "community_name": "App.jsx",
-      "file_type": "code",
-      "norm_label": "notfoundpage.jsx",
-      "source_file": "src/pages/NotFoundPage.jsx",
       "source_location": "L1"
     },
     {
@@ -2659,7 +2660,7 @@
       "label": "serviceWorker.js",
       "_origin": "ast",
       "community": 34,
-      "community_name": "App.jsx",
+      "community_name": "index.jsx",
       "file_type": "code",
       "norm_label": "serviceworker.js",
       "source_file": "src/serviceWorker.js",
@@ -2864,11 +2865,22 @@
       "source_location": "L1"
     },
     {
+      "id": "studio_sanity_cli",
+      "label": "sanity.cli.js",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "index.js",
+      "file_type": "code",
+      "norm_label": "sanity.cli.js",
+      "source_file": "studio/sanity.cli.js",
+      "source_location": "L1"
+    },
+    {
       "id": "studio_sanity_config",
       "label": "sanity.config.js",
       "_origin": "ast",
       "community": 5,
-      "community_name": "fields.js",
+      "community_name": "index.js",
       "file_type": "code",
       "norm_label": "sanity.config.js",
       "source_file": "studio/sanity.config.js",
@@ -2879,7 +2891,7 @@
       "label": "singletonTypes",
       "_origin": "ast",
       "community": 5,
-      "community_name": "fields.js",
+      "community_name": "index.js",
       "file_type": "code",
       "norm_label": "singletontypes",
       "source_file": "studio/sanity.config.js",
@@ -2890,7 +2902,7 @@
       "label": "apartmentPortrait.js",
       "_origin": "ast",
       "community": 5,
-      "community_name": "fields.js",
+      "community_name": "index.js",
       "file_type": "code",
       "norm_label": "apartmentportrait.js",
       "source_file": "studio/schemaTypes/apartmentPortrait.js",
@@ -2901,7 +2913,7 @@
       "label": "apartmentPortrait",
       "_origin": "ast",
       "community": 5,
-      "community_name": "fields.js",
+      "community_name": "index.js",
       "file_type": "code",
       "norm_label": "apartmentportrait",
       "source_file": "studio/schemaTypes/apartmentPortrait.js",
@@ -2912,7 +2924,7 @@
       "label": "apartmentProject.js",
       "_origin": "ast",
       "community": 5,
-      "community_name": "fields.js",
+      "community_name": "index.js",
       "file_type": "code",
       "norm_label": "apartmentproject.js",
       "source_file": "studio/schemaTypes/apartmentProject.js",
@@ -2923,18 +2935,40 @@
       "label": "apartmentProject",
       "_origin": "ast",
       "community": 5,
-      "community_name": "fields.js",
+      "community_name": "index.js",
       "file_type": "code",
       "norm_label": "apartmentproject",
       "source_file": "studio/schemaTypes/apartmentProject.js",
       "source_location": "L4"
     },
     {
+      "id": "studio_schematypes_bookshelf",
+      "label": "bookshelf.js",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "index.js",
+      "file_type": "code",
+      "norm_label": "bookshelf.js",
+      "source_file": "studio/schemaTypes/bookshelf.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "studio_schematypes_bookshelf_bookshelf",
+      "label": "bookshelf",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "index.js",
+      "file_type": "code",
+      "norm_label": "bookshelf",
+      "source_file": "studio/schemaTypes/bookshelf.js",
+      "source_location": "L26"
+    },
+    {
       "id": "studio_schematypes_city",
       "label": "city.js",
       "_origin": "ast",
       "community": 5,
-      "community_name": "fields.js",
+      "community_name": "index.js",
       "file_type": "code",
       "norm_label": "city.js",
       "source_file": "studio/schemaTypes/city.js",
@@ -2945,7 +2979,7 @@
       "label": "city",
       "_origin": "ast",
       "community": 5,
-      "community_name": "fields.js",
+      "community_name": "index.js",
       "file_type": "code",
       "norm_label": "city",
       "source_file": "studio/schemaTypes/city.js",
@@ -2956,7 +2990,7 @@
       "label": "experience.js",
       "_origin": "ast",
       "community": 5,
-      "community_name": "fields.js",
+      "community_name": "index.js",
       "file_type": "code",
       "norm_label": "experience.js",
       "source_file": "studio/schemaTypes/experience.js",
@@ -2967,7 +3001,7 @@
       "label": "experience",
       "_origin": "ast",
       "community": 5,
-      "community_name": "fields.js",
+      "community_name": "index.js",
       "file_type": "code",
       "norm_label": "experience",
       "source_file": "studio/schemaTypes/experience.js",
@@ -2978,7 +3012,7 @@
       "label": "fields.js",
       "_origin": "ast",
       "community": 5,
-      "community_name": "fields.js",
+      "community_name": "index.js",
       "file_type": "code",
       "norm_label": "fields.js",
       "source_file": "studio/schemaTypes/fields.js",
@@ -2989,7 +3023,7 @@
       "label": "orderField",
       "_origin": "ast",
       "community": 5,
-      "community_name": "fields.js",
+      "community_name": "index.js",
       "file_type": "code",
       "norm_label": "orderfield",
       "source_file": "studio/schemaTypes/fields.js",
@@ -3000,7 +3034,7 @@
       "label": "index.js",
       "_origin": "ast",
       "community": 5,
-      "community_name": "fields.js",
+      "community_name": "index.js",
       "file_type": "code",
       "norm_label": "index.js",
       "source_file": "studio/schemaTypes/index.js",
@@ -3011,18 +3045,18 @@
       "label": "schemaTypes",
       "_origin": "ast",
       "community": 5,
-      "community_name": "fields.js",
+      "community_name": "index.js",
       "file_type": "code",
       "norm_label": "schematypes",
       "source_file": "studio/schemaTypes/index.js",
-      "source_location": "L8"
+      "source_location": "L9"
     },
     {
       "id": "studio_schematypes_photographyportfolio",
       "label": "photographyPortfolio.js",
       "_origin": "ast",
       "community": 5,
-      "community_name": "fields.js",
+      "community_name": "index.js",
       "file_type": "code",
       "norm_label": "photographyportfolio.js",
       "source_file": "studio/schemaTypes/photographyPortfolio.js",
@@ -3033,7 +3067,7 @@
       "label": "photographyPortfolio",
       "_origin": "ast",
       "community": 5,
-      "community_name": "fields.js",
+      "community_name": "index.js",
       "file_type": "code",
       "norm_label": "photographyportfolio",
       "source_file": "studio/schemaTypes/photographyPortfolio.js",
@@ -3044,7 +3078,7 @@
       "label": "resume.js",
       "_origin": "ast",
       "community": 5,
-      "community_name": "fields.js",
+      "community_name": "index.js",
       "file_type": "code",
       "norm_label": "resume.js",
       "source_file": "studio/schemaTypes/resume.js",
@@ -3055,7 +3089,7 @@
       "label": "resume",
       "_origin": "ast",
       "community": 5,
-      "community_name": "fields.js",
+      "community_name": "index.js",
       "file_type": "code",
       "norm_label": "resume",
       "source_file": "studio/schemaTypes/resume.js",
@@ -4004,26 +4038,14 @@
       "source_url": null
     },
     {
-      "id": "ref_sanity_cli",
-      "label": "ref_sanity_cli",
+      "id": "ref_testing_library_jest_dom_vitest",
+      "label": "ref_testing_library_jest_dom_vitest",
       "_origin": "semantic",
       "community": 2,
       "community_name": "normalizeContent.js",
       "external": true,
       "file_type": "concept",
-      "norm_label": "ref_sanity_cli",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "src_sanity_config",
-      "label": "src_sanity_config",
-      "_origin": "semantic",
-      "community": 2,
-      "community_name": "normalizeContent.js",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "src_sanity_config",
+      "norm_label": "ref_testing_library_jest_dom_vitest",
       "source_file": "",
       "type": "external"
     },
@@ -4036,18 +4058,6 @@
       "external": true,
       "file_type": "concept",
       "norm_label": "src_sanity_defaultcontent",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "ref_testing_library_jest_dom_vitest",
-      "label": "ref_testing_library_jest_dom_vitest",
-      "_origin": "semantic",
-      "community": 3,
-      "community_name": "package.json",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "ref_testing_library_jest_dom_vitest",
       "source_file": "",
       "type": "external"
     },
@@ -4068,7 +4078,7 @@
       "label": "ref_react_dom_client",
       "_origin": "semantic",
       "community": 34,
-      "community_name": "App.jsx",
+      "community_name": "index.jsx",
       "external": true,
       "file_type": "concept",
       "norm_label": "ref_react_dom_client",
@@ -4080,7 +4090,7 @@
       "label": "src_styles_styles",
       "_origin": "semantic",
       "community": 34,
-      "community_name": "App.jsx",
+      "community_name": "index.jsx",
       "external": true,
       "file_type": "concept",
       "norm_label": "src_styles_styles",
@@ -4104,10 +4114,22 @@
       "label": "ref_sanity",
       "_origin": "semantic",
       "community": 5,
-      "community_name": "fields.js",
+      "community_name": "index.js",
       "external": true,
       "file_type": "concept",
       "norm_label": "ref_sanity",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "ref_sanity_cli",
+      "label": "ref_sanity_cli",
+      "_origin": "semantic",
+      "community": 5,
+      "community_name": "index.js",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_sanity_cli",
       "source_file": "",
       "type": "external"
     },
@@ -4116,10 +4138,22 @@
       "label": "ref_sanity_structure",
       "_origin": "semantic",
       "community": 5,
-      "community_name": "fields.js",
+      "community_name": "index.js",
       "external": true,
       "file_type": "concept",
       "norm_label": "ref_sanity_structure",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "src_sanity_config",
+      "label": "src_sanity_config",
+      "_origin": "semantic",
+      "community": 5,
+      "community_name": "index.js",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "src_sanity_config",
       "source_file": "",
       "type": "external"
     }
@@ -4206,7 +4240,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/components/apartment/RoomPanel.jsx",
-      "source_location": "L37",
+      "source_location": "L39",
       "weight": 1.0
     },
     {
@@ -4218,7 +4252,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/components/apartment/RoomPanel.jsx",
-      "source_location": "L46",
+      "source_location": "L48",
       "weight": 1.0
     },
     {
@@ -4230,7 +4264,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/components/apartment/RoomPanel.jsx",
-      "source_location": "L46",
+      "source_location": "L48",
       "weight": 1.0
     },
     {
@@ -4554,7 +4588,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/sanity/normalizeContent.js",
-      "source_location": "L33",
+      "source_location": "L35",
       "weight": 1.0
     },
     {
@@ -4566,7 +4600,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/sanity/normalizeContent.js",
-      "source_location": "L34",
+      "source_location": "L36",
       "weight": 1.0
     },
     {
@@ -4578,7 +4612,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/sanity/normalizeContent.js",
-      "source_location": "L43",
+      "source_location": "L45",
       "weight": 1.0
     },
     {
@@ -4590,7 +4624,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/sanity/normalizeContent.js",
-      "source_location": "L54",
+      "source_location": "L59",
       "weight": 1.0
     },
     {
@@ -4602,7 +4636,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/sanity/normalizeContent.js",
-      "source_location": "L57",
+      "source_location": "L62",
       "weight": 1.0
     },
     {
@@ -4614,7 +4648,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/sanity/normalizeContent.js",
-      "source_location": "L58",
+      "source_location": "L63",
       "weight": 1.0
     },
     {
@@ -4626,7 +4660,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/sanity/normalizeContent.js",
-      "source_location": "L72",
+      "source_location": "L77",
       "weight": 1.0
     },
     {
@@ -4675,6 +4709,42 @@
       "context": "call",
       "source_file": "src/serviceWorker.js",
       "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "studio_schematypes_bookshelf_booklist",
+      "target": "studio_schematypes_fields_stringfield",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "studio/schemaTypes/bookshelf.js",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "studio_schematypes_bookshelf_booklist",
+      "target": "studio_schematypes_fields_textfield",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "studio/schemaTypes/bookshelf.js",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "studio_schematypes_bookshelf_booklist",
+      "target": "studio_schematypes_fields_urlfield",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "studio/schemaTypes/bookshelf.js",
+      "source_location": "L19",
       "weight": 1.0
     },
     {
@@ -6382,6 +6452,54 @@
       "weight": 1.0
     },
     {
+      "source": "studio_schematypes_bookshelf",
+      "target": "studio_schematypes_fields_required",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "studio/schemaTypes/bookshelf.js",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "studio_schematypes_bookshelf",
+      "target": "studio_schematypes_fields_stringfield",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "studio/schemaTypes/bookshelf.js",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "studio_schematypes_bookshelf",
+      "target": "studio_schematypes_fields_textfield",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "studio/schemaTypes/bookshelf.js",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "studio_schematypes_bookshelf",
+      "target": "studio_schematypes_fields_urlfield",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "studio/schemaTypes/bookshelf.js",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
       "source": "studio_schematypes_city",
       "target": "studio_schematypes_fields_orderfield",
       "relation": "imports",
@@ -6547,6 +6665,18 @@
       "context": "import",
       "source_file": "studio/schemaTypes/index.js",
       "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "studio_schematypes_index",
+      "target": "studio_schematypes_bookshelf_bookshelf",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "studio/schemaTypes/index.js",
+      "source_location": "L7",
       "weight": 1.0
     },
     {
@@ -8674,6 +8804,30 @@
       "weight": 1.0
     },
     {
+      "source": "studio_schematypes_bookshelf",
+      "target": "ref_sanity",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "studio/schemaTypes/bookshelf.js",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "studio_schematypes_bookshelf",
+      "target": "studio_schematypes_fields",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "studio/schemaTypes/bookshelf.js",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
       "source": "studio_schematypes_city",
       "target": "ref_sanity",
       "relation": "imports_from",
@@ -8803,6 +8957,18 @@
       "context": "import",
       "source_file": "studio/schemaTypes/index.js",
       "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "studio_schematypes_index",
+      "target": "studio_schematypes_bookshelf",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "studio/schemaTypes/index.js",
+      "source_location": "L7",
       "weight": 1.0
     },
     {
@@ -10303,7 +10469,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/components/apartment/RoomPanel.jsx",
-      "source_location": "L45",
+      "source_location": "L47",
       "weight": 1.0
     },
     {
@@ -10787,7 +10953,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/sanity/normalizeContent.js",
-      "source_location": "L32",
+      "source_location": "L34",
       "weight": 1.0
     },
     {
@@ -10809,7 +10975,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/sanity/normalizeContent.js",
-      "source_location": "L53",
+      "source_location": "L58",
       "weight": 1.0
     },
     {
@@ -11022,6 +11188,28 @@
       "weight": 1.0
     },
     {
+      "source": "studio_schematypes_bookshelf",
+      "target": "studio_schematypes_bookshelf_bookshelf",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "studio/schemaTypes/bookshelf.js",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "studio_schematypes_bookshelf",
+      "target": "studio_schematypes_bookshelf_booklist",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "studio/schemaTypes/bookshelf.js",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
       "source": "studio_schematypes_city",
       "target": "studio_schematypes_city_city",
       "relation": "contains",
@@ -11128,7 +11316,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "studio/schemaTypes/index.js",
-      "source_location": "L8",
+      "source_location": "L9",
       "weight": 1.0
     },
     {
@@ -11322,6 +11510,18 @@
       "weight": 1.0
     },
     {
+      "source": "studio_schematypes_bookshelf_booklist",
+      "target": "studio_schematypes_fields_required",
+      "relation": "indirect_call",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "collection",
+      "source_file": "studio/schemaTypes/bookshelf.js",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
       "source": "studio_schematypes_fields",
       "target": "studio_schematypes_fields_required",
       "relation": "indirect_call",
@@ -11435,5 +11635,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "c2e205a841a15469411097f08616dae99f96129f"
+  "built_at_commit": "1594aded3d5ab85acbec68d4aebe26a8c12d81c5"
 }

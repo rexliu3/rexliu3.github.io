@@ -23,6 +23,8 @@ function documents(value) {
 }
 
 const DOCUMENT_FIELDS = {
+  nonfictionBooks: { _key: "", title: "", author: "", note: "", url: "" },
+  fictionBooks: { _key: "", title: "", author: "", note: "", url: "" },
   cities: { name: "", label: "", subtitle: "", text: "", illustration: "", illustrationAlt: "" },
   apartmentProjects: { name: "", image: "", type: "", text: "", url: "", sourceUrl: "" },
   experiences: { company: "", title: "", date: "", website: "", logo: "", note: "" },
@@ -46,6 +48,9 @@ function normalizeCollection(name, value) {
   });
   if (name === "photographyPhotos") {
     return collection.filter((photo) => photo.imageUrl && photo.alt);
+  }
+  if (name === "nonfictionBooks" || name === "fictionBooks") {
+    return collection.filter((book) => book.title.trim());
   }
   return collection;
 }
