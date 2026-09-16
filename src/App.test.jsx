@@ -32,14 +32,15 @@ test("a rejected content request still opens every room and restores keyboard fo
   vi.spyOn(console, "warn").mockImplementation(() => {});
   const view = render(<App />);
   await waitFor(() => expect(view.getByText("Make yourself")).toBeTruthy());
+  fireEvent.click(view.getByRole("button", { name: "Browse all corners" }));
 
   for (const room of fallbackContent.rooms) {
     const trigger =
       room.content === false
         ? view.getByLabelText("Explore the record player — choose café jazz")
-        : within(view.getByLabelText("Explore the apartment"))
-            .getByText(room.short)
-            .closest("button");
+        : within(view.getByRole("region", { name: "What brings you in?" })).getByRole("button", {
+            name: `${room.short} ${room.name}`,
+          });
     trigger.focus();
     fireEvent.click(trigger);
     expect(view.getByRole("dialog")).toBeTruthy();
@@ -57,7 +58,8 @@ test("a rejected content request still opens every room and restores keyboard fo
 
 test("travel tabs support keyboard navigation and an empty city list", () => {
   const view = render(<ApartmentPage content={fallbackContent} />);
-  fireEvent.click(view.getByText("Travel"));
+  fireEvent.click(view.getByRole("button", { name: "Browse all corners" }));
+  fireEvent.click(view.getByRole("button", { name: "Travel The world map" }));
   const firstTab = view.getByRole("tablist").querySelector("button");
   firstTab.focus();
   fireEvent.keyDown(firstTab, { key: "End" });
@@ -98,7 +100,7 @@ test("the camera shows curated Sanity photos", () => {
       }}
     />
   );
-  fireEvent.click(view.getByText("Photos"));
+  fireEvent.click(view.getByRole("button", { name: "Explore photos" }));
 
   const dialog = within(view.getByRole("dialog"));
   expect(dialog.getByAltText(photo.alt).getAttribute("src")).toBe(photo.imageUrl);
@@ -203,9 +205,8 @@ test("day/night and sound controls remain functional", async () => {
 
 test("room navigation updates captions and cycles back to the first room", () => {
   const view = render(<ApartmentPage content={fallbackContent} />);
-  const navigation = within(view.getByLabelText("Explore the apartment"));
   const firstRoom = fallbackContent.rooms[0];
-  const trigger = navigation.getByText(firstRoom.short).closest("button");
+  const trigger = view.getByRole("button", { name: "Explore books I like" });
   fireEvent.mouseEnter(trigger);
   expect(view.getByText(`Explore ${firstRoom.name.toLowerCase()}`)).toBeTruthy();
   fireEvent.mouseLeave(trigger);
@@ -234,11 +235,15 @@ test("music and dance opens a blank content panel while the record player opens 
   expect(view.container.querySelector(".record-player")).toBeTruthy();
 });
 
-test("bottom navigation contains content, including music taste and résumé", () => {
+test("all corners expansion replaces the duplicate navigation and opens content", () => {
   const view = render(<ApartmentPage content={fallbackContent} />);
-  const navigation = within(view.getByRole("navigation", { name: "Explore the apartment" }));
-  expect(navigation.getByRole("button", { name: "Music & dance" })).toBeTruthy();
+  expect(view.queryByRole("navigation", { name: "Explore the apartment" })).toBeNull();
+  const toggle = view.getByRole("button", { name: "Browse all corners" });
+  expect(toggle.getAttribute("id")).toBe("explore");
+  fireEvent.click(toggle);
+  const navigation = within(view.getByRole("region", { name: "What brings you in?" }));
+  expect(navigation.getByRole("button", { name: /Music & dance/ })).toBeTruthy();
   expect(navigation.queryByRole("button", { name: /jazz|cat|record player/i })).toBeNull();
-  fireEvent.click(navigation.getByRole("button", { name: "Résumé" }));
+  fireEvent.click(navigation.getByRole("button", { name: "Résumé The résumé" }));
   expect(within(view.getByRole("dialog")).getByText("The work so far.")).toBeTruthy();
 });

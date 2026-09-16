@@ -84,10 +84,6 @@
   .room-record {
     font-size: 10px;
   }
-  .explore-nav {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    margin-bottom: 48px;
-  }
   .apartment-footer {
     flex-direction: column;
     align-items: flex-start;
@@ -192,13 +188,6 @@
   .directory-toggle {
     width: 100%;
     justify-content: center;
-  }
-  .explore-nav {
-    margin-top: 16px;
-  }
-  .explore-nav button {
-    padding: 15px 13px;
-    font-size: 11px;
   }
   .room-directory {
     padding: 20px;

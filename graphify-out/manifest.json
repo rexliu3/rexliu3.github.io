@@ -12,10 +12,10 @@
     "semantic_hash": "c52804eb4bc68a74493e63075ca2bbf5"
   },
   "e2e/apartment.spec.js": {
-    "mtime": 1789582094.537797,
-    "seen": 1789584479.6066198,
-    "ast_hash": "a9ec7532609027228da51dd9b00c6583",
-    "semantic_hash": "a9ec7532609027228da51dd9b00c6583"
+    "mtime": 1789593600.541454,
+    "seen": 1789593682.076034,
+    "ast_hash": "6b923c10cdc576d34c2b62dd3bf65d6f",
+    "semantic_hash": ""
   },
   "eslint.config.js": {
     "mtime": 1789582094.5378723,
@@ -48,9 +48,9 @@
     "semantic_hash": "3b68e3d8debd1577707604c27ba0a103"
   },
   "src/App.test.jsx": {
-    "mtime": 1789593199.324526,
-    "seen": 1789593223.663388,
-    "ast_hash": "5f3d8990716f01224dd15fdd6b8b1940",
+    "mtime": 1789593614.1282978,
+    "seen": 1789593682.076038,
+    "ast_hash": "3b76b987806feafc0fb075f6d377e065",
     "semantic_hash": ""
   },
   "src/components/SiteImage.jsx": {
@@ -83,17 +83,11 @@
     "ast_hash": "5ca204005410baf0fdcbb24b8e6e2bf1",
     "semantic_hash": "5ca204005410baf0fdcbb24b8e6e2bf1"
   },
-  "src/components/apartment/ApartmentNavigation.jsx": {
-    "mtime": 1789582094.5413635,
-    "seen": 1789584479.606625,
-    "ast_hash": "618852d082fbca6f0a2b83ecbc161d07",
-    "semantic_hash": "618852d082fbca6f0a2b83ecbc161d07"
-  },
   "src/components/apartment/ApartmentScene.jsx": {
-    "mtime": 1789582094.5414307,
-    "seen": 1789584479.606625,
-    "ast_hash": "a3f1320ffe1c962ed7d364120951ec97",
-    "semantic_hash": "a3f1320ffe1c962ed7d364120951ec97"
+    "mtime": 1789593600.5387547,
+    "seen": 1789593682.076042,
+    "ast_hash": "2912a2eea1c02f6443feff1a24e67a0e",
+    "semantic_hash": ""
   },
   "src/components/apartment/Icon.jsx": {
     "mtime": 1789582094.5414975,
@@ -324,10 +318,10 @@
     "semantic_hash": "bd8df9dabccd6d6499fc4e86a813a815"
   },
   "src/pages/ApartmentPage.jsx": {
-    "mtime": 1789582094.5468104,
-    "seen": 1789584479.60664,
-    "ast_hash": "1de2a03237ff29e921230c049ecfd4ff",
-    "semantic_hash": "1de2a03237ff29e921230c049ecfd4ff"
+    "mtime": 1789593600.5382192,
+    "seen": 1789593682.076063,
+    "ast_hash": "62ba5aa22abae4d1a628fb287d458dda",
+    "semantic_hash": ""
   },
   "src/pages/MainPage.jsx": {
     "mtime": 1789582094.54687,
@@ -486,10 +480,10 @@
     "semantic_hash": "678ecb3b4a59d6e807afeb9f040cc281"
   },
   "README.md": {
-    "mtime": 1789582094.5375214,
-    "seen": 1789584479.60665,
-    "ast_hash": "3390494617b508489f3a66d95013c05e",
-    "semantic_hash": "3390494617b508489f3a66d95013c05e"
+    "mtime": 1789593600.5418606,
+    "seen": 1789593682.076085,
+    "ast_hash": "6fdd6f55546427039b7d78089acaac32",
+    "semantic_hash": ""
   },
   "public/audio/CREDITS.md": {
     "mtime": 1789581517.8248293,

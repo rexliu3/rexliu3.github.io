@@ -2,7 +2,6 @@ import React, { useRef, useState } from "react";
 import { ApartmentHeader, ApartmentFooter } from "../components/apartment/ApartmentLayout";
 import ApartmentIntro from "../components/apartment/ApartmentIntro";
 import ApartmentScene from "../components/apartment/ApartmentScene";
-import ApartmentNavigation from "../components/apartment/ApartmentNavigation";
 import RoomPanel from "../components/apartment/RoomPanel";
 import useJazzPlayer from "../hooks/useJazzPlayer";
 import useRoomNavigation from "../hooks/useRoomNavigation";
@@ -54,7 +53,6 @@ export default function ApartmentPage({ content }) {
             }}
           />
         )}
-        <ApartmentNavigation rooms={rooms} onOpen={openRoom} onHover={setHovered} />
         <PortfolioOverview content={content} onOpen={openRoom} />
         <ApartmentFooter settings={settings} />
       </div>

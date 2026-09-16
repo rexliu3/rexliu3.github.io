@@ -61,12 +61,12 @@ icon components when extending the apartment.
 
 ## Exploring the apartment
 
-Objects and the navigation strip open the same accessible room dialogs. The
+Objects and the expandable directory open the same accessible room dialogs. The
 **Browse all corners** directory searches room names and descriptions, including
 the portrait and résumé. Rooms have shareable links such as `/?room=projects`;
 browser back/forward navigation and refresh preserve the selected room.
 
-The bottom navigation and directory show content destinations, including **Music & dance**,
+The directory shows content destinations, including **Music & dance**,
 **About me**, and **Résumé**. Scene-only ambience, such as the jazz record player,
 is excluded. The speaker opens a separate music-taste panel, currently left blank;
 its optional artists, genres, dance styles, notes, and playlist link live in

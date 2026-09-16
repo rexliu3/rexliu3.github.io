@@ -94,6 +94,7 @@ export default function ApartmentScene({
         <button
           type="button"
           className="directory-toggle"
+          id="explore"
           ref={directoryToggle}
           aria-expanded={directoryOpen}
           aria-controls="room-directory"

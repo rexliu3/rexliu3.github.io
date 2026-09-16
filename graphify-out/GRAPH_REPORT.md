@@ -1,17 +1,17 @@
 # Graph Report - rexliu3.github.io  (2026-09-16)
 
 ## Corpus Check
-- 94 files · ~144,817 words
+- 93 files · ~144,891 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 17 file(s) not represented in the graph (top: .scss 10, (none) 5, .toml 1)
 
 ## Summary
-- 355 nodes · 636 edges · 35 communities (20 shown, 15 thin omitted)
+- 353 nodes · 627 edges · 35 communities (20 shown, 15 thin omitted)
 - Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 16 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `21a8fb72`
+- Built from commit: `c2e205a8`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -59,10 +59,10 @@
 4. `What You Must Do When Invoked` - 12 edges
 5. `floor()` - 10 edges
 6. `/graphify` - 10 edges
-7. `Icon()` - 9 edges
-8. `getContentRooms()` - 9 edges
-9. `fallbackContent` - 9 edges
-10. `normalizeContent()` - 9 edges
+7. `fallbackContent` - 9 edges
+8. `normalizeContent()` - 9 edges
+9. `@testing-library/react` - 8 edges
+10. `Icon()` - 8 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `RoomPanel()` --calls--> `useDialog()`  [EXTRACTED]
@@ -82,20 +82,20 @@
 ## Communities (35 total, 15 thin omitted)
 
 ### Community 0 - "ApartmentPage.jsx"
-Cohesion: 0.11
-Nodes (22): ref_testing_library_jest_dom_vitest, @testing-library/react, ApartmentIntro(), ApartmentFooter(), ApartmentHeader(), ApartmentNavigation(), ApartmentScene(), getCaption() (+14 more)
+Cohesion: 0.12
+Nodes (20): @testing-library/react, ApartmentIntro(), ApartmentFooter(), ApartmentHeader(), ApartmentScene(), getCaption(), Icon(), paths (+12 more)
 
 ### Community 1 - "Apartment.jsx"
 Cohesion: 0.21
 Nodes (22): Apartment(), Bookshelf(), Cat(), CoffeeTable(), Desk(), floor(), front(), points() (+14 more)
 
 ### Community 2 - "normalizeContent.js"
-Cohesion: 0.17
+Cohesion: 0.18
 Nodes (17): ref_sanity_cli, CONTENT_TIMEOUT_MS, fetchSiteContent(), sanityConfig, src_sanity_config, ContentContext, SanityContentProvider(), src_sanity_defaultcontent (+9 more)
 
 ### Community 3 - "package.json"
 Cohesion: 0.06
-Nodes (28): dependencies, react, react-dom, sanity, engines, node, react, react-dom (+20 more)
+Nodes (29): dependencies, react, react-dom, sanity, engines, node, react, react-dom (+21 more)
 
 ### Community 4 - "ref_react"
 Cohesion: 0.12
@@ -169,7 +169,7 @@ Nodes (7): ref_react_dom_client, App(), MainPage(), NotFoundPage(), useSanityCon
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `@testing-library/react` connect `ApartmentPage.jsx` to `normalizeContent.js`, `package.json`, `ref_react`?**
+- **Why does `@testing-library/react` connect `ApartmentPage.jsx` to `package.json`, `ref_react`?**
   _High betweenness centrality (0.180) - this node is a cross-community bridge._
 - **Why does `scripts` connect `scripts` to `package.json`?**
   _High betweenness centrality (0.056) - this node is a cross-community bridge._
@@ -178,8 +178,8 @@ _Questions this graph is uniquely positioned to answer:_
 - **What connects `printWidth`, `tabWidth`, `semi` to the rest of the system?**
   _142 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `ApartmentPage.jsx` be split into smaller, more focused modules?**
-  _Cohesion score 0.11095305832147938 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.11932773109243698 - nodes in this community are weakly interconnected._
 - **Should `package.json` be split into smaller, more focused modules?**
-  _Cohesion score 0.06218487394957983 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.05855855855855856 - nodes in this community are weakly interconnected._
 - **Should `ref_react` be split into smaller, more focused modules?**
   _Cohesion score 0.11904761904761904 - nodes in this community are weakly interconnected._

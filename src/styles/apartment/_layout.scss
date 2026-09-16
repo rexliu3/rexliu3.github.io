@@ -168,51 +168,6 @@
 .intro-button:hover {
   color: var(--accent);
 }
-.explore-nav {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 1px;
-  background: var(--line);
-  margin-top: 24px;
-  margin-bottom: 72px;
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  overflow: hidden;
-  scroll-margin-top: 24px;
-}
-.explore-nav button {
-  position: relative;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  text-align: left;
-  gap: 17px 8px;
-  padding: 18px 20px;
-  background: var(--paper);
-  transition: background 180ms;
-  font-size: 12px;
-}
-.explore-nav button > svg:not(.nav-arrow) {
-  grid-row: 1;
-  grid-column: 2;
-  color: var(--olive);
-}
-.nav-number {
-  color: var(--muted);
-  font-size: 9px;
-  font-variant-numeric: tabular-nums;
-  letter-spacing: 1px;
-}
-.nav-arrow {
-  opacity: 0.45;
-  align-self: center;
-}
-.explore-nav button:hover,
-.explore-nav button:focus-visible {
-  background: var(--surface);
-}
-.explore-nav button:focus-visible {
-  outline-offset: -3px;
-}
 .apartment-footer {
   border-top: 1px solid var(--line);
   min-height: 85px;

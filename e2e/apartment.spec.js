@@ -60,10 +60,14 @@ test("keyboard users can skip the scene and explore every corner", async ({ page
   await page.keyboard.press("Tab");
   await expect(page.getByRole("link", { name: "Skip to apartment navigation" })).toBeFocused();
   await page.keyboard.press("Enter");
+  await expect(page.getByRole("button", { name: "Browse all corners" })).toBeFocused();
+  await page.keyboard.press("Enter");
+  await page.keyboard.press("Tab");
+  await page.keyboard.press("Tab");
   await page.keyboard.press("Tab");
   const books = page
-    .getByRole("navigation", { name: "Explore the apartment" })
-    .getByRole("button", { name: "Books" });
+    .getByRole("region", { name: "What brings you in?" })
+    .getByRole("button", { name: "Books The bookshelf" });
   await expect(books).toBeFocused();
   await page.keyboard.press("Enter");
   await expect(page.getByRole("heading", { name: "Between the covers." })).toBeVisible();
