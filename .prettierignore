@@ -10,3 +10,5 @@ public/assets/
 src/assets/
 playwright-report/
 test-results/
+.codex/skills/
+graphify-out/
