@@ -114,7 +114,13 @@ test("Sanity book favorites appear in their categories with a Goodreads link", a
       result: {
         contentModel: "dynamic-v1",
         nonfictionBooks: [
-          { _key: "first", title: "First nonfiction", author: "One", note: "A lasting idea." },
+          {
+            _key: "first",
+            title: "First nonfiction",
+            author: "One",
+            note: "A lasting idea.",
+            imageUrl: "https://cdn.example.com/cover.jpg",
+          },
           { _key: "second", title: "Second nonfiction", author: "Two", url: "javascript:alert(1)" },
         ],
         fictionBooks: [
@@ -133,6 +139,10 @@ test("Sanity book favorites appear in their categories with a Goodreads link", a
     nonfiction.getAllByRole("heading", { level: 4 }).map((heading) => heading.textContent)
   ).toEqual(["First nonfiction", "Second nonfiction"]);
   expect(nonfiction.getByText("A lasting idea.")).toBeTruthy();
+  expect(nonfiction.getByAltText("Cover of First nonfiction").getAttribute("src")).toBe(
+    "https://cdn.example.com/cover.jpg"
+  );
+  expect(nonfiction.getAllByRole("img")).toHaveLength(1);
   expect(nonfiction.queryByRole("link")).toBeNull();
   const fiction = within(dialog.getByRole("region", { name: "Favorite fiction" }));
   expect(fiction.getByRole("link", { name: /A novel/ }).getAttribute("href")).toBe(

@@ -1,17 +1,17 @@
 # Graph Report - rexliu3.github.io  (2026-09-16)
 
 ## Corpus Check
-- 94 files · ~145,326 words
+- 94 files · ~145,373 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 17 file(s) not represented in the graph (top: .scss 10, (none) 5, .toml 1)
 
 ## Summary
-- 356 nodes · 641 edges · 35 communities (20 shown, 15 thin omitted)
+- 356 nodes · 645 edges · 34 communities (19 shown, 15 thin omitted)
 - Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 17 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `1594aded`
+- Built from commit: `abbfb3b9`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -50,7 +50,6 @@
 - graphify reference: transcribe video and audio
 - AGENTS.md
 - extraction-spec.md
-- index.jsx
 
 ## God Nodes (most connected - your core abstractions)
 1. `scripts` - 16 edges
@@ -79,7 +78,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (35 total, 15 thin omitted)
+## Communities (34 total, 15 thin omitted)
 
 ### Community 0 - "ApartmentPage.jsx"
 Cohesion: 0.12
@@ -90,20 +89,20 @@ Cohesion: 0.21
 Nodes (22): Apartment(), Bookshelf(), Cat(), CoffeeTable(), Desk(), floor(), front(), points() (+14 more)
 
 ### Community 2 - "normalizeContent.js"
-Cohesion: 0.12
-Nodes (22): ref_testing_library_jest_dom_vitest, @testing-library/react, vitest, App(), MainPage(), NotFoundPage(), CONTENT_TIMEOUT_MS, fetchSiteContent() (+14 more)
+Cohesion: 0.11
+Nodes (24): ref_react_dom_client, ref_sanity_cli, App(), MainPage(), NotFoundPage(), CONTENT_TIMEOUT_MS, fetchSiteContent(), sanityConfig (+16 more)
 
 ### Community 3 - "package.json"
-Cohesion: 0.07
-Nodes (27): dependencies, react, react-dom, sanity, engines, node, react, react-dom (+19 more)
+Cohesion: 0.06
+Nodes (30): dependencies, react, react-dom, sanity, engines, node, react, react-dom (+22 more)
 
 ### Community 4 - "ref_react"
 Cohesion: 0.12
 Nodes (17): ref_react, JazzPlayer(), BooksPanel(), CityDrawing(), EducationPanel(), ExperienceItem(), MusicTastePanel(), PhotosPanel() (+9 more)
 
 ### Community 5 - "index.js"
-Cohesion: 0.15
-Nodes (20): ref_sanity, ref_sanity_cli, ref_sanity_structure, src_sanity_config, singletonTypes, apartmentPortrait, apartmentProject, bookList() (+12 more)
+Cohesion: 0.17
+Nodes (18): ref_sanity, ref_sanity_structure, singletonTypes, apartmentPortrait, apartmentProject, bookList(), bookshelf, city (+10 more)
 
 ### Community 6 - "devDependencies"
 Cohesion: 0.12
@@ -157,10 +156,6 @@ Nodes (3): For git commit hook, For native CLAUDE.md integration, graphify refer
 Cohesion: 0.50
 Nodes (3): For --cluster-only, For --update (incremental re-extraction), graphify reference: incremental update and cluster-only
 
-### Community 34 - "index.jsx"
-Cohesion: 0.50
-Nodes (3): ref_react_dom_client, unregister(), src_styles_styles
-
 ## Knowledge Gaps
 - **142 isolated node(s):** `printWidth`, `tabWidth`, `semi`, `singleQuote`, `trailingComma` (+137 more)
   These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 165 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
@@ -169,7 +164,7 @@ Nodes (3): ref_react_dom_client, unregister(), src_styles_styles
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `@testing-library/react` connect `normalizeContent.js` to `ApartmentPage.jsx`, `package.json`, `ref_react`?**
+- **Why does `@testing-library/react` connect `package.json` to `ApartmentPage.jsx`, `normalizeContent.js`, `ref_react`?**
   _High betweenness centrality (0.180) - this node is a cross-community bridge._
 - **Why does `scripts` connect `scripts` to `package.json`?**
   _High betweenness centrality (0.056) - this node is a cross-community bridge._
@@ -180,6 +175,6 @@ _Questions this graph is uniquely positioned to answer:_
 - **Should `ApartmentPage.jsx` be split into smaller, more focused modules?**
   _Cohesion score 0.12298387096774194 - nodes in this community are weakly interconnected._
 - **Should `normalizeContent.js` be split into smaller, more focused modules?**
-  _Cohesion score 0.11587301587301588 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.10668563300142248 - nodes in this community are weakly interconnected._
 - **Should `package.json` be split into smaller, more focused modules?**
-  _Cohesion score 0.06854838709677419 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.05832147937411095 - nodes in this community are weakly interconnected._

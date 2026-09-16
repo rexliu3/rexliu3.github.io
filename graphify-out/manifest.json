@@ -48,9 +48,9 @@
     "semantic_hash": "3b68e3d8debd1577707604c27ba0a103"
   },
   "src/App.test.jsx": {
-    "mtime": 1789595143.168132,
-    "seen": 1789595149.462372,
-    "ast_hash": "e8dc82b5f0e2470940d1f81988f16bef",
+    "mtime": 1789595615.082481,
+    "seen": 1789595629.486166,
+    "ast_hash": "c5c078ee8042e614005395d344789296",
     "semantic_hash": ""
   },
   "src/components/SiteImage.jsx": {
@@ -126,9 +126,9 @@
     "semantic_hash": ""
   },
   "src/components/apartment/panels/BooksPanel.jsx": {
-    "mtime": 1789595120.6475909,
-    "seen": 1789595149.46238,
-    "ast_hash": "3726d3e5682f74605fbb6f971ec6eef7",
+    "mtime": 1789595615.014813,
+    "seen": 1789595629.4861739,
+    "ast_hash": "7630cd24ba7d99c0ce7072c6b40a1a21",
     "semantic_hash": ""
   },
   "src/components/apartment/panels/CityDrawing.jsx": {
@@ -372,9 +372,9 @@
     "semantic_hash": ""
   },
   "src/sanity/normalizeContent.js": {
-    "mtime": 1789595119.7600756,
-    "seen": 1789595149.462402,
-    "ast_hash": "47df459c0664622ecc774fd71d267622",
+    "mtime": 1789595612.2230694,
+    "seen": 1789595629.4861948,
+    "ast_hash": "7a5356734f6273766042d40f6b3a00b0",
     "semantic_hash": ""
   },
   "src/sanity/normalizeContent.test.js": {
@@ -384,9 +384,9 @@
     "semantic_hash": ""
   },
   "src/sanity/siteQuery.js": {
-    "mtime": 1789595119.759536,
-    "seen": 1789595149.462403,
-    "ast_hash": "8b34f789b3645421c76708a6b26d2fab",
+    "mtime": 1789595612.222563,
+    "seen": 1789595629.486197,
+    "ast_hash": "56354a7855452f406cb093c8368812ab",
     "semantic_hash": ""
   },
   "src/serviceWorker.js": {
@@ -672,9 +672,9 @@
     "semantic_hash": ""
   },
   "studio/schemaTypes/bookshelf.js": {
-    "mtime": 1789595120.623981,
-    "seen": 1789595149.4624078,
-    "ast_hash": "146ce152e085946603e7105584748575",
+    "mtime": 1789595612.221599,
+    "seen": 1789595629.486202,
+    "ast_hash": "adef59e7c9edbeb52c2d5815430203df",
     "semantic_hash": ""
   }
 }

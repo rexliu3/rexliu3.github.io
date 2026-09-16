@@ -23,8 +23,8 @@ function documents(value) {
 }
 
 const DOCUMENT_FIELDS = {
-  nonfictionBooks: { _key: "", title: "", author: "", note: "", url: "" },
-  fictionBooks: { _key: "", title: "", author: "", note: "", url: "" },
+  nonfictionBooks: { _key: "", title: "", author: "", note: "", url: "", imageUrl: "" },
+  fictionBooks: { _key: "", title: "", author: "", note: "", url: "", imageUrl: "" },
   cities: { name: "", label: "", subtitle: "", text: "", illustration: "", illustrationAlt: "" },
   apartmentProjects: { name: "", image: "", type: "", text: "", url: "", sourceUrl: "" },
   experiences: { company: "", title: "", date: "", website: "", logo: "", note: "" },

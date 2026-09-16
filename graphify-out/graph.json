@@ -616,6 +616,18 @@
       "source_location": "L7"
     },
     {
+      "id": "src_serviceworker_unregister",
+      "label": "unregister()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "normalizeContent.js",
+      "file_type": "code",
+      "norm_label": "unregister()",
+      "source_file": "src/serviceWorker.js",
+      "source_location": "L2"
+    },
+    {
       "id": "src_utils_urls_safeurl",
       "label": "safeUrl()",
       "_callable": true,
@@ -625,18 +637,6 @@
       "file_type": "code",
       "norm_label": "safeurl()",
       "source_file": "src/utils/urls.js",
-      "source_location": "L2"
-    },
-    {
-      "id": "src_serviceworker_unregister",
-      "label": "unregister()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 34,
-      "community_name": "index.jsx",
-      "file_type": "code",
-      "norm_label": "unregister()",
-      "source_file": "src/serviceWorker.js",
       "source_location": "L2"
     },
     {
@@ -661,7 +661,7 @@
       "file_type": "code",
       "norm_label": "bookspanel()",
       "source_file": "src/components/apartment/panels/BooksPanel.jsx",
-      "source_location": "L3"
+      "source_location": "L4"
     },
     {
       "id": "src_components_apartment_panels_citydrawing_citydrawing",
@@ -1358,6 +1358,17 @@
       "source_location": "L1"
     },
     {
+      "id": "src_index",
+      "label": "index.jsx",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "normalizeContent.js",
+      "file_type": "code",
+      "norm_label": "index.jsx",
+      "source_file": "src/index.jsx",
+      "source_location": "L1"
+    },
+    {
       "id": "src_pages_mainpage",
       "label": "MainPage.jsx",
       "_origin": "ast",
@@ -1501,59 +1512,26 @@
       "source_location": "L1"
     },
     {
-      "id": "src_sanity_sitequery",
-      "label": "siteQuery.js",
+      "id": "src_serviceworker",
+      "label": "serviceWorker.js",
       "_origin": "ast",
       "community": 2,
       "community_name": "normalizeContent.js",
       "file_type": "code",
-      "norm_label": "sitequery.js",
-      "source_file": "src/sanity/siteQuery.js",
+      "norm_label": "serviceworker.js",
+      "source_file": "src/serviceWorker.js",
       "source_location": "L1"
     },
     {
-      "id": "src_sanity_sitequery_test",
-      "label": "siteQuery.test.js",
+      "id": "studio_sanity_cli",
+      "label": "sanity.cli.js",
       "_origin": "ast",
       "community": 2,
       "community_name": "normalizeContent.js",
       "file_type": "code",
-      "norm_label": "sitequery.test.js",
-      "source_file": "src/sanity/siteQuery.test.js",
+      "norm_label": "sanity.cli.js",
+      "source_file": "studio/sanity.cli.js",
       "source_location": "L1"
-    },
-    {
-      "id": "src_setuptests",
-      "label": "setupTests.js",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "normalizeContent.js",
-      "file_type": "code",
-      "norm_label": "setuptests.js",
-      "source_file": "src/setupTests.js",
-      "source_location": "L1"
-    },
-    {
-      "id": "ref_testing_library_react",
-      "label": "@testing-library/react",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "normalizeContent.js",
-      "file_type": "concept",
-      "norm_label": "@testing-library/react",
-      "source_file": "package.json",
-      "source_location": "L35"
-    },
-    {
-      "id": "ref_vitest",
-      "label": "vitest",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "normalizeContent.js",
-      "file_type": "concept",
-      "norm_label": "vitest",
-      "source_file": "package.json",
-      "source_location": "L46"
     },
     {
       "id": "codex_skills_graphify_skill",
@@ -2338,6 +2316,39 @@
       "source_location": "L1"
     },
     {
+      "id": "src_sanity_sitequery",
+      "label": "siteQuery.js",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "sitequery.js",
+      "source_file": "src/sanity/siteQuery.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_sanity_sitequery_test",
+      "label": "siteQuery.test.js",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "sitequery.test.js",
+      "source_file": "src/sanity/siteQuery.test.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_setuptests",
+      "label": "setupTests.js",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "setuptests.js",
+      "source_file": "src/setupTests.js",
+      "source_location": "L1"
+    },
+    {
       "id": "vite_config",
       "label": "vite.config.js",
       "_origin": "ast",
@@ -2503,6 +2514,17 @@
       "source_location": "L34"
     },
     {
+      "id": "ref_testing_library_react",
+      "label": "@testing-library/react",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "package.json",
+      "file_type": "concept",
+      "norm_label": "@testing-library/react",
+      "source_file": "package.json",
+      "source_location": "L35"
+    },
+    {
       "id": "ref_vite",
       "label": "vite",
       "_origin": "ast",
@@ -2523,6 +2545,17 @@
       "norm_label": "@vitejs/plugin-react",
       "source_file": "package.json",
       "source_location": "L36"
+    },
+    {
+      "id": "ref_vitest",
+      "label": "vitest",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "package.json",
+      "file_type": "concept",
+      "norm_label": "vitest",
+      "source_file": "package.json",
+      "source_location": "L46"
     },
     {
       "id": "codex_skills_graphify_references_github_and_merge",
@@ -2642,28 +2675,6 @@
       "node_kind": "heading",
       "norm_label": "graphify reference: extraction subagent prompt (compact)",
       "source_file": ".codex/skills/graphify/references/extraction-spec.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_index",
-      "label": "index.jsx",
-      "_origin": "ast",
-      "community": 34,
-      "community_name": "index.jsx",
-      "file_type": "code",
-      "norm_label": "index.jsx",
-      "source_file": "src/index.jsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_serviceworker",
-      "label": "serviceWorker.js",
-      "_origin": "ast",
-      "community": 34,
-      "community_name": "index.jsx",
-      "file_type": "code",
-      "norm_label": "serviceworker.js",
-      "source_file": "src/serviceWorker.js",
       "source_location": "L1"
     },
     {
@@ -2865,17 +2876,6 @@
       "source_location": "L1"
     },
     {
-      "id": "studio_sanity_cli",
-      "label": "sanity.cli.js",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "index.js",
-      "file_type": "code",
-      "norm_label": "sanity.cli.js",
-      "source_file": "studio/sanity.cli.js",
-      "source_location": "L1"
-    },
-    {
       "id": "studio_sanity_config",
       "label": "sanity.config.js",
       "_origin": "ast",
@@ -2961,7 +2961,7 @@
       "file_type": "code",
       "norm_label": "bookshelf",
       "source_file": "studio/schemaTypes/bookshelf.js",
-      "source_location": "L26"
+      "source_location": "L27"
     },
     {
       "id": "studio_schematypes_city",
@@ -4038,14 +4038,38 @@
       "source_url": null
     },
     {
-      "id": "ref_testing_library_jest_dom_vitest",
-      "label": "ref_testing_library_jest_dom_vitest",
+      "id": "ref_react_dom_client",
+      "label": "ref_react_dom_client",
       "_origin": "semantic",
       "community": 2,
       "community_name": "normalizeContent.js",
       "external": true,
       "file_type": "concept",
-      "norm_label": "ref_testing_library_jest_dom_vitest",
+      "norm_label": "ref_react_dom_client",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "ref_sanity_cli",
+      "label": "ref_sanity_cli",
+      "_origin": "semantic",
+      "community": 2,
+      "community_name": "normalizeContent.js",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_sanity_cli",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "src_sanity_config",
+      "label": "src_sanity_config",
+      "_origin": "semantic",
+      "community": 2,
+      "community_name": "normalizeContent.js",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "src_sanity_config",
       "source_file": "",
       "type": "external"
     },
@@ -4062,6 +4086,30 @@
       "type": "external"
     },
     {
+      "id": "src_styles_styles",
+      "label": "src_styles_styles",
+      "_origin": "semantic",
+      "community": 2,
+      "community_name": "normalizeContent.js",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "src_styles_styles",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "ref_testing_library_jest_dom_vitest",
+      "label": "ref_testing_library_jest_dom_vitest",
+      "_origin": "semantic",
+      "community": 3,
+      "community_name": "package.json",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_testing_library_jest_dom_vitest",
+      "source_file": "",
+      "type": "external"
+    },
+    {
       "id": "ref_vitest_config",
       "label": "ref_vitest_config",
       "_origin": "semantic",
@@ -4070,30 +4118,6 @@
       "external": true,
       "file_type": "concept",
       "norm_label": "ref_vitest_config",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "ref_react_dom_client",
-      "label": "ref_react_dom_client",
-      "_origin": "semantic",
-      "community": 34,
-      "community_name": "index.jsx",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "ref_react_dom_client",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "src_styles_styles",
-      "label": "src_styles_styles",
-      "_origin": "semantic",
-      "community": 34,
-      "community_name": "index.jsx",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "src_styles_styles",
       "source_file": "",
       "type": "external"
     },
@@ -4122,18 +4146,6 @@
       "type": "external"
     },
     {
-      "id": "ref_sanity_cli",
-      "label": "ref_sanity_cli",
-      "_origin": "semantic",
-      "community": 5,
-      "community_name": "index.js",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "ref_sanity_cli",
-      "source_file": "",
-      "type": "external"
-    },
-    {
       "id": "ref_sanity_structure",
       "label": "ref_sanity_structure",
       "_origin": "semantic",
@@ -4142,18 +4154,6 @@
       "external": true,
       "file_type": "concept",
       "norm_label": "ref_sanity_structure",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "src_sanity_config",
-      "label": "src_sanity_config",
-      "_origin": "semantic",
-      "community": 5,
-      "community_name": "index.js",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "src_sanity_config",
       "source_file": "",
       "type": "external"
     }
@@ -4725,7 +4725,7 @@
     },
     {
       "source": "studio_schematypes_bookshelf_booklist",
-      "target": "studio_schematypes_fields_textfield",
+      "target": "studio_schematypes_fields_imagefield",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4737,7 +4737,7 @@
     },
     {
       "source": "studio_schematypes_bookshelf_booklist",
-      "target": "studio_schematypes_fields_urlfield",
+      "target": "studio_schematypes_fields_textfield",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4745,6 +4745,18 @@
       "context": "call",
       "source_file": "studio/schemaTypes/bookshelf.js",
       "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "studio_schematypes_bookshelf_booklist",
+      "target": "studio_schematypes_fields_urlfield",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "studio/schemaTypes/bookshelf.js",
+      "source_location": "L20",
       "weight": 1.0
     },
     {
@@ -5297,6 +5309,18 @@
       "context": "import",
       "source_file": "src/components/apartment/ApartmentScene.jsx",
       "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_apartment_panels_bookspanel",
+      "target": "src_components_siteimage_siteimage",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/components/apartment/panels/BooksPanel.jsx",
+      "source_location": "L2",
       "weight": 1.0
     },
     {
@@ -6453,6 +6477,18 @@
     },
     {
       "source": "studio_schematypes_bookshelf",
+      "target": "studio_schematypes_fields_imagefield",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "studio/schemaTypes/bookshelf.js",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "studio_schematypes_bookshelf",
       "target": "studio_schematypes_fields_required",
       "relation": "imports",
       "_origin": "ast",
@@ -7145,6 +7181,18 @@
       "context": "import",
       "source_file": "src/components/apartment/panels/BooksPanel.jsx",
       "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_apartment_panels_bookspanel",
+      "target": "src_components_siteimage",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/components/apartment/panels/BooksPanel.jsx",
+      "source_location": "L2",
       "weight": 1.0
     },
     {
@@ -10315,7 +10363,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/components/apartment/panels/BooksPanel.jsx",
-      "source_location": "L3",
+      "source_location": "L4",
       "weight": 1.0
     },
     {
@@ -11195,7 +11243,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "studio/schemaTypes/bookshelf.js",
-      "source_location": "L26",
+      "source_location": "L27",
       "weight": 1.0
     },
     {
@@ -11635,5 +11683,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "1594aded3d5ab85acbec68d4aebe26a8c12d81c5"
+  "built_at_commit": "abbfb3b9c19e54434ae5f8fd95e3ca80ffb2357c"
 }
