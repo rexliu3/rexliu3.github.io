@@ -13,6 +13,13 @@ export default function PortraitPanel({ room, portrait, settings }) {
         <p>
           For work or a conversation, <a href={`mailto:${settings.email}`}>send me an email</a>.
         </p>
+        <p>
+          To connect socially, find me on{" "}
+          <a href={settings.instagramUrl} target="_blank" rel="noopener noreferrer">
+            Instagram
+          </a>
+          .
+        </p>
       </div>
     </>
   );
