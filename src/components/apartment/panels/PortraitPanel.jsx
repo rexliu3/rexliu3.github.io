@@ -11,10 +11,11 @@ export default function PortraitPanel({ room, portrait, settings }) {
       <div className="portrait-panel-invitation">
         <h3>Get in touch</h3>
         <p>
-          For work or a conversation, <a href={`mailto:${settings.email}`}>send me an email</a>.
+          Have something in mind? <a href={`mailto:${settings.email}`}>Drop me a line</a> — work,
+          ideas, or a good book recommendation.
         </p>
         <p>
-          To connect socially, find me on{" "}
+          For the less buttoned-up version, say hi on{" "}
           <a href={settings.instagramUrl} target="_blank" rel="noopener noreferrer">
             Instagram
           </a>

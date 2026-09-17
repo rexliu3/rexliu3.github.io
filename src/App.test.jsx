@@ -226,7 +226,7 @@ test("the wall portrait opens the experience introduction", () => {
   expect(dialog.getByRole("heading", { name: "About me" })).toBeTruthy();
   expect(dialog.getByText(/software engineer and UC Berkeley alum/i)).toBeTruthy();
   expect(dialog.getByAltText(fallbackContent.apartmentPortrait.alt)).toBeTruthy();
-  expect(dialog.getByText("send me an email").closest("a").getAttribute("href")).toBe(
+  expect(dialog.getByRole("link", { name: "Drop me a line" }).getAttribute("href")).toBe(
     `mailto:${fallbackContent.settings.email}`
   );
   expect(dialog.getByRole("heading", { name: "Get in touch" })).toBeTruthy();
