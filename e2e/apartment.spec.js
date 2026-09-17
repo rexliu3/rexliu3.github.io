@@ -84,7 +84,9 @@ test("keyboard users can skip the scene and explore every corner", async ({ page
     .getByRole("button", { name: "Books The bookshelf" });
   await expect(books).toBeFocused();
   await page.keyboard.press("Enter");
-  await expect(page.getByRole("heading", { name: "Between the covers." })).toBeVisible();
+  await expect(
+    page.getByRole("heading", { name: "the stories worth coming back to." })
+  ).toBeVisible();
   await page.keyboard.press("Shift+Tab");
   await expect(page.getByRole("button", { name: "Explore the next object" })).toBeFocused();
   await page.keyboard.press("Escape");
