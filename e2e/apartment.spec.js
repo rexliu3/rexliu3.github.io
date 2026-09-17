@@ -57,8 +57,8 @@ test("day/night preference survives a reload", async ({ page }, testInfo) => {
 
 test("clicking the window toggles weather without opening a popup", async ({ page }, testInfo) => {
   await page.goto("/");
-  await page.getByRole("button", { name: "Window: switch to rain" }).click();
-  const window = page.getByRole("button", { name: "Window: switch to clear skies" });
+  const window = page.getByRole("button", { name: "Toggle weather" });
+  await window.click();
   await expect(window).toHaveAttribute("aria-pressed", "true");
   await expect(page.locator(".window-rain")).toBeVisible();
   await expect(page.getByRole("dialog")).toHaveCount(0);

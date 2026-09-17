@@ -6,7 +6,7 @@ function getCaption(hovered, rooms, settings, raining) {
   if (!hovered) return settings.idleCaption;
   if (hovered === "cat") return settings.catCaption;
   if (hovered === "window")
-    return raining ? "Click the window for clear skies" : "Click the window for rain";
+    return raining ? "Raining · Toggle weather" : "Clear skies · Toggle weather";
   const label =
     hovered === "speaker"
       ? settings.speakerLabel

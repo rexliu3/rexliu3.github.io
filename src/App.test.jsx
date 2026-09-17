@@ -197,9 +197,9 @@ test("published education entries appear without a résumé link", async () => {
 
 test("the window toggles rain independently of day and night with mouse and keyboard", () => {
   const view = render(<ApartmentPage content={fallbackContent} />);
-  const window = view.getByRole("button", { name: "Window: switch to rain" });
+  const window = view.getByRole("button", { name: "Toggle weather" });
   fireEvent.mouseEnter(window);
-  expect(view.getByText("Click the window for rain")).toBeTruthy();
+  expect(view.getByText("Clear skies · Toggle weather")).toBeTruthy();
   fireEvent.click(window);
   expect(window.getAttribute("aria-pressed")).toBe("true");
   expect(view.container.querySelector(".window-rain")).toBeTruthy();

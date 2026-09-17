@@ -12,9 +12,9 @@
     "semantic_hash": "c52804eb4bc68a74493e63075ca2bbf5"
   },
   "e2e/apartment.spec.js": {
-    "mtime": 1789612110.1395512,
-    "seen": 1789612122.353902,
-    "ast_hash": "94ed53622137d1bde0c431397ad5e006",
+    "mtime": 1789612376.3436658,
+    "seen": 1789612386.960337,
+    "ast_hash": "4ad043a59e8f2008913cdfc30c91509d",
     "semantic_hash": ""
   },
   "eslint.config.js": {
@@ -48,9 +48,9 @@
     "semantic_hash": "3b68e3d8debd1577707604c27ba0a103"
   },
   "src/App.test.jsx": {
-    "mtime": 1789612088.4694796,
-    "seen": 1789612097.054024,
-    "ast_hash": "dfe6cd18c93979ef29aec671582e40c7",
+    "mtime": 1789612376.3431203,
+    "seen": 1789612386.960341,
+    "ast_hash": "4393d55691a83f1fed2d24607abac90a",
     "semantic_hash": ""
   },
   "src/components/SiteImage.jsx": {
@@ -84,9 +84,9 @@
     "semantic_hash": ""
   },
   "src/components/apartment/ApartmentScene.jsx": {
-    "mtime": 1789612089.8362653,
-    "seen": 1789612097.054028,
-    "ast_hash": "2b95305c2a2093a873213f015e851428",
+    "mtime": 1789612376.3424234,
+    "seen": 1789612386.960345,
+    "ast_hash": "771b07d463beb5f2b7f3d9abd2e467ea",
     "semantic_hash": ""
   },
   "src/components/apartment/Icon.jsx": {
@@ -252,9 +252,9 @@
     "semantic_hash": "0d04a28fcdec8bd4128dd064f826042b"
   },
   "src/components/apartment/scene/Window.jsx": {
-    "mtime": 1789612237.0384443,
-    "seen": 1789612246.5325382,
-    "ast_hash": "9621f54b1ad019d195762d0bdd3d76f6",
+    "mtime": 1789612376.3417163,
+    "seen": 1789612386.960362,
+    "ast_hash": "f65f243839937b9bcc2eed586a27b4bf",
     "semantic_hash": ""
   },
   "src/components/apartment/scene/geometry.js": {

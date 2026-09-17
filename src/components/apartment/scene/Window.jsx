@@ -9,7 +9,7 @@ export default function Window({ night, raining, onToggleWeather, hovered, onHov
       strokeWidth="1.5"
       role="button"
       tabIndex="0"
-      aria-label={raining ? "Window: switch to clear skies" : "Window: switch to rain"}
+      aria-label="Toggle weather"
       aria-pressed={raining}
       className={`room-object weather-window${hovered ? " is-highlighted" : ""}`}
       onClick={onToggleWeather}
@@ -60,21 +60,21 @@ export default function Window({ night, raining, onToggleWeather, hovered, onHov
         {raining && (
           <g className="window-rain" aria-hidden="true">
             <rect width="190" height="137" fill="#b1c2c9" opacity=".12" />
-            {Array.from({ length: 48 }, (_, index) => {
+            {Array.from({ length: 72 }, (_, index) => {
               const x = (index * 73 + 17) % 210;
               const y = (index * 47) % 137;
-              const length = 4 + (index % 9);
+              const length = 9 + (index % 12);
               return (
                 <path
                   className="rain-streak"
                   key={index}
-                  d={`M${x} ${y}l-1.2 ${length}`}
+                  d={`M${x} ${y}l-2 ${length}`}
                   fill="none"
-                  stroke="#e0ebef"
-                  strokeWidth={0.45 + (index % 3) * 0.2}
-                  opacity={0.18 + (index % 5) * 0.07}
+                  stroke="#edf6fa"
+                  strokeWidth={0.9 + (index % 3) * 0.2}
+                  opacity={0.55 + (index % 5) * 0.08}
                   style={{
-                    animationDuration: `${0.55 + (index % 7) * 0.08}s`,
+                    animationDuration: `${1.1 + (index % 7) * 0.1}s`,
                     animationDelay: `${-index * 0.137}s`,
                   }}
                 />
@@ -105,7 +105,7 @@ export default function Window({ night, raining, onToggleWeather, hovered, onHov
       >
         <rect x="-57" y="-15" width="114" height="30" rx="15" />
         <text textAnchor="middle" y="4">
-          {raining ? "Clear skies" : "Rain"}
+          Toggle weather
         </text>
       </g>
     </g>
