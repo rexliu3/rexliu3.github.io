@@ -1,5 +1,6 @@
 const siteQuery = `{
   "contentModel": "dynamic-v1",
+  "educations": *[_type == "education"] | order(order asc),
   "nonfictionBooks": *[_type == "bookshelf" && _id == "bookshelf"][0].nonfiction[]{
     ..., "imageUrl": cover.asset->url
   },

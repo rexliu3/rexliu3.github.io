@@ -154,6 +154,41 @@ test("Sanity book favorites appear in their categories with a Goodreads link", a
   expect(dialog.queryByText("The shelf is still being unpacked.")).toBeNull();
 });
 
+test("published education entries appear without a résumé link", async () => {
+  global.fetch = vi.fn().mockResolvedValue({
+    ok: true,
+    json: async () => ({
+      result: {
+        contentModel: "dynamic-v1",
+        educations: [
+          {
+            _id: "first-school",
+            school: "First School",
+            degree: "B.A. Computer Science",
+            years: "2020–2023",
+          },
+          {
+            _id: "second-school",
+            school: "Second School",
+            degree: "Graduate program",
+            years: "2024–2025",
+            note: "Additional study.",
+          },
+        ],
+      },
+    }),
+  });
+  const view = render(<App />);
+  await view.findByText("First School");
+  fireEvent.click(view.getByRole("button", { name: /View education/ }));
+  const dialog = within(view.getByRole("dialog"));
+  expect(
+    dialog.getAllByRole("heading", { level: 3 }).map((heading) => heading.textContent)
+  ).toEqual(["First School", "Second School"]);
+  expect(dialog.getByText("Additional study.")).toBeTruthy();
+  expect(dialog.queryByRole("link")).toBeNull();
+});
+
 test("the wall portrait opens the experience introduction", () => {
   const view = render(<ApartmentPage content={fallbackContent} />);
   fireEvent.click(view.getByText("Start with an intro"));

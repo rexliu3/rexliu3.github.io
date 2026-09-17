@@ -735,6 +735,12 @@
 .berkeley-card > div span {
   margin: 0 9px;
 }
+.berkeley-card > .education-note {
+  margin: 14px 0 0;
+  font-size: 12px;
+  letter-spacing: normal;
+  white-space: pre-line;
+}
 .not-found {
   min-height: 100vh;
   display: flex;

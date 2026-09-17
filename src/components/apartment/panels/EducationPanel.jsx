@@ -1,18 +1,19 @@
 import React from "react";
 
-export default function EducationPanel({ content, settings }) {
+export default function EducationPanel({ educations = [] }) {
   return (
     <>
-      <div className="berkeley-card">
-        <p>{content.institutionLabel}</p>
-        <h3>{content.school}</h3>
-        <div>
-          {content.degree} <span>·</span> {content.years}
-        </div>
-      </div>
-      <a className="panel-link" href={settings.resumeUrl} target="_blank" rel="noopener noreferrer">
-        {content.linkLabel}
-      </a>
+      {educations.map((education) => (
+        <article className="berkeley-card" key={education._id}>
+          {education.institutionLabel && <p>{education.institutionLabel}</p>}
+          <h3>{education.school}</h3>
+          <div>
+            {education.degree} <span>·</span> {education.years}
+          </div>
+          {education.note && <p className="education-note">{education.note}</p>}
+        </article>
+      ))}
+      {!educations.length && <p className="panel-lede">Education details are not available yet.</p>}
     </>
   );
 }

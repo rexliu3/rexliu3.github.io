@@ -4,7 +4,7 @@ import { Icon } from "./Icon";
 export default function PortfolioOverview({ content, onOpen }) {
   const { settings, experiences } = content;
   const copy = settings.overview;
-  const education = settings.panels.education;
+  const education = content.educations?.[0];
 
   return (
     <section className="portfolio-overview" aria-labelledby="overview-title" id="out-and-about">
@@ -23,15 +23,17 @@ export default function PortfolioOverview({ content, onOpen }) {
           </div>
           <h3>{copy.educationTitle}</h3>
           <p>{copy.educationDescription}</p>
-          <div className="education-preview">
-            <span aria-hidden="true">{education.seal}</span>
-            <small>{education.institutionLabel}</small>
-            <strong>{education.school}</strong>
-            <div>{education.degree}</div>
-            <small>{education.years}</small>
-          </div>
+          {education && (
+            <div className="education-preview">
+              <span aria-hidden="true">{education.school.charAt(0)}</span>
+              <small>{education.institutionLabel}</small>
+              <strong>{education.school}</strong>
+              <div>{education.degree}</div>
+              <small>{education.years}</small>
+            </div>
+          )}
           <button type="button" className="text-link" onClick={() => onOpen("berkeley")}>
-            The Berkeley chapter <Icon name="arrow" size={16} />
+            View education <Icon name="arrow" size={16} />
           </button>
         </article>
         <article className="overview-experience">

@@ -29,6 +29,7 @@ export default function RoomPanel({ active, onClose, onNavigate, player, content
     apartmentProjects: projects,
     cities,
     experiences,
+    educations,
     jazzTracks: tracks,
     photographyPhotos,
     nonfictionBooks,
@@ -92,6 +93,7 @@ export default function RoomPanel({ active, onClose, onNavigate, player, content
               cities={cities}
               projects={projects}
               experiences={experiences}
+              educations={educations}
               photos={photographyPhotos}
               nonfictionBooks={nonfictionBooks}
               fictionBooks={fictionBooks}
