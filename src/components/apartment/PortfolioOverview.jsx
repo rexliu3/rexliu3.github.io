@@ -1,5 +1,6 @@
 import React from "react";
 import { Icon } from "./Icon";
+import SiteImage from "../SiteImage";
 
 export default function PortfolioOverview({ content, onOpen }) {
   const { settings, experiences } = content;
@@ -25,9 +26,10 @@ export default function PortfolioOverview({ content, onOpen }) {
           <p>{copy.educationDescription}</p>
           {education && (
             <div className="education-preview">
-              <span aria-hidden="true">{education.school.charAt(0)}</span>
-              <small>{education.institutionLabel}</small>
-              <strong>{education.school}</strong>
+              {education.logo && (
+                <SiteImage className="education-logo" src={education.logo} alt="" />
+              )}
+              <strong>{education.institutionLabel}</strong>
               <div>{education.degree}</div>
               <small>{education.years}</small>
             </div>

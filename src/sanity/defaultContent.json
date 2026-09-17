@@ -81,9 +81,7 @@
         "downloadLabel": "Download PDF"
       },
       "education": {
-        "seal": "B",
-        "institutionLabel": "UNIVERSITY OF CALIFORNIA",
-        "school": "Berkeley",
+        "institutionLabel": "University of California, Berkeley",
         "degree": "B.A. Computer Science",
         "years": "2020–2023"
       }

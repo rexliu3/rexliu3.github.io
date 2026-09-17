@@ -23,7 +23,7 @@ function documents(value) {
 }
 
 const DOCUMENT_FIELDS = {
-  educations: { school: "", institutionLabel: "", degree: "", years: "", note: "" },
+  educations: { institutionLabel: "", degree: "", years: "", note: "", logo: "" },
   nonfictionBooks: { _key: "", title: "", author: "", note: "", url: "", imageUrl: "" },
   fictionBooks: { _key: "", title: "", author: "", note: "", url: "", imageUrl: "" },
   cities: { name: "", label: "", subtitle: "", text: "", illustration: "", illustrationAlt: "" },

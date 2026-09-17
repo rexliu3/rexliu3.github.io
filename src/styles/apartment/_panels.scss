@@ -716,16 +716,11 @@
   border-bottom: 1px solid var(--line);
   margin: 24px 0;
 }
-.berkeley-card > p {
-  font-size: 10px;
-  letter-spacing: 1px;
-  margin: 0 0 6px;
-  color: var(--muted);
-}
 .berkeley-card h3 {
-  font-family: Georgia, serif;
-  font-size: 30px;
-  font-weight: 400;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: normal;
   margin: 0 0 12px;
 }
 .berkeley-card > div {
@@ -734,6 +729,27 @@
 }
 .berkeley-card > div span {
   margin: 0 9px;
+}
+.education-institution {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.education-institution h3 {
+  margin: 0;
+  color: var(--ink);
+}
+.education-logo {
+  display: block;
+  flex: 0 0 42px;
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  background: transparent;
+}
+.education-preview .education-logo {
+  margin: 0 auto 12px;
 }
 .berkeley-card > .education-note {
   margin: 14px 0 0;

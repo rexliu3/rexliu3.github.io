@@ -163,13 +163,14 @@ test("published education entries appear without a résumé link", async () => {
         educations: [
           {
             _id: "first-school",
-            school: "First School",
+            institutionLabel: "First School",
+            logo: "https://cdn.example.com/institution.png",
             degree: "B.A. Computer Science",
             years: "2020–2023",
           },
           {
             _id: "second-school",
-            school: "Second School",
+            institutionLabel: "Second School",
             degree: "Graduate program",
             years: "2024–2025",
             note: "Additional study.",
@@ -186,6 +187,9 @@ test("published education entries appear without a résumé link", async () => {
     dialog.getAllByRole("heading", { level: 3 }).map((heading) => heading.textContent)
   ).toEqual(["First School", "Second School"]);
   expect(dialog.getByText("Additional study.")).toBeTruthy();
+  expect(dialog.getByRole("img").getAttribute("src")).toBe(
+    "https://cdn.example.com/institution.png"
+  );
   expect(dialog.queryByRole("link")).toBeNull();
 });
 

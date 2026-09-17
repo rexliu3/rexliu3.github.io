@@ -1,12 +1,21 @@
 import React from "react";
+import SiteImage from "../../SiteImage";
 
 export default function EducationPanel({ educations = [] }) {
   return (
     <>
       {educations.map((education) => (
         <article className="berkeley-card" key={education._id}>
-          {education.institutionLabel && <p>{education.institutionLabel}</p>}
-          <h3>{education.school}</h3>
+          <div className="education-institution">
+            {education.logo && (
+              <SiteImage
+                className="education-logo"
+                src={education.logo}
+                alt={`${education.institutionLabel} logo`}
+              />
+            )}
+            <h3>{education.institutionLabel}</h3>
+          </div>
           <div>
             {education.degree} <span>·</span> {education.years}
           </div>

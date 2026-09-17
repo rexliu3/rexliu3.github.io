@@ -77,21 +77,12 @@
   outline-offset: -7px;
   text-align: center;
 }
-.education-preview > span {
-  display: grid;
-  place-items: center;
-  width: 40px;
-  height: 40px;
-  margin: 0 auto 8px;
-  border: 1px solid var(--olive);
-  border-radius: 50%;
-  font-family: var(--serif);
-  color: var(--olive);
-}
 .education-preview > strong {
-  font-family: var(--serif);
-  font-size: 32px;
-  font-weight: 400;
+  display: block;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: normal;
 }
 .education-preview > small,
 .experience-preview-list small {
