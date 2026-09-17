@@ -17,6 +17,7 @@ export default function ApartmentPage({ content }) {
   const directoryToggle = useRef(null);
   const player = useJazzPlayer(jazzTracks);
   const [hovered, setHovered] = useState(null);
+  const [raining, setRaining] = useState(false);
   return (
     <main className={`apartment-site${night ? " is-night" : ""}`}>
       <audio ref={player.audio} preload="none" onEnded={player.onEnded} onError={player.onError} />
@@ -31,6 +32,8 @@ export default function ApartmentPage({ content }) {
           rooms={rooms}
           hovered={hovered}
           night={night}
+          raining={raining}
+          onToggleWeather={() => setRaining((current) => !current)}
           sound={player.sound}
           portrait={apartmentPortrait}
           audioError={player.audioError}

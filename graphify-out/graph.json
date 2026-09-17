@@ -505,7 +505,7 @@
       "file_type": "code",
       "norm_label": "apartmentscene()",
       "source_file": "src/components/apartment/ApartmentScene.jsx",
-      "source_location": "L15"
+      "source_location": "L17"
     },
     {
       "id": "src_components_apartment_apartmentscene_getcaption",
@@ -4183,18 +4183,6 @@
   "links": [
     {
       "source": "src_components_apartment_apartment_apartment",
-      "target": "src_components_apartment_scene_geometry_front",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "src/components/apartment/Apartment.jsx",
-      "source_location": "L36",
-      "weight": 1.0
-    },
-    {
-      "source": "src_components_apartment_apartment_apartment",
       "target": "src_components_apartment_scene_geometry_project",
       "relation": "calls",
       "_origin": "ast",
@@ -4202,7 +4190,19 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/components/apartment/Apartment.jsx",
-      "source_location": "L94",
+      "source_location": "L109",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_apartment_apartment_apartment",
+      "target": "src_components_apartment_scene_geometry_front",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/components/apartment/Apartment.jsx",
+      "source_location": "L51",
       "weight": 1.0
     },
     {
@@ -4214,7 +4214,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/components/apartment/ApartmentScene.jsx",
-      "source_location": "L32",
+      "source_location": "L36",
       "weight": 1.0
     },
     {
@@ -4502,7 +4502,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/components/apartment/scene/Window.jsx",
-      "source_location": "L6",
+      "source_location": "L7",
       "weight": 1.0
     },
     {
@@ -10474,7 +10474,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/components/apartment/ApartmentScene.jsx",
-      "source_location": "L15",
+      "source_location": "L17",
       "weight": 1.0
     },
     {
@@ -11872,5 +11872,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "e4cbafa940cfbd413068f86baa6ffc7a953b16d6"
+  "built_at_commit": "2049843096975b03dd3a32160f17f83823fc1dd3"
 }

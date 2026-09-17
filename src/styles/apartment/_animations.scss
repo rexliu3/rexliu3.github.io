@@ -7,6 +7,15 @@
     transform: rotate(2deg);
   }
 }
+@keyframes window-rain {
+  to {
+    transform: translate(-26px, 40px);
+  }
+}
+.window-rain {
+  animation: window-rain 900ms linear infinite;
+  pointer-events: none;
+}
 @keyframes steam {
   0% {
     opacity: 0;

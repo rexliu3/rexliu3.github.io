@@ -55,6 +55,20 @@ test("day/night preference survives a reload", async ({ page }, testInfo) => {
   await page.screenshot({ path: testInfo.outputPath("night.png"), fullPage: true });
 });
 
+test("clicking the window toggles weather without opening a popup", async ({ page }, testInfo) => {
+  await page.goto("/");
+  await page.getByRole("button", { name: "Window: switch to rain" }).click();
+  const window = page.getByRole("button", { name: "Window: switch to clear skies" });
+  await expect(window).toHaveAttribute("aria-pressed", "true");
+  await expect(page.locator(".window-rain")).toBeVisible();
+  await expect(page.getByRole("dialog")).toHaveCount(0);
+  await page.screenshot({ path: testInfo.outputPath("rain.png"), fullPage: true });
+  await window.focus();
+  await page.keyboard.press("Enter");
+  await expect(page.locator(".window-rain")).toHaveCount(0);
+  await expect(page.locator(".window-clouds")).toBeVisible();
+});
+
 test("keyboard users can skip the scene and explore every corner", async ({ page }) => {
   await page.goto("/");
   await page.keyboard.press("Tab");

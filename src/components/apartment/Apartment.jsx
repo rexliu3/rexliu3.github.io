@@ -12,7 +12,16 @@ import Speaker from "./scene/Speaker";
 import Cat from "./scene/Cat";
 import Plant from "./scene/Plant";
 
-export default function Apartment({ onOpen, hovered, onHover, night, sound, portrait }) {
+export default function Apartment({
+  onOpen,
+  hovered,
+  onHover,
+  night,
+  sound,
+  portrait,
+  raining,
+  onToggleWeather,
+}) {
   const common = { onOpen, hovered, onHover };
   return (
     <svg
@@ -29,9 +38,15 @@ export default function Apartment({ onOpen, hovered, onHover, night, sound, port
         music on the speaker, photos on the camera, a résumé on the desk, a Berkeley diploma, and a
         framed portrait.
       </desc>
-      <SceneDefinitions night={night} />
-      <RoomShell night={night} />
-      <Window night={night} />
+      <SceneDefinitions night={night} raining={raining} />
+      <RoomShell night={night} raining={raining} />
+      <Window
+        night={night}
+        raining={raining}
+        onToggleWeather={onToggleWeather}
+        hovered={hovered === "window"}
+        onHover={onHover}
+      />
       <Hotspot id="travel" label="travel logs and favorite places" {...common}>
         <g transform={front(234, 2, 227)} filter="url(#object-shadow)">
           <rect

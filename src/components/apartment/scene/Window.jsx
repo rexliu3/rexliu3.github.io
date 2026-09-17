@@ -1,13 +1,38 @@
 import React from "react";
 import { front } from "./geometry";
 
-export default function Window({ night }) {
+export default function Window({ night, raining, onToggleWeather, hovered, onHover }) {
   return (
-    <g transform={front(443, 1, 246)} stroke="#a08864" strokeWidth="1.5">
+    <g
+      transform={front(443, 1, 246)}
+      stroke="#a08864"
+      strokeWidth="1.5"
+      role="button"
+      tabIndex="0"
+      aria-label={raining ? "Window: switch to clear skies" : "Window: switch to rain"}
+      aria-pressed={raining}
+      className={`room-object weather-window${hovered ? " is-highlighted" : ""}`}
+      onClick={onToggleWeather}
+      onMouseEnter={() => onHover("window")}
+      onMouseLeave={() => onHover(null)}
+      onFocus={() => onHover("window")}
+      onBlur={() => onHover(null)}
+      onKeyDown={(event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          onToggleWeather();
+        }
+      }}
+    >
       <rect x="-5" y="-5" width="200" height="147" rx="3" fill="#c6b18c" />
       <rect width="190" height="137" fill="url(#sky)" />
       <g clipPath="url(#window-clip)" stroke="none">
-        {night ? (
+        {raining ? (
+          <g fill={night ? "#61717d" : "#d0d8d7"} opacity=".9">
+            <path d="M-15 37q17-26 37-11 17-27 39-8 20-5 33 19Z" />
+            <path d="M94 24q14-22 32-12 18-20 35-6 26-6 45 18Z" />
+          </g>
+        ) : night ? (
           <g fill="#f6e5b9">
             <circle cx="148" cy="29" r="12" />
             <g className="window-stars">
@@ -33,10 +58,27 @@ export default function Window({ night }) {
         {[29, 43, 76, 87, 101, 137, 149, 174].map((x) => (
           <path key={x} d={`M${x} 106h3v5h-3Zm0 12h3v5h-3Z`} fill={night ? "#e8cc85" : "#d3d9bc"} />
         ))}
+        {raining && (
+          <rect
+            className="window-rain"
+            x="-26"
+            y="-40"
+            width="268"
+            height="220"
+            fill="url(#window-rain)"
+            opacity=".7"
+          />
+        )}
       </g>
       <rect x="3" y="3" width="184" height="131" fill="none" stroke="#eee4ca" strokeWidth="5" />
       <path d="M95 0v137M0 69h190" stroke="#eee4ca" strokeWidth="5" />
       <rect x="-9" y="137" width="208" height="6" rx="1" fill="#f0e3ca" />
+      <g className="object-tag" transform="translate(95 160)" stroke="none" aria-hidden="true">
+        <rect x="-57" y="-15" width="114" height="30" rx="15" />
+        <text textAnchor="middle" y="4">
+          {raining ? "Clear skies" : "Rain"}
+        </text>
+      </g>
     </g>
   );
 }

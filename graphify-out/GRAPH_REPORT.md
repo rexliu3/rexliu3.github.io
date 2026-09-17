@@ -1,7 +1,7 @@
 # Graph Report - rexliu3.github.io  (2026-09-16)
 
 ## Corpus Check
-- 95 files · ~145,550 words
+- 95 files · ~145,810 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 17 file(s) not represented in the graph (top: .scss 10, (none) 5, .toml 1)
 
@@ -11,7 +11,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `e4cbafa9`
+- Built from commit: `20498430`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 

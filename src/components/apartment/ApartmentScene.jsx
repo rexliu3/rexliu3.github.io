@@ -2,9 +2,11 @@ import React from "react";
 import Apartment from "./Apartment";
 import { Icon } from "./Icon";
 
-function getCaption(hovered, rooms, settings) {
+function getCaption(hovered, rooms, settings, raining) {
   if (!hovered) return settings.idleCaption;
   if (hovered === "cat") return settings.catCaption;
+  if (hovered === "window")
+    return raining ? "Click the window for clear skies" : "Click the window for rain";
   const label =
     hovered === "speaker"
       ? settings.speakerLabel
@@ -17,6 +19,8 @@ export default function ApartmentScene({
   rooms,
   hovered,
   night,
+  raining,
+  onToggleWeather,
   sound,
   portrait,
   audioError,
@@ -29,7 +33,7 @@ export default function ApartmentScene({
   onToggleDirectory,
   track,
 }) {
-  const caption = getCaption(hovered, rooms, settings);
+  const caption = getCaption(hovered, rooms, settings, raining);
   return (
     <section className="room-section" aria-label="Rex’s interactive apartment">
       <div className="room-topline">
@@ -74,6 +78,8 @@ export default function ApartmentScene({
           hovered={hovered}
           onHover={onHover}
           night={night}
+          raining={raining}
+          onToggleWeather={onToggleWeather}
           sound={sound}
           portrait={portrait}
         />

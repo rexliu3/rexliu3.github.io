@@ -195,6 +195,29 @@ test("published education entries appear without a résumé link", async () => {
   expect(dialog.queryByRole("link")).toBeNull();
 });
 
+test("the window toggles rain independently of day and night with mouse and keyboard", () => {
+  const view = render(<ApartmentPage content={fallbackContent} />);
+  const window = view.getByRole("button", { name: "Window: switch to rain" });
+  fireEvent.mouseEnter(window);
+  expect(view.getByText("Click the window for rain")).toBeTruthy();
+  fireEvent.click(window);
+  expect(window.getAttribute("aria-pressed")).toBe("true");
+  expect(view.container.querySelector(".window-rain")).toBeTruthy();
+  expect(view.container.querySelector(".sunbeam")).toBeNull();
+  expect(view.queryByRole("dialog")).toBeNull();
+  fireEvent.click(view.getByRole("button", { name: "Switch to nighttime" }));
+  expect(view.container.querySelector(".window-rain")).toBeTruthy();
+  fireEvent.keyDown(window, { key: "Enter" });
+  expect(window.getAttribute("aria-pressed")).toBe("false");
+  expect(view.container.querySelector(".window-stars")).toBeTruthy();
+  fireEvent.keyDown(window, { key: " " });
+  expect(window.getAttribute("aria-pressed")).toBe("true");
+  fireEvent.click(view.getByRole("button", { name: "Switch to daytime" }));
+  fireEvent.click(window);
+  expect(view.container.querySelector(".window-clouds")).toBeTruthy();
+  expect(view.container.querySelector(".sunbeam")).toBeTruthy();
+});
+
 test("the wall portrait opens the experience introduction", () => {
   const view = render(<ApartmentPage content={fallbackContent} />);
   fireEvent.click(view.getByText("Start with an intro"));

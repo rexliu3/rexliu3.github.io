@@ -2,7 +2,7 @@ import React from "react";
 import { Face, Edge } from "./primitives";
 import { floor } from "./geometry";
 
-export default function RoomShell({ night }) {
+export default function RoomShell({ night, raining }) {
   return (
     <>
       <g filter="url(#room-shadow)" stroke="#a78e6d" strokeWidth="1.4" strokeLinejoin="round">
@@ -84,7 +84,7 @@ export default function RoomShell({ night }) {
           )}
         </g>
       </g>
-      {!night && (
+      {!night && !raining && (
         <Face
           className="sunbeam"
           vertices={[
