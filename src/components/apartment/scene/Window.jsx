@@ -28,9 +28,8 @@ export default function Window({ night, raining, onToggleWeather, hovered, onHov
       <rect width="190" height="137" fill="url(#sky)" />
       <g clipPath="url(#window-clip)" stroke="none">
         {raining ? (
-          <g fill={night ? "#61717d" : "#d0d8d7"} opacity=".9">
-            <path d="M-15 37q17-26 37-11 17-27 39-8 20-5 33 19Z" />
-            <path d="M94 24q14-22 32-12 18-20 35-6 26-6 45 18Z" />
+          <g fill={night ? "#61717d" : "#c2ced0"} opacity=".4">
+            <path d="M-20 0h230v38Q155 20 95 35T-20 29Z" />
           </g>
         ) : night ? (
           <g fill="#f6e5b9">
@@ -59,21 +58,51 @@ export default function Window({ night, raining, onToggleWeather, hovered, onHov
           <path key={x} d={`M${x} 106h3v5h-3Zm0 12h3v5h-3Z`} fill={night ? "#e8cc85" : "#d3d9bc"} />
         ))}
         {raining && (
-          <rect
-            className="window-rain"
-            x="-26"
-            y="-40"
-            width="268"
-            height="220"
-            fill="url(#window-rain)"
-            opacity=".7"
-          />
+          <g className="window-rain" aria-hidden="true">
+            <rect width="190" height="137" fill="#b1c2c9" opacity=".12" />
+            {Array.from({ length: 48 }, (_, index) => {
+              const x = (index * 73 + 17) % 210;
+              const y = (index * 47) % 137;
+              const length = 4 + (index % 9);
+              return (
+                <path
+                  className="rain-streak"
+                  key={index}
+                  d={`M${x} ${y}l-1.2 ${length}`}
+                  fill="none"
+                  stroke="#e0ebef"
+                  strokeWidth={0.45 + (index % 3) * 0.2}
+                  opacity={0.18 + (index % 5) * 0.07}
+                  style={{
+                    animationDuration: `${0.55 + (index % 7) * 0.08}s`,
+                    animationDelay: `${-index * 0.137}s`,
+                  }}
+                />
+              );
+            })}
+            {Array.from({ length: 9 }, (_, index) => (
+              <path
+                key={`glass-${index}`}
+                d={`M${12 + ((index * 53) % 170)} ${9 + ((index * 37) % 110)}q-1 3 -.6 5`}
+                fill="none"
+                stroke="#e3edef"
+                strokeWidth="1"
+                opacity=".24"
+                strokeLinecap="round"
+              />
+            ))}
+          </g>
         )}
       </g>
       <rect x="3" y="3" width="184" height="131" fill="none" stroke="#eee4ca" strokeWidth="5" />
       <path d="M95 0v137M0 69h190" stroke="#eee4ca" strokeWidth="5" />
       <rect x="-9" y="137" width="208" height="6" rx="1" fill="#f0e3ca" />
-      <g className="object-tag" transform="translate(95 160)" stroke="none" aria-hidden="true">
+      <g
+        className="object-tag"
+        transform="matrix(1 .1 0 1 95 -31)"
+        stroke="none"
+        aria-hidden="true"
+      >
         <rect x="-57" y="-15" width="114" height="30" rx="15" />
         <text textAnchor="middle" y="4">
           {raining ? "Clear skies" : "Rain"}

@@ -15,9 +15,6 @@ export default function SceneDefinitions({ night, raining }) {
         <stop stopColor={night ? "#253c58" : raining ? "#899fa6" : "#b9d3cd"} />
         <stop offset="1" stopColor={night ? "#697282" : raining ? "#b7c6c7" : "#e2e6cf"} />
       </linearGradient>
-      <pattern id="window-rain" width="26" height="40" patternUnits="userSpaceOnUse">
-        <path d="M16 3l-5 12" stroke="#d8e8ed" strokeWidth="1.6" strokeLinecap="round" />
-      </pattern>
       <radialGradient id="lamp-glow">
         <stop stopColor="#ffe6a1" stopOpacity=".7" />
         <stop offset="1" stopColor="#ffe6a1" stopOpacity="0" />

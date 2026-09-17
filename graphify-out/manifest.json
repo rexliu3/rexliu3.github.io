@@ -234,9 +234,9 @@
     "semantic_hash": ""
   },
   "src/components/apartment/scene/SceneDefinitions.jsx": {
-    "mtime": 1789612070.5355062,
-    "seen": 1789612097.0540411,
-    "ast_hash": "36bcf0bb50a44fb3e5b91fd620d7356e",
+    "mtime": 1789612236.4264507,
+    "seen": 1789612246.532537,
+    "ast_hash": "0311bc7b8c1b5b67e42f5ed5a1fe6b0f",
     "semantic_hash": ""
   },
   "src/components/apartment/scene/Sofa.jsx": {
@@ -252,9 +252,9 @@
     "semantic_hash": "0d04a28fcdec8bd4128dd064f826042b"
   },
   "src/components/apartment/scene/Window.jsx": {
-    "mtime": 1789612089.861401,
-    "seen": 1789612097.0540428,
-    "ast_hash": "18e7cf3bbc694f50f7d228dd79bc156c",
+    "mtime": 1789612237.0384443,
+    "seen": 1789612246.5325382,
+    "ast_hash": "9621f54b1ad019d195762d0bdd3d76f6",
     "semantic_hash": ""
   },
   "src/components/apartment/scene/geometry.js": {

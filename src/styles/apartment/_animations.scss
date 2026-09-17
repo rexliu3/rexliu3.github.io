@@ -8,13 +8,18 @@
   }
 }
 @keyframes window-rain {
+  from {
+    transform: translate(9px, -160px);
+  }
   to {
-    transform: translate(-26px, 40px);
+    transform: translate(-9px, 160px);
   }
 }
 .window-rain {
-  animation: window-rain 900ms linear infinite;
   pointer-events: none;
+}
+.rain-streak {
+  animation: window-rain 750ms linear infinite;
 }
 @keyframes steam {
   0% {
