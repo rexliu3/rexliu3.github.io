@@ -4,156 +4,12 @@
   "graph": {},
   "nodes": [
     {
-      "id": "src_components_apartment_apartmentintro_apartmentintro",
-      "label": "ApartmentIntro()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "ApartmentPage.jsx",
-      "file_type": "code",
-      "norm_label": "apartmentintro()",
-      "source_file": "src/components/apartment/ApartmentIntro.jsx",
-      "source_location": "L4"
-    },
-    {
-      "id": "src_components_apartment_apartmentlayout_apartmentfooter",
-      "label": "ApartmentFooter()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "ApartmentPage.jsx",
-      "file_type": "code",
-      "norm_label": "apartmentfooter()",
-      "source_file": "src/components/apartment/ApartmentLayout.jsx",
-      "source_location": "L33"
-    },
-    {
-      "id": "src_components_apartment_apartmentlayout_apartmentheader",
-      "label": "ApartmentHeader()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "ApartmentPage.jsx",
-      "file_type": "code",
-      "norm_label": "apartmentheader()",
-      "source_file": "src/components/apartment/ApartmentLayout.jsx",
-      "source_location": "L4"
-    },
-    {
-      "id": "src_components_apartment_apartmentscene_apartmentscene",
-      "label": "ApartmentScene()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "ApartmentPage.jsx",
-      "file_type": "code",
-      "norm_label": "apartmentscene()",
-      "source_file": "src/components/apartment/ApartmentScene.jsx",
-      "source_location": "L17"
-    },
-    {
-      "id": "src_components_apartment_apartmentscene_getcaption",
-      "label": "getCaption()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "ApartmentPage.jsx",
-      "file_type": "code",
-      "norm_label": "getcaption()",
-      "source_file": "src/components/apartment/ApartmentScene.jsx",
-      "source_location": "L5"
-    },
-    {
-      "id": "src_components_apartment_icon_icon",
-      "label": "Icon()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "ApartmentPage.jsx",
-      "file_type": "code",
-      "norm_label": "icon()",
-      "source_file": "src/components/apartment/Icon.jsx",
-      "source_location": "L94"
-    },
-    {
-      "id": "src_components_apartment_portfoliooverview_portfoliooverview",
-      "label": "PortfolioOverview()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "ApartmentPage.jsx",
-      "file_type": "code",
-      "norm_label": "portfoliooverview()",
-      "source_file": "src/components/apartment/PortfolioOverview.jsx",
-      "source_location": "L5"
-    },
-    {
-      "id": "src_components_apartment_roomdirectory_roomdirectory",
-      "label": "RoomDirectory()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "ApartmentPage.jsx",
-      "file_type": "code",
-      "norm_label": "roomdirectory()",
-      "source_file": "src/components/apartment/RoomDirectory.jsx",
-      "source_location": "L5"
-    },
-    {
-      "id": "src_components_apartment_roompanel_roompanel",
-      "label": "RoomPanel()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "ApartmentPage.jsx",
-      "file_type": "code",
-      "norm_label": "roompanel()",
-      "source_file": "src/components/apartment/RoomPanel.jsx",
-      "source_location": "L26"
-    },
-    {
-      "id": "src_components_apartment_roompanel_roompanel_navigatenext",
-      "label": "navigateNext()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "ApartmentPage.jsx",
-      "file_type": "code",
-      "norm_label": "navigatenext()",
-      "source_file": "src/components/apartment/RoomPanel.jsx",
-      "source_location": "L49"
-    },
-    {
-      "id": "src_components_apartment_rooms_getcontentrooms",
-      "label": "getContentRooms()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "ApartmentPage.jsx",
-      "file_type": "code",
-      "norm_label": "getcontentrooms()",
-      "source_file": "src/components/apartment/rooms.js",
-      "source_location": "L2"
-    },
-    {
-      "id": "src_hooks_usejazzplayer_usejazzplayer",
-      "label": "useJazzPlayer()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "ApartmentPage.jsx",
-      "file_type": "code",
-      "norm_label": "usejazzplayer()",
-      "source_file": "src/hooks/useJazzPlayer.js",
-      "source_location": "L6"
-    },
-    {
       "id": "src_hooks_useroomnavigation_readroom",
       "label": "readRoom()",
       "_callable": true,
       "_origin": "ast",
       "community": 0,
-      "community_name": "ApartmentPage.jsx",
+      "community_name": "@testing-library/react",
       "file_type": "code",
       "norm_label": "readroom()",
       "source_file": "src/hooks/useRoomNavigation.js",
@@ -165,7 +21,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 0,
-      "community_name": "ApartmentPage.jsx",
+      "community_name": "@testing-library/react",
       "file_type": "code",
       "norm_label": "useroomnavigation()",
       "source_file": "src/hooks/useRoomNavigation.js",
@@ -177,7 +33,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 0,
-      "community_name": "ApartmentPage.jsx",
+      "community_name": "@testing-library/react",
       "file_type": "code",
       "norm_label": "preferrednight()",
       "source_file": "src/hooks/useTheme.js",
@@ -189,23 +45,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 0,
-      "community_name": "ApartmentPage.jsx",
+      "community_name": "@testing-library/react",
       "file_type": "code",
       "norm_label": "usetheme()",
       "source_file": "src/hooks/useTheme.js",
       "source_location": "L15"
-    },
-    {
-      "id": "src_pages_apartmentpage_apartmentpage",
-      "label": "ApartmentPage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "ApartmentPage.jsx",
-      "file_type": "code",
-      "norm_label": "apartmentpage()",
-      "source_file": "src/pages/ApartmentPage.jsx",
-      "source_location": "L12"
     },
     {
       "id": "src_components_apartment_apartment_apartment",
@@ -472,6 +316,42 @@
       "source_location": "L4"
     },
     {
+      "id": "src_app_app",
+      "label": "App()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "normalizeContent.js",
+      "file_type": "code",
+      "norm_label": "app()",
+      "source_file": "src/App.jsx",
+      "source_location": "L6"
+    },
+    {
+      "id": "src_pages_mainpage_mainpage",
+      "label": "MainPage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "normalizeContent.js",
+      "file_type": "code",
+      "norm_label": "mainpage()",
+      "source_file": "src/pages/MainPage.jsx",
+      "source_location": "L5"
+    },
+    {
+      "id": "src_pages_notfoundpage_notfoundpage",
+      "label": "NotFoundPage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "normalizeContent.js",
+      "file_type": "code",
+      "norm_label": "notfoundpage()",
+      "source_file": "src/pages/NotFoundPage.jsx",
+      "source_location": "L3"
+    },
+    {
       "id": "src_sanity_client_fetchsitecontent",
       "label": "fetchSiteContent()",
       "_callable": true,
@@ -494,6 +374,18 @@
       "norm_label": "sanitycontentprovider()",
       "source_file": "src/sanity/ContentContext.jsx",
       "source_location": "L7"
+    },
+    {
+      "id": "src_sanity_contentcontext_usesanitycontent",
+      "label": "useSanityContent()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "normalizeContent.js",
+      "file_type": "code",
+      "norm_label": "usesanitycontent()",
+      "source_file": "src/sanity/ContentContext.jsx",
+      "source_location": "L26"
     },
     {
       "id": "src_sanity_normalizecontent_documents",
@@ -568,6 +460,18 @@
       "source_location": "L7"
     },
     {
+      "id": "src_serviceworker_unregister",
+      "label": "unregister()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "normalizeContent.js",
+      "file_type": "code",
+      "norm_label": "unregister()",
+      "source_file": "src/serviceWorker.js",
+      "source_location": "L2"
+    },
+    {
       "id": "src_utils_urls_safeurl",
       "label": "safeUrl()",
       "_callable": true,
@@ -580,64 +484,148 @@
       "source_location": "L2"
     },
     {
-      "id": "src_app_app",
-      "label": "App()",
+      "id": "src_components_apartment_panels_citydrawing_citydrawing",
+      "label": "CityDrawing()",
       "_callable": true,
       "_origin": "ast",
       "community": 34,
-      "community_name": "App.jsx",
+      "community_name": "TravelPanel.jsx",
       "file_type": "code",
-      "norm_label": "app()",
-      "source_file": "src/App.jsx",
-      "source_location": "L6"
-    },
-    {
-      "id": "src_pages_mainpage_mainpage",
-      "label": "MainPage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 34,
-      "community_name": "App.jsx",
-      "file_type": "code",
-      "norm_label": "mainpage()",
-      "source_file": "src/pages/MainPage.jsx",
-      "source_location": "L5"
-    },
-    {
-      "id": "src_pages_notfoundpage_notfoundpage",
-      "label": "NotFoundPage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 34,
-      "community_name": "App.jsx",
-      "file_type": "code",
-      "norm_label": "notfoundpage()",
-      "source_file": "src/pages/NotFoundPage.jsx",
+      "norm_label": "citydrawing()",
+      "source_file": "src/components/apartment/panels/CityDrawing.jsx",
       "source_location": "L3"
     },
     {
-      "id": "src_sanity_contentcontext_usesanitycontent",
-      "label": "useSanityContent()",
+      "id": "src_components_apartment_panels_travelpanel_travelpanel",
+      "label": "TravelPanel()",
       "_callable": true,
       "_origin": "ast",
       "community": 34,
-      "community_name": "App.jsx",
+      "community_name": "TravelPanel.jsx",
       "file_type": "code",
-      "norm_label": "usesanitycontent()",
-      "source_file": "src/sanity/ContentContext.jsx",
-      "source_location": "L26"
+      "norm_label": "travelpanel()",
+      "source_file": "src/components/apartment/panels/TravelPanel.jsx",
+      "source_location": "L5"
     },
     {
-      "id": "src_serviceworker_unregister",
-      "label": "unregister()",
+      "id": "src_components_apartment_panels_travelpanel_travelpanel_handletabkey",
+      "label": "handleTabKey()",
       "_callable": true,
       "_origin": "ast",
       "community": 34,
-      "community_name": "App.jsx",
+      "community_name": "TravelPanel.jsx",
       "file_type": "code",
-      "norm_label": "unregister()",
-      "source_file": "src/serviceWorker.js",
-      "source_location": "L2"
+      "norm_label": "handletabkey()",
+      "source_file": "src/components/apartment/panels/TravelPanel.jsx",
+      "source_location": "L10"
+    },
+    {
+      "id": "src_components_apartment_panels_visitedcitiesmap_position",
+      "label": "position()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 34,
+      "community_name": "TravelPanel.jsx",
+      "file_type": "code",
+      "norm_label": "position()",
+      "source_file": "src/components/apartment/panels/VisitedCitiesMap.jsx",
+      "source_location": "L8"
+    },
+    {
+      "id": "src_components_apartment_panels_visitedcitiesmap_visitdate",
+      "label": "visitDate()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 34,
+      "community_name": "TravelPanel.jsx",
+      "file_type": "code",
+      "norm_label": "visitdate()",
+      "source_file": "src/components/apartment/panels/VisitedCitiesMap.jsx",
+      "source_location": "L4"
+    },
+    {
+      "id": "src_components_apartment_panels_visitedcitiesmap_visitedcitiesmap",
+      "label": "VisitedCitiesMap()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 34,
+      "community_name": "TravelPanel.jsx",
+      "file_type": "code",
+      "norm_label": "visitedcitiesmap()",
+      "source_file": "src/components/apartment/panels/VisitedCitiesMap.jsx",
+      "source_location": "L13"
+    },
+    {
+      "id": "src_components_apartment_apartmentintro_apartmentintro",
+      "label": "ApartmentIntro()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "ref_react",
+      "file_type": "code",
+      "norm_label": "apartmentintro()",
+      "source_file": "src/components/apartment/ApartmentIntro.jsx",
+      "source_location": "L4"
+    },
+    {
+      "id": "src_components_apartment_apartmentlayout_apartmentfooter",
+      "label": "ApartmentFooter()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "ref_react",
+      "file_type": "code",
+      "norm_label": "apartmentfooter()",
+      "source_file": "src/components/apartment/ApartmentLayout.jsx",
+      "source_location": "L33"
+    },
+    {
+      "id": "src_components_apartment_apartmentlayout_apartmentheader",
+      "label": "ApartmentHeader()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "ref_react",
+      "file_type": "code",
+      "norm_label": "apartmentheader()",
+      "source_file": "src/components/apartment/ApartmentLayout.jsx",
+      "source_location": "L4"
+    },
+    {
+      "id": "src_components_apartment_apartmentscene_apartmentscene",
+      "label": "ApartmentScene()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "ref_react",
+      "file_type": "code",
+      "norm_label": "apartmentscene()",
+      "source_file": "src/components/apartment/ApartmentScene.jsx",
+      "source_location": "L17"
+    },
+    {
+      "id": "src_components_apartment_apartmentscene_getcaption",
+      "label": "getCaption()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "ref_react",
+      "file_type": "code",
+      "norm_label": "getcaption()",
+      "source_file": "src/components/apartment/ApartmentScene.jsx",
+      "source_location": "L5"
+    },
+    {
+      "id": "src_components_apartment_icon_icon",
+      "label": "Icon()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "ref_react",
+      "file_type": "code",
+      "norm_label": "icon()",
+      "source_file": "src/components/apartment/Icon.jsx",
+      "source_location": "L94"
     },
     {
       "id": "src_components_apartment_jazzplayer_jazzplayer",
@@ -662,18 +650,6 @@
       "norm_label": "bookspanel()",
       "source_file": "src/components/apartment/panels/BooksPanel.jsx",
       "source_location": "L4"
-    },
-    {
-      "id": "src_components_apartment_panels_citydrawing_citydrawing",
-      "label": "CityDrawing()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "ref_react",
-      "file_type": "code",
-      "norm_label": "citydrawing()",
-      "source_file": "src/components/apartment/panels/CityDrawing.jsx",
-      "source_location": "L3"
     },
     {
       "id": "src_components_apartment_panels_educationpanel_educationpanel",
@@ -760,64 +736,64 @@
       "source_location": "L5"
     },
     {
-      "id": "src_components_apartment_panels_travelpanel_travelpanel",
-      "label": "TravelPanel()",
+      "id": "src_components_apartment_portfoliooverview_portfoliooverview",
+      "label": "PortfolioOverview()",
       "_callable": true,
       "_origin": "ast",
       "community": 4,
       "community_name": "ref_react",
       "file_type": "code",
-      "norm_label": "travelpanel()",
-      "source_file": "src/components/apartment/panels/TravelPanel.jsx",
+      "norm_label": "portfoliooverview()",
+      "source_file": "src/components/apartment/PortfolioOverview.jsx",
       "source_location": "L5"
     },
     {
-      "id": "src_components_apartment_panels_travelpanel_travelpanel_handletabkey",
-      "label": "handleTabKey()",
+      "id": "src_components_apartment_roomdirectory_roomdirectory",
+      "label": "RoomDirectory()",
       "_callable": true,
       "_origin": "ast",
       "community": 4,
       "community_name": "ref_react",
       "file_type": "code",
-      "norm_label": "handletabkey()",
-      "source_file": "src/components/apartment/panels/TravelPanel.jsx",
-      "source_location": "L10"
+      "norm_label": "roomdirectory()",
+      "source_file": "src/components/apartment/RoomDirectory.jsx",
+      "source_location": "L5"
     },
     {
-      "id": "src_components_apartment_panels_visitedcitiesmap_position",
-      "label": "position()",
+      "id": "src_components_apartment_roompanel_roompanel",
+      "label": "RoomPanel()",
       "_callable": true,
       "_origin": "ast",
       "community": 4,
       "community_name": "ref_react",
       "file_type": "code",
-      "norm_label": "position()",
-      "source_file": "src/components/apartment/panels/VisitedCitiesMap.jsx",
-      "source_location": "L8"
+      "norm_label": "roompanel()",
+      "source_file": "src/components/apartment/RoomPanel.jsx",
+      "source_location": "L26"
     },
     {
-      "id": "src_components_apartment_panels_visitedcitiesmap_visitdate",
-      "label": "visitDate()",
+      "id": "src_components_apartment_roompanel_roompanel_navigatenext",
+      "label": "navigateNext()",
       "_callable": true,
       "_origin": "ast",
       "community": 4,
       "community_name": "ref_react",
       "file_type": "code",
-      "norm_label": "visitdate()",
-      "source_file": "src/components/apartment/panels/VisitedCitiesMap.jsx",
-      "source_location": "L4"
+      "norm_label": "navigatenext()",
+      "source_file": "src/components/apartment/RoomPanel.jsx",
+      "source_location": "L49"
     },
     {
-      "id": "src_components_apartment_panels_visitedcitiesmap_visitedcitiesmap",
-      "label": "VisitedCitiesMap()",
+      "id": "src_components_apartment_rooms_getcontentrooms",
+      "label": "getContentRooms()",
       "_callable": true,
       "_origin": "ast",
       "community": 4,
       "community_name": "ref_react",
       "file_type": "code",
-      "norm_label": "visitedcitiesmap()",
-      "source_file": "src/components/apartment/panels/VisitedCitiesMap.jsx",
-      "source_location": "L13"
+      "norm_label": "getcontentrooms()",
+      "source_file": "src/components/apartment/rooms.js",
+      "source_location": "L2"
     },
     {
       "id": "src_components_siteimage_siteimage",
@@ -868,6 +844,30 @@
       "source_location": "L22"
     },
     {
+      "id": "src_hooks_usejazzplayer_usejazzplayer",
+      "label": "useJazzPlayer()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "ref_react",
+      "file_type": "code",
+      "norm_label": "usejazzplayer()",
+      "source_file": "src/hooks/useJazzPlayer.js",
+      "source_location": "L6"
+    },
+    {
+      "id": "src_pages_apartmentpage_apartmentpage",
+      "label": "ApartmentPage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "ref_react",
+      "file_type": "code",
+      "norm_label": "apartmentpage()",
+      "source_file": "src/pages/ApartmentPage.jsx",
+      "source_location": "L12"
+    },
+    {
       "id": "src_utils_urls_resumedownloadurl",
       "label": "resumeDownloadUrl()",
       "_callable": true,
@@ -878,6 +878,30 @@
       "norm_label": "resumedownloadurl()",
       "source_file": "src/utils/urls.js",
       "source_location": "L17"
+    },
+    {
+      "id": "studio_components_cardinallocationinput_cardinallocationinput",
+      "label": "CardinalLocationInput()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "index.js",
+      "file_type": "code",
+      "norm_label": "cardinallocationinput()",
+      "source_file": "studio/components/CardinalLocationInput.jsx",
+      "source_location": "L5"
+    },
+    {
+      "id": "studio_components_cardinallocationinput_cardinallocationinput_updatecoordinate",
+      "label": "updateCoordinate()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "index.js",
+      "file_type": "code",
+      "norm_label": "updatecoordinate()",
+      "source_file": "studio/components/CardinalLocationInput.jsx",
+      "source_location": "L13"
     },
     {
       "id": "studio_schematypes_bookshelf_booklist",
@@ -976,132 +1000,11 @@
       "source_location": "L8"
     },
     {
-      "id": "src_app_test",
-      "label": "App.test.jsx",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "ApartmentPage.jsx",
-      "file_type": "code",
-      "norm_label": "app.test.jsx",
-      "source_file": "src/App.test.jsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_components_apartment_apartmentintro",
-      "label": "ApartmentIntro.jsx",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "ApartmentPage.jsx",
-      "file_type": "code",
-      "norm_label": "apartmentintro.jsx",
-      "source_file": "src/components/apartment/ApartmentIntro.jsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_components_apartment_apartmentlayout",
-      "label": "ApartmentLayout.jsx",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "ApartmentPage.jsx",
-      "file_type": "code",
-      "norm_label": "apartmentlayout.jsx",
-      "source_file": "src/components/apartment/ApartmentLayout.jsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_components_apartment_apartmentscene",
-      "label": "ApartmentScene.jsx",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "ApartmentPage.jsx",
-      "file_type": "code",
-      "norm_label": "apartmentscene.jsx",
-      "source_file": "src/components/apartment/ApartmentScene.jsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_components_apartment_icon",
-      "label": "Icon.jsx",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "ApartmentPage.jsx",
-      "file_type": "code",
-      "norm_label": "icon.jsx",
-      "source_file": "src/components/apartment/Icon.jsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_components_apartment_icon_paths",
-      "label": "paths",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "ApartmentPage.jsx",
-      "file_type": "code",
-      "norm_label": "paths",
-      "source_file": "src/components/apartment/Icon.jsx",
-      "source_location": "L3"
-    },
-    {
-      "id": "src_components_apartment_portfoliooverview",
-      "label": "PortfolioOverview.jsx",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "ApartmentPage.jsx",
-      "file_type": "code",
-      "norm_label": "portfoliooverview.jsx",
-      "source_file": "src/components/apartment/PortfolioOverview.jsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_components_apartment_roomdirectory",
-      "label": "RoomDirectory.jsx",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "ApartmentPage.jsx",
-      "file_type": "code",
-      "norm_label": "roomdirectory.jsx",
-      "source_file": "src/components/apartment/RoomDirectory.jsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_components_apartment_rooms",
-      "label": "rooms.js",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "ApartmentPage.jsx",
-      "file_type": "code",
-      "norm_label": "rooms.js",
-      "source_file": "src/components/apartment/rooms.js",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_hooks_usejazzplayer",
-      "label": "useJazzPlayer.js",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "ApartmentPage.jsx",
-      "file_type": "code",
-      "norm_label": "usejazzplayer.js",
-      "source_file": "src/hooks/useJazzPlayer.js",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_hooks_usejazzplayer_empty_tracks",
-      "label": "EMPTY_TRACKS",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "ApartmentPage.jsx",
-      "file_type": "code",
-      "norm_label": "empty_tracks",
-      "source_file": "src/hooks/useJazzPlayer.js",
-      "source_location": "L3"
-    },
-    {
       "id": "src_hooks_useroomnavigation",
       "label": "useRoomNavigation.js",
       "_origin": "ast",
       "community": 0,
-      "community_name": "ApartmentPage.jsx",
+      "community_name": "@testing-library/react",
       "file_type": "code",
       "norm_label": "useroomnavigation.js",
       "source_file": "src/hooks/useRoomNavigation.js",
@@ -1112,7 +1015,7 @@
       "label": "useRoomNavigation.test.jsx",
       "_origin": "ast",
       "community": 0,
-      "community_name": "ApartmentPage.jsx",
+      "community_name": "@testing-library/react",
       "file_type": "code",
       "norm_label": "useroomnavigation.test.jsx",
       "source_file": "src/hooks/useRoomNavigation.test.jsx",
@@ -1123,7 +1026,7 @@
       "label": "useTheme.js",
       "_origin": "ast",
       "community": 0,
-      "community_name": "ApartmentPage.jsx",
+      "community_name": "@testing-library/react",
       "file_type": "code",
       "norm_label": "usetheme.js",
       "source_file": "src/hooks/useTheme.js",
@@ -1134,21 +1037,32 @@
       "label": "useTheme.test.jsx",
       "_origin": "ast",
       "community": 0,
-      "community_name": "ApartmentPage.jsx",
+      "community_name": "@testing-library/react",
       "file_type": "code",
       "norm_label": "usetheme.test.jsx",
       "source_file": "src/hooks/useTheme.test.jsx",
       "source_location": "L1"
     },
     {
-      "id": "src_pages_apartmentpage",
-      "label": "ApartmentPage.jsx",
+      "id": "src_sanity_sitequery",
+      "label": "siteQuery.js",
       "_origin": "ast",
       "community": 0,
-      "community_name": "ApartmentPage.jsx",
+      "community_name": "@testing-library/react",
       "file_type": "code",
-      "norm_label": "apartmentpage.jsx",
-      "source_file": "src/pages/ApartmentPage.jsx",
+      "norm_label": "sitequery.js",
+      "source_file": "src/sanity/siteQuery.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_sanity_sitequery_test",
+      "label": "siteQuery.test.js",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "@testing-library/react",
+      "file_type": "code",
+      "norm_label": "sitequery.test.js",
+      "source_file": "src/sanity/siteQuery.test.js",
       "source_location": "L1"
     },
     {
@@ -1156,7 +1070,7 @@
       "label": "setupTests.js",
       "_origin": "ast",
       "community": 0,
-      "community_name": "ApartmentPage.jsx",
+      "community_name": "@testing-library/react",
       "file_type": "code",
       "norm_label": "setuptests.js",
       "source_file": "src/setupTests.js",
@@ -1167,11 +1081,22 @@
       "label": "@testing-library/react",
       "_origin": "ast",
       "community": 0,
-      "community_name": "ApartmentPage.jsx",
+      "community_name": "@testing-library/react",
       "file_type": "concept",
       "norm_label": "@testing-library/react",
       "source_file": "package.json",
       "source_location": "L35"
+    },
+    {
+      "id": "ref_vitest",
+      "label": "vitest",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "@testing-library/react",
+      "file_type": "concept",
+      "norm_label": "vitest",
+      "source_file": "package.json",
+      "source_location": "L46"
     },
     {
       "id": "src_components_apartment_apartment",
@@ -1394,14 +1319,47 @@
       "source_location": "L6"
     },
     {
-      "id": "src_components_apartment_roomdirectory_test",
-      "label": "RoomDirectory.test.jsx",
+      "id": "src_app",
+      "label": "App.jsx",
       "_origin": "ast",
       "community": 2,
       "community_name": "normalizeContent.js",
       "file_type": "code",
-      "norm_label": "roomdirectory.test.jsx",
-      "source_file": "src/components/apartment/RoomDirectory.test.jsx",
+      "norm_label": "app.jsx",
+      "source_file": "src/App.jsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_index",
+      "label": "index.jsx",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "normalizeContent.js",
+      "file_type": "code",
+      "norm_label": "index.jsx",
+      "source_file": "src/index.jsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_pages_mainpage",
+      "label": "MainPage.jsx",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "normalizeContent.js",
+      "file_type": "code",
+      "norm_label": "mainpage.jsx",
+      "source_file": "src/pages/MainPage.jsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_pages_notfoundpage",
+      "label": "NotFoundPage.jsx",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "normalizeContent.js",
+      "file_type": "code",
+      "norm_label": "notfoundpage.jsx",
+      "source_file": "src/pages/NotFoundPage.jsx",
       "source_location": "L1"
     },
     {
@@ -1523,6 +1481,17 @@
       "file_type": "code",
       "norm_label": "normalizecontent.test.js",
       "source_file": "src/sanity/normalizeContent.test.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_serviceworker",
+      "label": "serviceWorker.js",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "normalizeContent.js",
+      "file_type": "code",
+      "norm_label": "serviceworker.js",
+      "source_file": "src/serviceWorker.js",
       "source_location": "L1"
     },
     {
@@ -2319,28 +2288,6 @@
       "source_location": "L1"
     },
     {
-      "id": "src_sanity_sitequery",
-      "label": "siteQuery.js",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "package.json",
-      "file_type": "code",
-      "norm_label": "sitequery.js",
-      "source_file": "src/sanity/siteQuery.js",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_sanity_sitequery_test",
-      "label": "siteQuery.test.js",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "package.json",
-      "file_type": "code",
-      "norm_label": "sitequery.test.js",
-      "source_file": "src/sanity/siteQuery.test.js",
-      "source_location": "L1"
-    },
-    {
       "id": "vite_config",
       "label": "vite.config.js",
       "_origin": "ast",
@@ -2528,17 +2475,6 @@
       "source_location": "L36"
     },
     {
-      "id": "ref_vitest",
-      "label": "vitest",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "package.json",
-      "file_type": "concept",
-      "norm_label": "vitest",
-      "source_file": "package.json",
-      "source_location": "L46"
-    },
-    {
       "id": "codex_skills_graphify_references_github_and_merge",
       "label": "github-and-merge.md",
       "_origin": "ast",
@@ -2659,59 +2595,103 @@
       "source_location": "L1"
     },
     {
-      "id": "src_app",
-      "label": "App.jsx",
+      "id": "src_components_apartment_panels_citydrawing",
+      "label": "CityDrawing.jsx",
       "_origin": "ast",
       "community": 34,
-      "community_name": "App.jsx",
+      "community_name": "TravelPanel.jsx",
       "file_type": "code",
-      "norm_label": "app.jsx",
-      "source_file": "src/App.jsx",
+      "norm_label": "citydrawing.jsx",
+      "source_file": "src/components/apartment/panels/CityDrawing.jsx",
       "source_location": "L1"
     },
     {
-      "id": "src_index",
-      "label": "index.jsx",
+      "id": "src_components_apartment_panels_travelpanel",
+      "label": "TravelPanel.jsx",
       "_origin": "ast",
       "community": 34,
-      "community_name": "App.jsx",
+      "community_name": "TravelPanel.jsx",
       "file_type": "code",
-      "norm_label": "index.jsx",
-      "source_file": "src/index.jsx",
+      "norm_label": "travelpanel.jsx",
+      "source_file": "src/components/apartment/panels/TravelPanel.jsx",
       "source_location": "L1"
     },
     {
-      "id": "src_pages_mainpage",
-      "label": "MainPage.jsx",
+      "id": "src_components_apartment_panels_visitedcitiesmap",
+      "label": "VisitedCitiesMap.jsx",
       "_origin": "ast",
       "community": 34,
-      "community_name": "App.jsx",
+      "community_name": "TravelPanel.jsx",
       "file_type": "code",
-      "norm_label": "mainpage.jsx",
-      "source_file": "src/pages/MainPage.jsx",
+      "norm_label": "visitedcitiesmap.jsx",
+      "source_file": "src/components/apartment/panels/VisitedCitiesMap.jsx",
       "source_location": "L1"
     },
     {
-      "id": "src_pages_notfoundpage",
-      "label": "NotFoundPage.jsx",
+      "id": "src_app_test",
+      "label": "App.test.jsx",
       "_origin": "ast",
-      "community": 34,
-      "community_name": "App.jsx",
+      "community": 4,
+      "community_name": "ref_react",
       "file_type": "code",
-      "norm_label": "notfoundpage.jsx",
-      "source_file": "src/pages/NotFoundPage.jsx",
+      "norm_label": "app.test.jsx",
+      "source_file": "src/App.test.jsx",
       "source_location": "L1"
     },
     {
-      "id": "src_serviceworker",
-      "label": "serviceWorker.js",
+      "id": "src_components_apartment_apartmentintro",
+      "label": "ApartmentIntro.jsx",
       "_origin": "ast",
-      "community": 34,
-      "community_name": "App.jsx",
+      "community": 4,
+      "community_name": "ref_react",
       "file_type": "code",
-      "norm_label": "serviceworker.js",
-      "source_file": "src/serviceWorker.js",
+      "norm_label": "apartmentintro.jsx",
+      "source_file": "src/components/apartment/ApartmentIntro.jsx",
       "source_location": "L1"
+    },
+    {
+      "id": "src_components_apartment_apartmentlayout",
+      "label": "ApartmentLayout.jsx",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "ref_react",
+      "file_type": "code",
+      "norm_label": "apartmentlayout.jsx",
+      "source_file": "src/components/apartment/ApartmentLayout.jsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_components_apartment_apartmentscene",
+      "label": "ApartmentScene.jsx",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "ref_react",
+      "file_type": "code",
+      "norm_label": "apartmentscene.jsx",
+      "source_file": "src/components/apartment/ApartmentScene.jsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_components_apartment_icon",
+      "label": "Icon.jsx",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "ref_react",
+      "file_type": "code",
+      "norm_label": "icon.jsx",
+      "source_file": "src/components/apartment/Icon.jsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_components_apartment_icon_paths",
+      "label": "paths",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "ref_react",
+      "file_type": "code",
+      "norm_label": "paths",
+      "source_file": "src/components/apartment/Icon.jsx",
+      "source_location": "L3"
     },
     {
       "id": "src_components_apartment_jazzplayer",
@@ -2733,17 +2713,6 @@
       "file_type": "code",
       "norm_label": "bookspanel.jsx",
       "source_file": "src/components/apartment/panels/BooksPanel.jsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_components_apartment_panels_citydrawing",
-      "label": "CityDrawing.jsx",
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "ref_react",
-      "file_type": "code",
-      "norm_label": "citydrawing.jsx",
-      "source_file": "src/components/apartment/panels/CityDrawing.jsx",
       "source_location": "L1"
     },
     {
@@ -2824,25 +2793,36 @@
       "source_location": "L1"
     },
     {
-      "id": "src_components_apartment_panels_travelpanel",
-      "label": "TravelPanel.jsx",
+      "id": "src_components_apartment_portfoliooverview",
+      "label": "PortfolioOverview.jsx",
       "_origin": "ast",
       "community": 4,
       "community_name": "ref_react",
       "file_type": "code",
-      "norm_label": "travelpanel.jsx",
-      "source_file": "src/components/apartment/panels/TravelPanel.jsx",
+      "norm_label": "portfoliooverview.jsx",
+      "source_file": "src/components/apartment/PortfolioOverview.jsx",
       "source_location": "L1"
     },
     {
-      "id": "src_components_apartment_panels_visitedcitiesmap",
-      "label": "VisitedCitiesMap.jsx",
+      "id": "src_components_apartment_roomdirectory",
+      "label": "RoomDirectory.jsx",
       "_origin": "ast",
       "community": 4,
       "community_name": "ref_react",
       "file_type": "code",
-      "norm_label": "visitedcitiesmap.jsx",
-      "source_file": "src/components/apartment/panels/VisitedCitiesMap.jsx",
+      "norm_label": "roomdirectory.jsx",
+      "source_file": "src/components/apartment/RoomDirectory.jsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_components_apartment_roomdirectory_test",
+      "label": "RoomDirectory.test.jsx",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "ref_react",
+      "file_type": "code",
+      "norm_label": "roomdirectory.test.jsx",
+      "source_file": "src/components/apartment/RoomDirectory.test.jsx",
       "source_location": "L1"
     },
     {
@@ -2866,6 +2846,17 @@
       "norm_label": "panels",
       "source_file": "src/components/apartment/RoomPanel.jsx",
       "source_location": "L15"
+    },
+    {
+      "id": "src_components_apartment_rooms",
+      "label": "rooms.js",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "ref_react",
+      "file_type": "code",
+      "norm_label": "rooms.js",
+      "source_file": "src/components/apartment/rooms.js",
+      "source_location": "L1"
     },
     {
       "id": "src_components_siteimage",
@@ -2912,6 +2903,39 @@
       "source_location": "L1"
     },
     {
+      "id": "src_hooks_usejazzplayer",
+      "label": "useJazzPlayer.js",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "ref_react",
+      "file_type": "code",
+      "norm_label": "usejazzplayer.js",
+      "source_file": "src/hooks/useJazzPlayer.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_hooks_usejazzplayer_empty_tracks",
+      "label": "EMPTY_TRACKS",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "ref_react",
+      "file_type": "code",
+      "norm_label": "empty_tracks",
+      "source_file": "src/hooks/useJazzPlayer.js",
+      "source_location": "L3"
+    },
+    {
+      "id": "src_pages_apartmentpage",
+      "label": "ApartmentPage.jsx",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "ref_react",
+      "file_type": "code",
+      "norm_label": "apartmentpage.jsx",
+      "source_file": "src/pages/ApartmentPage.jsx",
+      "source_location": "L1"
+    },
+    {
       "id": "src_utils_urls",
       "label": "urls.js",
       "_origin": "ast",
@@ -2920,6 +2944,17 @@
       "file_type": "code",
       "norm_label": "urls.js",
       "source_file": "src/utils/urls.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "studio_components_cardinallocationinput",
+      "label": "CardinalLocationInput.jsx",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "index.js",
+      "file_type": "code",
+      "norm_label": "cardinallocationinput.jsx",
+      "source_file": "studio/components/CardinalLocationInput.jsx",
       "source_location": "L1"
     },
     {
@@ -3052,7 +3087,7 @@
       "file_type": "code",
       "norm_label": "cityvisited",
       "source_file": "studio/schemaTypes/cityVisited.js",
-      "source_location": "L19"
+      "source_location": "L20"
     },
     {
       "id": "studio_schematypes_cityvisited_months",
@@ -3063,7 +3098,7 @@
       "file_type": "code",
       "norm_label": "months",
       "source_file": "studio/schemaTypes/cityVisited.js",
-      "source_location": "L4"
+      "source_location": "L5"
     },
     {
       "id": "studio_schematypes_education",
@@ -3580,7 +3615,7 @@
       "file_type": "code",
       "norm_label": "react",
       "source_file": "studio/package.json",
-      "source_location": "L11"
+      "source_location": "L12"
     },
     {
       "id": "studio_package_dependencies_react_dom",
@@ -3591,7 +3626,7 @@
       "file_type": "code",
       "norm_label": "react-dom",
       "source_file": "studio/package.json",
-      "source_location": "L12"
+      "source_location": "L13"
     },
     {
       "id": "studio_package_dependencies_sanity",
@@ -3602,7 +3637,18 @@
       "file_type": "code",
       "norm_label": "sanity",
       "source_file": "studio/package.json",
-      "source_location": "L13"
+      "source_location": "L14"
+    },
+    {
+      "id": "studio_package_dependencies_sanity_ui",
+      "label": "@sanity/ui",
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "studio/package.json",
+      "file_type": "code",
+      "norm_label": "@sanity/ui",
+      "source_file": "studio/package.json",
+      "source_location": "L11"
     },
     {
       "id": "studio_package_dependencies_styled_components",
@@ -3613,7 +3659,7 @@
       "file_type": "code",
       "norm_label": "styled-components",
       "source_file": "studio/package.json",
-      "source_location": "L14"
+      "source_location": "L15"
     },
     {
       "id": "studio_package_name",
@@ -3693,6 +3739,17 @@
       "source_location": "L4"
     },
     {
+      "id": "ref_sanity_ui",
+      "label": "@sanity/ui",
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "studio/package.json",
+      "file_type": "concept",
+      "norm_label": "@sanity/ui",
+      "source_file": "studio/package.json",
+      "source_location": "L11"
+    },
+    {
       "id": "ref_styled_components",
       "label": "styled-components",
       "_origin": "ast",
@@ -3701,7 +3758,7 @@
       "file_type": "concept",
       "norm_label": "styled-components",
       "source_file": "studio/package.json",
-      "source_location": "L14"
+      "source_location": "L15"
     },
     {
       "id": "studio_package_json_ref_react",
@@ -3712,7 +3769,7 @@
       "file_type": "concept",
       "norm_label": "react",
       "source_file": "studio/package.json",
-      "source_location": "L11"
+      "source_location": "L12"
     },
     {
       "id": "studio_package_json_ref_react_dom",
@@ -3723,7 +3780,7 @@
       "file_type": "concept",
       "norm_label": "react-dom",
       "source_file": "studio/package.json",
-      "source_location": "L12"
+      "source_location": "L13"
     },
     {
       "id": "studio_package_json_ref_sanity",
@@ -3734,7 +3791,7 @@
       "file_type": "concept",
       "norm_label": "sanity",
       "source_file": "studio/package.json",
-      "source_location": "L13"
+      "source_location": "L14"
     },
     {
       "id": "public_manifest",
@@ -4144,10 +4201,22 @@
       "label": "ref_testing_library_jest_dom_vitest",
       "_origin": "semantic",
       "community": 0,
-      "community_name": "ApartmentPage.jsx",
+      "community_name": "@testing-library/react",
       "external": true,
       "file_type": "concept",
       "norm_label": "ref_testing_library_jest_dom_vitest",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "ref_react_dom_client",
+      "label": "ref_react_dom_client",
+      "_origin": "semantic",
+      "community": 2,
+      "community_name": "normalizeContent.js",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_react_dom_client",
       "source_file": "",
       "type": "external"
     },
@@ -4188,6 +4257,18 @@
       "type": "external"
     },
     {
+      "id": "src_styles_styles",
+      "label": "src_styles_styles",
+      "_origin": "semantic",
+      "community": 2,
+      "community_name": "normalizeContent.js",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "src_styles_styles",
+      "source_file": "",
+      "type": "external"
+    },
+    {
       "id": "ref_vitest_config",
       "label": "ref_vitest_config",
       "_origin": "semantic",
@@ -4200,26 +4281,14 @@
       "type": "external"
     },
     {
-      "id": "ref_react_dom_client",
-      "label": "ref_react_dom_client",
+      "id": "src_components_apartment_panels_worldland",
+      "label": "src_components_apartment_panels_worldland",
       "_origin": "semantic",
       "community": 34,
-      "community_name": "App.jsx",
+      "community_name": "TravelPanel.jsx",
       "external": true,
       "file_type": "concept",
-      "norm_label": "ref_react_dom_client",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "src_styles_styles",
-      "label": "src_styles_styles",
-      "_origin": "semantic",
-      "community": 34,
-      "community_name": "App.jsx",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "src_styles_styles",
+      "norm_label": "src_components_apartment_panels_worldland",
       "source_file": "",
       "type": "external"
     },
@@ -4256,17 +4325,6 @@
       "external": true,
       "file_type": "concept",
       "norm_label": "ref_sanity_structure",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "src_components_apartment_panels_worldland",
-      "label": "src_components_apartment_panels_worldland",
-      "community": 4,
-      "community_name": "ref_react",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "src_components_apartment_panels_worldland",
       "source_file": "",
       "type": "external"
     }
@@ -4918,6 +4976,18 @@
       "context": "call",
       "source_file": "src/sanity/normalizeContent.test.js",
       "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "studio_components_cardinallocationinput_cardinallocationinput",
+      "target": "studio_components_cardinallocationinput_cardinallocationinput_updatecoordinate",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "studio/components/CardinalLocationInput.jsx",
+      "source_location": "L13",
       "weight": 1.0
     },
     {
@@ -6530,7 +6600,7 @@
     },
     {
       "source": "studio_package",
-      "target": "studio_package_json_ref_react",
+      "target": "ref_sanity_ui",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -6542,7 +6612,7 @@
     },
     {
       "source": "studio_package",
-      "target": "studio_package_json_ref_react_dom",
+      "target": "studio_package_json_ref_react",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -6554,7 +6624,7 @@
     },
     {
       "source": "studio_package",
-      "target": "studio_package_json_ref_sanity",
+      "target": "studio_package_json_ref_react_dom",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -6566,7 +6636,7 @@
     },
     {
       "source": "studio_package",
-      "target": "ref_styled_components",
+      "target": "studio_package_json_ref_sanity",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -6574,6 +6644,18 @@
       "context": "import",
       "source_file": "studio/package.json",
       "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "studio_package",
+      "target": "ref_styled_components",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "studio/package.json",
+      "source_location": "L15",
       "weight": 1.0
     },
     {
@@ -9049,6 +9131,42 @@
       "weight": 1.0
     },
     {
+      "source": "studio_components_cardinallocationinput",
+      "target": "ref_react",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "studio/components/CardinalLocationInput.jsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "studio_components_cardinallocationinput",
+      "target": "ref_sanity_ui",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "studio/components/CardinalLocationInput.jsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "studio_components_cardinallocationinput",
+      "target": "ref_sanity",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "studio/components/CardinalLocationInput.jsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
       "source": "studio_sanity_cli",
       "target": "ref_sanity_cli",
       "relation": "imports_from",
@@ -9238,6 +9356,18 @@
       "context": "import",
       "source_file": "studio/schemaTypes/cityVisited.js",
       "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "studio_schematypes_cityvisited",
+      "target": "studio_components_cardinallocationinput",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "studio/schemaTypes/cityVisited.js",
+      "source_location": "L3",
       "weight": 1.0
     },
     {
@@ -11493,6 +11623,17 @@
       "weight": 1.0
     },
     {
+      "source": "studio_components_cardinallocationinput",
+      "target": "studio_components_cardinallocationinput_cardinallocationinput",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "studio/components/CardinalLocationInput.jsx",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
       "source": "studio_package",
       "target": "studio_package_dependencies",
       "relation": "contains",
@@ -11549,7 +11690,7 @@
     },
     {
       "source": "studio_package_dependencies",
-      "target": "studio_package_dependencies_react",
+      "target": "studio_package_dependencies_sanity_ui",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -11560,7 +11701,7 @@
     },
     {
       "source": "studio_package_dependencies",
-      "target": "studio_package_dependencies_react_dom",
+      "target": "studio_package_dependencies_react",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -11571,7 +11712,7 @@
     },
     {
       "source": "studio_package_dependencies",
-      "target": "studio_package_dependencies_sanity",
+      "target": "studio_package_dependencies_react_dom",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -11582,13 +11723,24 @@
     },
     {
       "source": "studio_package_dependencies",
-      "target": "studio_package_dependencies_styled_components",
+      "target": "studio_package_dependencies_sanity",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "studio/package.json",
       "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "studio_package_dependencies",
+      "target": "studio_package_dependencies_styled_components",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "studio/package.json",
+      "source_location": "L15",
       "weight": 1.0
     },
     {
@@ -11698,7 +11850,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "studio/schemaTypes/cityVisited.js",
-      "source_location": "L19",
+      "source_location": "L20",
       "weight": 1.0
     },
     {
@@ -11709,7 +11861,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "studio/schemaTypes/cityVisited.js",
-      "source_location": "L4",
+      "source_location": "L5",
       "weight": 1.0
     },
     {
@@ -12033,7 +12185,19 @@
       "confidence_score": 0.85,
       "context": "collection",
       "source_file": "studio/schemaTypes/cityVisited.js",
-      "source_location": "L24",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "studio_schematypes_cityvisited",
+      "target": "studio_components_cardinallocationinput_cardinallocationinput",
+      "relation": "indirect_call",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "collection",
+      "source_file": "studio/schemaTypes/cityVisited.js",
+      "source_location": "L43",
       "weight": 1.0
     },
     {
@@ -12162,5 +12326,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "8a026543134edcde675cabb754dd9691e26cb0b5"
+  "built_at_commit": "8f0dbac79a1bc14beeb0ca8385396043a1ed07ca"
 }

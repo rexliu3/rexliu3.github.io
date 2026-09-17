@@ -1,5 +1,6 @@
 import { defineField, defineType } from "sanity";
 import { required, stringField } from "./fields";
+import CardinalLocationInput from "../components/CardinalLocationInput";
 
 const months = [
   "January",
@@ -39,8 +40,8 @@ export const cityVisited = defineType({
       name: "location",
       title: "Map location",
       type: "geopoint",
-      description:
-        "Enter the city’s latitude and longitude to position its marker on the world map.",
+      components: { input: CardinalLocationInput },
+      description: "Enter latitude and longitude in decimal degrees and select N/S and E/W.",
       validation: (Rule) =>
         Rule.required().custom((point) =>
           point &&
@@ -49,7 +50,7 @@ export const cityVisited = defineType({
           Number.isFinite(point.lng) &&
           Math.abs(point.lng) <= 180
             ? true
-            : "Enter a valid latitude (−90 to 90) and longitude (−180 to 180)."
+            : "Enter latitude from 0 to 90 with N/S and longitude from 0 to 180 with E/W."
         ),
     }),
   ],

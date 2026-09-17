@@ -408,10 +408,10 @@
     "semantic_hash": "f129177299b994037ad7771a6b62efd6"
   },
   "studio/package.json": {
-    "mtime": 1789581518.0370433,
-    "seen": 1789584479.606645,
-    "ast_hash": "33e6447e5d2da8ce6bb1a11ac5bfa6bc",
-    "semantic_hash": "33e6447e5d2da8ce6bb1a11ac5bfa6bc"
+    "mtime": 1789671573.2533,
+    "seen": 1789671595.757992,
+    "ast_hash": "03e484fa97221ffe2d2642a07591b477",
+    "semantic_hash": ""
   },
   "studio/sanity.cli.js": {
     "mtime": 1789581518.0371099,
@@ -696,9 +696,15 @@
     "semantic_hash": ""
   },
   "studio/schemaTypes/cityVisited.js": {
-    "mtime": 1789613510.44049,
-    "seen": 1789671044.068614,
-    "ast_hash": "cd8334a13b0b17d4ffa799dcce79c9d7",
+    "mtime": 1789671571.3191516,
+    "seen": 1789671595.757996,
+    "ast_hash": "fb02703ce1a00d55ea74832fc85d8600",
+    "semantic_hash": ""
+  },
+  "studio/components/CardinalLocationInput.jsx": {
+    "mtime": 1789671571.3085942,
+    "seen": 1789671595.7579908,
+    "ast_hash": "d46c2e7ba1fa840a4d14f7fab5ab404a",
     "semantic_hash": ""
   }
 }
