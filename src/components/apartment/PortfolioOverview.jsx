@@ -5,7 +5,9 @@ import SiteImage from "../SiteImage";
 export default function PortfolioOverview({ content, onOpen }) {
   const { settings, experiences } = content;
   const copy = settings.overview;
-  const education = content.educations?.[0];
+  const education =
+    content.educations?.find((entry) => /\bberkeley\b/i.test(entry.institutionLabel)) ||
+    content.educations?.[0];
 
   return (
     <section className="portfolio-overview" aria-labelledby="overview-title" id="out-and-about">

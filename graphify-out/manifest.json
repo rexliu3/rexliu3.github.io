@@ -12,8 +12,8 @@
     "semantic_hash": "c52804eb4bc68a74493e63075ca2bbf5"
   },
   "e2e/apartment.spec.js": {
-    "mtime": 1789613043.486807,
-    "seen": 1789613053.1014311,
+    "mtime": 1789613510.395583,
+    "seen": 1789671044.068573,
     "ast_hash": "1fb846df0754437afc41d5562efeba7e",
     "semantic_hash": ""
   },
@@ -48,9 +48,9 @@
     "semantic_hash": "3b68e3d8debd1577707604c27ba0a103"
   },
   "src/App.test.jsx": {
-    "mtime": 1789613043.4649513,
-    "seen": 1789613053.101436,
-    "ast_hash": "e16929bd65d391a3e492b1620dcdd821",
+    "mtime": 1789671030.9268312,
+    "seen": 1789671044.068577,
+    "ast_hash": "a0815f4963a83fde7ee64b90fc7769a0",
     "semantic_hash": ""
   },
   "src/components/SiteImage.jsx": {
@@ -66,8 +66,8 @@
     "semantic_hash": "14dcb69e9e30c29c15172f107962db7f"
   },
   "src/components/apartment/Apartment.jsx": {
-    "mtime": 1789612089.8449445,
-    "seen": 1789612097.054026,
+    "mtime": 1789613510.404915,
+    "seen": 1789671044.068579,
     "ast_hash": "dfb3beb660661a60692d0be750178ad0",
     "semantic_hash": ""
   },
@@ -78,14 +78,14 @@
     "semantic_hash": "7873c3980019c43c4b3f1d0bc36cb245"
   },
   "src/components/apartment/ApartmentLayout.jsx": {
-    "mtime": 1789596157.0994215,
-    "seen": 1789596169.1531231,
+    "mtime": 1789613510.405709,
+    "seen": 1789671044.0685802,
     "ast_hash": "42a0c4f3d92a7bccc2f00344975dffff",
     "semantic_hash": ""
   },
   "src/components/apartment/ApartmentScene.jsx": {
-    "mtime": 1789612376.3424234,
-    "seen": 1789612386.960345,
+    "mtime": 1789613510.4063036,
+    "seen": 1789671044.068581,
     "ast_hash": "771b07d463beb5f2b7f3d9abd2e467ea",
     "semantic_hash": ""
   },
@@ -102,9 +102,9 @@
     "semantic_hash": "4f3c0ac8b2c116652afc9df09ce3c323"
   },
   "src/components/apartment/PortfolioOverview.jsx": {
-    "mtime": 1789611364.7669473,
-    "seen": 1789611375.149399,
-    "ast_hash": "e534d704acfbada11d631fe1bab6b4dc",
+    "mtime": 1789671030.8878472,
+    "seen": 1789671044.068583,
+    "ast_hash": "a8d726e560ad42f58c2279de42aa254d",
     "semantic_hash": ""
   },
   "src/components/apartment/RoomDirectory.jsx": {
@@ -114,20 +114,20 @@
     "semantic_hash": "3196a1c686da1f099d4b35f6c7527364"
   },
   "src/components/apartment/RoomDirectory.test.jsx": {
-    "mtime": 1789611747.3414192,
-    "seen": 1789611755.3690681,
+    "mtime": 1789613510.4079177,
+    "seen": 1789671044.068584,
     "ast_hash": "3536493fb47ce4bf7f2d2e8169bd19e9",
     "semantic_hash": ""
   },
   "src/components/apartment/RoomPanel.jsx": {
-    "mtime": 1789612979.0284302,
-    "seen": 1789613053.1014452,
+    "mtime": 1789613510.4082985,
+    "seen": 1789671044.068584,
     "ast_hash": "6434403ff1395693ba0e9c524fddc413",
     "semantic_hash": ""
   },
   "src/components/apartment/panels/BooksPanel.jsx": {
-    "mtime": 1789595615.014813,
-    "seen": 1789595629.4861739,
+    "mtime": 1789613510.4167857,
+    "seen": 1789671044.068585,
     "ast_hash": "7630cd24ba7d99c0ce7072c6b40a1a21",
     "semantic_hash": ""
   },
@@ -138,8 +138,8 @@
     "semantic_hash": "40c0f8154930182a32c7e7467dfaa84a"
   },
   "src/components/apartment/panels/EducationPanel.jsx": {
-    "mtime": 1789611364.7592478,
-    "seen": 1789611375.1494021,
+    "mtime": 1789613510.417529,
+    "seen": 1789671044.0685859,
     "ast_hash": "206400636498ac34473da896906a0009",
     "semantic_hash": ""
   },
@@ -162,8 +162,8 @@
     "semantic_hash": "fab4c4e51b212a211a0c7a20ba9d5b4a"
   },
   "src/components/apartment/panels/PortraitPanel.jsx": {
-    "mtime": 1789612582.1525912,
-    "seen": 1789612593.774969,
+    "mtime": 1789613510.4183006,
+    "seen": 1789671044.068588,
     "ast_hash": "ca6686f3a55b0a26a47bdd37ca7e1c20",
     "semantic_hash": ""
   },
@@ -180,8 +180,8 @@
     "semantic_hash": ""
   },
   "src/components/apartment/panels/TravelPanel.jsx": {
-    "mtime": 1789612979.0288851,
-    "seen": 1789613053.10145,
+    "mtime": 1789613510.418713,
+    "seen": 1789671044.068589,
     "ast_hash": "2e8d3f344c8183d5c42ccfe74a903654",
     "semantic_hash": ""
   },
@@ -228,14 +228,14 @@
     "semantic_hash": "3dbbbc8539c77fcd283a25e35c49c5d3"
   },
   "src/components/apartment/scene/RoomShell.jsx": {
-    "mtime": 1789612070.5361516,
-    "seen": 1789612097.0540411,
+    "mtime": 1789613510.420759,
+    "seen": 1789671044.068594,
     "ast_hash": "230b27f515c9953be6cf7f41b5ecdade",
     "semantic_hash": ""
   },
   "src/components/apartment/scene/SceneDefinitions.jsx": {
-    "mtime": 1789612236.4264507,
-    "seen": 1789612246.532537,
+    "mtime": 1789613510.4291325,
+    "seen": 1789671044.068595,
     "ast_hash": "0311bc7b8c1b5b67e42f5ed5a1fe6b0f",
     "semantic_hash": ""
   },
@@ -252,8 +252,8 @@
     "semantic_hash": "0d04a28fcdec8bd4128dd064f826042b"
   },
   "src/components/apartment/scene/Window.jsx": {
-    "mtime": 1789612376.3417163,
-    "seen": 1789612386.960362,
+    "mtime": 1789613510.430435,
+    "seen": 1789671044.068596,
     "ast_hash": "f65f243839937b9bcc2eed586a27b4bf",
     "semantic_hash": ""
   },
@@ -318,8 +318,8 @@
     "semantic_hash": "bd8df9dabccd6d6499fc4e86a813a815"
   },
   "src/pages/ApartmentPage.jsx": {
-    "mtime": 1789612070.53304,
-    "seen": 1789612097.054049,
+    "mtime": 1789613510.4312167,
+    "seen": 1789671044.068602,
     "ast_hash": "3f92c5ada1986560a39b3d8176bd08bd",
     "semantic_hash": ""
   },
@@ -360,33 +360,33 @@
     "semantic_hash": "e063d32113431bfd47d8918d2e64910f"
   },
   "src/sanity/defaultContent.json": {
-    "mtime": 1789612979.0291767,
-    "seen": 1789613053.10147,
+    "mtime": 1789613510.4317727,
+    "seen": 1789671044.068606,
     "ast_hash": "159e554415249a61cb03aff245e11560",
     "semantic_hash": ""
   },
   "src/sanity/fallbackContent.js": {
-    "mtime": 1789612979.0278597,
-    "seen": 1789613053.10147,
+    "mtime": 1789613510.4321246,
+    "seen": 1789671044.068606,
     "ast_hash": "5ebf6d5b02899a15bc3356505dab4041",
     "semantic_hash": ""
   },
   "src/sanity/normalizeContent.js": {
-    "mtime": 1789613017.039834,
-    "seen": 1789613053.101471,
+    "mtime": 1789613510.4325752,
+    "seen": 1789671044.068607,
     "ast_hash": "22e2181fb0910e8c280166c2e12f6dc2",
     "semantic_hash": ""
   },
   "src/sanity/normalizeContent.test.js": {
-    "mtime": 1789613043.4748113,
-    "seen": 1789613053.101472,
+    "mtime": 1789613510.4330573,
+    "seen": 1789671044.068607,
     "ast_hash": "bb7da99d4619966c866b5fbec8e8c778",
     "semantic_hash": ""
   },
   "src/sanity/siteQuery.js": {
-    "mtime": 1789612979.0276012,
-    "seen": 1789613053.101472,
-    "ast_hash": "1e04d64356765177681567736c1e74ee",
+    "mtime": 1789671027.7111495,
+    "seen": 1789671044.068608,
+    "ast_hash": "879c4a96b2b4d1e5ed34a8f7fdfb57df",
     "semantic_hash": ""
   },
   "src/serviceWorker.js": {
@@ -420,8 +420,8 @@
     "semantic_hash": "c0e127b984b169d8ab15a457039f4c42"
   },
   "studio/sanity.config.js": {
-    "mtime": 1789595119.7589056,
-    "seen": 1789595149.462406,
+    "mtime": 1789613510.439568,
+    "seen": 1789671044.0686111,
     "ast_hash": "b3bffec0be8268a627eee9a7bbb57f20",
     "semantic_hash": ""
   },
@@ -456,8 +456,8 @@
     "semantic_hash": "6c91c86d32e116bf36728d900ea53b8f"
   },
   "studio/schemaTypes/index.js": {
-    "mtime": 1789612979.0272167,
-    "seen": 1789613053.101482,
+    "mtime": 1789613510.4422648,
+    "seen": 1789671044.068616,
     "ast_hash": "f20b335db54f58238349446220849011",
     "semantic_hash": ""
   },
@@ -588,9 +588,9 @@
     "semantic_hash": "ed20006d86492e395189ffdd4b2b2067"
   },
   "src/sanity/siteQuery.test.js": {
-    "mtime": 1789585101.0393867,
-    "seen": 1789585113.220939,
-    "ast_hash": "b5ab1c1fad747662973102cb1e54ad6c",
+    "mtime": 1789671027.7128808,
+    "seen": 1789671044.068608,
+    "ast_hash": "95da21274bedaed731105de35bab7055",
     "semantic_hash": ""
   },
   ".codex/skills/graphify/SKILL.md": {
@@ -672,32 +672,32 @@
     "semantic_hash": ""
   },
   "studio/schemaTypes/bookshelf.js": {
-    "mtime": 1789595612.221599,
-    "seen": 1789595629.486202,
+    "mtime": 1789613510.4400923,
+    "seen": 1789671044.068613,
     "ast_hash": "adef59e7c9edbeb52c2d5815430203df",
     "semantic_hash": ""
   },
   "studio/schemaTypes/education.js": {
-    "mtime": 1789611350.70684,
-    "seen": 1789611375.149429,
+    "mtime": 1789613510.4417539,
+    "seen": 1789671044.068614,
     "ast_hash": "0a4616bbea3c809f3a125a4c4c891788",
     "semantic_hash": ""
   },
   "src/components/apartment/panels/VisitedCitiesMap.jsx": {
-    "mtime": 1789613078.6830099,
-    "seen": 1789613092.0762188,
+    "mtime": 1789613510.4190428,
+    "seen": 1789671044.0685902,
     "ast_hash": "325d25dcc41b18a604d45a9c01425e11",
     "semantic_hash": ""
   },
   "src/components/apartment/panels/worldLand.json": {
-    "mtime": 1789613017.06069,
-    "seen": 1789613053.101452,
+    "mtime": 1789613510.4194596,
+    "seen": 1789671044.0685902,
     "ast_hash": "8bf4bfb4462f4e847dcdf3387542b3d1",
     "semantic_hash": ""
   },
   "studio/schemaTypes/cityVisited.js": {
-    "mtime": 1789613017.0175695,
-    "seen": 1789613053.1014788,
+    "mtime": 1789613510.44049,
+    "seen": 1789671044.068614,
     "ast_hash": "cd8334a13b0b17d4ffa799dcce79c9d7",
     "semantic_hash": ""
   }

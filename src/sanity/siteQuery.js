@@ -1,7 +1,7 @@
 const siteQuery = `{
   "contentModel": "dynamic-v1",
   "visitedCities": *[_type == "cityVisited"] | order(year desc, month desc){_id, name, month, year, location},
-  "educations": *[_type == "education"] | order(order asc){
+  "educations": *[_type == "education"] | order(order desc){
     ..., "logo": logoUpload.asset->url
   },
   "nonfictionBooks": *[_type == "bookshelf" && _id == "bookshelf"][0].nonfiction[]{

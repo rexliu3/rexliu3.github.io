@@ -254,6 +254,39 @@ test("Sanity visits appear on the world map with hover, focus, and tap details",
   ).toBeNull();
 });
 
+test("the education preview features Berkeley even when another education is first", () => {
+  const view = render(
+    <ApartmentPage
+      content={{
+        ...fallbackContent,
+        educations: [
+          {
+            _id: "newer",
+            institutionLabel: "Another institution",
+            degree: "Graduate program",
+            years: "2024–2025",
+          },
+          {
+            _id: "berkeley",
+            institutionLabel: "University of California, Berkeley",
+            degree: "B.A. Computer Science",
+            years: "2020–2023",
+          },
+        ],
+      }}
+    />
+  );
+  const preview = within(view.container.querySelector(".overview-education"));
+  expect(preview.getByText("University of California, Berkeley")).toBeTruthy();
+  expect(preview.queryByText("Another institution")).toBeNull();
+  fireEvent.click(preview.getByRole("button", { name: /View education/ }));
+  expect(
+    within(view.getByRole("dialog"))
+      .getAllByRole("heading", { level: 3 })
+      .map((heading) => heading.textContent)
+  ).toEqual(["Another institution", "University of California, Berkeley"]);
+});
+
 test("the wall portrait opens the experience introduction", () => {
   const view = render(<ApartmentPage content={fallbackContent} />);
   fireEvent.click(view.getByText("Start with an intro"));
