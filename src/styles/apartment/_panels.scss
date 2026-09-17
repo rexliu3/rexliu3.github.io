@@ -155,7 +155,7 @@
   aspect-ratio: 4 / 5;
   object-fit: cover;
   border-radius: 10px;
-  background: #e8dfcd;
+  background: transparent;
 }
 .portrait-panel-invitation {
   max-width: 420px;
@@ -315,7 +315,7 @@
   object-fit: contain;
   object-position: center;
   border-radius: 6px;
-  background: #e7e4d6;
+  background: transparent;
 }
 .apartment-projects h3 {
   font-size: 22px;
@@ -567,7 +567,7 @@
   overflow: hidden;
   border: 1px solid #e0ddcf;
   border-radius: 5px;
-  background: #f3f0e6;
+  background: transparent;
 }
 .photography-gallery img {
   display: block;
