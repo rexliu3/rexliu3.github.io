@@ -86,12 +86,7 @@
         "school": "Berkeley",
         "degree": "B.A. Computer Science",
         "years": "2020–2023",
-        "storyTitle": "Curiosity found a home.",
-        "storyParagraphs": [
-          "My Berkeley journey laid the foundation for my work in software engineering—from frontend and backend development to mobile apps, data, and leading engineering teams.",
-          "Today, I’m building at Palantir Technologies in New York. The habit of asking questions came with me."
-        ],
-        "linkLabel": "Take a look at my résumé"
+        "linkLabel": "View résumé"
       }
     }
   },
@@ -156,8 +151,8 @@
       "name": "The diploma",
       "short": "Berkeley",
       "icon": "diploma",
-      "panelTitle": "A chapter in blue & gold.",
-      "lede": "Three years of questions, late nights, and learning how to build things that matter.",
+      "panelTitle": "Education",
+      "lede": "Computer Science at UC Berkeley, 2020–2023.",
       "order": 6
     },
     {

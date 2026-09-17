@@ -82,7 +82,7 @@ export default function RoomPanel({ active, onClose, onNavigate, player, content
           </button>
         </div>
         <div className="panel-content">
-          <p className="eyebrow">{settings.panelEyebrow}</p>
+          <p className="eyebrow">{active === "berkeley" ? "BACKGROUND" : settings.panelEyebrow}</p>
           <h2 id="panel-title">{room.panelTitle}</h2>
           {PanelContent && (
             <PanelContent

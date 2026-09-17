@@ -711,45 +711,29 @@
   border-color: #b8bea3;
 }
 .berkeley-card {
-  background: #eae9db;
-  border: 1px solid #c7c5ad;
-  outline: 1px solid #d4d0b8;
-  outline-offset: -9px;
-  padding: 25px;
-  text-align: center;
+  padding: 20px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
   margin: 24px 0;
-  color: #3b5358;
-}
-.berkeley-seal {
-  display: inline-grid;
-  place-items: center;
-  height: 42px;
-  width: 42px;
-  border: 2px solid #b5a168;
-  border-radius: 50%;
-  font-family: var(--serif);
-  color: #a69052;
 }
 .berkeley-card > p {
-  font-size: 8px !important;
-  letter-spacing: 2px;
-  margin-bottom: 0;
+  font-size: 10px;
+  letter-spacing: 1px;
+  margin: 0 0 6px;
+  color: var(--muted);
 }
 .berkeley-card h3 {
   font-family: Georgia, serif;
-  font-size: 48px;
-  letter-spacing: -2px;
-  margin: 2px 0 16px;
+  font-size: 30px;
+  font-weight: 400;
+  margin: 0 0 12px;
 }
 .berkeley-card > div {
-  font-size: 11px;
-  color: #7f816d;
+  font-size: 12px;
+  color: var(--muted);
 }
 .berkeley-card > div span {
   margin: 0 9px;
-}
-.berkeley-story h3 {
-  font-size: 25px;
 }
 .not-found {
   min-height: 100vh;
