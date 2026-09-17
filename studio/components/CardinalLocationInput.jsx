@@ -1,14 +1,30 @@
-import React, { useId, useState } from "react";
+import React, { useEffect, useId, useState } from "react";
 import { Flex, Select, Stack, Text, TextInput } from "@sanity/ui";
 import { PatchEvent, set, setIfMissing, unset } from "sanity";
 
 export default function CardinalLocationInput({ value, onChange, readOnly, elementProps }) {
   const id = useId();
-  const [emptyDirections, setEmptyDirections] = useState({ lat: "N", lng: "E" });
-  const directions = {
-    lat: value?.lat ? (value.lat < 0 ? "S" : "N") : emptyDirections.lat,
-    lng: value?.lng ? (value.lng < 0 ? "W" : "E") : emptyDirections.lng,
-  };
+  const latitude = value?.lat;
+  const longitude = value?.lng;
+  const [directions, setDirections] = useState(() => ({
+    lat: latitude < 0 ? "S" : "N",
+    lng: longitude < 0 ? "W" : "E",
+  }));
+
+  // Sanity echoes patches asynchronously. Don't reset a selection from the old
+  // coordinate on every render; sync only when the stored coordinate changes.
+  useEffect(() => {
+    setDirections((current) => ({
+      ...current,
+      lat: latitude ? (latitude < 0 ? "S" : "N") : current.lat,
+    }));
+  }, [latitude]);
+  useEffect(() => {
+    setDirections((current) => ({
+      ...current,
+      lng: longitude ? (longitude < 0 ? "W" : "E") : current.lng,
+    }));
+  }, [longitude]);
 
   function updateCoordinate(axis, magnitude, direction) {
     if (!Number.isFinite(magnitude)) {
@@ -71,7 +87,7 @@ export default function CardinalLocationInput({ value, onChange, readOnly, eleme
               disabled={readOnly}
               onChange={(event) => {
                 const direction = event.currentTarget.value;
-                setEmptyDirections((current) => ({ ...current, [axis]: direction }));
+                setDirections((current) => ({ ...current, [axis]: direction }));
                 if (Number.isFinite(value?.[axis])) updateCoordinate(axis, value[axis], direction);
               }}
             >
