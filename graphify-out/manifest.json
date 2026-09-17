@@ -12,9 +12,9 @@
     "semantic_hash": "c52804eb4bc68a74493e63075ca2bbf5"
   },
   "e2e/apartment.spec.js": {
-    "mtime": 1789612726.520748,
-    "seen": 1789612733.830934,
-    "ast_hash": "9ebec0c0dfc4e8dfa140d3204f8e15f7",
+    "mtime": 1789612778.7646973,
+    "seen": 1789612785.317937,
+    "ast_hash": "4ad043a59e8f2008913cdfc30c91509d",
     "semantic_hash": ""
   },
   "eslint.config.js": {
@@ -360,9 +360,9 @@
     "semantic_hash": "e063d32113431bfd47d8918d2e64910f"
   },
   "src/sanity/defaultContent.json": {
-    "mtime": 1789612725.481847,
-    "seen": 1789612733.830976,
-    "ast_hash": "562c69c192326f28d56cbcfe8ff789c8",
+    "mtime": 1789612775.647039,
+    "seen": 1789612785.31797,
+    "ast_hash": "e722c59bf5937a2feae23b40fdee8ff6",
     "semantic_hash": ""
   },
   "src/sanity/fallbackContent.js": {
