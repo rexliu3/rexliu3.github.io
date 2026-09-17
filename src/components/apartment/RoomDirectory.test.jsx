@@ -12,7 +12,7 @@ test("searches room descriptions and recovers from an empty result", () => {
   fireEvent.change(input, { target: { value: "  PHOTOs  " } });
   fireEvent.click(view.getByRole("button", { name: "Photos The camera" }));
   expect(onOpen).toHaveBeenCalledWith("photos");
-  expect(view.getByRole("status")).toHaveTextContent("1 room found");
+  expect(view.getByRole("status")).toHaveTextContent("2 rooms found");
   fireEvent.change(input, { target: { value: "no-such-corner" } });
   expect(view.getByRole("status")).toHaveTextContent("0 rooms found");
   fireEvent.click(view.getByRole("button", { name: "show every room" }));

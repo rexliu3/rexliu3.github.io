@@ -9,10 +9,9 @@ export default function PortraitPanel({ room, portrait, settings }) {
         <SiteImage src={portrait.imageUrl} alt={portrait.alt} />
       </figure>
       <div className="portrait-panel-invitation">
-        <h3>Your turn.</h3>
+        <h3>Get in touch</h3>
         <p>
-          Don’t be a stranger — <a href={`mailto:${settings.email}`}>say hello by email</a>. Then
-          poke around the apartment and click whatever catches your eye.
+          For work or a conversation, <a href={`mailto:${settings.email}`}>send me an email</a>.
         </p>
       </div>
     </>

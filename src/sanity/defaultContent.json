@@ -146,10 +146,10 @@
     {
       "id": "berkeley",
       "name": "The diploma",
-      "short": "Berkeley",
+      "short": "Education",
       "icon": "diploma",
       "panelTitle": "Education",
-      "lede": "Computer Science at UC Berkeley, 2020–2023.",
+      "lede": "My education and academic background.",
       "order": 6
     },
     {
@@ -157,8 +157,8 @@
       "name": "The portrait",
       "short": "About me",
       "icon": "portrait",
-      "panelTitle": "Hello from the other side.",
-      "lede": "Hey, I’m Rex — a software engineer at Palantir in New York. I like turning messy ideas into useful web and mobile products, and I’ve had a lot of fun building and leading teams along the way at Berkeley SkyDeck, HKP Solutions, Investocracy, and RISE.",
+      "panelTitle": "About me",
+      "lede": "I’m Rex, a software engineer and UC Berkeley alum. I build software and enjoy reading, traveling, and taking photos. This site brings together my work and a few things I’m interested in.",
       "order": 7
     },
     {

@@ -44,7 +44,9 @@ test("a rejected content request still opens every room and restores keyboard fo
     trigger.focus();
     fireEvent.click(trigger);
     expect(view.getByRole("dialog")).toBeTruthy();
-    expect(view.getByText(room.panelTitle)).toBeTruthy();
+    expect(
+      within(view.getByRole("dialog")).getByRole("heading", { name: room.panelTitle, level: 2 })
+    ).toBeTruthy();
     const closeButton = view.getByLabelText("Back to the apartment");
     expect(document.activeElement).toBe(closeButton);
     fireEvent.keyDown(closeButton, { key: "Tab", shiftKey: true });
@@ -198,13 +200,13 @@ test("the wall portrait opens the experience introduction", () => {
   fireEvent.click(view.getByText("Start with an intro"));
 
   const dialog = within(view.getByRole("dialog"));
-  expect(dialog.getByText("Hello from the other side.")).toBeTruthy();
-  expect(dialog.getByText(/software engineer at Palantir/i)).toBeTruthy();
+  expect(dialog.getByRole("heading", { name: "About me" })).toBeTruthy();
+  expect(dialog.getByText(/software engineer and UC Berkeley alum/i)).toBeTruthy();
   expect(dialog.getByAltText(fallbackContent.apartmentPortrait.alt)).toBeTruthy();
-  expect(dialog.getByText("say hello by email").closest("a").getAttribute("href")).toBe(
+  expect(dialog.getByText("send me an email").closest("a").getAttribute("href")).toBe(
     `mailto:${fallbackContent.settings.email}`
   );
-  expect(dialog.getByText(/click whatever catches your eye/i)).toBeTruthy();
+  expect(dialog.getByRole("heading", { name: "Get in touch" })).toBeTruthy();
 });
 
 test("the desk résumé opens work notes with open and download options", () => {
@@ -329,7 +331,7 @@ test("all corners expansion replaces the duplicate navigation and opens content"
   fireEvent.click(toggle);
   const navigation = within(view.getByRole("region", { name: "What brings you in?" }));
   expect(navigation.getByRole("button", { name: /Music & dance/ })).toBeTruthy();
-  expect(navigation.queryByRole("button", { name: /jazz|cat|record player/i })).toBeNull();
+  expect(navigation.queryByRole("button", { name: /\b(jazz|cat|record player)\b/i })).toBeNull();
   fireEvent.click(navigation.getByRole("button", { name: "Résumé The résumé" }));
   expect(within(view.getByRole("dialog")).getByText("The work so far.")).toBeTruthy();
 });

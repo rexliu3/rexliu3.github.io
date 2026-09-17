@@ -48,9 +48,9 @@
     "semantic_hash": "3b68e3d8debd1577707604c27ba0a103"
   },
   "src/App.test.jsx": {
-    "mtime": 1789611364.8197327,
-    "seen": 1789611375.1493928,
-    "ast_hash": "851aff416e158ca46fcd18b9a70fccc7",
+    "mtime": 1789611749.3238308,
+    "seen": 1789611755.3690612,
+    "ast_hash": "7e5e561a16d7054638a540c38a46c379",
     "semantic_hash": ""
   },
   "src/components/SiteImage.jsx": {
@@ -114,10 +114,10 @@
     "semantic_hash": "3196a1c686da1f099d4b35f6c7527364"
   },
   "src/components/apartment/RoomDirectory.test.jsx": {
-    "mtime": 1789582094.5419052,
-    "seen": 1789584479.606627,
-    "ast_hash": "391f116e442b1c3d3f5429d322abdb5c",
-    "semantic_hash": "391f116e442b1c3d3f5429d322abdb5c"
+    "mtime": 1789611747.3414192,
+    "seen": 1789611755.3690681,
+    "ast_hash": "3536493fb47ce4bf7f2d2e8169bd19e9",
+    "semantic_hash": ""
   },
   "src/components/apartment/RoomPanel.jsx": {
     "mtime": 1789611001.1697307,
@@ -162,10 +162,10 @@
     "semantic_hash": "fab4c4e51b212a211a0c7a20ba9d5b4a"
   },
   "src/components/apartment/panels/PortraitPanel.jsx": {
-    "mtime": 1789582094.542804,
-    "seen": 1789584479.6066298,
-    "ast_hash": "85a41b09898ae1adaaaf8b1c167335ab",
-    "semantic_hash": "85a41b09898ae1adaaaf8b1c167335ab"
+    "mtime": 1789611728.2613788,
+    "seen": 1789611755.369073,
+    "ast_hash": "0ea556e58ddeaaba4449a2a88b421a1d",
+    "semantic_hash": ""
   },
   "src/components/apartment/panels/ProjectsPanel.jsx": {
     "mtime": 1789582094.5428975,
@@ -360,9 +360,9 @@
     "semantic_hash": "e063d32113431bfd47d8918d2e64910f"
   },
   "src/sanity/defaultContent.json": {
-    "mtime": 1789611328.6772802,
-    "seen": 1789611341.856632,
-    "ast_hash": "a6e8d0d5368e4043f6ef4c5ecc4daf8b",
+    "mtime": 1789611728.260365,
+    "seen": 1789611755.369091,
+    "ast_hash": "1dec73a0b24e1b26abfcb9a097604900",
     "semantic_hash": ""
   },
   "src/sanity/fallbackContent.js": {
