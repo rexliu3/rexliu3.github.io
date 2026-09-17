@@ -28,6 +28,7 @@ export default function RoomPanel({ active, onClose, onNavigate, player, content
     apartmentPortrait: portrait,
     apartmentProjects: projects,
     cities,
+    visitedCities,
     experiences,
     educations,
     jazzTracks: tracks,
@@ -91,6 +92,7 @@ export default function RoomPanel({ active, onClose, onNavigate, player, content
               room={room}
               content={definition.contentKey ? settings.panels[definition.contentKey] : undefined}
               cities={cities}
+              visitedCities={visitedCities}
               projects={projects}
               experiences={experiences}
               educations={educations}

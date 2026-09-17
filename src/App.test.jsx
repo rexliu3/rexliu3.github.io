@@ -218,6 +218,42 @@ test("the window toggles rain independently of day and night with mouse and keyb
   expect(view.container.querySelector(".sunbeam")).toBeTruthy();
 });
 
+test("Sanity visits appear on the world map with hover, focus, and tap details", async () => {
+  global.fetch = vi.fn().mockResolvedValue({
+    ok: true,
+    json: async () => ({
+      result: {
+        contentModel: "dynamic-v1",
+        visitedCities: [
+          {
+            _id: "visit",
+            name: "Vancouver",
+            month: 7,
+            year: 2023,
+            location: { lat: 49.2827, lng: -123.1207 },
+          },
+        ],
+      },
+    }),
+  });
+  const view = render(<App />);
+  fireEvent.click(view.getByRole("button", { name: "Explore travel logs and favorite places" }));
+  const dialog = within(view.getByRole("dialog"));
+  const marker = await dialog.findByRole("button", { name: "Vancouver, July 2023" });
+  fireEvent.mouseEnter(marker);
+  expect(within(dialog.getByRole("tooltip")).getByText("July 2023")).toBeTruthy();
+  fireEvent.mouseLeave(marker);
+  expect(dialog.queryByRole("tooltip")).toBeNull();
+  fireEvent.focus(marker);
+  expect(within(dialog.getByRole("tooltip")).getByText("Vancouver")).toBeTruthy();
+  fireEvent.blur(marker);
+  fireEvent.click(marker);
+  expect(dialog.getByRole("tooltip")).toBeTruthy();
+  expect(
+    dialog.queryByText("Travel logs and favorite places are still being unpacked.")
+  ).toBeNull();
+});
+
 test("the wall portrait opens the experience introduction", () => {
   const view = render(<ApartmentPage content={fallbackContent} />);
   fireEvent.click(view.getByText("Start with an intro"));

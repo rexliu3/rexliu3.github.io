@@ -55,6 +55,42 @@ test("day/night preference survives a reload", async ({ page }, testInfo) => {
   await page.screenshot({ path: testInfo.outputPath("night.png"), fullPage: true });
 });
 
+test("visited city markers show Sanity visit dates", async ({ page }, testInfo) => {
+  await page.route("**/*.apicdn.sanity.io/**", (route) =>
+    route.fulfill({
+      json: {
+        result: {
+          contentModel: "dynamic-v1",
+          visitedCities: [
+            {
+              _id: "vancouver",
+              name: "Vancouver",
+              month: 7,
+              year: 2023,
+              location: { lat: 49.2827, lng: -123.1207 },
+            },
+            {
+              _id: "paris",
+              name: "Paris",
+              month: 5,
+              year: 2024,
+              location: { lat: 48.8566, lng: 2.3522 },
+            },
+          ],
+        },
+      },
+    })
+  );
+  await page.goto("/?room=travel");
+  const marker = page.getByRole("button", { name: "Vancouver, July 2023" });
+  await marker.hover();
+  await expect(page.getByRole("tooltip")).toContainText("Vancouver");
+  await expect(page.getByRole("tooltip")).toContainText("July 2023");
+  await page.screenshot({ path: testInfo.outputPath("visited-map.png"), fullPage: true });
+  await page.getByRole("button", { name: "Paris, May 2024" }).focus();
+  await expect(page.getByRole("tooltip")).toContainText("May 2024");
+});
+
 test("clicking the window toggles weather without opening a popup", async ({ page }, testInfo) => {
   await page.goto("/");
   const window = page.getByRole("button", { name: "Toggle weather" });

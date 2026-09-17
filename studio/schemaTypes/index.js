@@ -6,6 +6,7 @@ import { photographyPortfolio } from "./photographyPortfolio";
 import { apartmentPortrait } from "./apartmentPortrait";
 import { bookshelf } from "./bookshelf";
 import { education } from "./education";
+import { cityVisited } from "./cityVisited";
 
 export const schemaTypes = [
   city,
@@ -16,4 +17,5 @@ export const schemaTypes = [
   apartmentPortrait,
   bookshelf,
   education,
+  cityVisited,
 ];

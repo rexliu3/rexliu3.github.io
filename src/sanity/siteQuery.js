@@ -1,5 +1,6 @@
 const siteQuery = `{
   "contentModel": "dynamic-v1",
+  "visitedCities": *[_type == "cityVisited"] | order(year desc, month desc){_id, name, month, year, location},
   "educations": *[_type == "education"] | order(order asc){
     ..., "logo": logoUpload.asset->url
   },

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import CityDrawing from "./CityDrawing";
+import VisitedCitiesMap from "./VisitedCitiesMap";
 
-export default function TravelPanel({ room, content, cities }) {
+export default function TravelPanel({ room, content, cities, visitedCities = [] }) {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const cityIndex = Math.min(selectedIndex, Math.max(0, cities.length - 1));
   const city = cities[cityIndex];
@@ -59,7 +60,7 @@ export default function TravelPanel({ room, content, cities }) {
           </div>
         </>
       )}
-      <p className="content-footnote">{content.footnote}</p>
+      <VisitedCitiesMap cities={visitedCities} />
     </>
   );
 }

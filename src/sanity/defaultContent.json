@@ -46,8 +46,7 @@
         "noteBody": "My reading list and personal notes will live here. Check back for the first stack."
       },
       "travel": {
-        "tabsLabel": "Cities on my journey",
-        "footnote": "Travel logs and favorite places are still being unpacked."
+        "tabsLabel": "Cities on my journey"
       },
       "projects": {
         "linkLabel": "More things on GitHub"

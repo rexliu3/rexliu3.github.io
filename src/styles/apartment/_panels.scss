@@ -290,11 +290,102 @@
   margin-bottom: 22px;
   display: block;
 }
-.content-footnote {
-  border-top: 1px solid #e5e0d3;
-  padding-top: 16px;
-  margin-top: 22px;
-  font-style: italic;
+.visited-cities {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+.visited-cities h3 {
+  font-size: 23px;
+  margin-bottom: 8px;
+}
+.visited-map-hint,
+.map-credit {
+  font-size: 11px;
+  color: #6e7266;
+}
+.visited-world-map {
+  position: relative;
+  margin: 18px 0 10px;
+  background: #e3eceb;
+  border-radius: 8px;
+}
+.visited-world-map svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: inherit;
+}
+.world-land {
+  fill: #b3bfa3;
+  stroke: #8f9f87;
+  stroke-width: 0.5;
+}
+.world-equator {
+  fill: none;
+  stroke: #a9bdbb;
+  stroke-width: 0.5;
+  stroke-dasharray: 4 6;
+}
+.visited-city-marker {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  transform: translate(-50%, -50%);
+  background: transparent;
+  border-radius: 50%;
+  z-index: 1;
+}
+.visited-city-marker span {
+  width: 8px;
+  height: 8px;
+  background: #a95132;
+  border: 1.5px solid #fffaf0;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px #a9513222;
+}
+.visited-city-marker:hover span,
+.visited-city-marker.is-active span {
+  box-shadow: 0 0 0 5px #a9513233;
+}
+.visited-city-marker:focus-visible {
+  outline: 2px solid #a95132;
+  outline-offset: 1px;
+}
+.visited-city-tooltip {
+  position: absolute;
+  z-index: 2;
+  transform: translate(-50%, -100%);
+  margin-top: -16px;
+  padding: 9px 12px;
+  background: #fffaf0;
+  color: #343d31;
+  border: 1px solid #d3c1a0;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px #343d3120;
+  max-width: 70%;
+  text-align: center;
+  pointer-events: none;
+  font-size: 12px;
+}
+.visited-city-tooltip strong,
+.visited-city-tooltip span {
+  display: block;
+}
+.visited-city-tooltip.is-below {
+  transform: translate(-50%, 0);
+  margin-top: 16px;
+}
+.visited-city-tooltip span {
+  margin-top: 3px;
+  font-size: 11px;
+  color: #6e7266;
+}
+.map-credit {
+  display: block;
 }
 .apartment-projects {
   display: grid;

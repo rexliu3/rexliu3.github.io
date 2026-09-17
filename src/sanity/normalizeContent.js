@@ -23,6 +23,7 @@ function documents(value) {
 }
 
 const DOCUMENT_FIELDS = {
+  visitedCities: { name: "", month: 0, year: 0, location: { lat: 0, lng: 0 } },
   educations: { institutionLabel: "", degree: "", years: "", note: "", logo: "" },
   nonfictionBooks: { _key: "", title: "", author: "", note: "", url: "", imageUrl: "" },
   fictionBooks: { _key: "", title: "", author: "", note: "", url: "", imageUrl: "" },
@@ -33,7 +34,23 @@ const DOCUMENT_FIELDS = {
 };
 
 function normalizeCollection(name, value) {
-  const collection = documents(value).map((document, index) => {
+  const source = documents(value).filter(
+    (document) =>
+      name !== "visitedCities" ||
+      (typeof document.name === "string" &&
+        document.name.trim() &&
+        Number.isInteger(document.month) &&
+        document.month >= 1 &&
+        document.month <= 12 &&
+        Number.isInteger(document.year) &&
+        document.year >= 1900 &&
+        document.year <= 2100 &&
+        Number.isFinite(document.location?.lat) &&
+        Math.abs(document.location.lat) <= 90 &&
+        Number.isFinite(document.location?.lng) &&
+        Math.abs(document.location.lng) <= 180)
+  );
+  const collection = source.map((document, index) => {
     const normalized = withDefaults(document, {
       _id: `${name}-${index}`,
       order: index,

@@ -5,6 +5,7 @@ import defaultContent from "./defaultContent.json";
 const fallbackContent = {
   ...defaultContent,
   experiences: [],
+  visitedCities: [],
   educations: [{ _id: "education-berkeley", ...defaultContent.settings.panels.education }],
   nonfictionBooks: [],
   fictionBooks: [],

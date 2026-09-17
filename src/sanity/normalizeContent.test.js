@@ -3,6 +3,21 @@ import fallbackContent from "./fallbackContent";
 
 const normalize = (content) => normalizeContent({ contentModel: "dynamic-v1", ...content });
 
+test("only maps visits with valid dates and real coordinates", () => {
+  const visit = { name: "Vancouver", month: 7, year: 2023, location: { lat: 49.28, lng: -123.12 } };
+  const content = normalize({
+    visitedCities: [
+      visit,
+      { ...visit, location: null },
+      { ...visit, month: 13 },
+      { ...visit, year: "2023" },
+      { ...visit, location: { lat: 91, lng: 0 } },
+    ],
+  });
+  expect(content.visitedCities).toHaveLength(1);
+  expect(content.visitedCities[0]).toMatchObject(visit);
+});
+
 test("rejects executable CMS links and retains valid project destinations", () => {
   const content = normalize({
     resumeUrl: "javascript:alert(1)",
