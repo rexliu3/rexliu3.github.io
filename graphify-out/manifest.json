@@ -66,10 +66,10 @@
     "semantic_hash": "14dcb69e9e30c29c15172f107962db7f"
   },
   "src/components/apartment/Apartment.jsx": {
-    "mtime": 1789582094.541086,
-    "seen": 1789584479.606624,
-    "ast_hash": "f4eeaa22b7b2ae1a88f3b85c5584d024",
-    "semantic_hash": "f4eeaa22b7b2ae1a88f3b85c5584d024"
+    "mtime": 1789611908.8639934,
+    "seen": 1789611916.401283,
+    "ast_hash": "3af8baa2db914f42c24ea8302c8392c5",
+    "semantic_hash": ""
   },
   "src/components/apartment/ApartmentIntro.jsx": {
     "mtime": 1789582094.5411801,

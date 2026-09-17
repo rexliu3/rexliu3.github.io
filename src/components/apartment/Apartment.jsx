@@ -89,7 +89,7 @@ export default function Apartment({ onOpen, hovered, onHover, night, sound, port
         </g>
         <ObjectTag x={315} y={2} z={250} label="Travel" />
       </Hotspot>
-      <Hotspot id="berkeley" label="the Berkeley journey" {...common}>
+      <Hotspot id="berkeley" label="education" {...common}>
         <g
           transform={`matrix(.5 .5 0 1 ${project(718, 170, 216).join(" ")})`}
           filter="url(#object-shadow)"
@@ -118,7 +118,7 @@ export default function Apartment({ onOpen, hovered, onHover, night, sound, port
           <path d="M22 33h52m-45 5h38m-33 5h28" stroke="#b3a584" strokeWidth="1" />
           <circle cx="48" cy="53" r="6" fill="#bd9e55" />
         </g>
-        <ObjectTag x={718} y={218} z={246} label="Berkeley" />
+        <ObjectTag x={718} y={218} z={246} label="Education" />
       </Hotspot>
       <Hotspot id="portrait" label="portrait" {...common}>
         <g
