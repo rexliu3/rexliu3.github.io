@@ -48,9 +48,9 @@
     "semantic_hash": "3b68e3d8debd1577707604c27ba0a103"
   },
   "src/App.test.jsx": {
-    "mtime": 1789671030.9268312,
-    "seen": 1789671044.068577,
-    "ast_hash": "a0815f4963a83fde7ee64b90fc7769a0",
+    "mtime": 1789779455.926003,
+    "seen": 1789779464.131566,
+    "ast_hash": "765a5905b336f6dceb37c130bc4d5048",
     "semantic_hash": ""
   },
   "src/components/SiteImage.jsx": {
@@ -84,9 +84,9 @@
     "semantic_hash": ""
   },
   "src/components/apartment/ApartmentScene.jsx": {
-    "mtime": 1789613510.4063036,
-    "seen": 1789671044.068581,
-    "ast_hash": "771b07d463beb5f2b7f3d9abd2e467ea",
+    "mtime": 1789779535.1609085,
+    "seen": 1789779546.3841898,
+    "ast_hash": "cce0e05266579faf93f80125f21ebc92",
     "semantic_hash": ""
   },
   "src/components/apartment/Icon.jsx": {
@@ -138,9 +138,9 @@
     "semantic_hash": "40c0f8154930182a32c7e7467dfaa84a"
   },
   "src/components/apartment/panels/EducationPanel.jsx": {
-    "mtime": 1789613510.417529,
-    "seen": 1789671044.0685859,
-    "ast_hash": "206400636498ac34473da896906a0009",
+    "mtime": 1789778960.445514,
+    "seen": 1789778973.2682638,
+    "ast_hash": "b127f57392856c86701590afe6f915c1",
     "semantic_hash": ""
   },
   "src/components/apartment/panels/ExperienceItem.jsx": {
@@ -150,9 +150,9 @@
     "semantic_hash": ""
   },
   "src/components/apartment/panels/MusicTastePanel.jsx": {
-    "mtime": 1789778393.1656237,
-    "seen": 1789778409.6446521,
-    "ast_hash": "e6caefadec52bdd1c8807c10b25f3901",
+    "mtime": 1789779254.851799,
+    "seen": 1789779269.441098,
+    "ast_hash": "3961d43edd044a8dbcecda04c34469be",
     "semantic_hash": ""
   },
   "src/components/apartment/panels/PhotosPanel.jsx": {
@@ -360,9 +360,9 @@
     "semantic_hash": "e063d32113431bfd47d8918d2e64910f"
   },
   "src/sanity/defaultContent.json": {
-    "mtime": 1789777538.1368148,
-    "seen": 1789777583.612261,
-    "ast_hash": "8b0c7376ba0c112f82684649c8604d41",
+    "mtime": 1789779535.225655,
+    "seen": 1789779546.384217,
+    "ast_hash": "6e608779d370c7e22f2067563a3f42c2",
     "semantic_hash": ""
   },
   "src/sanity/fallbackContent.js": {

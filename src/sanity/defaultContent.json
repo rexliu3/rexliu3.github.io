@@ -17,7 +17,6 @@
       "Welcome to my little corner of the internet."
     ],
     "apartmentLabel": "APT. 001",
-    "apartmentNote": "A WORK IN PROGRESS, LIKE ME",
     "asideLines": ["a few of my", "favorite things"],
     "idleCaption": "Every object has a story. Click around.",
     "catCaption": "Pet the cat",
@@ -55,7 +54,7 @@
         "artists": [],
         "genres": [],
         "danceStyles": [],
-        "note": "",
+        "note": "Spending too many hours with headphones in.",
         "playlistUrl": "",
         "playlistLabel": "Listen to my playlist",
         "spotifyUrl": "https://open.spotify.com/user/rexliu3?si=5fb772f1cf434715",

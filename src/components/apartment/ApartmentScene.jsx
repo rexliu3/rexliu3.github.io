@@ -37,10 +37,7 @@ export default function ApartmentScene({
   return (
     <section className="room-section" aria-label="Rex’s interactive apartment">
       <div className="room-topline">
-        <span className="room-coordinate">
-          {settings.apartmentLabel} <span>·</span>{" "}
-          <span className="room-note">{settings.apartmentNote}</span>
-        </span>
+        <span className="room-coordinate">{settings.apartmentLabel}</span>
         <div className="room-controls">
           <button
             type="button"

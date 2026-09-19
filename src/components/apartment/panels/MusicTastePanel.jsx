@@ -14,7 +14,7 @@ export default function MusicTastePanel({ room, content, topSongsByYear = [] }) 
   return (
     <>
       {room.lede && <p className="panel-lede">{room.lede}</p>}
-      {content.note && <p>{content.note}</p>}
+      {content.note && <p className="panel-lede">{content.note}</p>}
       {sections.map((section) => (
         <section className="music-taste-section" key={section.title}>
           <h3>{section.title}</h3>
@@ -32,9 +32,12 @@ export default function MusicTastePanel({ room, content, topSongsByYear = [] }) 
             <div className="top-songs-year" key={_key || year}>
               <h4>{year}</h4>
               <ol>
-                {songs.map((song) => (
+                {songs.map((song, index) => (
                   <li key={song._key}>
-                    <span>
+                    <span className="song-position" aria-hidden="true">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                    <span className="song-details">
                       <strong>{song.title}</strong>
                       {song.artist && <small>{song.artist}</small>}
                     </span>

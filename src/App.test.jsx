@@ -402,11 +402,14 @@ test("room navigation updates captions and cycles back to the first room", () =>
   }
 });
 
-test("music and dance opens a blank content panel while the record player opens jazz", () => {
+test("music and dance opens its listening note while the record player opens jazz", () => {
   const view = render(<ApartmentPage content={fallbackContent} />);
   fireEvent.click(view.getByLabelText("Explore music and dance"));
   const dialog = within(view.getByRole("dialog"));
   expect(dialog.getByRole("heading", { name: "Music & dance." })).toBeTruthy();
+  expect(
+    dialog.getByText("Spending too many hours with headphones in.").classList.contains("panel-lede")
+  ).toBe(true);
   expect(view.container.querySelector(".record-player")).toBeNull();
   expect(HTMLMediaElement.prototype.play).not.toHaveBeenCalled();
   fireEvent.keyDown(document, { key: "Escape" });

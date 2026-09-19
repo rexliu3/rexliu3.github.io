@@ -60,10 +60,6 @@
     font-size: 8px;
     letter-spacing: 0.8px;
   }
-  .room-coordinate > span,
-  .room-note {
-    display: none;
-  }
   .room-aside,
   .room-signature {
     display: none;
@@ -260,6 +256,25 @@
   }
   .resume-actions {
     grid-template-columns: 1fr;
+  }
+  .top-songs-year {
+    grid-template-columns: 48px 1fr;
+    gap: 10px;
+  }
+  .berkeley-card {
+    padding: 18px;
+    background:
+      linear-gradient(90deg, transparent 0 31px, #dba48d3b 31px 32px, transparent 32px),
+      repeating-linear-gradient(#fbf8f0 0 31px, #e4e0d41f 31px 32px);
+  }
+  .education-institution,
+  .education-degree,
+  .berkeley-card > .education-note {
+    margin-left: 10px;
+  }
+  .education-degree {
+    grid-template-columns: 1fr;
+    gap: 5px;
   }
   .apartment-footer > div {
     gap: 20px;
