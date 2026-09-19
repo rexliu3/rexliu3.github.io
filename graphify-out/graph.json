@@ -4,174 +4,6 @@
   "graph": {},
   "nodes": [
     {
-      "id": "src_components_apartment_apartmentintro_apartmentintro",
-      "label": "ApartmentIntro()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "ApartmentPage.jsx",
-      "file_type": "code",
-      "norm_label": "apartmentintro()",
-      "source_file": "src/components/apartment/ApartmentIntro.jsx",
-      "source_location": "L4"
-    },
-    {
-      "id": "src_components_apartment_apartmentlayout_apartmentfooter",
-      "label": "ApartmentFooter()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "ApartmentPage.jsx",
-      "file_type": "code",
-      "norm_label": "apartmentfooter()",
-      "source_file": "src/components/apartment/ApartmentLayout.jsx",
-      "source_location": "L33"
-    },
-    {
-      "id": "src_components_apartment_apartmentlayout_apartmentheader",
-      "label": "ApartmentHeader()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "ApartmentPage.jsx",
-      "file_type": "code",
-      "norm_label": "apartmentheader()",
-      "source_file": "src/components/apartment/ApartmentLayout.jsx",
-      "source_location": "L4"
-    },
-    {
-      "id": "src_components_apartment_portfoliooverview_portfoliooverview",
-      "label": "PortfolioOverview()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "ApartmentPage.jsx",
-      "file_type": "code",
-      "norm_label": "portfoliooverview()",
-      "source_file": "src/components/apartment/PortfolioOverview.jsx",
-      "source_location": "L5"
-    },
-    {
-      "id": "src_components_apartment_roomdirectory_roomdirectory",
-      "label": "RoomDirectory()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "ApartmentPage.jsx",
-      "file_type": "code",
-      "norm_label": "roomdirectory()",
-      "source_file": "src/components/apartment/RoomDirectory.jsx",
-      "source_location": "L5"
-    },
-    {
-      "id": "src_components_apartment_roompanel_roompanel",
-      "label": "RoomPanel()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "ApartmentPage.jsx",
-      "file_type": "code",
-      "norm_label": "roompanel()",
-      "source_file": "src/components/apartment/RoomPanel.jsx",
-      "source_location": "L26"
-    },
-    {
-      "id": "src_components_apartment_roompanel_roompanel_navigatenext",
-      "label": "navigateNext()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "ApartmentPage.jsx",
-      "file_type": "code",
-      "norm_label": "navigatenext()",
-      "source_file": "src/components/apartment/RoomPanel.jsx",
-      "source_location": "L50"
-    },
-    {
-      "id": "src_components_apartment_rooms_getcontentrooms",
-      "label": "getContentRooms()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "ApartmentPage.jsx",
-      "file_type": "code",
-      "norm_label": "getcontentrooms()",
-      "source_file": "src/components/apartment/rooms.js",
-      "source_location": "L2"
-    },
-    {
-      "id": "src_hooks_usejazzplayer_usejazzplayer",
-      "label": "useJazzPlayer()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "ApartmentPage.jsx",
-      "file_type": "code",
-      "norm_label": "usejazzplayer()",
-      "source_file": "src/hooks/useJazzPlayer.js",
-      "source_location": "L6"
-    },
-    {
-      "id": "src_hooks_useroomnavigation_readroom",
-      "label": "readRoom()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "ApartmentPage.jsx",
-      "file_type": "code",
-      "norm_label": "readroom()",
-      "source_file": "src/hooks/useRoomNavigation.js",
-      "source_location": "L3"
-    },
-    {
-      "id": "src_hooks_useroomnavigation_useroomnavigation",
-      "label": "useRoomNavigation()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "ApartmentPage.jsx",
-      "file_type": "code",
-      "norm_label": "useroomnavigation()",
-      "source_file": "src/hooks/useRoomNavigation.js",
-      "source_location": "L9"
-    },
-    {
-      "id": "src_hooks_usetheme_preferrednight",
-      "label": "preferredNight()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "ApartmentPage.jsx",
-      "file_type": "code",
-      "norm_label": "preferrednight()",
-      "source_file": "src/hooks/useTheme.js",
-      "source_location": "L5"
-    },
-    {
-      "id": "src_hooks_usetheme_usetheme",
-      "label": "useTheme()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "ApartmentPage.jsx",
-      "file_type": "code",
-      "norm_label": "usetheme()",
-      "source_file": "src/hooks/useTheme.js",
-      "source_location": "L15"
-    },
-    {
-      "id": "src_pages_apartmentpage_apartmentpage",
-      "label": "ApartmentPage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "ApartmentPage.jsx",
-      "file_type": "code",
-      "norm_label": "apartmentpage()",
-      "source_file": "src/pages/ApartmentPage.jsx",
-      "source_location": "L12"
-    },
-    {
       "id": "src_components_apartment_apartment_apartment",
       "label": "Apartment()",
       "_callable": true,
@@ -436,6 +268,18 @@
       "source_location": "L4"
     },
     {
+      "id": "src_app_app",
+      "label": "App()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "normalizeContent.js",
+      "file_type": "code",
+      "norm_label": "app()",
+      "source_file": "src/App.jsx",
+      "source_location": "L6"
+    },
+    {
       "id": "src_pages_mainpage_mainpage",
       "label": "MainPage()",
       "_callable": true,
@@ -580,6 +424,18 @@
       "source_location": "L7"
     },
     {
+      "id": "src_serviceworker_unregister",
+      "label": "unregister()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "normalizeContent.js",
+      "file_type": "code",
+      "norm_label": "unregister()",
+      "source_file": "src/serviceWorker.js",
+      "source_location": "L2"
+    },
+    {
       "id": "src_utils_urls_safeurl",
       "label": "safeUrl()",
       "_callable": true,
@@ -664,28 +520,40 @@
       "source_location": "L13"
     },
     {
-      "id": "src_app_app",
-      "label": "App()",
+      "id": "src_components_apartment_apartmentintro_apartmentintro",
+      "label": "ApartmentIntro()",
       "_callable": true,
       "_origin": "ast",
-      "community": 35,
-      "community_name": "index.jsx",
+      "community": 4,
+      "community_name": "ref_react",
       "file_type": "code",
-      "norm_label": "app()",
-      "source_file": "src/App.jsx",
-      "source_location": "L6"
+      "norm_label": "apartmentintro()",
+      "source_file": "src/components/apartment/ApartmentIntro.jsx",
+      "source_location": "L4"
     },
     {
-      "id": "src_serviceworker_unregister",
-      "label": "unregister()",
+      "id": "src_components_apartment_apartmentlayout_apartmentfooter",
+      "label": "ApartmentFooter()",
       "_callable": true,
       "_origin": "ast",
-      "community": 35,
-      "community_name": "index.jsx",
+      "community": 4,
+      "community_name": "ref_react",
       "file_type": "code",
-      "norm_label": "unregister()",
-      "source_file": "src/serviceWorker.js",
-      "source_location": "L2"
+      "norm_label": "apartmentfooter()",
+      "source_file": "src/components/apartment/ApartmentLayout.jsx",
+      "source_location": "L33"
+    },
+    {
+      "id": "src_components_apartment_apartmentlayout_apartmentheader",
+      "label": "ApartmentHeader()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "ref_react",
+      "file_type": "code",
+      "norm_label": "apartmentheader()",
+      "source_file": "src/components/apartment/ApartmentLayout.jsx",
+      "source_location": "L4"
     },
     {
       "id": "src_components_apartment_apartmentscene_apartmentscene",
@@ -832,6 +700,66 @@
       "source_location": "L6"
     },
     {
+      "id": "src_components_apartment_portfoliooverview_portfoliooverview",
+      "label": "PortfolioOverview()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "ref_react",
+      "file_type": "code",
+      "norm_label": "portfoliooverview()",
+      "source_file": "src/components/apartment/PortfolioOverview.jsx",
+      "source_location": "L5"
+    },
+    {
+      "id": "src_components_apartment_roomdirectory_roomdirectory",
+      "label": "RoomDirectory()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "ref_react",
+      "file_type": "code",
+      "norm_label": "roomdirectory()",
+      "source_file": "src/components/apartment/RoomDirectory.jsx",
+      "source_location": "L5"
+    },
+    {
+      "id": "src_components_apartment_roompanel_roompanel",
+      "label": "RoomPanel()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "ref_react",
+      "file_type": "code",
+      "norm_label": "roompanel()",
+      "source_file": "src/components/apartment/RoomPanel.jsx",
+      "source_location": "L26"
+    },
+    {
+      "id": "src_components_apartment_roompanel_roompanel_navigatenext",
+      "label": "navigateNext()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "ref_react",
+      "file_type": "code",
+      "norm_label": "navigatenext()",
+      "source_file": "src/components/apartment/RoomPanel.jsx",
+      "source_location": "L50"
+    },
+    {
+      "id": "src_components_apartment_rooms_getcontentrooms",
+      "label": "getContentRooms()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "ref_react",
+      "file_type": "code",
+      "norm_label": "getcontentrooms()",
+      "source_file": "src/components/apartment/rooms.js",
+      "source_location": "L2"
+    },
+    {
       "id": "src_components_siteimage_siteimage",
       "label": "SiteImage()",
       "_callable": true,
@@ -878,6 +806,78 @@
       "norm_label": "handlekeydown()",
       "source_file": "src/hooks/useDialog.js",
       "source_location": "L22"
+    },
+    {
+      "id": "src_hooks_usejazzplayer_usejazzplayer",
+      "label": "useJazzPlayer()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "ref_react",
+      "file_type": "code",
+      "norm_label": "usejazzplayer()",
+      "source_file": "src/hooks/useJazzPlayer.js",
+      "source_location": "L6"
+    },
+    {
+      "id": "src_hooks_useroomnavigation_readroom",
+      "label": "readRoom()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "ref_react",
+      "file_type": "code",
+      "norm_label": "readroom()",
+      "source_file": "src/hooks/useRoomNavigation.js",
+      "source_location": "L3"
+    },
+    {
+      "id": "src_hooks_useroomnavigation_useroomnavigation",
+      "label": "useRoomNavigation()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "ref_react",
+      "file_type": "code",
+      "norm_label": "useroomnavigation()",
+      "source_file": "src/hooks/useRoomNavigation.js",
+      "source_location": "L9"
+    },
+    {
+      "id": "src_hooks_usetheme_preferrednight",
+      "label": "preferredNight()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "ref_react",
+      "file_type": "code",
+      "norm_label": "preferrednight()",
+      "source_file": "src/hooks/useTheme.js",
+      "source_location": "L5"
+    },
+    {
+      "id": "src_hooks_usetheme_usetheme",
+      "label": "useTheme()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "ref_react",
+      "file_type": "code",
+      "norm_label": "usetheme()",
+      "source_file": "src/hooks/useTheme.js",
+      "source_location": "L15"
+    },
+    {
+      "id": "src_pages_apartmentpage_apartmentpage",
+      "label": "ApartmentPage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "ref_react",
+      "file_type": "code",
+      "norm_label": "apartmentpage()",
+      "source_file": "src/pages/ApartmentPage.jsx",
+      "source_location": "L12"
     },
     {
       "id": "src_utils_urls_resumedownloadurl",
@@ -1012,147 +1012,72 @@
       "source_location": "L29"
     },
     {
-      "id": "src_app_test",
-      "label": "App.test.jsx",
+      "id": "graphify_out_memory_query_20260919_010620_4063185f_what_project_deployments_do_you_see_for_netlify",
+      "label": "query_20260919_010620_4063185f_what_project_deployments_do_you_see_for_netlify.md",
       "_origin": "ast",
       "community": 0,
-      "community_name": "ApartmentPage.jsx",
-      "file_type": "code",
-      "norm_label": "app.test.jsx",
-      "source_file": "src/App.test.jsx",
+      "community_name": "Q: what project deployments do you see for netlify",
+      "file_type": "document",
+      "frontmatter": {
+        "type": "query",
+        "date": "2026-09-19T01:06:20.664590+00:00",
+        "question": "what project deployments do you see for netlify",
+        "contributor": "graphify",
+        "outcome": "useful",
+        "source_nodes": "[&quot;deploy&quot;, &quot;build&quot;, &quot;preview&quot;, &quot;package.json&quot;]"
+      },
+      "node_kind": "page",
+      "norm_label": "query_20260919_010620_4063185f_what_project_deployments_do_you_see_for_netlify.md",
+      "source_file": "graphify-out/memory/query_20260919_010620_4063185f_what_project_deployments_do_you_see_for_netlify.md",
       "source_location": "L1"
     },
     {
-      "id": "src_components_apartment_apartmentlayout",
-      "label": "ApartmentLayout.jsx",
+      "id": "graphify_out_memory_query_20260919_010620_4063185f_what_project_deployments_do_you_see_for_netlify_answer",
+      "label": "Answer",
       "_origin": "ast",
       "community": 0,
-      "community_name": "ApartmentPage.jsx",
-      "file_type": "code",
-      "norm_label": "apartmentlayout.jsx",
-      "source_file": "src/components/apartment/ApartmentLayout.jsx",
-      "source_location": "L1"
+      "community_name": "Q: what project deployments do you see for netlify",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "answer",
+      "source_file": "graphify-out/memory/query_20260919_010620_4063185f_what_project_deployments_do_you_see_for_netlify.md",
+      "source_location": "L12"
     },
     {
-      "id": "src_components_apartment_roomdirectory",
-      "label": "RoomDirectory.jsx",
+      "id": "graphify_out_memory_query_20260919_010620_4063185f_what_project_deployments_do_you_see_for_netlify_outcome",
+      "label": "Outcome",
       "_origin": "ast",
       "community": 0,
-      "community_name": "ApartmentPage.jsx",
-      "file_type": "code",
-      "norm_label": "roomdirectory.jsx",
-      "source_file": "src/components/apartment/RoomDirectory.jsx",
-      "source_location": "L1"
+      "community_name": "Q: what project deployments do you see for netlify",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "outcome",
+      "source_file": "graphify-out/memory/query_20260919_010620_4063185f_what_project_deployments_do_you_see_for_netlify.md",
+      "source_location": "L16"
     },
     {
-      "id": "src_components_apartment_rooms",
-      "label": "rooms.js",
+      "id": "graphify_out_memory_query_20260919_010620_4063185f_what_project_deployments_do_you_see_for_netlify_q_what_project_deployments_do_you_see_for_netlify",
+      "label": "Q: what project deployments do you see for netlify",
       "_origin": "ast",
       "community": 0,
-      "community_name": "ApartmentPage.jsx",
-      "file_type": "code",
-      "norm_label": "rooms.js",
-      "source_file": "src/components/apartment/rooms.js",
-      "source_location": "L1"
+      "community_name": "Q: what project deployments do you see for netlify",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "q: what project deployments do you see for netlify",
+      "source_file": "graphify-out/memory/query_20260919_010620_4063185f_what_project_deployments_do_you_see_for_netlify.md",
+      "source_location": "L10"
     },
     {
-      "id": "src_hooks_usejazzplayer",
-      "label": "useJazzPlayer.js",
+      "id": "graphify_out_memory_query_20260919_010620_4063185f_what_project_deployments_do_you_see_for_netlify_source_nodes",
+      "label": "Source Nodes",
       "_origin": "ast",
       "community": 0,
-      "community_name": "ApartmentPage.jsx",
-      "file_type": "code",
-      "norm_label": "usejazzplayer.js",
-      "source_file": "src/hooks/useJazzPlayer.js",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_hooks_usejazzplayer_empty_tracks",
-      "label": "EMPTY_TRACKS",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "ApartmentPage.jsx",
-      "file_type": "code",
-      "norm_label": "empty_tracks",
-      "source_file": "src/hooks/useJazzPlayer.js",
-      "source_location": "L3"
-    },
-    {
-      "id": "src_hooks_useroomnavigation",
-      "label": "useRoomNavigation.js",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "ApartmentPage.jsx",
-      "file_type": "code",
-      "norm_label": "useroomnavigation.js",
-      "source_file": "src/hooks/useRoomNavigation.js",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_hooks_useroomnavigation_test",
-      "label": "useRoomNavigation.test.jsx",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "ApartmentPage.jsx",
-      "file_type": "code",
-      "norm_label": "useroomnavigation.test.jsx",
-      "source_file": "src/hooks/useRoomNavigation.test.jsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_hooks_usetheme",
-      "label": "useTheme.js",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "ApartmentPage.jsx",
-      "file_type": "code",
-      "norm_label": "usetheme.js",
-      "source_file": "src/hooks/useTheme.js",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_hooks_usetheme_test",
-      "label": "useTheme.test.jsx",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "ApartmentPage.jsx",
-      "file_type": "code",
-      "norm_label": "usetheme.test.jsx",
-      "source_file": "src/hooks/useTheme.test.jsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_pages_apartmentpage",
-      "label": "ApartmentPage.jsx",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "ApartmentPage.jsx",
-      "file_type": "code",
-      "norm_label": "apartmentpage.jsx",
-      "source_file": "src/pages/ApartmentPage.jsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_setuptests",
-      "label": "setupTests.js",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "ApartmentPage.jsx",
-      "file_type": "code",
-      "norm_label": "setuptests.js",
-      "source_file": "src/setupTests.js",
-      "source_location": "L1"
-    },
-    {
-      "id": "ref_testing_library_react",
-      "label": "@testing-library/react",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "ApartmentPage.jsx",
-      "file_type": "concept",
-      "norm_label": "@testing-library/react",
-      "source_file": "package.json",
-      "source_location": "L35"
+      "community_name": "Q: what project deployments do you see for netlify",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "source nodes",
+      "source_file": "graphify-out/memory/query_20260919_010620_4063185f_what_project_deployments_do_you_see_for_netlify.md",
+      "source_location": "L20"
     },
     {
       "id": "src_components_apartment_apartment",
@@ -1386,6 +1311,17 @@
       "source_location": "L1"
     },
     {
+      "id": "src_app_test",
+      "label": "App.test.jsx",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "normalizeContent.js",
+      "file_type": "code",
+      "norm_label": "app.test.jsx",
+      "source_file": "src/App.test.jsx",
+      "source_location": "L1"
+    },
+    {
       "id": "src_components_apartment_roomdirectory_test",
       "label": "RoomDirectory.test.jsx",
       "_origin": "ast",
@@ -1394,6 +1330,28 @@
       "file_type": "code",
       "norm_label": "roomdirectory.test.jsx",
       "source_file": "src/components/apartment/RoomDirectory.test.jsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_hooks_useroomnavigation_test",
+      "label": "useRoomNavigation.test.jsx",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "normalizeContent.js",
+      "file_type": "code",
+      "norm_label": "useroomnavigation.test.jsx",
+      "source_file": "src/hooks/useRoomNavigation.test.jsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_index",
+      "label": "index.jsx",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "normalizeContent.js",
+      "file_type": "code",
+      "norm_label": "index.jsx",
+      "source_file": "src/index.jsx",
       "source_location": "L1"
     },
     {
@@ -1540,6 +1498,50 @@
       "source_location": "L1"
     },
     {
+      "id": "src_sanity_sitequery",
+      "label": "siteQuery.js",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "normalizeContent.js",
+      "file_type": "code",
+      "norm_label": "sitequery.js",
+      "source_file": "src/sanity/siteQuery.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_sanity_sitequery_test",
+      "label": "siteQuery.test.js",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "normalizeContent.js",
+      "file_type": "code",
+      "norm_label": "sitequery.test.js",
+      "source_file": "src/sanity/siteQuery.test.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_serviceworker",
+      "label": "serviceWorker.js",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "normalizeContent.js",
+      "file_type": "code",
+      "norm_label": "serviceworker.js",
+      "source_file": "src/serviceWorker.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_setuptests",
+      "label": "setupTests.js",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "normalizeContent.js",
+      "file_type": "code",
+      "norm_label": "setuptests.js",
+      "source_file": "src/setupTests.js",
+      "source_location": "L1"
+    },
+    {
       "id": "studio_sanity_cli",
       "label": "sanity.cli.js",
       "_origin": "ast",
@@ -1549,6 +1551,28 @@
       "norm_label": "sanity.cli.js",
       "source_file": "studio/sanity.cli.js",
       "source_location": "L1"
+    },
+    {
+      "id": "ref_testing_library_react",
+      "label": "@testing-library/react",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "normalizeContent.js",
+      "file_type": "concept",
+      "norm_label": "@testing-library/react",
+      "source_file": "package.json",
+      "source_location": "L35"
+    },
+    {
+      "id": "ref_vitest",
+      "label": "vitest",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "normalizeContent.js",
+      "file_type": "concept",
+      "norm_label": "vitest",
+      "source_file": "package.json",
+      "source_location": "L46"
     },
     {
       "id": "codex_skills_graphify_skill",
@@ -2333,28 +2357,6 @@
       "source_location": "L1"
     },
     {
-      "id": "src_sanity_sitequery",
-      "label": "siteQuery.js",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "package.json",
-      "file_type": "code",
-      "norm_label": "sitequery.js",
-      "source_file": "src/sanity/siteQuery.js",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_sanity_sitequery_test",
-      "label": "siteQuery.test.js",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "package.json",
-      "file_type": "code",
-      "norm_label": "sitequery.test.js",
-      "source_file": "src/sanity/siteQuery.test.js",
-      "source_location": "L1"
-    },
-    {
       "id": "vite_config",
       "label": "vite.config.js",
       "_origin": "ast",
@@ -2542,17 +2544,6 @@
       "source_location": "L36"
     },
     {
-      "id": "ref_vitest",
-      "label": "vitest",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "package.json",
-      "file_type": "concept",
-      "norm_label": "vitest",
-      "source_file": "package.json",
-      "source_location": "L46"
-    },
-    {
       "id": "codex_skills_graphify_references_github_and_merge",
       "label": "github-and-merge.md",
       "_origin": "ast",
@@ -2706,26 +2697,72 @@
       "source_location": "L1"
     },
     {
-      "id": "src_index",
-      "label": "index.jsx",
+      "id": "graphify_out_memory_query_20260919_012109_23d3d38c_why_is_the_netlify_deployment_broken",
+      "label": "query_20260919_012109_23d3d38c_why_is_the_netlify_deployment_broken.md",
       "_origin": "ast",
       "community": 35,
-      "community_name": "index.jsx",
-      "file_type": "code",
-      "norm_label": "index.jsx",
-      "source_file": "src/index.jsx",
+      "community_name": "Q: why is the Netlify deployment broken",
+      "file_type": "document",
+      "frontmatter": {
+        "type": "query",
+        "date": "2026-09-19T01:21:09.678977+00:00",
+        "question": "why is the Netlify deployment broken",
+        "contributor": "graphify",
+        "outcome": "useful",
+        "source_nodes": "[&quot;build&quot;, &quot;deploy&quot;, &quot;package.json&quot;, &quot;vite&quot;]"
+      },
+      "node_kind": "page",
+      "norm_label": "query_20260919_012109_23d3d38c_why_is_the_netlify_deployment_broken.md",
+      "source_file": "graphify-out/memory/query_20260919_012109_23d3d38c_why_is_the_netlify_deployment_broken.md",
       "source_location": "L1"
     },
     {
-      "id": "src_serviceworker",
-      "label": "serviceWorker.js",
+      "id": "graphify_out_memory_query_20260919_012109_23d3d38c_why_is_the_netlify_deployment_broken_answer",
+      "label": "Answer",
       "_origin": "ast",
       "community": 35,
-      "community_name": "index.jsx",
-      "file_type": "code",
-      "norm_label": "serviceworker.js",
-      "source_file": "src/serviceWorker.js",
-      "source_location": "L1"
+      "community_name": "Q: why is the Netlify deployment broken",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "answer",
+      "source_file": "graphify-out/memory/query_20260919_012109_23d3d38c_why_is_the_netlify_deployment_broken.md",
+      "source_location": "L12"
+    },
+    {
+      "id": "graphify_out_memory_query_20260919_012109_23d3d38c_why_is_the_netlify_deployment_broken_outcome",
+      "label": "Outcome",
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "Q: why is the Netlify deployment broken",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "outcome",
+      "source_file": "graphify-out/memory/query_20260919_012109_23d3d38c_why_is_the_netlify_deployment_broken.md",
+      "source_location": "L16"
+    },
+    {
+      "id": "graphify_out_memory_query_20260919_012109_23d3d38c_why_is_the_netlify_deployment_broken_q_why_is_the_netlify_deployment_broken",
+      "label": "Q: why is the Netlify deployment broken",
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "Q: why is the Netlify deployment broken",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "q: why is the netlify deployment broken",
+      "source_file": "graphify-out/memory/query_20260919_012109_23d3d38c_why_is_the_netlify_deployment_broken.md",
+      "source_location": "L10"
+    },
+    {
+      "id": "graphify_out_memory_query_20260919_012109_23d3d38c_why_is_the_netlify_deployment_broken_source_nodes",
+      "label": "Source Nodes",
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "Q: why is the Netlify deployment broken",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "source nodes",
+      "source_file": "graphify-out/memory/query_20260919_012109_23d3d38c_why_is_the_netlify_deployment_broken.md",
+      "source_location": "L20"
     },
     {
       "id": "src_components_apartment_apartmentintro",
@@ -2736,6 +2773,17 @@
       "file_type": "code",
       "norm_label": "apartmentintro.jsx",
       "source_file": "src/components/apartment/ApartmentIntro.jsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_components_apartment_apartmentlayout",
+      "label": "ApartmentLayout.jsx",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "ref_react",
+      "file_type": "code",
+      "norm_label": "apartmentlayout.jsx",
+      "source_file": "src/components/apartment/ApartmentLayout.jsx",
       "source_location": "L1"
     },
     {
@@ -2882,6 +2930,17 @@
       "source_location": "L1"
     },
     {
+      "id": "src_components_apartment_roomdirectory",
+      "label": "RoomDirectory.jsx",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "ref_react",
+      "file_type": "code",
+      "norm_label": "roomdirectory.jsx",
+      "source_file": "src/components/apartment/RoomDirectory.jsx",
+      "source_location": "L1"
+    },
+    {
       "id": "src_components_apartment_roompanel",
       "label": "RoomPanel.jsx",
       "_origin": "ast",
@@ -2902,6 +2961,17 @@
       "norm_label": "panels",
       "source_file": "src/components/apartment/RoomPanel.jsx",
       "source_location": "L15"
+    },
+    {
+      "id": "src_components_apartment_rooms",
+      "label": "rooms.js",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "ref_react",
+      "file_type": "code",
+      "norm_label": "rooms.js",
+      "source_file": "src/components/apartment/rooms.js",
+      "source_location": "L1"
     },
     {
       "id": "src_components_siteimage",
@@ -2945,6 +3015,72 @@
       "file_type": "code",
       "norm_label": "usedialog.test.jsx",
       "source_file": "src/hooks/useDialog.test.jsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_hooks_usejazzplayer",
+      "label": "useJazzPlayer.js",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "ref_react",
+      "file_type": "code",
+      "norm_label": "usejazzplayer.js",
+      "source_file": "src/hooks/useJazzPlayer.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_hooks_usejazzplayer_empty_tracks",
+      "label": "EMPTY_TRACKS",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "ref_react",
+      "file_type": "code",
+      "norm_label": "empty_tracks",
+      "source_file": "src/hooks/useJazzPlayer.js",
+      "source_location": "L3"
+    },
+    {
+      "id": "src_hooks_useroomnavigation",
+      "label": "useRoomNavigation.js",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "ref_react",
+      "file_type": "code",
+      "norm_label": "useroomnavigation.js",
+      "source_file": "src/hooks/useRoomNavigation.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_hooks_usetheme",
+      "label": "useTheme.js",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "ref_react",
+      "file_type": "code",
+      "norm_label": "usetheme.js",
+      "source_file": "src/hooks/useTheme.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_hooks_usetheme_test",
+      "label": "useTheme.test.jsx",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "ref_react",
+      "file_type": "code",
+      "norm_label": "usetheme.test.jsx",
+      "source_file": "src/hooks/useTheme.test.jsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_pages_apartmentpage",
+      "label": "ApartmentPage.jsx",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "ref_react",
+      "file_type": "code",
+      "norm_label": "apartmentpage.jsx",
+      "source_file": "src/pages/ApartmentPage.jsx",
       "source_location": "L1"
     },
     {
@@ -4242,14 +4378,14 @@
       "source_url": null
     },
     {
-      "id": "ref_testing_library_jest_dom_vitest",
-      "label": "ref_testing_library_jest_dom_vitest",
+      "id": "ref_react_dom_client",
+      "label": "ref_react_dom_client",
       "_origin": "semantic",
-      "community": 0,
-      "community_name": "ApartmentPage.jsx",
+      "community": 2,
+      "community_name": "normalizeContent.js",
       "external": true,
       "file_type": "concept",
-      "norm_label": "ref_testing_library_jest_dom_vitest",
+      "norm_label": "ref_react_dom_client",
       "source_file": "",
       "type": "external"
     },
@@ -4262,6 +4398,18 @@
       "external": true,
       "file_type": "concept",
       "norm_label": "ref_sanity_cli",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "ref_testing_library_jest_dom_vitest",
+      "label": "ref_testing_library_jest_dom_vitest",
+      "_origin": "semantic",
+      "community": 2,
+      "community_name": "normalizeContent.js",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_testing_library_jest_dom_vitest",
       "source_file": "",
       "type": "external"
     },
@@ -4290,6 +4438,18 @@
       "type": "external"
     },
     {
+      "id": "src_styles_styles",
+      "label": "src_styles_styles",
+      "_origin": "semantic",
+      "community": 2,
+      "community_name": "normalizeContent.js",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "src_styles_styles",
+      "source_file": "",
+      "type": "external"
+    },
+    {
       "id": "ref_vitest_config",
       "label": "ref_vitest_config",
       "_origin": "semantic",
@@ -4310,30 +4470,6 @@
       "external": true,
       "file_type": "concept",
       "norm_label": "src_components_apartment_panels_worldland",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "ref_react_dom_client",
-      "label": "ref_react_dom_client",
-      "_origin": "semantic",
-      "community": 35,
-      "community_name": "index.jsx",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "ref_react_dom_client",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "src_styles_styles",
-      "label": "src_styles_styles",
-      "_origin": "semantic",
-      "community": 35,
-      "community_name": "index.jsx",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "src_styles_styles",
       "source_file": "",
       "type": "external"
     },
@@ -10445,6 +10581,94 @@
       "weight": 1.0
     },
     {
+      "source": "graphify_out_memory_query_20260919_010620_4063185f_what_project_deployments_do_you_see_for_netlify",
+      "target": "graphify_out_memory_query_20260919_010620_4063185f_what_project_deployments_do_you_see_for_netlify_q_what_project_deployments_do_you_see_for_netlify",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/memory/query_20260919_010620_4063185f_what_project_deployments_do_you_see_for_netlify.md",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "graphify_out_memory_query_20260919_010620_4063185f_what_project_deployments_do_you_see_for_netlify_q_what_project_deployments_do_you_see_for_netlify",
+      "target": "graphify_out_memory_query_20260919_010620_4063185f_what_project_deployments_do_you_see_for_netlify_answer",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/memory/query_20260919_010620_4063185f_what_project_deployments_do_you_see_for_netlify.md",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "graphify_out_memory_query_20260919_010620_4063185f_what_project_deployments_do_you_see_for_netlify_q_what_project_deployments_do_you_see_for_netlify",
+      "target": "graphify_out_memory_query_20260919_010620_4063185f_what_project_deployments_do_you_see_for_netlify_outcome",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/memory/query_20260919_010620_4063185f_what_project_deployments_do_you_see_for_netlify.md",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "graphify_out_memory_query_20260919_010620_4063185f_what_project_deployments_do_you_see_for_netlify_q_what_project_deployments_do_you_see_for_netlify",
+      "target": "graphify_out_memory_query_20260919_010620_4063185f_what_project_deployments_do_you_see_for_netlify_source_nodes",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/memory/query_20260919_010620_4063185f_what_project_deployments_do_you_see_for_netlify.md",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "graphify_out_memory_query_20260919_012109_23d3d38c_why_is_the_netlify_deployment_broken",
+      "target": "graphify_out_memory_query_20260919_012109_23d3d38c_why_is_the_netlify_deployment_broken_q_why_is_the_netlify_deployment_broken",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/memory/query_20260919_012109_23d3d38c_why_is_the_netlify_deployment_broken.md",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "graphify_out_memory_query_20260919_012109_23d3d38c_why_is_the_netlify_deployment_broken_q_why_is_the_netlify_deployment_broken",
+      "target": "graphify_out_memory_query_20260919_012109_23d3d38c_why_is_the_netlify_deployment_broken_answer",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/memory/query_20260919_012109_23d3d38c_why_is_the_netlify_deployment_broken.md",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "graphify_out_memory_query_20260919_012109_23d3d38c_why_is_the_netlify_deployment_broken_q_why_is_the_netlify_deployment_broken",
+      "target": "graphify_out_memory_query_20260919_012109_23d3d38c_why_is_the_netlify_deployment_broken_outcome",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/memory/query_20260919_012109_23d3d38c_why_is_the_netlify_deployment_broken.md",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "graphify_out_memory_query_20260919_012109_23d3d38c_why_is_the_netlify_deployment_broken_q_why_is_the_netlify_deployment_broken",
+      "target": "graphify_out_memory_query_20260919_012109_23d3d38c_why_is_the_netlify_deployment_broken_source_nodes",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/memory/query_20260919_012109_23d3d38c_why_is_the_netlify_deployment_broken.md",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
       "source": "package",
       "target": "package_name",
       "relation": "contains",
@@ -12634,5 +12858,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "8f2262cae62d470ed7416070767d7f2b8ed8eb81"
+  "built_at_commit": "f08b0a53992340b4ae87657b7456e4fe4f968fbf"
 }

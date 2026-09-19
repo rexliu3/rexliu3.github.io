@@ -1,22 +1,22 @@
 # Graph Report - rexliu3.github.io  (2026-09-18)
 
 ## Corpus Check
-- 101 files · ~148,058 words
+- 103 files · ~148,361 words
 - Verdict: corpus is large enough that graph structure adds value.
-- Unclassified: 17 file(s) not represented in the graph (top: .scss 10, (none) 5, .toml 1)
+- Unclassified: 18 file(s) not represented in the graph (top: .scss 10, (none) 5, .toml 2)
 
 ## Summary
-- 375 nodes · 707 edges · 36 communities (21 shown, 15 thin omitted)
+- 385 nodes · 715 edges · 36 communities (21 shown, 15 thin omitted)
 - Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 21 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `8f2262ca`
+- Built from commit: `f08b0a53`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
-- ApartmentPage.jsx
+- Q: what project deployments do you see for netlify
 - Apartment.jsx
 - normalizeContent.js
 - package.json
@@ -51,7 +51,7 @@
 - AGENTS.md
 - extraction-spec.md
 - TravelPanel.jsx
-- index.jsx
+- Q: why is the Netlify deployment broken
 
 ## God Nodes (most connected - your core abstractions)
 1. `scripts` - 16 edges
@@ -66,8 +66,6 @@
 10. `SiteImage()` - 9 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `RoomPanel()` --calls--> `useDialog()`  [EXTRACTED]
-  src/components/apartment/RoomPanel.jsx → src/hooks/useDialog.js
 - `navigateNext()` --calls--> `getContentRooms()`  [EXTRACTED]
   src/components/apartment/RoomPanel.jsx → src/components/apartment/rooms.js
 - `MusicTastePanel()` --calls--> `safeUrl()`  [EXTRACTED]
@@ -76,31 +74,33 @@
   src/components/apartment/scene/Sofa.jsx → src/components/apartment/scene/geometry.js
 - `Dialog()` --calls--> `useDialog()`  [EXTRACTED]
   src/hooks/useDialog.test.jsx → src/hooks/useDialog.js
+- `normalize()` --calls--> `normalizeContent()`  [EXTRACTED]
+  src/sanity/normalizeContent.test.js → src/sanity/normalizeContent.js
 
 ## Import Cycles
 - None detected.
 
 ## Communities (36 total, 15 thin omitted)
 
-### Community 0 - "ApartmentPage.jsx"
-Cohesion: 0.13
-Nodes (17): ref_testing_library_jest_dom_vitest, @testing-library/react, ApartmentIntro(), ApartmentFooter(), ApartmentHeader(), PortfolioOverview(), RoomDirectory(), RoomPanel() (+9 more)
+### Community 0 - "Q: what project deployments do you see for netlify"
+Cohesion: 0.40
+Nodes (4): Answer, Outcome, Q: what project deployments do you see for netlify, Source Nodes
 
 ### Community 1 - "Apartment.jsx"
 Cohesion: 0.21
 Nodes (22): Apartment(), Bookshelf(), Cat(), CoffeeTable(), Desk(), floor(), front(), points() (+14 more)
 
 ### Community 2 - "normalizeContent.js"
-Cohesion: 0.14
-Nodes (21): ref_sanity_cli, MainPage(), NotFoundPage(), CONTENT_TIMEOUT_MS, fetchSiteContent(), sanityConfig, src_sanity_config, ContentContext (+13 more)
+Cohesion: 0.09
+Nodes (28): ref_react_dom_client, ref_sanity_cli, ref_testing_library_jest_dom_vitest, @testing-library/react, vitest, App(), MainPage(), NotFoundPage() (+20 more)
 
 ### Community 3 - "package.json"
-Cohesion: 0.06
-Nodes (28): dependencies, react, react-dom, sanity, engines, node, react, react-dom (+20 more)
+Cohesion: 0.07
+Nodes (27): dependencies, react, react-dom, sanity, engines, node, react, react-dom (+19 more)
 
 ### Community 4 - "ref_react"
-Cohesion: 0.13
-Nodes (19): ref_react, ApartmentScene(), getCaption(), Icon(), paths, JazzPlayer(), BooksPanel(), EducationPanel() (+11 more)
+Cohesion: 0.08
+Nodes (34): ref_react, ApartmentIntro(), ApartmentFooter(), ApartmentHeader(), ApartmentScene(), getCaption(), Icon(), paths (+26 more)
 
 ### Community 5 - "index.js"
 Cohesion: 0.15
@@ -162,29 +162,29 @@ Nodes (3): For --cluster-only, For --update (incremental re-extraction), graphif
 Cohesion: 0.29
 Nodes (6): CityDrawing(), TravelPanel(), position(), visitDate(), VisitedCitiesMap(), src_components_apartment_panels_worldland
 
-### Community 35 - "index.jsx"
+### Community 35 - "Q: why is the Netlify deployment broken"
 Cohesion: 0.40
-Nodes (4): ref_react_dom_client, App(), unregister(), src_styles_styles
+Nodes (4): Answer, Outcome, Q: why is the Netlify deployment broken, Source Nodes
 
 ## Knowledge Gaps
-- **144 isolated node(s):** `printWidth`, `tabWidth`, `semi`, `singleQuote`, `trailingComma` (+139 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 169 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **150 isolated node(s):** `printWidth`, `tabWidth`, `semi`, `singleQuote`, `trailingComma` (+145 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 177 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **15 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `@testing-library/react` connect `ApartmentPage.jsx` to `studio/package.json`, `normalizeContent.js`, `package.json`, `ref_react`?**
-  _High betweenness centrality (0.202) - this node is a cross-community bridge._
+- **Why does `@testing-library/react` connect `normalizeContent.js` to `studio/package.json`, `package.json`, `ref_react`?**
+  _High betweenness centrality (0.192) - this node is a cross-community bridge._
 - **Why does `scripts` connect `scripts` to `package.json`?**
-  _High betweenness centrality (0.058) - this node is a cross-community bridge._
+  _High betweenness centrality (0.055) - this node is a cross-community bridge._
 - **What connects `printWidth`, `tabWidth`, `semi` to the rest of the system?**
-  _144 weakly-connected nodes found - possible documentation gaps or missing edges._
-- **Should `ApartmentPage.jsx` be split into smaller, more focused modules?**
-  _Cohesion score 0.12962962962962962 - nodes in this community are weakly interconnected._
+  _150 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `normalizeContent.js` be split into smaller, more focused modules?**
-  _Cohesion score 0.1350806451612903 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.08695652173913043 - nodes in this community are weakly interconnected._
 - **Should `package.json` be split into smaller, more focused modules?**
-  _Cohesion score 0.06218487394957983 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.06854838709677419 - nodes in this community are weakly interconnected._
 - **Should `ref_react` be split into smaller, more focused modules?**
-  _Cohesion score 0.13090418353576247 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.08249603384452671 - nodes in this community are weakly interconnected._
+- **Should `devDependencies` be split into smaller, more focused modules?**
+  _Cohesion score 0.125 - nodes in this community are weakly interconnected._
