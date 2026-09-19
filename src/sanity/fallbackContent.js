@@ -9,6 +9,7 @@ const fallbackContent = {
   educations: [{ _id: "education-berkeley", ...defaultContent.settings.panels.education }],
   nonfictionBooks: [],
   fictionBooks: [],
+  topSongsByYear: [],
   photographyPhotos: [],
   apartmentPortrait: {
     imageUrl: "/assets/Profile-Picture.png",

@@ -61,6 +61,33 @@ test("keeps the bundled music collection", () => {
   expect(content.jazzTracks).toEqual(fallbackContent.jazzTracks);
 });
 
+test("normalizes top songs by newest year and rejects unsafe Spotify links", () => {
+  const content = normalize({
+    topSongsByYear: [
+      { year: 2024, songs: [{ title: "Older song", artist: "Artist" }] },
+      {
+        year: 2026,
+        songs: [
+          {
+            title: "Newest song",
+            artist: "Artist",
+            spotifyUrl: "https://open.spotify.com/track/1",
+          },
+          { title: "", artist: "Missing title" },
+          { title: "Unsafe link", artist: "Artist", spotifyUrl: "javascript:alert(1)" },
+        ],
+      },
+      { year: "2025", songs: [{ title: "Wrong year type" }] },
+    ],
+  });
+
+  expect(content.topSongsByYear.map(({ year }) => year)).toEqual([2026, 2024]);
+  expect(content.topSongsByYear[0].songs).toMatchObject([
+    { title: "Newest song", spotifyUrl: "https://open.spotify.com/track/1" },
+    { title: "Unsafe link", spotifyUrl: "" },
+  ]);
+});
+
 test("uses a single experience note and migrates legacy highlights", () => {
   expect(
     normalize({ experiences: [{ note: "Building useful software." }] }).experiences[0].note

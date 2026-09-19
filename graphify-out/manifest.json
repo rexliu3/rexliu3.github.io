@@ -120,9 +120,9 @@
     "semantic_hash": ""
   },
   "src/components/apartment/RoomPanel.jsx": {
-    "mtime": 1789613510.4082985,
-    "seen": 1789671044.068584,
-    "ast_hash": "6434403ff1395693ba0e9c524fddc413",
+    "mtime": 1789777538.1382194,
+    "seen": 1789777583.612237,
+    "ast_hash": "201bc1c53089558a68ba8af3d04691f7",
     "semantic_hash": ""
   },
   "src/components/apartment/panels/BooksPanel.jsx": {
@@ -150,10 +150,10 @@
     "semantic_hash": ""
   },
   "src/components/apartment/panels/MusicTastePanel.jsx": {
-    "mtime": 1789582094.542569,
-    "seen": 1789584479.6066298,
-    "ast_hash": "2df16a7db4dd49f8a79a9c098b8717c2",
-    "semantic_hash": "2df16a7db4dd49f8a79a9c098b8717c2"
+    "mtime": 1789777538.1388369,
+    "seen": 1789777583.6122398,
+    "ast_hash": "0dfcd72ca20e77691e811362fcb3c047",
+    "semantic_hash": ""
   },
   "src/components/apartment/panels/PhotosPanel.jsx": {
     "mtime": 1789582094.542658,
@@ -360,33 +360,33 @@
     "semantic_hash": "e063d32113431bfd47d8918d2e64910f"
   },
   "src/sanity/defaultContent.json": {
-    "mtime": 1789613510.4317727,
-    "seen": 1789671044.068606,
-    "ast_hash": "159e554415249a61cb03aff245e11560",
+    "mtime": 1789777538.1368148,
+    "seen": 1789777583.612261,
+    "ast_hash": "8b0c7376ba0c112f82684649c8604d41",
     "semantic_hash": ""
   },
   "src/sanity/fallbackContent.js": {
-    "mtime": 1789613510.4321246,
-    "seen": 1789671044.068606,
-    "ast_hash": "5ebf6d5b02899a15bc3356505dab4041",
+    "mtime": 1789777538.137289,
+    "seen": 1789777583.612261,
+    "ast_hash": "2d091a5cda6d1c6973451d96807ac41d",
     "semantic_hash": ""
   },
   "src/sanity/normalizeContent.js": {
-    "mtime": 1789613510.4325752,
-    "seen": 1789671044.068607,
-    "ast_hash": "22e2181fb0910e8c280166c2e12f6dc2",
+    "mtime": 1789777538.137626,
+    "seen": 1789777583.6122618,
+    "ast_hash": "01fda555309931c5a55c2221d5bb2953",
     "semantic_hash": ""
   },
   "src/sanity/normalizeContent.test.js": {
-    "mtime": 1789613510.4330573,
-    "seen": 1789671044.068607,
-    "ast_hash": "bb7da99d4619966c866b5fbec8e8c778",
+    "mtime": 1789777547.6442173,
+    "seen": 1789777583.6122618,
+    "ast_hash": "b771746dd792eae177127672fceb83b1",
     "semantic_hash": ""
   },
   "src/sanity/siteQuery.js": {
-    "mtime": 1789671027.7111495,
-    "seen": 1789671044.068608,
-    "ast_hash": "879c4a96b2b4d1e5ed34a8f7fdfb57df",
+    "mtime": 1789777538.1359963,
+    "seen": 1789777583.612263,
+    "ast_hash": "d0d4635243c9179bab154c494527ae6b",
     "semantic_hash": ""
   },
   "src/serviceWorker.js": {
@@ -420,9 +420,9 @@
     "semantic_hash": "c0e127b984b169d8ab15a457039f4c42"
   },
   "studio/sanity.config.js": {
-    "mtime": 1789613510.439568,
-    "seen": 1789671044.0686111,
-    "ast_hash": "b3bffec0be8268a627eee9a7bbb57f20",
+    "mtime": 1789777538.135235,
+    "seen": 1789777583.612267,
+    "ast_hash": "959df682d68f6e2039985cbc98b90254",
     "semantic_hash": ""
   },
   "studio/schemaTypes/apartmentPortrait.js": {
@@ -456,9 +456,9 @@
     "semantic_hash": "6c91c86d32e116bf36728d900ea53b8f"
   },
   "studio/schemaTypes/index.js": {
-    "mtime": 1789613510.4422648,
-    "seen": 1789671044.068616,
-    "ast_hash": "f20b335db54f58238349446220849011",
+    "mtime": 1789777538.1344068,
+    "seen": 1789777583.612272,
+    "ast_hash": "cf8a8ab288222b4b3d856eae36c86cfe",
     "semantic_hash": ""
   },
   "studio/schemaTypes/photographyPortfolio.js": {
@@ -588,9 +588,9 @@
     "semantic_hash": "ed20006d86492e395189ffdd4b2b2067"
   },
   "src/sanity/siteQuery.test.js": {
-    "mtime": 1789671027.7128808,
-    "seen": 1789671044.068608,
-    "ast_hash": "95da21274bedaed731105de35bab7055",
+    "mtime": 1789777538.1401095,
+    "seen": 1789777583.612263,
+    "ast_hash": "c153e53b1875f7070448b80d6033e97a",
     "semantic_hash": ""
   },
   ".codex/skills/graphify/SKILL.md": {
@@ -711,6 +711,12 @@
     "mtime": 1789671879.9060972,
     "seen": 1789671892.186477,
     "ast_hash": "c21f8176f86d01a1a471d4f1e6923ed4",
+    "semantic_hash": ""
+  },
+  "studio/schemaTypes/topSongs.js": {
+    "mtime": 1789777538.1334603,
+    "seen": 1789777583.612274,
+    "ast_hash": "630568dcd70373d593b3f82116c2680f",
     "semantic_hash": ""
   }
 }

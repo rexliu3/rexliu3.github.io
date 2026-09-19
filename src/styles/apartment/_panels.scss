@@ -17,6 +17,54 @@
   background: #eeeee1;
   font-size: 12px;
 }
+.top-songs {
+  margin: 28px 0 8px;
+}
+.top-songs-year {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 16px;
+  padding: 16px 0;
+  border-top: 1px solid #e1ddcf;
+}
+.top-songs-year h4 {
+  margin: 3px 0 0;
+  color: #a1815b;
+  font-family: var(--serif);
+  font-size: 18px;
+  font-weight: 400;
+}
+.top-songs-year ol {
+  display: grid;
+  gap: 11px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.top-songs-year li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.top-songs-year li span:first-child {
+  display: grid;
+  gap: 2px;
+}
+.top-songs-year strong {
+  color: #454b40;
+  font-size: 12px;
+  font-weight: 600;
+}
+.top-songs-year small {
+  color: #8b8878;
+  font-size: 10px;
+}
+.top-songs-year a {
+  flex: 0 0 auto;
+  color: #a65f43;
+  font-size: 10px;
+}
 .panel-backdrop {
   position: fixed;
   inset: 0;

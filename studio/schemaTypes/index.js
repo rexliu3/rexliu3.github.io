@@ -7,6 +7,7 @@ import { apartmentPortrait } from "./apartmentPortrait";
 import { bookshelf } from "./bookshelf";
 import { education } from "./education";
 import { cityVisited } from "./cityVisited";
+import { topSongs } from "./topSongs";
 
 export const schemaTypes = [
   city,
@@ -18,4 +19,5 @@ export const schemaTypes = [
   bookshelf,
   education,
   cityVisited,
+  topSongs,
 ];

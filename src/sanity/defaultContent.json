@@ -57,7 +57,9 @@
         "danceStyles": [],
         "note": "",
         "playlistUrl": "",
-        "playlistLabel": "Listen to my playlist"
+        "playlistLabel": "Listen to my playlist",
+        "spotifyUrl": "https://open.spotify.com/user/rexliu3?si=5fb772f1cf434715",
+        "spotifyLabel": "Find me on Spotify"
       },
       "music": {
         "choicesLabel": "FIVE RECORDS FOR A SLOW AFTERNOON",

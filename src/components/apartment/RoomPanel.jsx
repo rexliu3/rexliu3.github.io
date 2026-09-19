@@ -35,6 +35,7 @@ export default function RoomPanel({ active, onClose, onNavigate, player, content
     photographyPhotos,
     nonfictionBooks,
     fictionBooks,
+    topSongsByYear,
     rooms,
     settings,
   } = content;
@@ -99,6 +100,7 @@ export default function RoomPanel({ active, onClose, onNavigate, player, content
               photos={photographyPhotos}
               nonfictionBooks={nonfictionBooks}
               fictionBooks={fictionBooks}
+              topSongsByYear={topSongsByYear}
               portrait={portrait}
               settings={settings}
             />

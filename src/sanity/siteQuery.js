@@ -10,6 +10,11 @@ const siteQuery = `{
   "fictionBooks": *[_type == "bookshelf" && _id == "bookshelf"][0].fiction[]{
     ..., "imageUrl": cover.asset->url
   },
+  "topSongsByYear": *[_type == "topSongs" && _id == "topSongs"][0].years[]{
+    _key,
+    year,
+    songs[]{_key, title, artist, spotifyUrl}
+  },
   "resumeUrl": *[_type == "resume" && _id == "resume"][0].file.asset->url,
   "apartmentPortrait": *[_type == "apartmentPortrait" && _id == "apartmentPortrait"][0]{
     "imageUrl": image.asset->url,

@@ -73,6 +73,25 @@ function normalizeCollection(name, value) {
   return collection;
 }
 
+function normalizeTopSongs(value) {
+  return documents(value)
+    .filter(({ year }) => Number.isInteger(year) && year >= 1900 && year <= 2100)
+    .map((entry, index) => ({
+      _key: typeof entry._key === "string" ? entry._key : `song-year-${index}`,
+      year: entry.year,
+      songs: documents(entry.songs)
+        .filter(({ title }) => typeof title === "string" && title.trim())
+        .map((song, songIndex) => ({
+          _key: typeof song._key === "string" ? song._key : `song-${index}-${songIndex}`,
+          title: song.title,
+          artist: typeof song.artist === "string" ? song.artist : "",
+          spotifyUrl: safeUrl(song.spotifyUrl),
+        })),
+    }))
+    .filter(({ songs }) => songs.length)
+    .sort((a, b) => b.year - a.year);
+}
+
 export default function normalizeContent(content) {
   if (!isObject(content) || content.contentModel !== "dynamic-v1") {
     throw new Error("Sanity content is not initialized");
@@ -90,6 +109,7 @@ export default function normalizeContent(content) {
     settings: { ...fallbackContent.settings, resumeUrl },
     rooms: fallbackContent.rooms,
     jazzTracks: fallbackContent.jazzTracks,
+    topSongsByYear: normalizeTopSongs(content.topSongsByYear),
     apartmentPortrait,
     ...Object.fromEntries(
       Object.keys(DOCUMENT_FIELDS).map((name) => [name, normalizeCollection(name, content[name])])
