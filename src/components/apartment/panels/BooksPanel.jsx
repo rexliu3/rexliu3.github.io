@@ -1,5 +1,6 @@
 import React from "react";
 import SiteImage from "../../SiteImage";
+import { Icon } from "../Icon";
 
 export default function BooksPanel({ room, content, nonfictionBooks = [], fictionBooks = [] }) {
   return (
@@ -60,7 +61,7 @@ export default function BooksPanel({ room, content, nonfictionBooks = [], fictio
         target="_blank"
         rel="noopener noreferrer"
       >
-        My reading list on Goodreads ↗
+        My reading list on Goodreads <Icon name="arrow" size={16} />
       </a>
     </>
   );

@@ -1,6 +1,7 @@
 import React from "react";
 import ExperienceItem from "./ExperienceItem";
 import { resumeDownloadUrl } from "../../../utils/urls";
+import { Icon } from "../Icon";
 
 export default function ResumePanel({ room, content, experiences = [], settings }) {
   const resumeUrl = settings.resumeUrl;
@@ -21,13 +22,13 @@ export default function ResumePanel({ room, content, experiences = [], settings 
       </div>
       <div className="resume-actions">
         <a href={resumeUrl} target="_blank" rel="noopener noreferrer">
-          {content.openLabel}
+          {content.openLabel} <Icon name="arrow" size={16} />
         </a>
         <a
           href={resumeDownloadUrl(resumeUrl)}
           download={isBundledFile ? "Rex-Liu-Resume.pdf" : undefined}
         >
-          {content.downloadLabel}
+          {content.downloadLabel} <Icon name="arrow" size={16} />
         </a>
       </div>
     </>

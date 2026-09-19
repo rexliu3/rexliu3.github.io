@@ -39,8 +39,13 @@ export default function MusicTastePanel({ room, content, topSongsByYear = [] }) 
                       {song.artist && <small>{song.artist}</small>}
                     </span>
                     {song.spotifyUrl && (
-                      <a href={song.spotifyUrl} target="_blank" rel="noopener noreferrer">
-                        Play <span aria-hidden="true">↗</span>
+                      <a
+                        href={song.spotifyUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`Play ${song.title}${song.artist ? ` by ${song.artist}` : ""} on Spotify`}
+                      >
+                        <Icon name="play" size={16} />
                       </a>
                     )}
                   </li>

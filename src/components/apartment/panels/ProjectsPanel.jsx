@@ -1,5 +1,6 @@
 import React from "react";
 import SiteImage from "../../SiteImage";
+import { Icon } from "../Icon";
 
 export default function ProjectsPanel({ room, content, projects, settings }) {
   return (
@@ -37,7 +38,7 @@ export default function ProjectsPanel({ room, content, projects, settings }) {
         </p>
       )}
       <a className="panel-link" href={settings.githubUrl} target="_blank" rel="noopener noreferrer">
-        {content.linkLabel}
+        {content.linkLabel} <Icon name="arrow" size={16} />
       </a>
     </>
   );

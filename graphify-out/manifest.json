@@ -90,10 +90,10 @@
     "semantic_hash": ""
   },
   "src/components/apartment/Icon.jsx": {
-    "mtime": 1789582094.5414975,
-    "seen": 1789584479.606626,
-    "ast_hash": "c38b6ec211a82d7a997ba986fe14a5b3",
-    "semantic_hash": "c38b6ec211a82d7a997ba986fe14a5b3"
+    "mtime": 1789778393.1647966,
+    "seen": 1789778409.644646,
+    "ast_hash": "e8eafc1ab779372b341f28167d428197",
+    "semantic_hash": ""
   },
   "src/components/apartment/JazzPlayer.jsx": {
     "mtime": 1789582094.5415654,
@@ -126,9 +126,9 @@
     "semantic_hash": ""
   },
   "src/components/apartment/panels/BooksPanel.jsx": {
-    "mtime": 1789613510.4167857,
-    "seen": 1789671044.068585,
-    "ast_hash": "7630cd24ba7d99c0ce7072c6b40a1a21",
+    "mtime": 1789778440.2428985,
+    "seen": 1789778447.5138729,
+    "ast_hash": "4f34d050782b627b4a3701bff356ab63",
     "semantic_hash": ""
   },
   "src/components/apartment/panels/CityDrawing.jsx": {
@@ -150,9 +150,9 @@
     "semantic_hash": ""
   },
   "src/components/apartment/panels/MusicTastePanel.jsx": {
-    "mtime": 1789777538.1388369,
-    "seen": 1789777583.6122398,
-    "ast_hash": "0dfcd72ca20e77691e811362fcb3c047",
+    "mtime": 1789778393.1656237,
+    "seen": 1789778409.6446521,
+    "ast_hash": "e6caefadec52bdd1c8807c10b25f3901",
     "semantic_hash": ""
   },
   "src/components/apartment/panels/PhotosPanel.jsx": {
@@ -168,15 +168,15 @@
     "semantic_hash": ""
   },
   "src/components/apartment/panels/ProjectsPanel.jsx": {
-    "mtime": 1789582094.5428975,
-    "seen": 1789584479.6066308,
-    "ast_hash": "6fd214c75e3927550a8bf5be36cffb91",
-    "semantic_hash": "6fd214c75e3927550a8bf5be36cffb91"
+    "mtime": 1789778440.243466,
+    "seen": 1789778447.513877,
+    "ast_hash": "c1121a2940230492cabdb36bacd8decd",
+    "semantic_hash": ""
   },
   "src/components/apartment/panels/ResumePanel.jsx": {
-    "mtime": 1789585848.1372886,
-    "seen": 1789585937.256808,
-    "ast_hash": "c737a577e6aa31d76b658ba0924d56d9",
+    "mtime": 1789778440.2443688,
+    "seen": 1789778447.513878,
+    "ast_hash": "d9b8a9dd2bcf3ae3a2b57b2438092bc1",
     "semantic_hash": ""
   },
   "src/components/apartment/panels/TravelPanel.jsx": {

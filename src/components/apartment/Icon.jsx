@@ -82,6 +82,7 @@ const paths = {
       <path d="m11 4-6 5H2v6h3l6 5ZM16 9l6 6m0-6-6 6" />
     </>
   ),
+  play: <path d="m9 7 8 5-8 5Z" fill="currentColor" stroke="none" />,
   arrow: <path d="M5 12h14m-5-5 5 5-5 5" />,
   portrait: (
     <>
