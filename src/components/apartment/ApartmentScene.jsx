@@ -35,7 +35,7 @@ export default function ApartmentScene({
 }) {
   const caption = getCaption(hovered, rooms, settings, raining);
   return (
-    <section className="room-section" aria-label="Rex’s interactive apartment">
+    <section id="explore" className="room-section" aria-label="Rex’s interactive apartment">
       <div className="room-topline">
         <span className="room-coordinate">{settings.apartmentLabel}</span>
         <div className="room-controls">
@@ -97,7 +97,6 @@ export default function ApartmentScene({
         <button
           type="button"
           className="directory-toggle"
-          id="explore"
           ref={directoryToggle}
           aria-expanded={directoryOpen}
           aria-controls="room-directory"

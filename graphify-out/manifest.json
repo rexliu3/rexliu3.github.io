@@ -48,9 +48,9 @@
     "semantic_hash": "3b68e3d8debd1577707604c27ba0a103"
   },
   "src/App.test.jsx": {
-    "mtime": 1789874881.1216948,
-    "seen": 1789874891.912179,
-    "ast_hash": "c60a321486be95bdac7a34edddc4551e",
+    "mtime": 1789875150.7931833,
+    "seen": 1789875162.434558,
+    "ast_hash": "5a68bb66327cf29aa76233870051a953",
     "semantic_hash": ""
   },
   "src/components/SiteImage.jsx": {
@@ -84,9 +84,9 @@
     "semantic_hash": ""
   },
   "src/components/apartment/ApartmentScene.jsx": {
-    "mtime": 1789779535.1609085,
-    "seen": 1789779546.3841898,
-    "ast_hash": "cce0e05266579faf93f80125f21ebc92",
+    "mtime": 1789875128.894914,
+    "seen": 1789875162.434562,
+    "ast_hash": "2cc058b2a3681ded3b2f3743ebc294e1",
     "semantic_hash": ""
   },
   "src/components/apartment/Icon.jsx": {

@@ -83,6 +83,12 @@ test("travel shows a compact, text-only journey list", () => {
   expect(dialog.queryByRole("list", { name: "My journey across three cities" })).toBeNull();
 });
 
+test("the apartment link targets the start of the interactive scene", () => {
+  const view = render(<ApartmentPage content={fallbackContent} />);
+  expect(view.getByRole("link", { name: "The apartment" }).getAttribute("href")).toBe("#explore");
+  expect(document.getElementById("explore")?.tagName).toBe("SECTION");
+});
+
 test("the scene camera opens the photography portfolio", () => {
   const view = render(<ApartmentPage content={fallbackContent} />);
   const camera = view.getByLabelText("Explore photos");
@@ -435,7 +441,6 @@ test("all corners expansion replaces the duplicate navigation and opens content"
   const view = render(<ApartmentPage content={fallbackContent} />);
   expect(view.queryByRole("navigation", { name: "Explore the apartment" })).toBeNull();
   const toggle = view.getByRole("button", { name: "Browse all corners" });
-  expect(toggle.getAttribute("id")).toBe("explore");
   fireEvent.click(toggle);
   const navigation = within(view.getByRole("region", { name: "What brings you in?" }));
   expect(navigation.getByRole("button", { name: /Music & dance/ })).toBeTruthy();
