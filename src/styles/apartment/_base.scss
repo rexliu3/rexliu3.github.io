@@ -34,11 +34,18 @@ a:not(.brand):focus-visible {
 }
 button,
 a,
+summary,
 svg[role="button"] {
   touch-action: manipulation;
 }
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
 button:focus-visible,
-a:focus-visible {
+a:focus-visible,
+summary:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 5px;
 }

@@ -292,18 +292,6 @@
       "source_location": "L5"
     },
     {
-      "id": "src_pages_notfoundpage_notfoundpage",
-      "label": "NotFoundPage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "normalizeContent.js",
-      "file_type": "code",
-      "norm_label": "notfoundpage()",
-      "source_file": "src/pages/NotFoundPage.jsx",
-      "source_location": "L3"
-    },
-    {
       "id": "src_sanity_client_fetchsitecontent",
       "label": "fetchSiteContent()",
       "_callable": true,
@@ -580,6 +568,18 @@
       "source_location": "L12"
     },
     {
+      "id": "src_pages_notfoundpage_notfoundpage",
+      "label": "NotFoundPage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "@testing-library/react",
+      "file_type": "code",
+      "norm_label": "notfoundpage()",
+      "source_file": "src/pages/NotFoundPage.jsx",
+      "source_location": "L4"
+    },
+    {
       "id": "src_components_apartment_apartmentintro_apartmentintro",
       "label": "ApartmentIntro()",
       "_callable": true,
@@ -649,7 +649,7 @@
       "file_type": "code",
       "norm_label": "icon()",
       "source_file": "src/components/apartment/Icon.jsx",
-      "source_location": "L95"
+      "source_location": "L96"
     },
     {
       "id": "src_components_apartment_jazzplayer_jazzplayer",
@@ -1329,17 +1329,6 @@
       "file_type": "code",
       "norm_label": "mainpage.jsx",
       "source_file": "src/pages/MainPage.jsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_pages_notfoundpage",
-      "label": "NotFoundPage.jsx",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "normalizeContent.js",
-      "file_type": "code",
-      "norm_label": "notfoundpage.jsx",
-      "source_file": "src/pages/NotFoundPage.jsx",
       "source_location": "L1"
     },
     {
@@ -2728,6 +2717,17 @@
       "file_type": "code",
       "norm_label": "usetheme.test.jsx",
       "source_file": "src/hooks/useTheme.test.jsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_pages_notfoundpage",
+      "label": "NotFoundPage.jsx",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "@testing-library/react",
+      "file_type": "code",
+      "norm_label": "notfoundpage.jsx",
+      "source_file": "src/pages/NotFoundPage.jsx",
       "source_location": "L1"
     },
     {
@@ -4589,7 +4589,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/components/apartment/ApartmentScene.jsx",
-      "source_location": "L36",
+      "source_location": "L38",
       "weight": 1.0
     },
     {
@@ -4986,6 +4986,18 @@
       "context": "call",
       "source_file": "src/pages/MainPage.jsx",
       "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_notfoundpage_notfoundpage",
+      "target": "src_hooks_usetheme_usetheme",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/pages/NotFoundPage.jsx",
+      "source_location": "L5",
       "weight": 1.0
     },
     {
@@ -6763,6 +6775,18 @@
       "context": "import",
       "source_file": "src/pages/MainPage.jsx",
       "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_notfoundpage",
+      "target": "src_hooks_usetheme_usetheme",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/pages/NotFoundPage.jsx",
+      "source_location": "L2",
       "weight": 1.0
     },
     {
@@ -9274,6 +9298,18 @@
       "weight": 1.0
     },
     {
+      "source": "src_pages_notfoundpage",
+      "target": "src_hooks_usetheme",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/pages/NotFoundPage.jsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
       "source": "src_sanity_cardinallocationinput_test",
       "target": "ref_testing_library_react",
       "relation": "imports_from",
@@ -11411,7 +11447,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/components/apartment/Icon.jsx",
-      "source_location": "L95",
+      "source_location": "L96",
       "weight": 1.0
     },
     {
@@ -11994,7 +12030,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/pages/NotFoundPage.jsx",
-      "source_location": "L3",
+      "source_location": "L4",
       "weight": 1.0
     },
     {
@@ -12911,5 +12947,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "075ac694455cebf819e798edf4118888e78b7d47"
+  "built_at_commit": "ce6dc83f13ea3971ee3fbd5dc5331dd5ab47a8b8"
 }

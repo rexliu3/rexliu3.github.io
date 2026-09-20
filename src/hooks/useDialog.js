@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 
 const FOCUSABLE_SELECTOR =
-  'button:not([disabled]), a[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex="0"]';
+  'button:not([disabled]), a[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), summary, [tabindex="0"]';
 
 /** Trap keyboard focus inside a dialog and restore focus when it closes. */
 export default function useDialog(onClose) {

@@ -29,6 +29,8 @@ export default function RoomDirectory({ rooms, onOpen, onClose }) {
         <span className="sr-only">Find a room</span>
         <input
           type="search"
+          name="room-search"
+          autoComplete="off"
           value={query}
           onChange={(event) => setQuery(event.target.value)}
           placeholder="Try projects, photography, or résumé…"

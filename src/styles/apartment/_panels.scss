@@ -29,7 +29,7 @@
 }
 .top-songs-year h4 {
   margin: 3px 0 0;
-  color: #a1815b;
+  color: #82633f;
   font-family: var(--serif);
   font-size: 18px;
   font-weight: 400;
@@ -49,7 +49,7 @@
   min-height: 38px;
 }
 .song-position {
-  color: #b4aa97;
+  color: #756b59;
   font-family: var(--serif);
   font-size: 11px;
 }
@@ -64,7 +64,7 @@
   font-weight: 600;
 }
 .top-songs-year small {
-  color: #8b8878;
+  color: #65695e;
   font-size: 10px;
 }
 .top-songs-year a {
@@ -100,6 +100,9 @@
   max-height: 90vh;
   max-height: 90dvh;
   overflow-y: auto;
+  overscroll-behavior: contain;
+  scroll-padding-block: 80px 20px;
+  overflow-wrap: anywhere;
   background: #faf7ef;
   color: #343d31;
   border: 1px solid #dedac9;
@@ -125,13 +128,13 @@
   align-items: center;
   gap: 10px;
   font-size: 11px;
-  color: #8b8875;
+  color: #65695e;
 }
 .close-panel {
   display: grid;
   place-items: center;
-  width: 33px;
-  height: 33px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   background: #eeece1;
 }
@@ -145,7 +148,7 @@
   font-size: 8px;
   letter-spacing: 1.6px;
   font-weight: 600;
-  color: #a1815b;
+  color: #82633f;
   text-transform: uppercase;
 }
 .panel-content h2 {
@@ -158,7 +161,7 @@
 }
 .panel-lede {
   font-size: 13px;
-  color: #858575;
+  color: #65695e;
   line-height: 1.85;
   margin-bottom: 26px;
 }
@@ -168,10 +171,10 @@
   font-size: 23px;
   margin: 8px 0;
 }
-.panel-content p:not(.eyebrow):not(.panel-lede) {
+.panel-content :where(p:not(.eyebrow):not(.panel-lede)) {
   font-size: 12px;
   line-height: 1.8;
-  color: #838271;
+  color: #65695e;
 }
 .panel-bottom {
   display: flex;
@@ -181,12 +184,13 @@
   padding: 21px 26px;
 }
 .panel-bottom button {
+  min-height: 44px;
   background: transparent;
   display: flex;
   align-items: center;
   gap: 10px;
   font-size: 10px;
-  color: #81816f;
+  color: #65695e;
   padding: 4px 0;
 }
 .panel-bottom button:hover {
@@ -305,7 +309,7 @@
   height: 160px;
   border-radius: 4px 1px 0 0;
   background: #809079;
-  color: #f3e9d2;
+  color: #1c231a;
   writing-mode: vertical-rl;
   padding: 17px 13px;
   font-size: 10px;
@@ -319,7 +323,7 @@
 .decorative-book:nth-child(3) {
   height: 173px;
   background: #c4ac78;
-  color: #5e654b;
+  color: #1c231a;
 }
 .decorative-book:nth-child(4) {
   height: 148px;
@@ -348,7 +352,7 @@
   border: 0;
 }
 .city-journey > li > span {
-  color: #b18462;
+  color: #88603f;
   font-family: var(--serif);
   font-size: 13px;
 }
@@ -360,14 +364,14 @@
 }
 .panel-content .city-journey p {
   margin: 3px 0 0;
-  color: #7d7e70;
+  color: #65695e;
   font-size: 12px;
   line-height: 1.5;
 }
 .city-journey time {
   display: block;
   margin-top: 6px;
-  color: #aa7656;
+  color: #85573b;
   font-size: 10px;
   font-weight: 600;
   letter-spacing: 0.5px;
@@ -386,7 +390,7 @@
 }
 .map-kicker {
   margin: 0 0 5px;
-  color: #a1815b;
+  color: #82633f;
   font-size: 8px;
   font-weight: 600;
   letter-spacing: 1.6px;
@@ -536,6 +540,30 @@
 .map-credit {
   display: block;
 }
+.visited-city-list {
+  margin: 16px 0;
+  font-size: 12px;
+}
+.visited-city-list summary {
+  padding: 12px 0;
+  cursor: pointer;
+  color: var(--accent);
+}
+.visited-city-list ul {
+  display: grid;
+  gap: 12px;
+  padding: 0;
+  list-style: none;
+}
+.visited-city-list li {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 6px 16px;
+}
+.visited-city-list li > span {
+  color: var(--muted);
+}
 .apartment-projects {
   display: grid;
   gap: 16px;
@@ -614,7 +642,7 @@
   width: 62px;
   height: 62px;
   border-radius: 50%;
-  background: #bc805e;
+  background: color-mix(in srgb, var(--record-color, #bc805e), #000 35%);
   text-align: center;
   padding-top: 16px;
   font-size: 9px;
@@ -709,7 +737,7 @@
   gap: 14px;
   margin: 20px 0 28px;
   font-size: 11px;
-  color: #727563;
+  color: #65695e;
 }
 .jazz-volume input {
   flex: 1;
@@ -763,7 +791,7 @@
   flex: 0 0 32px;
   height: 32px;
   border-radius: 50%;
-  background: var(--record-color);
+  background: color-mix(in srgb, var(--record-color), #000 35%);
   color: #fffaf0;
   font-size: 11px;
 }
@@ -778,16 +806,16 @@
 .jazz-track-copy > span {
   font-size: 10px;
   line-height: 1.5;
-  color: #737765;
+  color: #606451;
 }
 .jazz-track-duration {
   margin-left: auto;
-  color: #737765;
+  color: #606451;
   font-size: 10px;
   font-variant-numeric: tabular-nums;
 }
 .panel-content .jazz-credits {
-  font-size: 10px !important;
+  font-size: 10px;
   margin-bottom: 0;
 }
 .jazz-credits a {
@@ -824,7 +852,7 @@
   font-size: 10px;
 }
 .photography-gallery figcaption small {
-  color: #929080;
+  color: #65695e;
   font-size: 8px;
   letter-spacing: 0.4px;
   text-align: right;
@@ -889,7 +917,7 @@
 .resume-experience-list .experience-row__company a {
   display: inline-block;
   margin-top: 5px;
-  color: #6d765e;
+  color: #5d684e;
   font-size: 9px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
@@ -900,7 +928,7 @@
 }
 .resume-experience-list .experience-row__date {
   margin-top: 4px;
-  color: #898675;
+  color: #65695e;
   font-size: 9px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
@@ -981,7 +1009,7 @@
 }
 .education-index,
 .education-years {
-  color: #9a7358;
+  color: #815e45;
   font-size: 9px;
   font-weight: 600;
   letter-spacing: 1.3px;
@@ -1028,7 +1056,7 @@
 }
 .panel-content .education-label {
   margin: 0;
-  color: #a1815b;
+  color: #82633f;
   font-size: 8px;
   font-weight: 600;
   letter-spacing: 1.2px;
@@ -1045,7 +1073,7 @@
   border-bottom: 1px solid #ded9cc;
 }
 .education-degree span {
-  color: #989383;
+  color: #706957;
   font-size: 9px;
   letter-spacing: 0.8px;
   text-transform: uppercase;
@@ -1064,7 +1092,7 @@
   border-left: 2px solid #b9b99e;
 }
 .education-note > span {
-  color: #85826f;
+  color: #65695e;
   font-size: 8px;
   font-weight: 600;
   letter-spacing: 1px;
@@ -1092,7 +1120,7 @@
 }
 .not-found a {
   padding: 15px 22px;
-  background: #e7e8db;
+  background: var(--surface);
   border-radius: 30px;
 }
 @keyframes spin {

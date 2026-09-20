@@ -8,7 +8,7 @@ export default function JazzPlayer({ player, tracks, content }) {
       <p className="panel-lede">{content.lede}</p>
       <div className={`record-player${sound ? " is-playing" : ""}`} aria-hidden="true">
         <div className="vinyl-record">
-          <span style={{ background: track.color }}>
+          <span style={{ "--record-color": track.color }}>
             CAFÉ
             <br />
             REX

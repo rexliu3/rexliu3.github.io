@@ -1,17 +1,17 @@
-# Graph Report - rexliu3.github.io  (2026-09-19)
+# Graph Report - rexliu3.github.io  (2026-09-20)
 
 ## Corpus Check
-- 103 files · ~148,268 words
+- 103 files · ~148,945 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 18 file(s) not represented in the graph (top: .scss 10, (none) 5, .toml 2)
 
 ## Summary
-- 388 nodes · 716 edges · 38 communities (23 shown, 15 thin omitted)
+- 388 nodes · 719 edges · 38 communities (23 shown, 15 thin omitted)
 - Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 21 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `075ac694`
+- Built from commit: `ce6dc83f`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -93,8 +93,8 @@ Cohesion: 0.21
 Nodes (22): Apartment(), Bookshelf(), Cat(), CoffeeTable(), Desk(), floor(), front(), points() (+14 more)
 
 ### Community 2 - "normalizeContent.js"
-Cohesion: 0.11
-Nodes (25): ref_react_dom_client, ref_sanity_cli, App(), MainPage(), NotFoundPage(), CONTENT_TIMEOUT_MS, fetchSiteContent(), sanityConfig (+17 more)
+Cohesion: 0.12
+Nodes (24): ref_react_dom_client, ref_sanity_cli, App(), MainPage(), CONTENT_TIMEOUT_MS, fetchSiteContent(), sanityConfig, src_sanity_config (+16 more)
 
 ### Community 3 - "package.json"
 Cohesion: 0.07
@@ -170,7 +170,7 @@ Nodes (4): Answer, Outcome, Q: why is the Netlify deployment broken, Source Node
 
 ### Community 36 - "@testing-library/react"
 Cohesion: 0.14
-Nodes (10): ref_testing_library_jest_dom_vitest, @testing-library/react, vitest, EMPTY_TRACKS, useJazzPlayer(), readRoom(), useRoomNavigation(), preferredNight() (+2 more)
+Nodes (11): ref_testing_library_jest_dom_vitest, @testing-library/react, vitest, EMPTY_TRACKS, useJazzPlayer(), readRoom(), useRoomNavigation(), preferredNight() (+3 more)
 
 ### Community 37 - "Q: extract from this csv all the flights i've been on and fill in the Sanity cities visited. if cities appear multiple times, take the earliest date"
 Cohesion: 0.40
@@ -184,7 +184,7 @@ Nodes (4): Answer, Outcome, Q: extract from this csv all the flights i've been o
 ## Work-memory lessons
 
 **Preferred sources** — corroborated by past sessions; start here.
-- `package.json` (2× useful, score=1.998083006)
+- `package.json` (2× useful, score=1.923516032)
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
@@ -196,7 +196,7 @@ _Questions this graph is uniquely positioned to answer:_
 - **What connects `printWidth`, `tabWidth`, `semi` to the rest of the system?**
   _153 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `normalizeContent.js` be split into smaller, more focused modules?**
-  _Cohesion score 0.10953058321479374 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.11746031746031746 - nodes in this community are weakly interconnected._
 - **Should `package.json` be split into smaller, more focused modules?**
   _Cohesion score 0.06854838709677419 - nodes in this community are weakly interconnected._
 - **Should `ref_react` be split into smaller, more focused modules?**

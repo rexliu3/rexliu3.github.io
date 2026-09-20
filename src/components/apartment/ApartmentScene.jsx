@@ -27,6 +27,8 @@ export default function ApartmentScene({
   onOpen,
   onHover,
   onToggleNight,
+  motionPaused,
+  onToggleMotion,
   onToggleSound,
   directoryOpen,
   directoryToggle,
@@ -39,6 +41,16 @@ export default function ApartmentScene({
       <div className="room-topline">
         <span className="room-coordinate">{settings.apartmentLabel}</span>
         <div className="room-controls">
+          <button
+            type="button"
+            onClick={onToggleMotion}
+            aria-pressed={motionPaused}
+            aria-label={motionPaused ? "Resume animations" : "Pause animations"}
+          >
+            <Icon name={motionPaused ? "play" : "pause"} size={16} />
+            <span>Motion</span>
+          </button>
+          <span className="control-divider" />
           <button
             type="button"
             onClick={onToggleSound}
@@ -97,6 +109,7 @@ export default function ApartmentScene({
         <button
           type="button"
           className="directory-toggle"
+          id="browse-corners"
           ref={directoryToggle}
           aria-expanded={directoryOpen}
           aria-controls="room-directory"

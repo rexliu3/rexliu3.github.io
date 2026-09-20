@@ -46,7 +46,7 @@ export default function VisitedCitiesMap({ cities }) {
             onMouseLeave={() => setActive(null)}
             onFocus={() => setActive(city)}
             onBlur={() => setActive(null)}
-            onClick={() => setActive((current) => (current?._id === city._id ? null : city))}
+            onClick={() => setActive(city)}
           >
             <span aria-hidden="true" />
           </button>
@@ -58,7 +58,7 @@ export default function VisitedCitiesMap({ cities }) {
             role="tooltip"
             style={{
               ...position(active),
-              left: `${Math.max(15, Math.min(85, (active.location.lng + 180) / 3.6))}%`,
+              left: `clamp(70px, ${position(active).left}, calc(100% - 70px))`,
             }}
           >
             <strong>{active.name}</strong>
@@ -67,6 +67,19 @@ export default function VisitedCitiesMap({ cities }) {
         )}
       </div>
       {!cities.length && <p className="visited-map-hint">No visits added yet.</p>}
+      {!!cities.length && (
+        <details className="visited-city-list">
+          <summary>View all {placeCount}</summary>
+          <ul>
+            {cities.map((city) => (
+              <li key={city._id}>
+                <strong>{city.name}</strong>
+                <span>{visitDate(city)}</span>
+              </li>
+            ))}
+          </ul>
+        </details>
+      )}
       <small className="map-credit">
         Map data:{" "}
         <a

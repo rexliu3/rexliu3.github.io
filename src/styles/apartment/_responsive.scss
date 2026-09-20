@@ -294,3 +294,8 @@
     scroll-behavior: auto !important;
   }
 }
+.is-motion-paused *,
+.is-motion-paused *::before,
+.is-motion-paused *::after {
+  animation-play-state: paused !important;
+}

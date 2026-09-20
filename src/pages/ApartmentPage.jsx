@@ -18,11 +18,14 @@ export default function ApartmentPage({ content }) {
   const player = useJazzPlayer(jazzTracks);
   const [hovered, setHovered] = useState(null);
   const [raining, setRaining] = useState(false);
+  const [motionPaused, setMotionPaused] = useState(false);
   return (
-    <main className={`apartment-site${night ? " is-night" : ""}`}>
+    <main
+      className={`apartment-site${night ? " is-night" : ""}${motionPaused ? " is-motion-paused" : ""}`}
+    >
       <audio ref={player.audio} preload="none" onEnded={player.onEnded} onError={player.onError} />
       <div inert={activeRoomId ? true : undefined}>
-        <a className="skip-link" href="#explore">
+        <a className="skip-link" href="#browse-corners">
           Skip to apartment navigation
         </a>
         <ApartmentHeader settings={settings} onOpen={openRoom} />
@@ -40,6 +43,8 @@ export default function ApartmentPage({ content }) {
           onOpen={openRoom}
           onHover={setHovered}
           onToggleNight={toggleNight}
+          motionPaused={motionPaused}
+          onToggleMotion={() => setMotionPaused((current) => !current)}
           onToggleSound={player.toggleSound}
           directoryOpen={directoryOpen}
           directoryToggle={directoryToggle}

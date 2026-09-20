@@ -15,6 +15,7 @@
 /build
 /studio/dist
 /studio/.sanity
+/.netlify
 
 # misc
 .DS_Store
