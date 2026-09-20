@@ -222,11 +222,15 @@
     gap: 4px;
     min-height: 44px;
   }
-  .city-tabs button {
-    font-size: 10px;
+  .visited-map-heading {
+    align-items: center;
   }
-  .city-tabs button span {
-    margin-left: 4px;
+  .visited-cities h3 {
+    font-size: 24px;
+  }
+  .map-label {
+    top: 8px;
+    font-size: 6px;
   }
   .apartment-projects article {
     grid-template-columns: 80px 1fr;

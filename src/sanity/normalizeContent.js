@@ -27,7 +27,7 @@ const DOCUMENT_FIELDS = {
   educations: { institutionLabel: "", degree: "", years: "", note: "", logo: "" },
   nonfictionBooks: { _key: "", title: "", author: "", note: "", url: "", imageUrl: "" },
   fictionBooks: { _key: "", title: "", author: "", note: "", url: "", imageUrl: "" },
-  cities: { name: "", label: "", subtitle: "", text: "", illustration: "", illustrationAlt: "" },
+  cities: { name: "", subtitle: "", text: "" },
   apartmentProjects: { name: "", image: "", type: "", text: "", url: "", sourceUrl: "" },
   experiences: { company: "", title: "", date: "", website: "", logo: "", note: "" },
   photographyPhotos: { _key: "", imageUrl: "", alt: "", caption: "", location: "" },

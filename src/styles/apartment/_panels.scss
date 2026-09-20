@@ -328,52 +328,109 @@
   transform-origin: bottom;
   margin-left: 3px;
 }
-.city-tabs {
-  display: flex;
-  border-bottom: 1px solid #e0dccd;
-  margin-bottom: 23px;
+.city-journey {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
-.city-tabs button {
-  flex: 1;
-  background: transparent;
-  font-size: 11px;
-  color: #8e8b78;
-  padding: 12px 0;
-  border-bottom: 2px solid transparent;
+.city-journey li {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: 12px;
+  align-items: baseline;
+  padding: 0 0 14px;
+  border-bottom: 1px solid #e5e0d3;
 }
-.city-tabs button[aria-selected="true"] {
-  border-bottom-color: #ae7754;
-  color: #a46948;
+.city-journey li:last-child {
+  padding-bottom: 0;
+  border: 0;
 }
-.city-tabs button span {
-  margin-left: 12px;
-  color: #c0b7a1;
+.city-journey > li > span {
+  color: #b18462;
+  font-family: var(--serif);
+  font-size: 13px;
 }
-.city-drawing {
-  width: 100%;
-  border-radius: 6px;
-  margin-bottom: 22px;
+.city-journey strong {
+  color: #434a3f;
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 400;
+}
+.panel-content .city-journey p {
+  margin: 3px 0 0;
+  color: #7d7e70;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.city-journey time {
   display: block;
+  margin-top: 6px;
+  color: #aa7656;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
 }
 .visited-cities {
-  margin-top: 30px;
-  padding-top: 20px;
+  margin-top: 36px;
+  padding-top: 24px;
   border-top: 1px solid var(--line);
 }
+.visited-map-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 16px;
+}
+.map-kicker {
+  margin: 0 0 5px;
+  color: #a1815b;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 1.6px;
+}
 .visited-cities h3 {
-  font-size: 23px;
-  margin-bottom: 8px;
+  margin: 0;
+  font-size: 26px;
+}
+.visited-map-count {
+  flex: 0 0 auto;
+  padding: 6px 9px;
+  border: 1px solid #c5d3c5;
+  border-radius: 999px;
+  color: #526653;
+  background: #edf2e9;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
 }
 .visited-map-hint,
 .map-credit {
   font-size: 11px;
   color: #6e7266;
 }
+.visited-map-hint {
+  margin: 8px 0 0;
+}
 .visited-world-map {
   position: relative;
-  margin: 18px 0 10px;
-  background: #e3eceb;
-  border-radius: 8px;
+  isolation: isolate;
+  overflow: hidden;
+  margin: 16px 0 11px;
+  border: 1px solid #c7d8d2;
+  border-radius: 12px;
+  background-color: #dce9e5;
+  background-image:
+    linear-gradient(#ffffff33 1px, transparent 1px),
+    linear-gradient(90deg, #ffffff33 1px, transparent 1px);
+  background-size:
+    100% 25%,
+    12.5% 100%;
+  box-shadow:
+    inset 0 0 0 5px #f7f5eb99,
+    0 8px 20px #43585012;
 }
 .visited-world-map svg {
   display: block;
@@ -382,15 +439,31 @@
   border-radius: inherit;
 }
 .world-land {
-  fill: #b3bfa3;
-  stroke: #8f9f87;
-  stroke-width: 0.5;
+  fill: #a9bb9d;
+  stroke: #789275;
+  stroke-width: 0.7;
 }
 .world-equator {
   fill: none;
-  stroke: #a9bdbb;
-  stroke-width: 0.5;
+  stroke: #7da69b;
+  stroke-width: 0.7;
   stroke-dasharray: 4 6;
+}
+.map-label {
+  position: absolute;
+  z-index: 1;
+  top: 11px;
+  color: #53766c;
+  font-size: 7px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  opacity: 0.8;
+}
+.map-label-west {
+  left: 13px;
+}
+.map-label-east {
+  right: 13px;
 }
 .visited-city-marker {
   position: absolute;
@@ -405,19 +478,24 @@
   z-index: 1;
 }
 .visited-city-marker span {
-  width: 8px;
-  height: 8px;
-  background: #a95132;
-  border: 1.5px solid #fffaf0;
+  width: 9px;
+  height: 9px;
+  background: #b44d32;
+  border: 2px solid #fffaf0;
   border-radius: 50%;
-  box-shadow: 0 0 0 3px #a9513222;
+  box-shadow: 0 0 0 3px #b44d3230;
+  transition:
+    transform 150ms ease,
+    box-shadow 150ms ease;
 }
 .visited-city-marker:hover span,
-.visited-city-marker.is-active span {
-  box-shadow: 0 0 0 5px #a9513233;
+.visited-city-marker.is-active span,
+.visited-city-marker:focus-visible span {
+  transform: scale(1.25);
+  box-shadow: 0 0 0 6px #b44d3240;
 }
 .visited-city-marker:focus-visible {
-  outline: 2px solid #a95132;
+  outline: 2px solid #8d3b27;
   outline-offset: 1px;
 }
 .visited-city-tooltip {
@@ -425,12 +503,13 @@
   z-index: 2;
   transform: translate(-50%, -100%);
   margin-top: -16px;
-  padding: 9px 12px;
-  background: #fffaf0;
+  min-width: 106px;
+  padding: 10px 13px;
+  background: #fffdf5;
   color: #343d31;
-  border: 1px solid #d3c1a0;
-  border-radius: 6px;
-  box-shadow: 0 4px 12px #343d3120;
+  border: 1px solid #d1ba91;
+  border-radius: 8px;
+  box-shadow: 0 7px 18px #343d3126;
   max-width: 70%;
   text-align: center;
   pointer-events: none;
@@ -440,12 +519,17 @@
 .visited-city-tooltip span {
   display: block;
 }
+.visited-city-tooltip strong {
+  font-family: var(--serif);
+  font-size: 15px;
+  font-weight: 400;
+}
 .visited-city-tooltip.is-below {
   transform: translate(-50%, 0);
   margin-top: 16px;
 }
 .visited-city-tooltip span {
-  margin-top: 3px;
+  margin-top: 4px;
   font-size: 11px;
   color: #6e7266;
 }

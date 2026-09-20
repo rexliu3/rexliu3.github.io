@@ -33,19 +33,22 @@ test("direction edits stay selected while Sanity saves signed coordinates", () =
   expect(latitude.value).toBe("S");
   expect(onChange.mock.lastCall[0].patches).toContainEqual({
     type: "set",
-    value: -49.28,
-    path: ["lat"],
+    value: { _type: "geopoint", lat: -49.28, lng: 123.12 },
   });
   fireEvent.change(longitude, { target: { value: "W" } });
   expect(longitude.value).toBe("W");
   expect(onChange.mock.lastCall[0].patches).toContainEqual({
     type: "set",
-    value: -123.12,
-    path: ["lng"],
+    value: { _type: "geopoint", lat: 49.28, lng: -123.12 },
   });
   view.rerender(<CardinalLocationInput value={{ ...value }} onChange={onChange} />);
   expect(latitude.value).toBe("S");
   expect(longitude.value).toBe("W");
+  fireEvent.change(view.getByLabelText("Longitude (degrees)"), { target: { value: "122.5" } });
+  expect(onChange.mock.lastCall[0].patches).toContainEqual({
+    type: "set",
+    value: { _type: "geopoint", lat: 49.28, lng: -122.5 },
+  });
   view.rerender(<CardinalLocationInput value={{ lat: -49.28, lng: 123.12 }} onChange={onChange} />);
   expect(longitude.value).toBe("W");
   view.rerender(
@@ -62,7 +65,6 @@ test("directions can be selected before entering coordinates", () => {
   fireEvent.change(view.getByLabelText("Longitude (degrees)"), { target: { value: "123.12" } });
   expect(onChange.mock.lastCall[0].patches).toContainEqual({
     type: "set",
-    value: -123.12,
-    path: ["lng"],
+    value: { _type: "geopoint", lng: -123.12 },
   });
 });

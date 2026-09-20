@@ -14,7 +14,7 @@ import { getContentRooms } from "./rooms";
 
 const PANELS = {
   books: { Component: BooksPanel, contentKey: "books" },
-  travel: { Component: TravelPanel, contentKey: "travel" },
+  travel: { Component: TravelPanel },
   projects: { Component: ProjectsPanel, contentKey: "projects" },
   photos: { Component: PhotosPanel, contentKey: "photos" },
   berkeley: { Component: EducationPanel, contentKey: "education" },

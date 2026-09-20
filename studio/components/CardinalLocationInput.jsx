@@ -1,6 +1,6 @@
 import React, { useEffect, useId, useState } from "react";
 import { Flex, Select, Stack, Text, TextInput } from "@sanity/ui";
-import { PatchEvent, set, setIfMissing, unset } from "sanity";
+import { PatchEvent, set, unset } from "sanity";
 
 export default function CardinalLocationInput({ value, onChange, readOnly, elementProps }) {
   const id = useId();
@@ -33,7 +33,7 @@ export default function CardinalLocationInput({ value, onChange, readOnly, eleme
     }
     const sign = direction === "S" || direction === "W" ? -1 : 1;
     onChange(
-      PatchEvent.from(setIfMissing({ _type: "geopoint" }), set(Math.abs(magnitude) * sign, [axis]))
+      PatchEvent.from(set({ ...value, _type: "geopoint", [axis]: Math.abs(magnitude) * sign }))
     );
   }
 

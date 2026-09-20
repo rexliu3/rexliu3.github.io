@@ -58,17 +58,29 @@ test("a rejected content request still opens every room and restores keyboard fo
   }
 });
 
-test("travel tabs support keyboard navigation and an empty city list", () => {
-  const view = render(<ApartmentPage content={fallbackContent} />);
+test("travel shows a compact, text-only journey list", () => {
+  const homeVisits = [
+    { name: "Vancouver, Canada", month: 11, year: 2002, location: { lat: 49.28, lng: -123.12 } },
+    { name: "Berkeley, USA", month: 8, year: 2021, location: { lat: 37.8717, lng: -122.2728 } },
+    { name: "New York, USA", month: 2, year: 2023, location: { lat: 40.7306, lng: -73.9352 } },
+  ];
+  const view = render(
+    <ApartmentPage content={{ ...fallbackContent, visitedCities: homeVisits }} />
+  );
   fireEvent.click(view.getByRole("button", { name: "Browse all corners" }));
   fireEvent.click(view.getByRole("button", { name: "Travel The world map" }));
-  const firstTab = view.getByRole("tablist").querySelector("button");
-  firstTab.focus();
-  fireEvent.keyDown(firstTab, { key: "End" });
-  expect(document.activeElement.textContent).toContain("New York");
-  expect(within(view.getByRole("dialog")).getByText("A city that keeps you curious.")).toBeTruthy();
+  const dialog = within(view.getByRole("dialog"));
+  const journey = dialog.getByRole("list", { name: "My journey across three cities" });
+  expect(within(journey).getAllByRole("listitem")).toHaveLength(3);
+  expect(within(journey).getByText("Vancouver")).toBeTruthy();
+  expect(within(journey).getByText("Berkeley")).toBeTruthy();
+  expect(within(journey).getByText("New York")).toBeTruthy();
+  expect(within(journey).getByText("November 2002")).toBeTruthy();
+  expect(within(journey).getByText("August 2021")).toBeTruthy();
+  expect(within(journey).getByText("February 2023")).toBeTruthy();
+  expect(dialog.queryByRole("tablist")).toBeNull();
   view.rerender(<ApartmentPage content={{ ...fallbackContent, cities: [] }} />);
-  expect(view.queryByRole("tabpanel")).toBeNull();
+  expect(dialog.queryByRole("list", { name: "My journey across three cities" })).toBeNull();
 });
 
 test("the scene camera opens the photography portfolio", () => {
@@ -240,6 +252,7 @@ test("Sanity visits appear on the world map with hover, focus, and tap details",
   fireEvent.click(view.getByRole("button", { name: "Explore travel logs and favorite places" }));
   const dialog = within(view.getByRole("dialog"));
   const marker = await dialog.findByRole("button", { name: "Vancouver, July 2023" });
+  expect(dialog.getByText("1 place")).toBeTruthy();
   fireEvent.mouseEnter(marker);
   expect(within(dialog.getByRole("tooltip")).getByText("July 2023")).toBeTruthy();
   fireEvent.mouseLeave(marker);

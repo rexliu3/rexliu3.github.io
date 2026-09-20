@@ -12,11 +12,24 @@ const position = (city) => ({
 
 export default function VisitedCitiesMap({ cities }) {
   const [active, setActive] = useState(null);
+  const placeCount = `${cities.length} ${cities.length === 1 ? "place" : "places"}`;
   return (
     <section className="visited-cities" aria-labelledby="visited-cities-title">
-      <h3 id="visited-cities-title">Cities visited</h3>
-      <p className="visited-map-hint">Hover, focus, or tap a marker to see when I visited.</p>
+      <div className="visited-map-heading">
+        <div>
+          <p className="map-kicker">FIELD NOTES</p>
+          <h3 id="visited-cities-title">The world, pinned</h3>
+        </div>
+        <span className="visited-map-count">{placeCount}</span>
+      </div>
+      <p className="visited-map-hint">Hover, focus, or tap a pin to open a travel note.</p>
       <div className="visited-world-map" role="group" aria-label="World map of cities visited">
+        <span className="map-label map-label-west" aria-hidden="true">
+          WEST
+        </span>
+        <span className="map-label map-label-east" aria-hidden="true">
+          EAST
+        </span>
         <svg viewBox="0 0 720 360" aria-hidden="true">
           <path className="world-land" d={land.path} />
           <path className="world-equator" d="M0 180h720" />
@@ -33,7 +46,7 @@ export default function VisitedCitiesMap({ cities }) {
             onMouseLeave={() => setActive(null)}
             onFocus={() => setActive(city)}
             onBlur={() => setActive(null)}
-            onClick={() => setActive(city)}
+            onClick={() => setActive((current) => (current?._id === city._id ? null : city))}
           >
             <span aria-hidden="true" />
           </button>

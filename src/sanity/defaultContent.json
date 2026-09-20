@@ -44,9 +44,6 @@
         "noteTitle": "The shelf is still being unpacked.",
         "noteBody": "My reading list and personal notes will live here. Check back for the first stack."
       },
-      "travel": {
-        "tabsLabel": "Cities on my journey"
-      },
       "projects": {
         "linkLabel": "More things on GitHub"
       },
@@ -176,33 +173,24 @@
       "_id": "city-vancouver",
       "_type": "city",
       "name": "Vancouver",
-      "label": "01 / THE FIRST CHAPTER",
       "subtitle": "Mountains. Ocean. Beginnings.",
       "text": "The first pin on the map. Vancouver marks the beginning of a journey that would lead down the West Coast and across the continent.",
-      "illustration": "vancouver",
-      "illustrationAlt": "Illustration of mountains in Vancouver",
       "order": 0
     },
     {
-      "_id": "city-san-francisco",
+      "_id": "city-berkeley",
       "_type": "city",
-      "name": "San Francisco",
-      "label": "02 / THE BAY AREA CHAPTER",
-      "subtitle": "A little fog. A lot of possibility.",
-      "text": "The Bay Area chapter, with Berkeley just across the water. A place for learning, building, and finding new directions.",
-      "illustration": "san-francisco",
-      "illustrationAlt": "Illustration of the Golden Gate Bridge",
+      "name": "Berkeley",
+      "subtitle": "A little fog. A lot of learning.",
+      "text": "A place for learning, building, and finding new directions.",
       "order": 1
     },
     {
       "_id": "city-new-york",
       "_type": "city",
       "name": "New York",
-      "label": "03 / THE CURRENT CHAPTER",
       "subtitle": "A city that keeps you curious.",
       "text": "The latest pin, and the place I call home. I’m a software engineer at Palantir Technologies, making things in a city that never runs out of things to discover.",
-      "illustration": "new-york",
-      "illustrationAlt": "Illustration of the New York skyline",
       "order": 2
     }
   ],
