@@ -1,17 +1,17 @@
 # Graph Report - rexliu3.github.io  (2026-09-20)
 
 ## Corpus Check
-- 103 files · ~148,945 words
+- 104 files · ~149,896 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 18 file(s) not represented in the graph (top: .scss 10, (none) 5, .toml 2)
 
 ## Summary
-- 388 nodes · 719 edges · 38 communities (23 shown, 15 thin omitted)
+- 394 nodes · 724 edges · 38 communities (23 shown, 15 thin omitted)
 - Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 21 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `ce6dc83f`
+- Built from commit: `80c15404`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -22,7 +22,7 @@
 - package.json
 - ref_react
 - index.js
-- devDependencies
+- Frontend review — September 20, 2026
 - scripts
 - studio/package.json
 - manifest.json
@@ -52,7 +52,7 @@
 - extraction-spec.md
 - TravelPanel.jsx
 - Q: why is the Netlify deployment broken
-- @testing-library/react
+- App.jsx
 - Q: extract from this csv all the flights i've been on and fill in the Sanity cities visited. if cities appear multiple times, take the earliest date
 
 ## God Nodes (most connected - your core abstractions)
@@ -76,8 +76,8 @@
   src/components/apartment/scene/Sofa.jsx → src/components/apartment/scene/geometry.js
 - `Dialog()` --calls--> `useDialog()`  [EXTRACTED]
   src/hooks/useDialog.test.jsx → src/hooks/useDialog.js
-- `normalize()` --calls--> `normalizeContent()`  [EXTRACTED]
-  src/sanity/normalizeContent.test.js → src/sanity/normalizeContent.js
+- `ApartmentPage()` --calls--> `useRoomNavigation()`  [EXTRACTED]
+  src/pages/ApartmentPage.jsx → src/hooks/useRoomNavigation.js
 
 ## Import Cycles
 - None detected.
@@ -93,24 +93,24 @@ Cohesion: 0.21
 Nodes (22): Apartment(), Bookshelf(), Cat(), CoffeeTable(), Desk(), floor(), front(), points() (+14 more)
 
 ### Community 2 - "normalizeContent.js"
-Cohesion: 0.12
-Nodes (24): ref_react_dom_client, ref_sanity_cli, App(), MainPage(), CONTENT_TIMEOUT_MS, fetchSiteContent(), sanityConfig, src_sanity_config (+16 more)
+Cohesion: 0.11
+Nodes (23): ref_sanity_cli, ref_testing_library_jest_dom_vitest, @testing-library/react, vitest, readRoom(), useRoomNavigation(), CONTENT_TIMEOUT_MS, fetchSiteContent() (+15 more)
 
 ### Community 3 - "package.json"
-Cohesion: 0.07
-Nodes (27): dependencies, react, react-dom, sanity, engines, node, react, react-dom (+19 more)
+Cohesion: 0.04
+Nodes (43): dependencies, react, react-dom, sanity, devDependencies, eslint, @eslint/js, eslint-plugin-react (+35 more)
 
 ### Community 4 - "ref_react"
-Cohesion: 0.10
-Nodes (27): ref_react, ApartmentIntro(), ApartmentFooter(), ApartmentHeader(), ApartmentScene(), getCaption(), Icon(), paths (+19 more)
+Cohesion: 0.09
+Nodes (30): ref_react, ApartmentIntro(), ApartmentFooter(), ApartmentHeader(), ApartmentScene(), getCaption(), Icon(), paths (+22 more)
 
 ### Community 5 - "index.js"
 Cohesion: 0.15
 Nodes (22): ref_sanity, ref_sanity_structure, singletonTypes, apartmentPortrait, apartmentProject, bookList(), bookshelf, city (+14 more)
 
-### Community 6 - "devDependencies"
-Cohesion: 0.12
-Nodes (16): devDependencies, eslint, @eslint/js, eslint-plugin-react, eslint-plugin-react-hooks, gh-pages, globals, jsdom (+8 more)
+### Community 6 - "Frontend review — September 20, 2026"
+Cohesion: 0.33
+Nodes (5): Coverage, Deployment, Fixed findings, Frontend review — September 20, 2026, Validation
 
 ### Community 7 - "scripts"
 Cohesion: 0.12
@@ -168,17 +168,17 @@ Nodes (6): monthYear(), TravelPanel(), position(), visitDate(), VisitedCitiesMap
 Cohesion: 0.40
 Nodes (4): Answer, Outcome, Q: why is the Netlify deployment broken, Source Nodes
 
-### Community 36 - "@testing-library/react"
-Cohesion: 0.14
-Nodes (11): ref_testing_library_jest_dom_vitest, @testing-library/react, vitest, EMPTY_TRACKS, useJazzPlayer(), readRoom(), useRoomNavigation(), preferredNight() (+3 more)
+### Community 36 - "App.jsx"
+Cohesion: 0.20
+Nodes (9): ref_react_dom_client, App(), preferredNight(), useTheme(), MainPage(), NotFoundPage(), useSanityContent(), unregister() (+1 more)
 
 ### Community 37 - "Q: extract from this csv all the flights i've been on and fill in the Sanity cities visited. if cities appear multiple times, take the earliest date"
 Cohesion: 0.40
 Nodes (4): Answer, Outcome, Q: extract from this csv all the flights i've been on and fill in the Sanity cities visited. if cities appear multiple times, take the earliest date, Source Nodes
 
 ## Knowledge Gaps
-- **153 isolated node(s):** `printWidth`, `tabWidth`, `semi`, `singleQuote`, `trailingComma` (+148 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 180 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **157 isolated node(s):** `printWidth`, `tabWidth`, `semi`, `singleQuote`, `trailingComma` (+152 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 185 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **15 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Work-memory lessons
@@ -189,17 +189,17 @@ Nodes (4): Answer, Outcome, Q: extract from this csv all the flights i've been o
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `@testing-library/react` connect `@testing-library/react` to `studio/package.json`, `normalizeContent.js`, `package.json`, `ref_react`?**
-  _High betweenness centrality (0.187) - this node is a cross-community bridge._
+- **Why does `@testing-library/react` connect `normalizeContent.js` to `studio/package.json`, `package.json`, `ref_react`, `App.jsx`?**
+  _High betweenness centrality (0.181) - this node is a cross-community bridge._
 - **Why does `scripts` connect `scripts` to `package.json`?**
-  _High betweenness centrality (0.054) - this node is a cross-community bridge._
+  _High betweenness centrality (0.052) - this node is a cross-community bridge._
 - **What connects `printWidth`, `tabWidth`, `semi` to the rest of the system?**
-  _153 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _157 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `normalizeContent.js` be split into smaller, more focused modules?**
-  _Cohesion score 0.11746031746031746 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.1111111111111111 - nodes in this community are weakly interconnected._
 - **Should `package.json` be split into smaller, more focused modules?**
-  _Cohesion score 0.06854838709677419 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.044326241134751775 - nodes in this community are weakly interconnected._
 - **Should `ref_react` be split into smaller, more focused modules?**
-  _Cohesion score 0.10256410256410256 - nodes in this community are weakly interconnected._
-- **Should `devDependencies` be split into smaller, more focused modules?**
+  _Cohesion score 0.09415584415584416 - nodes in this community are weakly interconnected._
+- **Should `scripts` be split into smaller, more focused modules?**
   _Cohesion score 0.125 - nodes in this community are weakly interconnected._

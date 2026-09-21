@@ -730,5 +730,11 @@
     "seen": 1789874305.330809,
     "ast_hash": "288409b332b5b2dd1c6b427c106db756",
     "semantic_hash": ""
+  },
+  "FRONTEND_REVIEW.md": {
+    "mtime": 1789928208.0739784,
+    "seen": 1789959029.449561,
+    "ast_hash": "f97a15c9032b65d0aa22cb6cccd52636",
+    "semantic_hash": ""
   }
 }

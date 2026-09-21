@@ -268,28 +268,28 @@
       "source_location": "L4"
     },
     {
-      "id": "src_app_app",
-      "label": "App()",
+      "id": "src_hooks_useroomnavigation_readroom",
+      "label": "readRoom()",
       "_callable": true,
       "_origin": "ast",
       "community": 2,
       "community_name": "normalizeContent.js",
       "file_type": "code",
-      "norm_label": "app()",
-      "source_file": "src/App.jsx",
-      "source_location": "L6"
+      "norm_label": "readroom()",
+      "source_file": "src/hooks/useRoomNavigation.js",
+      "source_location": "L3"
     },
     {
-      "id": "src_pages_mainpage_mainpage",
-      "label": "MainPage()",
+      "id": "src_hooks_useroomnavigation_useroomnavigation",
+      "label": "useRoomNavigation()",
       "_callable": true,
       "_origin": "ast",
       "community": 2,
       "community_name": "normalizeContent.js",
       "file_type": "code",
-      "norm_label": "mainpage()",
-      "source_file": "src/pages/MainPage.jsx",
-      "source_location": "L5"
+      "norm_label": "useroomnavigation()",
+      "source_file": "src/hooks/useRoomNavigation.js",
+      "source_location": "L9"
     },
     {
       "id": "src_sanity_client_fetchsitecontent",
@@ -314,18 +314,6 @@
       "norm_label": "sanitycontentprovider()",
       "source_file": "src/sanity/ContentContext.jsx",
       "source_location": "L7"
-    },
-    {
-      "id": "src_sanity_contentcontext_usesanitycontent",
-      "label": "useSanityContent()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "normalizeContent.js",
-      "file_type": "code",
-      "norm_label": "usesanitycontent()",
-      "source_file": "src/sanity/ContentContext.jsx",
-      "source_location": "L26"
     },
     {
       "id": "src_sanity_normalizecontent_documents",
@@ -412,18 +400,6 @@
       "source_location": "L7"
     },
     {
-      "id": "src_serviceworker_unregister",
-      "label": "unregister()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "normalizeContent.js",
-      "file_type": "code",
-      "norm_label": "unregister()",
-      "source_file": "src/serviceWorker.js",
-      "source_location": "L2"
-    },
-    {
       "id": "src_utils_urls_safeurl",
       "label": "safeUrl()",
       "_callable": true,
@@ -496,40 +472,16 @@
       "source_location": "L13"
     },
     {
-      "id": "src_hooks_usejazzplayer_usejazzplayer",
-      "label": "useJazzPlayer()",
+      "id": "src_app_app",
+      "label": "App()",
       "_callable": true,
       "_origin": "ast",
       "community": 36,
-      "community_name": "@testing-library/react",
+      "community_name": "App.jsx",
       "file_type": "code",
-      "norm_label": "usejazzplayer()",
-      "source_file": "src/hooks/useJazzPlayer.js",
+      "norm_label": "app()",
+      "source_file": "src/App.jsx",
       "source_location": "L6"
-    },
-    {
-      "id": "src_hooks_useroomnavigation_readroom",
-      "label": "readRoom()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 36,
-      "community_name": "@testing-library/react",
-      "file_type": "code",
-      "norm_label": "readroom()",
-      "source_file": "src/hooks/useRoomNavigation.js",
-      "source_location": "L3"
-    },
-    {
-      "id": "src_hooks_useroomnavigation_useroomnavigation",
-      "label": "useRoomNavigation()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 36,
-      "community_name": "@testing-library/react",
-      "file_type": "code",
-      "norm_label": "useroomnavigation()",
-      "source_file": "src/hooks/useRoomNavigation.js",
-      "source_location": "L9"
     },
     {
       "id": "src_hooks_usetheme_preferrednight",
@@ -537,7 +489,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 36,
-      "community_name": "@testing-library/react",
+      "community_name": "App.jsx",
       "file_type": "code",
       "norm_label": "preferrednight()",
       "source_file": "src/hooks/useTheme.js",
@@ -549,23 +501,23 @@
       "_callable": true,
       "_origin": "ast",
       "community": 36,
-      "community_name": "@testing-library/react",
+      "community_name": "App.jsx",
       "file_type": "code",
       "norm_label": "usetheme()",
       "source_file": "src/hooks/useTheme.js",
       "source_location": "L15"
     },
     {
-      "id": "src_pages_apartmentpage_apartmentpage",
-      "label": "ApartmentPage()",
+      "id": "src_pages_mainpage_mainpage",
+      "label": "MainPage()",
       "_callable": true,
       "_origin": "ast",
       "community": 36,
-      "community_name": "@testing-library/react",
+      "community_name": "App.jsx",
       "file_type": "code",
-      "norm_label": "apartmentpage()",
-      "source_file": "src/pages/ApartmentPage.jsx",
-      "source_location": "L12"
+      "norm_label": "mainpage()",
+      "source_file": "src/pages/MainPage.jsx",
+      "source_location": "L5"
     },
     {
       "id": "src_pages_notfoundpage_notfoundpage",
@@ -573,11 +525,35 @@
       "_callable": true,
       "_origin": "ast",
       "community": 36,
-      "community_name": "@testing-library/react",
+      "community_name": "App.jsx",
       "file_type": "code",
       "norm_label": "notfoundpage()",
       "source_file": "src/pages/NotFoundPage.jsx",
       "source_location": "L4"
+    },
+    {
+      "id": "src_sanity_contentcontext_usesanitycontent",
+      "label": "useSanityContent()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "App.jsx",
+      "file_type": "code",
+      "norm_label": "usesanitycontent()",
+      "source_file": "src/sanity/ContentContext.jsx",
+      "source_location": "L26"
+    },
+    {
+      "id": "src_serviceworker_unregister",
+      "label": "unregister()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "App.jsx",
+      "file_type": "code",
+      "norm_label": "unregister()",
+      "source_file": "src/serviceWorker.js",
+      "source_location": "L2"
     },
     {
       "id": "src_components_apartment_apartmentintro_apartmentintro",
@@ -866,6 +842,30 @@
       "norm_label": "handlekeydown()",
       "source_file": "src/hooks/useDialog.js",
       "source_location": "L22"
+    },
+    {
+      "id": "src_hooks_usejazzplayer_usejazzplayer",
+      "label": "useJazzPlayer()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "ref_react",
+      "file_type": "code",
+      "norm_label": "usejazzplayer()",
+      "source_file": "src/hooks/useJazzPlayer.js",
+      "source_location": "L6"
+    },
+    {
+      "id": "src_pages_apartmentpage_apartmentpage",
+      "label": "ApartmentPage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "ref_react",
+      "file_type": "code",
+      "norm_label": "apartmentpage()",
+      "source_file": "src/pages/ApartmentPage.jsx",
+      "source_location": "L12"
     },
     {
       "id": "src_utils_urls_resumedownloadurl",
@@ -1288,47 +1288,36 @@
       "source_location": "L6"
     },
     {
-      "id": "src_app",
-      "label": "App.jsx",
+      "id": "src_components_apartment_roomdirectory_test",
+      "label": "RoomDirectory.test.jsx",
       "_origin": "ast",
       "community": 2,
       "community_name": "normalizeContent.js",
       "file_type": "code",
-      "norm_label": "app.jsx",
-      "source_file": "src/App.jsx",
+      "norm_label": "roomdirectory.test.jsx",
+      "source_file": "src/components/apartment/RoomDirectory.test.jsx",
       "source_location": "L1"
     },
     {
-      "id": "src_app_test",
-      "label": "App.test.jsx",
+      "id": "src_hooks_useroomnavigation",
+      "label": "useRoomNavigation.js",
       "_origin": "ast",
       "community": 2,
       "community_name": "normalizeContent.js",
       "file_type": "code",
-      "norm_label": "app.test.jsx",
-      "source_file": "src/App.test.jsx",
+      "norm_label": "useroomnavigation.js",
+      "source_file": "src/hooks/useRoomNavigation.js",
       "source_location": "L1"
     },
     {
-      "id": "src_index",
-      "label": "index.jsx",
+      "id": "src_hooks_useroomnavigation_test",
+      "label": "useRoomNavigation.test.jsx",
       "_origin": "ast",
       "community": 2,
       "community_name": "normalizeContent.js",
       "file_type": "code",
-      "norm_label": "index.jsx",
-      "source_file": "src/index.jsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_pages_mainpage",
-      "label": "MainPage.jsx",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "normalizeContent.js",
-      "file_type": "code",
-      "norm_label": "mainpage.jsx",
-      "source_file": "src/pages/MainPage.jsx",
+      "norm_label": "useroomnavigation.test.jsx",
+      "source_file": "src/hooks/useRoomNavigation.test.jsx",
       "source_location": "L1"
     },
     {
@@ -1453,14 +1442,36 @@
       "source_location": "L1"
     },
     {
-      "id": "src_serviceworker",
-      "label": "serviceWorker.js",
+      "id": "src_sanity_sitequery",
+      "label": "siteQuery.js",
       "_origin": "ast",
       "community": 2,
       "community_name": "normalizeContent.js",
       "file_type": "code",
-      "norm_label": "serviceworker.js",
-      "source_file": "src/serviceWorker.js",
+      "norm_label": "sitequery.js",
+      "source_file": "src/sanity/siteQuery.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_sanity_sitequery_test",
+      "label": "siteQuery.test.js",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "normalizeContent.js",
+      "file_type": "code",
+      "norm_label": "sitequery.test.js",
+      "source_file": "src/sanity/siteQuery.test.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_setuptests",
+      "label": "setupTests.js",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "normalizeContent.js",
+      "file_type": "code",
+      "norm_label": "setuptests.js",
+      "source_file": "src/setupTests.js",
       "source_location": "L1"
     },
     {
@@ -1473,6 +1484,28 @@
       "norm_label": "sanity.cli.js",
       "source_file": "studio/sanity.cli.js",
       "source_location": "L1"
+    },
+    {
+      "id": "ref_testing_library_react",
+      "label": "@testing-library/react",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "normalizeContent.js",
+      "file_type": "concept",
+      "norm_label": "@testing-library/react",
+      "source_file": "package.json",
+      "source_location": "L35"
+    },
+    {
+      "id": "ref_vitest",
+      "label": "vitest",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "normalizeContent.js",
+      "file_type": "concept",
+      "norm_label": "vitest",
+      "source_file": "package.json",
+      "source_location": "L46"
     },
     {
       "id": "codex_skills_graphify_skill",
@@ -2180,6 +2213,182 @@
       "source_location": "L29"
     },
     {
+      "id": "package_devdependencies",
+      "label": "devDependencies",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "devdependencies",
+      "source_file": "package.json",
+      "source_location": "L31"
+    },
+    {
+      "id": "package_devdependencies_eslint",
+      "label": "eslint",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "eslint",
+      "source_file": "package.json",
+      "source_location": "L37"
+    },
+    {
+      "id": "package_devdependencies_eslint_js",
+      "label": "@eslint/js",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "@eslint/js",
+      "source_file": "package.json",
+      "source_location": "L32"
+    },
+    {
+      "id": "package_devdependencies_eslint_plugin_react",
+      "label": "eslint-plugin-react",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "eslint-plugin-react",
+      "source_file": "package.json",
+      "source_location": "L38"
+    },
+    {
+      "id": "package_devdependencies_eslint_plugin_react_hooks",
+      "label": "eslint-plugin-react-hooks",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "eslint-plugin-react-hooks",
+      "source_file": "package.json",
+      "source_location": "L39"
+    },
+    {
+      "id": "package_devdependencies_gh_pages",
+      "label": "gh-pages",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "gh-pages",
+      "source_file": "package.json",
+      "source_location": "L40"
+    },
+    {
+      "id": "package_devdependencies_globals",
+      "label": "globals",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "globals",
+      "source_file": "package.json",
+      "source_location": "L41"
+    },
+    {
+      "id": "package_devdependencies_jsdom",
+      "label": "jsdom",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "jsdom",
+      "source_file": "package.json",
+      "source_location": "L42"
+    },
+    {
+      "id": "package_devdependencies_playwright_test",
+      "label": "@playwright/test",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "@playwright/test",
+      "source_file": "package.json",
+      "source_location": "L33"
+    },
+    {
+      "id": "package_devdependencies_prettier",
+      "label": "prettier",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "prettier",
+      "source_file": "package.json",
+      "source_location": "L43"
+    },
+    {
+      "id": "package_devdependencies_sass",
+      "label": "sass",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "sass",
+      "source_file": "package.json",
+      "source_location": "L44"
+    },
+    {
+      "id": "package_devdependencies_testing_library_jest_dom",
+      "label": "@testing-library/jest-dom",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "@testing-library/jest-dom",
+      "source_file": "package.json",
+      "source_location": "L34"
+    },
+    {
+      "id": "package_devdependencies_testing_library_react",
+      "label": "@testing-library/react",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "@testing-library/react",
+      "source_file": "package.json",
+      "source_location": "L35"
+    },
+    {
+      "id": "package_devdependencies_vite",
+      "label": "vite",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "vite",
+      "source_file": "package.json",
+      "source_location": "L45"
+    },
+    {
+      "id": "package_devdependencies_vitejs_plugin_react",
+      "label": "@vitejs/plugin-react",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "@vitejs/plugin-react",
+      "source_file": "package.json",
+      "source_location": "L36"
+    },
+    {
+      "id": "package_devdependencies_vitest",
+      "label": "vitest",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "vitest",
+      "source_file": "package.json",
+      "source_location": "L46"
+    },
+    {
       "id": "package_engines",
       "label": "engines",
       "_origin": "ast",
@@ -2654,47 +2863,14 @@
       "source_location": "L20"
     },
     {
-      "id": "src_hooks_usejazzplayer",
-      "label": "useJazzPlayer.js",
+      "id": "src_app",
+      "label": "App.jsx",
       "_origin": "ast",
       "community": 36,
-      "community_name": "@testing-library/react",
+      "community_name": "App.jsx",
       "file_type": "code",
-      "norm_label": "usejazzplayer.js",
-      "source_file": "src/hooks/useJazzPlayer.js",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_hooks_usejazzplayer_empty_tracks",
-      "label": "EMPTY_TRACKS",
-      "_origin": "ast",
-      "community": 36,
-      "community_name": "@testing-library/react",
-      "file_type": "code",
-      "norm_label": "empty_tracks",
-      "source_file": "src/hooks/useJazzPlayer.js",
-      "source_location": "L3"
-    },
-    {
-      "id": "src_hooks_useroomnavigation",
-      "label": "useRoomNavigation.js",
-      "_origin": "ast",
-      "community": 36,
-      "community_name": "@testing-library/react",
-      "file_type": "code",
-      "norm_label": "useroomnavigation.js",
-      "source_file": "src/hooks/useRoomNavigation.js",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_hooks_useroomnavigation_test",
-      "label": "useRoomNavigation.test.jsx",
-      "_origin": "ast",
-      "community": 36,
-      "community_name": "@testing-library/react",
-      "file_type": "code",
-      "norm_label": "useroomnavigation.test.jsx",
-      "source_file": "src/hooks/useRoomNavigation.test.jsx",
+      "norm_label": "app.jsx",
+      "source_file": "src/App.jsx",
       "source_location": "L1"
     },
     {
@@ -2702,7 +2878,7 @@
       "label": "useTheme.js",
       "_origin": "ast",
       "community": 36,
-      "community_name": "@testing-library/react",
+      "community_name": "App.jsx",
       "file_type": "code",
       "norm_label": "usetheme.js",
       "source_file": "src/hooks/useTheme.js",
@@ -2713,10 +2889,32 @@
       "label": "useTheme.test.jsx",
       "_origin": "ast",
       "community": 36,
-      "community_name": "@testing-library/react",
+      "community_name": "App.jsx",
       "file_type": "code",
       "norm_label": "usetheme.test.jsx",
       "source_file": "src/hooks/useTheme.test.jsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_index",
+      "label": "index.jsx",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "App.jsx",
+      "file_type": "code",
+      "norm_label": "index.jsx",
+      "source_file": "src/index.jsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_pages_mainpage",
+      "label": "MainPage.jsx",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "App.jsx",
+      "file_type": "code",
+      "norm_label": "mainpage.jsx",
+      "source_file": "src/pages/MainPage.jsx",
       "source_location": "L1"
     },
     {
@@ -2724,66 +2922,22 @@
       "label": "NotFoundPage.jsx",
       "_origin": "ast",
       "community": 36,
-      "community_name": "@testing-library/react",
+      "community_name": "App.jsx",
       "file_type": "code",
       "norm_label": "notfoundpage.jsx",
       "source_file": "src/pages/NotFoundPage.jsx",
       "source_location": "L1"
     },
     {
-      "id": "src_sanity_sitequery",
-      "label": "siteQuery.js",
+      "id": "src_serviceworker",
+      "label": "serviceWorker.js",
       "_origin": "ast",
       "community": 36,
-      "community_name": "@testing-library/react",
+      "community_name": "App.jsx",
       "file_type": "code",
-      "norm_label": "sitequery.js",
-      "source_file": "src/sanity/siteQuery.js",
+      "norm_label": "serviceworker.js",
+      "source_file": "src/serviceWorker.js",
       "source_location": "L1"
-    },
-    {
-      "id": "src_sanity_sitequery_test",
-      "label": "siteQuery.test.js",
-      "_origin": "ast",
-      "community": 36,
-      "community_name": "@testing-library/react",
-      "file_type": "code",
-      "norm_label": "sitequery.test.js",
-      "source_file": "src/sanity/siteQuery.test.js",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_setuptests",
-      "label": "setupTests.js",
-      "_origin": "ast",
-      "community": 36,
-      "community_name": "@testing-library/react",
-      "file_type": "code",
-      "norm_label": "setuptests.js",
-      "source_file": "src/setupTests.js",
-      "source_location": "L1"
-    },
-    {
-      "id": "ref_testing_library_react",
-      "label": "@testing-library/react",
-      "_origin": "ast",
-      "community": 36,
-      "community_name": "@testing-library/react",
-      "file_type": "concept",
-      "norm_label": "@testing-library/react",
-      "source_file": "package.json",
-      "source_location": "L35"
-    },
-    {
-      "id": "ref_vitest",
-      "label": "vitest",
-      "_origin": "ast",
-      "community": 36,
-      "community_name": "@testing-library/react",
-      "file_type": "concept",
-      "norm_label": "vitest",
-      "source_file": "package.json",
-      "source_location": "L46"
     },
     {
       "id": "graphify_out_memory_query_20260920_005213_8b67ce93_extract_from_this_csv_all_the_flights_i_ve_been_on",
@@ -2852,6 +3006,17 @@
       "norm_label": "source nodes",
       "source_file": "graphify-out/memory/query_20260920_005213_8b67ce93_extract_from_this_csv_all_the_flights_i_ve_been_on.md",
       "source_location": "L20"
+    },
+    {
+      "id": "src_app_test",
+      "label": "App.test.jsx",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "ref_react",
+      "file_type": "code",
+      "norm_label": "app.test.jsx",
+      "source_file": "src/App.test.jsx",
+      "source_location": "L1"
     },
     {
       "id": "src_components_apartment_apartmentintro",
@@ -3030,17 +3195,6 @@
       "source_location": "L1"
     },
     {
-      "id": "src_components_apartment_roomdirectory_test",
-      "label": "RoomDirectory.test.jsx",
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "ref_react",
-      "file_type": "code",
-      "norm_label": "roomdirectory.test.jsx",
-      "source_file": "src/components/apartment/RoomDirectory.test.jsx",
-      "source_location": "L1"
-    },
-    {
       "id": "src_components_apartment_roompanel",
       "label": "RoomPanel.jsx",
       "_origin": "ast",
@@ -3116,6 +3270,28 @@
       "norm_label": "usedialog.test.jsx",
       "source_file": "src/hooks/useDialog.test.jsx",
       "source_location": "L1"
+    },
+    {
+      "id": "src_hooks_usejazzplayer",
+      "label": "useJazzPlayer.js",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "ref_react",
+      "file_type": "code",
+      "norm_label": "usejazzplayer.js",
+      "source_file": "src/hooks/useJazzPlayer.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_hooks_usejazzplayer_empty_tracks",
+      "label": "EMPTY_TRACKS",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "ref_react",
+      "file_type": "code",
+      "norm_label": "empty_tracks",
+      "source_file": "src/hooks/useJazzPlayer.js",
+      "source_location": "L3"
     },
     {
       "id": "src_pages_apartmentpage",
@@ -3437,180 +3613,76 @@
       "source_location": "L4"
     },
     {
-      "id": "package_devdependencies",
-      "label": "devDependencies",
+      "id": "frontend_review",
+      "label": "FRONTEND_REVIEW.md",
       "_origin": "ast",
       "community": 6,
-      "community_name": "devDependencies",
-      "file_type": "code",
-      "norm_label": "devdependencies",
-      "source_file": "package.json",
-      "source_location": "L31"
+      "community_name": "Frontend review \u2014 September 20, 2026",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "frontend_review.md",
+      "source_file": "FRONTEND_REVIEW.md",
+      "source_location": "L1"
     },
     {
-      "id": "package_devdependencies_eslint",
-      "label": "eslint",
+      "id": "frontend_review_coverage",
+      "label": "Coverage",
       "_origin": "ast",
       "community": 6,
-      "community_name": "devDependencies",
-      "file_type": "code",
-      "norm_label": "eslint",
-      "source_file": "package.json",
-      "source_location": "L37"
+      "community_name": "Frontend review \u2014 September 20, 2026",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "coverage",
+      "source_file": "FRONTEND_REVIEW.md",
+      "source_location": "L5"
     },
     {
-      "id": "package_devdependencies_eslint_js",
-      "label": "@eslint/js",
+      "id": "frontend_review_deployment",
+      "label": "Deployment",
       "_origin": "ast",
       "community": 6,
-      "community_name": "devDependencies",
-      "file_type": "code",
-      "norm_label": "@eslint/js",
-      "source_file": "package.json",
-      "source_location": "L32"
+      "community_name": "Frontend review \u2014 September 20, 2026",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "deployment",
+      "source_file": "FRONTEND_REVIEW.md",
+      "source_location": "L56"
     },
     {
-      "id": "package_devdependencies_eslint_plugin_react",
-      "label": "eslint-plugin-react",
+      "id": "frontend_review_fixed_findings",
+      "label": "Fixed findings",
       "_origin": "ast",
       "community": 6,
-      "community_name": "devDependencies",
-      "file_type": "code",
-      "norm_label": "eslint-plugin-react",
-      "source_file": "package.json",
-      "source_location": "L38"
+      "community_name": "Frontend review \u2014 September 20, 2026",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "fixed findings",
+      "source_file": "FRONTEND_REVIEW.md",
+      "source_location": "L26"
     },
     {
-      "id": "package_devdependencies_eslint_plugin_react_hooks",
-      "label": "eslint-plugin-react-hooks",
+      "id": "frontend_review_frontend_review_september_20_2026",
+      "label": "Frontend review \u2014 September 20, 2026",
       "_origin": "ast",
       "community": 6,
-      "community_name": "devDependencies",
-      "file_type": "code",
-      "norm_label": "eslint-plugin-react-hooks",
-      "source_file": "package.json",
-      "source_location": "L39"
+      "community_name": "Frontend review \u2014 September 20, 2026",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "frontend review \u2014 september 20, 2026",
+      "source_file": "FRONTEND_REVIEW.md",
+      "source_location": "L1"
     },
     {
-      "id": "package_devdependencies_gh_pages",
-      "label": "gh-pages",
+      "id": "frontend_review_validation",
+      "label": "Validation",
       "_origin": "ast",
       "community": 6,
-      "community_name": "devDependencies",
-      "file_type": "code",
-      "norm_label": "gh-pages",
-      "source_file": "package.json",
-      "source_location": "L40"
-    },
-    {
-      "id": "package_devdependencies_globals",
-      "label": "globals",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "devDependencies",
-      "file_type": "code",
-      "norm_label": "globals",
-      "source_file": "package.json",
-      "source_location": "L41"
-    },
-    {
-      "id": "package_devdependencies_jsdom",
-      "label": "jsdom",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "devDependencies",
-      "file_type": "code",
-      "norm_label": "jsdom",
-      "source_file": "package.json",
+      "community_name": "Frontend review \u2014 September 20, 2026",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "validation",
+      "source_file": "FRONTEND_REVIEW.md",
       "source_location": "L42"
-    },
-    {
-      "id": "package_devdependencies_playwright_test",
-      "label": "@playwright/test",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "devDependencies",
-      "file_type": "code",
-      "norm_label": "@playwright/test",
-      "source_file": "package.json",
-      "source_location": "L33"
-    },
-    {
-      "id": "package_devdependencies_prettier",
-      "label": "prettier",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "devDependencies",
-      "file_type": "code",
-      "norm_label": "prettier",
-      "source_file": "package.json",
-      "source_location": "L43"
-    },
-    {
-      "id": "package_devdependencies_sass",
-      "label": "sass",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "devDependencies",
-      "file_type": "code",
-      "norm_label": "sass",
-      "source_file": "package.json",
-      "source_location": "L44"
-    },
-    {
-      "id": "package_devdependencies_testing_library_jest_dom",
-      "label": "@testing-library/jest-dom",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "devDependencies",
-      "file_type": "code",
-      "norm_label": "@testing-library/jest-dom",
-      "source_file": "package.json",
-      "source_location": "L34"
-    },
-    {
-      "id": "package_devdependencies_testing_library_react",
-      "label": "@testing-library/react",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "devDependencies",
-      "file_type": "code",
-      "norm_label": "@testing-library/react",
-      "source_file": "package.json",
-      "source_location": "L35"
-    },
-    {
-      "id": "package_devdependencies_vite",
-      "label": "vite",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "devDependencies",
-      "file_type": "code",
-      "norm_label": "vite",
-      "source_file": "package.json",
-      "source_location": "L45"
-    },
-    {
-      "id": "package_devdependencies_vitejs_plugin_react",
-      "label": "@vitejs/plugin-react",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "devDependencies",
-      "file_type": "code",
-      "norm_label": "@vitejs/plugin-react",
-      "source_file": "package.json",
-      "source_location": "L36"
-    },
-    {
-      "id": "package_devdependencies_vitest",
-      "label": "vitest",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "devDependencies",
-      "file_type": "code",
-      "norm_label": "vitest",
-      "source_file": "package.json",
-      "source_location": "L46"
     },
     {
       "id": "package_scripts",
@@ -4423,18 +4495,6 @@
       "source_url": null
     },
     {
-      "id": "ref_react_dom_client",
-      "label": "ref_react_dom_client",
-      "_origin": "semantic",
-      "community": 2,
-      "community_name": "normalizeContent.js",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "ref_react_dom_client",
-      "source_file": "",
-      "type": "external"
-    },
-    {
       "id": "ref_sanity_cli",
       "label": "ref_sanity_cli",
       "_origin": "semantic",
@@ -4443,6 +4503,18 @@
       "external": true,
       "file_type": "concept",
       "norm_label": "ref_sanity_cli",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "ref_testing_library_jest_dom_vitest",
+      "label": "ref_testing_library_jest_dom_vitest",
+      "_origin": "semantic",
+      "community": 2,
+      "community_name": "normalizeContent.js",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_testing_library_jest_dom_vitest",
       "source_file": "",
       "type": "external"
     },
@@ -4471,18 +4543,6 @@
       "type": "external"
     },
     {
-      "id": "src_styles_styles",
-      "label": "src_styles_styles",
-      "_origin": "semantic",
-      "community": 2,
-      "community_name": "normalizeContent.js",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "src_styles_styles",
-      "source_file": "",
-      "type": "external"
-    },
-    {
       "id": "ref_vitest_config",
       "label": "ref_vitest_config",
       "_origin": "semantic",
@@ -4507,14 +4567,26 @@
       "type": "external"
     },
     {
-      "id": "ref_testing_library_jest_dom_vitest",
-      "label": "ref_testing_library_jest_dom_vitest",
+      "id": "ref_react_dom_client",
+      "label": "ref_react_dom_client",
       "_origin": "semantic",
       "community": 36,
-      "community_name": "@testing-library/react",
+      "community_name": "App.jsx",
       "external": true,
       "file_type": "concept",
-      "norm_label": "ref_testing_library_jest_dom_vitest",
+      "norm_label": "ref_react_dom_client",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "src_styles_styles",
+      "label": "src_styles_styles",
+      "_origin": "semantic",
+      "community": 36,
+      "community_name": "App.jsx",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "src_styles_styles",
       "source_file": "",
       "type": "external"
     },
@@ -10626,6 +10698,61 @@
       "weight": 1.0
     },
     {
+      "source": "frontend_review",
+      "target": "frontend_review_frontend_review_september_20_2026",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "FRONTEND_REVIEW.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_review_frontend_review_september_20_2026",
+      "target": "frontend_review_fixed_findings",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "FRONTEND_REVIEW.md",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_review_frontend_review_september_20_2026",
+      "target": "frontend_review_validation",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "FRONTEND_REVIEW.md",
+      "source_location": "L42",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_review_frontend_review_september_20_2026",
+      "target": "frontend_review_coverage",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "FRONTEND_REVIEW.md",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_review_frontend_review_september_20_2026",
+      "target": "frontend_review_deployment",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "FRONTEND_REVIEW.md",
+      "source_location": "L56",
+      "weight": 1.0
+    },
+    {
       "source": "graphify_out_memory_query_20260919_010620_4063185f_what_project_deployments_do_you_see_for_netlify",
       "target": "graphify_out_memory_query_20260919_010620_4063185f_what_project_deployments_do_you_see_for_netlify_q_what_project_deployments_do_you_see_for_netlify",
       "relation": "contains",
@@ -12947,5 +13074,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "ce6dc83f13ea3971ee3fbd5dc5331dd5ab47a8b8"
+  "built_at_commit": "80c154048f9a66b11e7c1d0dfbbcc7cdd8891ba6"
 }
