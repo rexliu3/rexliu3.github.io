@@ -354,9 +354,9 @@
     "semantic_hash": "e063d32113431bfd47d8918d2e64910f"
   },
   "src/sanity/defaultContent.json": {
-    "mtime": 1789874854.3593495,
-    "seen": 1789874891.912214,
-    "ast_hash": "69cfd5f22df9c77153c27a1633f683df",
+    "mtime": 1790001847.1118999,
+    "seen": 1790001867.2751129,
+    "ast_hash": "bb049d4fb0f423c371b2263ee601f156",
     "semantic_hash": ""
   },
   "src/sanity/fallbackContent.js": {
